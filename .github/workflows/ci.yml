@@ -26,3 +26,35 @@ jobs:
       - run: npm run pack:check
       - run: npm run pack:conda:check
       - run: npm run example
+
+  rdkit-provider:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        shell: bash -el {0}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: mamba-org/setup-micromamba@f457c30a868e4760d3a6fcea5f25dc655b8edf39 # v3.2.1
+        with:
+          environment-file: devtools/conda-envs/rdkit-provider-py314.yaml
+          cache-environment: true
+      - run: npm install --global npm@11.19.1
+      - run: npm ci
+      - run: npm run build
+      - name: Verify installed provider origins
+        run: |
+          python - <<'PY'
+          import importlib, importlib.metadata, json, pathlib, sys
+          prefix = pathlib.Path(sys.prefix).resolve()
+          versions = {}
+          for module_name, distribution in [('rdkit', 'rdkit'), ('argdigest', 'argdigest'), ('depdigest', 'depdigest'), ('smonitor', 'smonitor'), ('pyunitwizard', 'pyunitwizard'), ('pytest_receptor', 'pytest-receptor')]:
+              module = importlib.import_module(module_name)
+              assert pathlib.Path(module.__file__).resolve().is_relative_to(prefix), module_name
+              versions[distribution] = importlib.metadata.version(distribution)
+          print(json.dumps({'python': sys.version, 'installed': versions}, sort_keys=True))
+          PY
+      - run: ruff check devtools/rdkit_adapter devtools/tests
+      - run: ruff format --check devtools/rdkit_adapter devtools/tests
+      - run: python -m pytest --receptor=ci devtools/tests
+      - run: npm run corpus:check

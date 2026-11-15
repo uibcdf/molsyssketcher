@@ -1,0 +1,18 @@
+# Source-development/CI fixture; not a second routine shared environment.
+name: molsyssketcher-rdkit-provider
+channels:
+  - uibcdf
+  - conda-forge
+dependencies:
+  - python=3.14.10
+  - nodejs=24.22.1
+  - rdkit=2026.09.2
+  - argdigest=0.17.1
+  - depdigest=0.15.2
+  - smonitor=0.23.0
+  - pyunitwizard=0.29.5
+  - pytest=9.2.0
+  - pytest-receptor=1.1.0
+  - pip
+  - pip:
+      - ruff==0.16.5

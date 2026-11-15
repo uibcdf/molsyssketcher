@@ -36,12 +36,14 @@ exists. Read their canonical `standards/*_GUIDE.md` before integration:
 - `../gh-run-receptor`: applicable first Actions inspection with native evidence
   fallback when information is incomplete.
 
-The current code is TypeScript with no Python runtime boundary. The four Python
-support libraries and pytest-receptor are not installed into a manufactured
-Python package. Their runtime integration becomes applicable with the first
-Python/provider adapter. TypeScript consumes explicit serialized quantities
-and diagnostics from that boundary; it does not reimplement these providers.
-Native Node/browser tests retain their selected tools.
+The shipped web foundation is TypeScript. The separate RDKit source-development
+adapter now uses ArgDigest, DepDigest and SMonitor plus pytest-receptor; local
+controlled source versions and hosted installed SDK receiving are recorded
+separately. PyUnitWizard host-policy preservation is tested; drawing coordinates
+are nonphysical, so quantity conversion is not applicable yet. No manufactured
+Python distribution or extra web runtime dependency is introduced. TypeScript
+will consume explicit serialized quantities and diagnostics from actual host
+boundaries. Native Node/browser tests retain their selected tools.
 
 Preserve sibling checkouts, shared environments and human work. Consult owning
 instructions and supported APIs before proposing a provider change. Record exact

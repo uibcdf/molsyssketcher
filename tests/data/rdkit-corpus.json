@@ -1,0 +1,14 @@
+[
+  { "id": "methanol", "smiles": "CO\n", "atoms": 2, "bonds": 1 },
+  { "id": "benzene", "smiles": "c1ccccc1", "atoms": 6, "bonds": 6 },
+  { "id": "salt", "smiles": "[Na+].[Cl-]", "atoms": 2, "bonds": 0 },
+  { "id": "isotope", "smiles": "[13CH3]O", "atoms": 2, "bonds": 1 },
+  { "id": "explicit-hydrogen", "smiles": "[H]OC", "atoms": 3, "bonds": 2 },
+  { "id": "tetra-a", "smiles": "N[C@@H](C)C(=O)O", "atoms": 6, "bonds": 5 },
+  { "id": "tetra-b", "smiles": "N[C@H](C)C(=O)O", "atoms": 6, "bonds": 5 },
+  { "id": "alkene-a", "smiles": "F/C=C/F", "atoms": 4, "bonds": 3 },
+  { "id": "alkene-b", "smiles": "F/C=C\\F", "atoms": 4, "bonds": 3 },
+  { "id": "pyrrole", "smiles": "c1cc[nH]c1", "atoms": 5, "bonds": 5 },
+  { "id": "fused", "smiles": "c1ccc2ccccc2c1", "atoms": 10, "bonds": 11 },
+  { "id": "macrocycle", "smiles": "C1CCCCCCCCCCC1", "atoms": 12, "bonds": 12 }
+]

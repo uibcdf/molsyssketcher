@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-15",
+  "owning_issue": "https://github.com/uibcdf/molsyssketcher/issues/2",
+  "source_identity": "the Git commit containing this receipt; exact-head CI evidence in the owning issue",
+  "scope": "source-development Python RDKit preparation, native reference round trips and built TypeScript receiving",
+  "provider": {"name": "RDKit", "version": "2026.09.2", "installed_distribution": "2026.9.2", "route": "python-rdkit-source"},
+  "local_python": "3.14.10",
+  "local_pytest": "9.2.0",
+  "local_pytest_receptor": "1.2.3+2.ga02820f",
+  "ruff": "0.16.5",
+  "controlled_support_sources": {
+    "argdigest": "7be790b7334e16715fceebbfa8a2b400edf768bb",
+    "depdigest": "5e93eaff314fe7cddf4eee89842977023b3a8b00",
+    "smonitor": "4a4cd1e415ea57e50c22925c36c2e727772fb3ab",
+    "pyunitwizard": "cc51c8e600f78f108bc563edd3221bd8788ead86"
+  },
+  "inspected_molsysmt_source": "6deb0200cd7e384128eded46caaf751a57e65bc6",
+  "native_corpus_cases": 12,
+  "python_tests": 40,
+  "node_tests": 23,
+  "checks": [
+    "ruff check devtools/rdkit_adapter devtools/tests",
+    "ruff format --check devtools/rdkit_adapter devtools/tests",
+    "python -m pytest --receptor=llm devtools/tests",
+    "python -m devtools.rdkit_adapter.corpus --check",
+    "npm run check",
+    "git diff --check"
+  ],
+  "plan": {"total": 69, "done": 6, "partial": 12, "todo": 51},
+  "quantity_boundary": "drawing coordinates are explicitly nonphysical; no quantity conversion; non-default PyUnitWizard host policy preserved",
+  "artifact_limits": "Python adapter is unshipped source tooling; core tarball/Conda resources acquire no Python/RDKit dependency",
+  "remaining": ["production provider/transport and actual adapter artifact", "own scene/SVG/font/hit geometry", "native interaction inputs and both diagram journeys", "browser/Qt/3D/Conda archive qualification", "formal admission and registered guides"]
+}

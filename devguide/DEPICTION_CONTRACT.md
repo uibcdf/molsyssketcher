@@ -12,6 +12,9 @@ to receive in P1.6, not an implemented provider API or frozen schema.
 The initial [supplied-input profile](SUPPLIED_INPUT_PROFILE.md) accepts explicit
 bijective maps and refuses generated/condensed objects. Its structural tests
 do not establish actual provider drawing chemistry or visual correctness.
+The [RDKit source route](RDKIT_PROVIDER.md) now supplies real preparation and
+native round-trip controls for that bounded profile; own-renderer receiving
+and broader preparation remain pending.
 
 ## Distinct representations
 

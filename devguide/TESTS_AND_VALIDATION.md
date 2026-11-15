@@ -1,10 +1,13 @@
 # Tests and validation
 
-Status: 21 initial document/controller/version contract tests execute with the native
+Status: 23 document/controller/version and real-preparation receiving tests execute with the native
 Node runner. `npm run check` receives strict types, format, these tests and
 documentation consistency; `npm run pack:check` receives an independent local
-packed consumer. There is no chemical, visual, browser/Qt or performance
-qualification yet. See [the first profile](SUPPLIED_INPUT_PROFILE.md).
+packed consumer. Own-renderer, browser/Qt and performance qualification remain
+pending. See [the first profile](SUPPLIED_INPUT_PROFILE.md).
+The [RDKit source route](RDKIT_PROVIDER.md) has 40 executed Python tests and
+12 actual provider-prepared controls with native chemical round trips. This is
+bounded preparation receiving, separate from rendering or a host/platform claim.
 
 `npm run pack:conda:check` checks the proposed asset-prefix layout after relocation,
 version identity and file digests. The draft Conda recipe and central profile

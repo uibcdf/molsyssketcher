@@ -5,8 +5,9 @@ and native interaction-result projection are distinct adapter roles.
 A saved native-result reader does not activate a detector just to display
 its observations. Product centrality does not require every backend at startup.
 
-Status: provider requirements; no integration or dependency is installed by
-this documentation.
+Status: provider requirements plus a bounded implemented
+[RDKit source-development route](RDKIT_PROVIDER.md). The web runtime loads no
+engine implicitly; production adapters and native interaction receiving remain pending.
 
 ## Provider role
 

@@ -19,7 +19,7 @@ results, owning issue and limits in CHECKPOINT.md or a linked receipt. A source
 description, a closed upstream issue or an unavailable-provider test is not
 executed integration evidence.
 
-There are **69 microsteps: 6 done, 9 partial and 54 todo**. Five completed steps
+There are **69 microsteps: 6 done, 12 partial and 51 todo**. Five completed steps
 are documentation/source review; P0.5 supplies the tested toolchain and license.
 Counts are unweighted, not effort percentages. Initial implementation evidence
 and explicit remaining acceptance are in CHECKPOINT.md and SUPPLIED_INPUT_PROFILE.md.
@@ -49,7 +49,7 @@ P6 is the final production capability.
 | P0.3 | done | Staged plan, decisions, risks and continuation checkpoint recorded and documentation links checked |
 | P0.4 | partial | Local instructions/reporting route and central handoff exist; formal admission, TypeScript-first profile and registered guide synchronization remain in suite #199 |
 | P0.5 | done | MIT selected by maintainer; Node/npm, TypeScript/Prettier pins, lockfile, ESM/declarations, executable local checks and clean packed-consumer route committed under component #1 |
-| P0.6 | partial | Finite supplied-input contract matrix, synthetic corpus and ingress/queue bounds exist; actual providers/public corpora, complete chemical/observation matrices and accepted measured budgets remain pending |
+| P0.6 | partial | Supplied-input and RDKit source-route matrices, 12 native molecular controls and ingress/queue bounds exist; native interaction/public complex corpora, full operation matrices and accepted measured budgets remain pending |
 | P0.7 | done | Source-backed conceptual review and prepared-depiction/transaction requirements recorded in CONCEPTUAL_REVIEW.md |
 | P0.8 | done | Maintainer's equal-pillar direction, complete interaction contract, separate readiness and integrated work ledger recorded |
 
@@ -62,11 +62,11 @@ local product decision.
 | ID | Status | Required result / completion evidence |
 | --- | --- | --- |
 | P1.1 | partial | Supplied molecular projections retain original text, stable local/provider/display maps and monotonic replacement generations; draft/edit/undo behavior remains pending |
-| P1.2 | todo | First chemical-provider adapter and real capability inventory; absence/unsupported/failure remain distinct |
-| P1.3 | todo | Supported chemical import/export and supplied/generated layout with tested correspondence and retained original input |
+| P1.2 | partial | Real bounded RDKit Python source adapter has lazy dependency/argument/catalog controls and a finite capability inventory; production host/transport and distributed adapter receiving remain pending |
+| P1.3 | partial | Native SMILES interpretation, generated 2D preparation, exact maps and retained input feed TypeScript; MOL/SMILES references round-trip for 12 controls. General format/export APIs and broader operation scope remain pending |
 | P1.4 | partial | One replacement destination has request intent, one running/one newest queued call, honest cancellation occupancy and stale/disposal rejection; independent destinations, undo and selected-provider size/time/service receiving remain pending |
-| P1.5 | todo | Model/provider controls, admitted round trips, quantity/provenance and source-identity boundaries |
-| P1.6 | partial | Supplied bijective depiction profile validates exact maps, explicit wedge endpoints/axes and missing preparation information; actual provider drawing chemistry and generated/condensed coverage remain pending |
+| P1.5 | partial | Twelve real-provider controls receive native round trips, parser/preparation provenance, original declarations and nonphysical drawing coordinates; native scientific quantities/external correspondence and full consumer receiving remain pending |
+| P1.6 | partial | Actual RDKit preparation supplies exact bijections, explicit wedges/H/charges/isotopes and native references; generated objects are refused. Broader preparation/scene coverage remains pending |
 | P1.7 | partial | Document candidate acceptance is atomic, state dimensions are independent and failures preserve accepted data; complete interpretation/depiction/scene acceptance remains pending |
 | P1.8 | partial | Shared immutable owner/generation/state/structure/preparation references and independent document controllers exist; scene composition and native provider receiving remain pending |
 

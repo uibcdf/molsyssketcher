@@ -33,6 +33,7 @@ task ledger; the checkpoint identifies the next work and received evidence.
 | [Tests and validation](TESTS_AND_VALIDATION.md) | What would establish chemical, interactive and integration correctness? |
 | [Engineering](ENGINEERING.md) | How will tooling, dependencies, qualification and distribution be introduced? |
 | [Supplied-input profile](SUPPLIED_INPUT_PROFILE.md) | What does the first executable foundation actually accept and guarantee? |
+| [RDKit preparation](RDKIT_PROVIDER.md) | Which real chemical preparation route and native controls have been executed? |
 | [Local workspace](WORKSPACE.md) | Where are the maintainer-provided source references and support tools? |
 | [Reporting](reporting_protocol.md) | Which owning issues and executable checks apply to current TypeScript work? |
 | [References](REFERENCES.md) | Which sources and owning issues informed the design? |

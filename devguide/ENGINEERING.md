@@ -92,6 +92,17 @@ candidate, release plan, publisher/credentials and public verification remain
 P5 receiving work. Library versions, public tags and release titles must be
 canonical `X.Y.Z` with no prefix or suffix; CI checks package/lock/tag equality.
 
+The first real scientific route is unshipped Python source tooling under
+`devtools/rdkit_adapter`, documented in RDKIT_PROVIDER.md. It uses the existing
+Python 3.14 shared environment locally without changing its prefix. Its Conda
+YAML is an explicit clean CI/bootstrap fixture; the separate provider job
+checks installed SDK origins and executes the actual engine and pytest-receptor.
+ArgDigest/DepDigest/SMonitor own the argument/dependency/diagnostic boundaries.
+PyUnitWizard policy preservation is tested; nonphysical drawing coordinates
+do not introduce a quantity-conversion boundary. Neither the core npm tarball
+nor the draft resource recipe includes this source tool or new Python runtime
+dependencies. A distributed companion/host adapter still needs its own receiving.
+
 Receive a built artifact in an independent consumer to detect accidental
 source-checkout imports. Test asset URLs, readiness, worker/WASM loading when
 selected, resize and disposal. Keep controlled source integration distinct

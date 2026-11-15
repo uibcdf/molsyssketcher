@@ -29,8 +29,10 @@ immutable acceptance, independent controllers, monotonic replacement generations
 bounded preparation queues and stale/disposal guards. MIT was selected by the
 maintainer. Node/npm and development dependencies are pinned.
 
-There is no renderer, live chemical/native-result adapter, production editor,
-published package or qualified browser/Qt/scientific/platform profile. A local
+There is no renderer, production chemical/native-result adapter, production editor,
+published package or qualified browser/Qt/platform profile. A bounded real
+RDKit source-development route and its native chemical controls now exist;
+this is separate from a production provider/host adapter. A local
 packed consumer is tested; this does not establish a public installation route.
 Package version `0.0.0` is a private tooling placeholder, not a release decision.
 
@@ -43,11 +45,12 @@ Package version `0.0.0` is a private tooling placeholder, not a release decision
 
 ## Integrated plan
 
-The ledger has **69 microsteps: 6 done, 9 partial and 54 todo**.
+The ledger has **69 microsteps: 6 done, 12 partial and 51 todo**.
 
 Completed items P0.1, P0.2, P0.3, P0.7 and P0.8 are documentation/source-review
 work only. P0.5 is now complete. P0.4/P0.6, P1.1/P1.4/P1.6/P1.7/P1.8 and
-I1.1/P5.3 are partial, with remaining acceptance named in the ledger. Counts do not
+I1.1/P5.3 are partial, with remaining acceptance named in the ledger. P1.2/P1.3/P1.5
+are now partial after actual native RDKit preparation/round-trip receiving. Counts do not
 measure effort or imply completion of either primary view.
 
 The expansion from 38 steps adds the documented adoption P0.8, shared reference
@@ -91,7 +94,7 @@ dated historical record, not a live plan counter.
 
 Documentation checks cover local file/anchor links, task IDs/status counts,
 decision/readiness consistency, historical-record preservation and whitespace.
-`npm run check` executes canonical version/lock consistency, strict types, source formatting, 21 synthetic
+`npm run check` executes canonical version/lock consistency, strict types, source formatting, 23 synthetic/real-provider-fixture
 document/controller tests and local link/anchor/ledger checks. `npm run pack:check`
 checks the local tarball's contents, offline independent consumer imports,
 declarations and read-only types. `npm run example` exercises both supplied
@@ -109,16 +112,40 @@ needs [central receiving](https://github.com/uibcdf/molsyssuite/issues/199#issue
 Tests exercise source retention, reordered mappings, explicit directed wedge
 endpoints, unsupported/partial states, exact parent generations, burst
 coalescing, uncancellable occupancy, stale successes/failures, callback re-entry,
-disposal and independent instances. They do not verify chemistry or drawings.
+disposal and independent instances. Synthetic tests do not verify chemistry or drawings.
+
+## Received RDKit source route
+
+[Component #2](https://github.com/uibcdf/molsyssketcher/issues/2) adds a bounded
+Python source-development adapter using RDKit 2026.09.2. It retains raw SMILES,
+uses explicit H/parser/layout/drawing options, disables generated chiral H atoms,
+checks actual origin mappings, and retains native MOL/SVG/isomeric-SMILES references.
+Its 12-case corpus covers charged fragments, isotope/explicit H, two stereo pairs,
+aromatic `[nH]`, fused and macrocyclic cases. The native MOL controls all round-trip;
+the Node boundary receives every generated document.
+
+There are 40 passing Python tests with pytest-receptor, including failure/absence,
+unsupported chemistry, correspondence reordering/generated-object rejection,
+support diagnostics, policy preservation and an actual Python-CLI-to-Node handoff.
+Ruff and native corpus regeneration checks pass. Local support libraries are
+controlled editables. The new CI job uses the declared Conda provider/test fixture;
+its exact-head installed-tool results are recorded in issue #2.
+
+See [RDKIT_PROVIDER.md](RDKIT_PROVIDER.md) and
+[rdkit_preparation_20261115.json](evidence/rdkit_preparation_20261115.json).
+ArgDigest, DepDigest and SMonitor serve the Python boundary. PyUnitWizard is
+reviewed and host-policy preservation tested; drawing positions are nonphysical
+and require no quantity conversion. This adapter is unshipped source tooling,
+not a new installed Python facade or a qualified host service.
 
 ## Resume here
 
 1. P0.4: resolve the two-pillar ownership/admission and TypeScript-first
    repository profile under [suite #199](https://github.com/uibcdf/molsyssuite/issues/199).
-2. P0.6/P1.2: inspect the supplied local MolSysMT/RDKit APIs and receive one
-   actual chemical/native-result route with public molecular/complex controls.
-3. Extend the experimental prepared profile from real provider information;
-   declare per-operation losses, admitted chemistry and measured budgets.
+2. Extend the real RDKit preparation route into a received host/transport and
+   finish the needed finite operation/loss/corpus and measured-budget decisions.
+3. Receive the first owner-native interaction result with actual molecular
+   parent/participant/coverage context; preserve independent pillar progress.
 4. Build coherent scene/font/hit geometry and first SVG primitives, reusing
    prepared fragments for molecular, ligand-centered and two-sided cases.
 5. Continue the joint slice through native observations, save/reopen/export and

@@ -2,8 +2,9 @@
 
 Implemented under [MolSysSketcher #1](https://github.com/uibcdf/molsyssketcher/issues/1),
 2026-11-15. This experimental foundation accepts attributed, already prepared
-JSON documents. It does not yet render, parse chemistry, read owner-native
-interaction results, or run a scientific calculation. The private package's
+JSON documents. The web runtime does not render or parse chemistry; the separate
+[RDKit source route](RDKIT_PROVIDER.md) now prepares actual molecular controls
+for this boundary. Owner-native interaction reading remains pending. The private package's
 `0.0.0` is a build placeholder, not a selected public release.
 
 ## Public surface and example
@@ -92,7 +93,7 @@ duplicate labels across owners, failed replacement, burst replacement,
 uncancellable work, callback re-entry and independent instance disposal.
 Synthetic labels and coordinates are not an RDKit or molecular-science oracle.
 
-P0.6 still needs actual provider routes, public molecular/complex/interface
+P0.6 still needs the production provider route, public complex/interface
 corpora, chemical operation/loss matrices, browser/Qt scenarios and accepted
 numerical performance budgets. Full native observations, both visual journeys,
 save/reopen and graphical export remain the next joint-slice work.

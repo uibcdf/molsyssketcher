@@ -2,4 +2,5 @@ node_modules/
 .npm-cache/
 dist/
 package-lock.json
+tests/data/rdkit-prepared.json
 devguide/

@@ -1,0 +1,3057 @@
+{
+  "schemaVersion": 1,
+  "scope": "Synthetic SMILES controls prepared by real RDKit; no renderer/host qualification",
+  "inputSha256": "8df7a8af419a2c005a4485f9b83c72e20134eec34f127e4b804666b1e5eca5e8",
+  "cases": [
+    {
+      "id": "methanol",
+      "schemaVersion": 1,
+      "kind": "rdkit-preparation",
+      "document": {
+        "schemaVersion": 1,
+        "kind": "prepared-molecule",
+        "id": "methanol",
+        "original": {
+          "format": "smiles",
+          "data": "CO\n",
+          "source": {
+            "owner": "molsyssketcher-synthetic-corpus",
+            "id": "methanol",
+            "generation": "1"
+          }
+        },
+        "context": {
+          "molecule": {
+            "owner": "molsyssketcher-synthetic-corpus",
+            "id": "methanol",
+            "generation": "1"
+          },
+          "chemicalState": "declared-smiles",
+          "structure": "no-physical-structure",
+          "preparation": {
+            "owner": "molsyssketcher-rdkit-corpus",
+            "id": "methanol",
+            "generation": "1"
+          }
+        },
+        "provider": {
+          "name": "RDKit",
+          "version": "2026.09.2",
+          "route": "python-rdkit-source",
+          "options": {
+            "parser": {
+              "sanitize": true,
+              "removeHs": false,
+              "parseName": false,
+              "allowCXSMILES": false
+            },
+            "layout": {
+              "canonOrient": true,
+              "clearConfs": true,
+              "nFlipsPerSample": 0,
+              "nSample": 0,
+              "sampleSeed": 0,
+              "permuteDeg4Nodes": false,
+              "bondLength": -1.0,
+              "forceRDKit": true,
+              "useRingTemplates": false,
+              "usePathAngleExpansion": true
+            },
+            "preparation": {
+              "kekulize": true,
+              "addChiralHs": false,
+              "wedgeBonds": true,
+              "forceCoords": false,
+              "wavyBonds": false
+            },
+            "drawingCoordinates": "nonphysical",
+            "verification": "sanitized-owned-drawing-copy",
+            "molBlockExport": {
+              "basis": "sanitized-owned-drawing-copy",
+              "kekulize": true
+            },
+            "maxAtoms": 256
+          }
+        },
+        "atoms": [
+          {
+            "id": "atom:0",
+            "providerIndex": 0,
+            "element": "C",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 3
+          },
+          {
+            "id": "atom:1",
+            "providerIndex": 1,
+            "element": "O",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 1
+          }
+        ],
+        "bonds": [
+          {
+            "id": "bond:0",
+            "providerIndex": 0,
+            "atoms": [
+              "atom:0",
+              "atom:1"
+            ]
+          }
+        ],
+        "depiction": {
+          "generation": "1",
+          "profile": "supplied-bijective@1",
+          "coordinates": "drawing",
+          "axes": "x-right-y-up",
+          "atoms": [
+            {
+              "id": "display-atom:0",
+              "atomId": "atom:0",
+              "origin": "mapped",
+              "x": -0.75,
+              "y": 5.551115123125783e-17,
+              "label": ""
+            },
+            {
+              "id": "display-atom:1",
+              "atomId": "atom:1",
+              "origin": "mapped",
+              "x": 0.75,
+              "y": -5.551115123125783e-17,
+              "label": "OH"
+            }
+          ],
+          "bonds": [
+            {
+              "id": "display-bond:0",
+              "bondId": "bond:0",
+              "atoms": [
+                "display-atom:0",
+                "display-atom:1"
+              ],
+              "style": "single"
+            }
+          ],
+          "coverage": {
+            "status": "complete",
+            "missing": []
+          }
+        }
+      },
+      "reference": {
+        "isomericSmiles": "CO",
+        "molBlock": "\n     RDKit          2D\n\n  2  1  0  0  0  0  0  0  0  0999 V2000\n   -0.7500    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.7500   -0.0000    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\nM  END\n",
+        "svg": "<?xml version='1.0' encoding='iso-8859-1'?>\n<svg version='1.1' baseProfile='full'\n              xmlns='http://www.w3.org/2000/svg'\n                      xmlns:rdkit='http://www.rdkit.org/xml'\n                      xmlns:xlink='http://www.w3.org/1999/xlink'\n                  xml:space='preserve'\nwidth='400px' height='300px' viewBox='0 0 400 300'>\n<!-- END OF HEADER -->\n<rect style='opacity:1.0;fill:#FFFFFF;stroke:none' width='400.0' height='300.0' x='0.0' y='0.0'> </rect>\n<path class='bond-0 atom-0 atom-1' d='M 51.2,149.8 L 169.5,149.8' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-0 atom-0 atom-1' d='M 169.5,149.8 L 287.7,149.8' style='fill:none;fill-rule:evenodd;stroke:#FF0000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='atom-1' d='M 296.2 149.9\nQ 296.2 143.1, 299.5 139.3\nQ 302.9 135.5, 309.2 135.5\nQ 315.5 135.5, 318.8 139.3\nQ 322.2 143.1, 322.2 149.9\nQ 322.2 156.7, 318.8 160.7\nQ 315.4 164.5, 309.2 164.5\nQ 302.9 164.5, 299.5 160.7\nQ 296.2 156.8, 296.2 149.9\nM 309.2 161.3\nQ 313.5 161.3, 315.8 158.5\nQ 318.2 155.5, 318.2 149.9\nQ 318.2 144.3, 315.8 141.5\nQ 313.5 138.7, 309.2 138.7\nQ 304.9 138.7, 302.5 141.5\nQ 300.2 144.3, 300.2 149.9\nQ 300.2 155.6, 302.5 158.5\nQ 304.9 161.3, 309.2 161.3\n' fill='#FF0000'/>\n<path class='atom-1' d='M 326.6 135.8\nL 330.4 135.8\nL 330.4 147.8\nL 344.9 147.8\nL 344.9 135.8\nL 348.8 135.8\nL 348.8 164.1\nL 344.9 164.1\nL 344.9 151.0\nL 330.4 151.0\nL 330.4 164.1\nL 326.6 164.1\nL 326.6 135.8\n' fill='#FF0000'/>\n</svg>\n"
+      }
+    },
+    {
+      "id": "benzene",
+      "schemaVersion": 1,
+      "kind": "rdkit-preparation",
+      "document": {
+        "schemaVersion": 1,
+        "kind": "prepared-molecule",
+        "id": "benzene",
+        "original": {
+          "format": "smiles",
+          "data": "c1ccccc1",
+          "source": {
+            "owner": "molsyssketcher-synthetic-corpus",
+            "id": "benzene",
+            "generation": "1"
+          }
+        },
+        "context": {
+          "molecule": {
+            "owner": "molsyssketcher-synthetic-corpus",
+            "id": "benzene",
+            "generation": "1"
+          },
+          "chemicalState": "declared-smiles",
+          "structure": "no-physical-structure",
+          "preparation": {
+            "owner": "molsyssketcher-rdkit-corpus",
+            "id": "benzene",
+            "generation": "1"
+          }
+        },
+        "provider": {
+          "name": "RDKit",
+          "version": "2026.09.2",
+          "route": "python-rdkit-source",
+          "options": {
+            "parser": {
+              "sanitize": true,
+              "removeHs": false,
+              "parseName": false,
+              "allowCXSMILES": false
+            },
+            "layout": {
+              "canonOrient": true,
+              "clearConfs": true,
+              "nFlipsPerSample": 0,
+              "nSample": 0,
+              "sampleSeed": 0,
+              "permuteDeg4Nodes": false,
+              "bondLength": -1.0,
+              "forceRDKit": true,
+              "useRingTemplates": false,
+              "usePathAngleExpansion": true
+            },
+            "preparation": {
+              "kekulize": true,
+              "addChiralHs": false,
+              "wedgeBonds": true,
+              "forceCoords": false,
+              "wavyBonds": false
+            },
+            "drawingCoordinates": "nonphysical",
+            "verification": "sanitized-owned-drawing-copy",
+            "molBlockExport": {
+              "basis": "sanitized-owned-drawing-copy",
+              "kekulize": true
+            },
+            "maxAtoms": 256
+          }
+        },
+        "atoms": [
+          {
+            "id": "atom:0",
+            "providerIndex": 0,
+            "element": "C",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 1
+          },
+          {
+            "id": "atom:1",
+            "providerIndex": 1,
+            "element": "C",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 1
+          },
+          {
+            "id": "atom:2",
+            "providerIndex": 2,
+            "element": "C",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 1
+          },
+          {
+            "id": "atom:3",
+            "providerIndex": 3,
+            "element": "C",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 1
+          },
+          {
+            "id": "atom:4",
+            "providerIndex": 4,
+            "element": "C",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 1
+          },
+          {
+            "id": "atom:5",
+            "providerIndex": 5,
+            "element": "C",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 1
+          }
+        ],
+        "bonds": [
+          {
+            "id": "bond:0",
+            "providerIndex": 0,
+            "atoms": [
+              "atom:0",
+              "atom:1"
+            ]
+          },
+          {
+            "id": "bond:1",
+            "providerIndex": 1,
+            "atoms": [
+              "atom:1",
+              "atom:2"
+            ]
+          },
+          {
+            "id": "bond:2",
+            "providerIndex": 2,
+            "atoms": [
+              "atom:2",
+              "atom:3"
+            ]
+          },
+          {
+            "id": "bond:3",
+            "providerIndex": 3,
+            "atoms": [
+              "atom:3",
+              "atom:4"
+            ]
+          },
+          {
+            "id": "bond:4",
+            "providerIndex": 4,
+            "atoms": [
+              "atom:4",
+              "atom:5"
+            ]
+          },
+          {
+            "id": "bond:5",
+            "providerIndex": 5,
+            "atoms": [
+              "atom:5",
+              "atom:0"
+            ]
+          }
+        ],
+        "depiction": {
+          "generation": "1",
+          "profile": "supplied-bijective@1",
+          "coordinates": "drawing",
+          "axes": "x-right-y-up",
+          "atoms": [
+            {
+              "id": "display-atom:0",
+              "atomId": "atom:0",
+              "origin": "mapped",
+              "x": 1.5000000000000004,
+              "y": 7.401486830834377e-17,
+              "label": ""
+            },
+            {
+              "id": "display-atom:1",
+              "atomId": "atom:1",
+              "origin": "mapped",
+              "x": 0.7500000000000006,
+              "y": 1.299038105676658,
+              "label": ""
+            },
+            {
+              "id": "display-atom:2",
+              "atomId": "atom:2",
+              "origin": "mapped",
+              "x": -0.7499999999999996,
+              "y": 1.2990381056766582,
+              "label": ""
+            },
+            {
+              "id": "display-atom:3",
+              "atomId": "atom:3",
+              "origin": "mapped",
+              "x": -1.5,
+              "y": 2.5771188818044677e-16,
+              "label": ""
+            },
+            {
+              "id": "display-atom:4",
+              "atomId": "atom:4",
+              "origin": "mapped",
+              "x": -0.7500000000000006,
+              "y": -1.2990381056766578,
+              "label": ""
+            },
+            {
+              "id": "display-atom:5",
+              "atomId": "atom:5",
+              "origin": "mapped",
+              "x": 0.7499999999999993,
+              "y": -1.2990381056766587,
+              "label": ""
+            }
+          ],
+          "bonds": [
+            {
+              "id": "display-bond:0",
+              "bondId": "bond:0",
+              "atoms": [
+                "display-atom:0",
+                "display-atom:1"
+              ],
+              "style": "single"
+            },
+            {
+              "id": "display-bond:1",
+              "bondId": "bond:1",
+              "atoms": [
+                "display-atom:1",
+                "display-atom:2"
+              ],
+              "style": "double"
+            },
+            {
+              "id": "display-bond:2",
+              "bondId": "bond:2",
+              "atoms": [
+                "display-atom:2",
+                "display-atom:3"
+              ],
+              "style": "single"
+            },
+            {
+              "id": "display-bond:3",
+              "bondId": "bond:3",
+              "atoms": [
+                "display-atom:3",
+                "display-atom:4"
+              ],
+              "style": "double"
+            },
+            {
+              "id": "display-bond:4",
+              "bondId": "bond:4",
+              "atoms": [
+                "display-atom:4",
+                "display-atom:5"
+              ],
+              "style": "single"
+            },
+            {
+              "id": "display-bond:5",
+              "bondId": "bond:5",
+              "atoms": [
+                "display-atom:5",
+                "display-atom:0"
+              ],
+              "style": "double"
+            }
+          ],
+          "coverage": {
+            "status": "complete",
+            "missing": []
+          }
+        }
+      },
+      "reference": {
+        "isomericSmiles": "c1ccccc1",
+        "molBlock": "\n     RDKit          2D\n\n  6  6  0  0  0  0  0  0  0  0999 V2000\n    1.5000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.7500    1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.7500    1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.5000    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.7500   -1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.7500   -1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  3  2  0\n  3  4  1  0\n  4  5  2  0\n  5  6  1  0\n  6  1  2  0\nM  END\n",
+        "svg": "<?xml version='1.0' encoding='iso-8859-1'?>\n<svg version='1.1' baseProfile='full'\n              xmlns='http://www.w3.org/2000/svg'\n                      xmlns:rdkit='http://www.rdkit.org/xml'\n                      xmlns:xlink='http://www.w3.org/1999/xlink'\n                  xml:space='preserve'\nwidth='400px' height='300px' viewBox='0 0 400 300'>\n<!-- END OF HEADER -->\n<rect style='opacity:1.0;fill:#FFFFFF;stroke:none' width='400.0' height='300.0' x='0.0' y='0.0'> </rect>\n<path class='bond-0 atom-0 atom-1' d='M 355.9,150.0 L 277.9,15.0' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-1 atom-1 atom-2' d='M 277.9,15.0 L 122.1,15.0' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-1 atom-1 atom-2' d='M 264.4,38.4 L 135.6,38.4' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-2 atom-2 atom-3' d='M 122.1,15.0 L 44.1,150.0' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-3 atom-3 atom-4' d='M 44.1,150.0 L 122.1,285.0' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-3 atom-3 atom-4' d='M 71.1,150.0 L 135.6,261.6' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-4 atom-4 atom-5' d='M 122.1,285.0 L 277.9,285.0' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-5 atom-5 atom-0' d='M 277.9,285.0 L 355.9,150.0' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-5 atom-5 atom-0' d='M 264.4,261.6 L 328.9,150.0' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path d='M 352.0,143.2 L 355.9,150.0 L 352.0,156.7' style='fill:none;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />\n<path d='M 281.8,21.8 L 277.9,15.0 L 270.1,15.0' style='fill:none;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />\n<path d='M 129.9,15.0 L 122.1,15.0 L 118.2,21.8' style='fill:none;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />\n<path d='M 48.0,143.2 L 44.1,150.0 L 48.0,156.7' style='fill:none;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />\n<path d='M 118.2,278.2 L 122.1,285.0 L 129.9,285.0' style='fill:none;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />\n<path d='M 270.1,285.0 L 277.9,285.0 L 281.8,278.2' style='fill:none;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />\n</svg>\n"
+      }
+    },
+    {
+      "id": "salt",
+      "schemaVersion": 1,
+      "kind": "rdkit-preparation",
+      "document": {
+        "schemaVersion": 1,
+        "kind": "prepared-molecule",
+        "id": "salt",
+        "original": {
+          "format": "smiles",
+          "data": "[Na+].[Cl-]",
+          "source": {
+            "owner": "molsyssketcher-synthetic-corpus",
+            "id": "salt",
+            "generation": "1"
+          }
+        },
+        "context": {
+          "molecule": {
+            "owner": "molsyssketcher-synthetic-corpus",
+            "id": "salt",
+            "generation": "1"
+          },
+          "chemicalState": "declared-smiles",
+          "structure": "no-physical-structure",
+          "preparation": {
+            "owner": "molsyssketcher-rdkit-corpus",
+            "id": "salt",
+            "generation": "1"
+          }
+        },
+        "provider": {
+          "name": "RDKit",
+          "version": "2026.09.2",
+          "route": "python-rdkit-source",
+          "options": {
+            "parser": {
+              "sanitize": true,
+              "removeHs": false,
+              "parseName": false,
+              "allowCXSMILES": false
+            },
+            "layout": {
+              "canonOrient": true,
+              "clearConfs": true,
+              "nFlipsPerSample": 0,
+              "nSample": 0,
+              "sampleSeed": 0,
+              "permuteDeg4Nodes": false,
+              "bondLength": -1.0,
+              "forceRDKit": true,
+              "useRingTemplates": false,
+              "usePathAngleExpansion": true
+            },
+            "preparation": {
+              "kekulize": true,
+              "addChiralHs": false,
+              "wedgeBonds": true,
+              "forceCoords": false,
+              "wavyBonds": false
+            },
+            "drawingCoordinates": "nonphysical",
+            "verification": "sanitized-owned-drawing-copy",
+            "molBlockExport": {
+              "basis": "sanitized-owned-drawing-copy",
+              "kekulize": true
+            },
+            "maxAtoms": 256
+          }
+        },
+        "atoms": [
+          {
+            "id": "atom:0",
+            "providerIndex": 0,
+            "element": "Na",
+            "isotope": null,
+            "formalCharge": 1,
+            "hydrogenCount": 0
+          },
+          {
+            "id": "atom:1",
+            "providerIndex": 1,
+            "element": "Cl",
+            "isotope": null,
+            "formalCharge": -1,
+            "hydrogenCount": 0
+          }
+        ],
+        "bonds": [],
+        "depiction": {
+          "generation": "1",
+          "profile": "supplied-bijective@1",
+          "coordinates": "drawing",
+          "axes": "x-right-y-up",
+          "atoms": [
+            {
+              "id": "display-atom:0",
+              "atomId": "atom:0",
+              "origin": "mapped",
+              "x": 0.0,
+              "y": 0.0,
+              "label": "Na+"
+            },
+            {
+              "id": "display-atom:1",
+              "atomId": "atom:1",
+              "origin": "mapped",
+              "x": 1.0,
+              "y": 0.0,
+              "label": "Cl-"
+            }
+          ],
+          "bonds": [],
+          "coverage": {
+            "status": "complete",
+            "missing": []
+          }
+        }
+      },
+      "reference": {
+        "isomericSmiles": "[Cl-].[Na+]",
+        "molBlock": "\n     RDKit          2D\n\n  2  0  0  0  0  0  0  0  0  0999 V2000\n    0.0000    0.0000    0.0000 Na  0  0  0  0  0 15  0  0  0  0  0  0\n    1.0000    0.0000    0.0000 Cl  0  0  0  0  0  0  0  0  0  0  0  0\nM  CHG  2   1   1   2  -1\nM  END\n",
+        "svg": "<?xml version='1.0' encoding='iso-8859-1'?>\n<svg version='1.1' baseProfile='full'\n              xmlns='http://www.w3.org/2000/svg'\n                      xmlns:rdkit='http://www.rdkit.org/xml'\n                      xmlns:xlink='http://www.w3.org/1999/xlink'\n                  xml:space='preserve'\nwidth='400px' height='300px' viewBox='0 0 400 300'>\n<!-- END OF HEADER -->\n<rect style='opacity:1.0;fill:#FFFFFF;stroke:none' width='400.0' height='300.0' x='0.0' y='0.0'> </rect>\n<path class='atom-0' d='M 89.4 135.7\nL 98.7 150.7\nQ 99.6 152.1, 101.1 154.8\nQ 102.5 157.5, 102.6 157.7\nL 102.6 135.7\nL 106.4 135.7\nL 106.4 164.0\nL 102.5 164.0\nL 92.5 147.6\nQ 91.4 145.7, 90.1 143.5\nQ 88.9 141.3, 88.6 140.6\nL 88.6 164.0\nL 84.9 164.0\nL 84.9 135.7\nL 89.4 135.7\n' fill='#000000'/>\n<path class='atom-0' d='M 111.6 158.4\nQ 111.6 155.1, 114.2 153.3\nQ 116.9 151.5, 121.7 151.5\nL 124.8 151.5\nL 124.8 150.7\nQ 124.8 148.2, 123.7 147.1\nQ 122.6 146.0, 120.1 146.0\nQ 118.4 146.0, 117.2 146.3\nQ 115.9 146.6, 113.9 147.5\nL 112.8 144.9\nQ 116.5 143.1, 120.2 143.1\nQ 124.5 143.1, 126.5 144.9\nQ 128.5 146.8, 128.5 150.8\nL 128.5 164.0\nL 125.6 164.0\nQ 125.6 163.8, 125.4 163.2\nQ 125.3 162.6, 125.1 161.6\nQ 122.2 164.5, 118.4 164.5\nQ 115.3 164.5, 113.4 162.8\nQ 111.6 161.2, 111.6 158.4\nM 115.4 158.3\nQ 115.4 159.9, 116.3 160.7\nQ 117.3 161.5, 119.1 161.5\nQ 120.7 161.5, 122.2 160.8\nQ 123.7 160.0, 124.8 158.7\nL 124.8 154.3\nL 122.0 154.3\nQ 118.7 154.3, 117.0 155.3\nQ 115.4 156.3, 115.4 158.3\n' fill='#000000'/>\n<path class='atom-0' d='M 133.5 144.2\nL 138.5 144.2\nL 138.5 139.0\nL 140.7 139.0\nL 140.7 144.2\nL 145.8 144.2\nL 145.8 146.1\nL 140.7 146.1\nL 140.7 151.4\nL 138.5 151.4\nL 138.5 146.1\nL 133.5 146.1\nL 133.5 144.2\n' fill='#000000'/>\n<path class='atom-1' d='M 272.2 150.8\nQ 272.2 143.8, 275.5 140.1\nQ 278.8 136.4, 285.1 136.4\nQ 290.9 136.4, 294.0 140.5\nL 291.4 142.6\nQ 289.1 139.6, 285.1 139.6\nQ 280.8 139.6, 278.5 142.5\nQ 276.3 145.4, 276.3 150.8\nQ 276.3 156.4, 278.6 159.3\nQ 280.9 162.2, 285.5 162.2\nQ 288.6 162.2, 292.3 160.3\nL 293.4 163.3\nQ 291.9 164.2, 289.7 164.8\nQ 287.4 165.4, 284.9 165.4\nQ 278.8 165.4, 275.5 161.6\nQ 272.2 157.8, 272.2 150.8\n' fill='#00CC00'/>\n<path class='atom-1' d='M 297.0 134.6\nL 300.6 134.6\nL 300.6 165.0\nL 297.0 165.0\nL 297.0 134.6\n' fill='#00CC00'/>\n<path class='atom-1' d='M 305.4 140.3\nL 315.1 140.3\nL 315.1 142.5\nL 305.4 142.5\nL 305.4 140.3\n' fill='#00CC00'/>\n</svg>\n"
+      }
+    },
+    {
+      "id": "isotope",
+      "schemaVersion": 1,
+      "kind": "rdkit-preparation",
+      "document": {
+        "schemaVersion": 1,
+        "kind": "prepared-molecule",
+        "id": "isotope",
+        "original": {
+          "format": "smiles",
+          "data": "[13CH3]O",
+          "source": {
+            "owner": "molsyssketcher-synthetic-corpus",
+            "id": "isotope",
+            "generation": "1"
+          }
+        },
+        "context": {
+          "molecule": {
+            "owner": "molsyssketcher-synthetic-corpus",
+            "id": "isotope",
+            "generation": "1"
+          },
+          "chemicalState": "declared-smiles",
+          "structure": "no-physical-structure",
+          "preparation": {
+            "owner": "molsyssketcher-rdkit-corpus",
+            "id": "isotope",
+            "generation": "1"
+          }
+        },
+        "provider": {
+          "name": "RDKit",
+          "version": "2026.09.2",
+          "route": "python-rdkit-source",
+          "options": {
+            "parser": {
+              "sanitize": true,
+              "removeHs": false,
+              "parseName": false,
+              "allowCXSMILES": false
+            },
+            "layout": {
+              "canonOrient": true,
+              "clearConfs": true,
+              "nFlipsPerSample": 0,
+              "nSample": 0,
+              "sampleSeed": 0,
+              "permuteDeg4Nodes": false,
+              "bondLength": -1.0,
+              "forceRDKit": true,
+              "useRingTemplates": false,
+              "usePathAngleExpansion": true
+            },
+            "preparation": {
+              "kekulize": true,
+              "addChiralHs": false,
+              "wedgeBonds": true,
+              "forceCoords": false,
+              "wavyBonds": false
+            },
+            "drawingCoordinates": "nonphysical",
+            "verification": "sanitized-owned-drawing-copy",
+            "molBlockExport": {
+              "basis": "sanitized-owned-drawing-copy",
+              "kekulize": true
+            },
+            "maxAtoms": 256
+          }
+        },
+        "atoms": [
+          {
+            "id": "atom:0",
+            "providerIndex": 0,
+            "element": "C",
+            "isotope": 13,
+            "formalCharge": 0,
+            "hydrogenCount": 3
+          },
+          {
+            "id": "atom:1",
+            "providerIndex": 1,
+            "element": "O",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 1
+          }
+        ],
+        "bonds": [
+          {
+            "id": "bond:0",
+            "providerIndex": 0,
+            "atoms": [
+              "atom:0",
+              "atom:1"
+            ]
+          }
+        ],
+        "depiction": {
+          "generation": "1",
+          "profile": "supplied-bijective@1",
+          "coordinates": "drawing",
+          "axes": "x-right-y-up",
+          "atoms": [
+            {
+              "id": "display-atom:0",
+              "atomId": "atom:0",
+              "origin": "mapped",
+              "x": -0.75,
+              "y": 5.551115123125783e-17,
+              "label": "13CH3"
+            },
+            {
+              "id": "display-atom:1",
+              "atomId": "atom:1",
+              "origin": "mapped",
+              "x": 0.75,
+              "y": -5.551115123125783e-17,
+              "label": "OH"
+            }
+          ],
+          "bonds": [
+            {
+              "id": "display-bond:0",
+              "bondId": "bond:0",
+              "atoms": [
+                "display-atom:0",
+                "display-atom:1"
+              ],
+              "style": "single"
+            }
+          ],
+          "coverage": {
+            "status": "complete",
+            "missing": []
+          }
+        }
+      },
+      "reference": {
+        "isomericSmiles": "[13CH3]O",
+        "molBlock": "\n     RDKit          2D\n\n  2  1  0  0  0  0  0  0  0  0999 V2000\n   -0.7500    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.7500   -0.0000    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\nM  ISO  1   1  13\nM  END\n",
+        "svg": "<?xml version='1.0' encoding='iso-8859-1'?>\n<svg version='1.1' baseProfile='full'\n              xmlns='http://www.w3.org/2000/svg'\n                      xmlns:rdkit='http://www.rdkit.org/xml'\n                      xmlns:xlink='http://www.w3.org/1999/xlink'\n                  xml:space='preserve'\nwidth='400px' height='300px' viewBox='0 0 400 300'>\n<!-- END OF HEADER -->\n<rect style='opacity:1.0;fill:#FFFFFF;stroke:none' width='400.0' height='300.0' x='0.0' y='0.0'> </rect>\n<path class='bond-0 atom-0 atom-1' d='M 118.8,152.2 L 199.8,152.2' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-0 atom-0 atom-1' d='M 199.8,152.2 L 280.8,152.2' style='fill:none;fill-rule:evenodd;stroke:#FF0000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='atom-0' d='M 61.1 149.9\nL 65.2 149.9\nL 65.2 135.9\nL 60.7 137.3\nL 60.0 135.7\nL 65.8 133.2\nL 67.6 133.5\nL 67.6 149.9\nL 71.3 149.9\nL 71.3 152.0\nL 61.1 152.0\nL 61.1 149.9\n' fill='#000000'/>\n<path class='atom-0' d='M 83.3 142.1\nQ 85.2 142.7, 86.0 143.8\nQ 86.9 145.0, 86.9 146.9\nQ 86.9 148.4, 86.1 149.7\nQ 85.3 150.9, 83.9 151.6\nQ 82.4 152.2, 80.5 152.2\nQ 78.5 152.2, 77.0 151.6\nQ 75.5 150.8, 74.4 149.4\nL 75.9 147.9\nQ 77.0 149.2, 78.0 149.7\nQ 79.0 150.1, 80.5 150.1\nQ 82.2 150.1, 83.3 149.2\nQ 84.3 148.3, 84.3 146.8\nQ 84.3 144.9, 83.2 144.1\nQ 82.1 143.2, 79.9 143.2\nL 78.5 143.2\nL 78.5 141.3\nL 79.7 141.3\nQ 81.7 141.3, 82.8 140.4\nQ 83.9 139.5, 83.9 137.9\nQ 83.9 136.6, 83.0 135.9\nQ 82.1 135.2, 80.6 135.2\nQ 79.0 135.2, 78.0 135.7\nQ 77.1 136.3, 76.3 137.7\nL 74.5 136.7\nQ 75.2 135.2, 76.8 134.1\nQ 78.3 133.1, 80.6 133.1\nQ 83.3 133.1, 84.9 134.4\nQ 86.5 135.7, 86.5 137.9\nQ 86.5 139.4, 85.7 140.4\nQ 84.9 141.5, 83.3 142.1\n' fill='#000000'/>\n<path class='atom-0' d='M 90.4 152.3\nQ 90.4 145.2, 93.7 141.6\nQ 97.0 137.8, 103.3 137.8\nQ 109.1 137.8, 112.3 142.0\nL 109.6 144.1\nQ 107.3 141.1, 103.3 141.1\nQ 99.0 141.1, 96.7 144.0\nQ 94.5 146.8, 94.5 152.3\nQ 94.5 157.9, 96.8 160.8\nQ 99.2 163.6, 103.7 163.6\nQ 106.9 163.6, 110.5 161.8\nL 111.6 164.8\nQ 110.1 165.7, 107.9 166.3\nQ 105.7 166.8, 103.2 166.8\nQ 97.0 166.8, 93.7 163.1\nQ 90.4 159.3, 90.4 152.3\n' fill='#000000'/>\n<path class='atom-1' d='M 287.4 152.2\nQ 287.4 145.4, 290.7 141.6\nQ 294.1 137.8, 300.4 137.8\nQ 306.7 137.8, 310.0 141.6\nQ 313.4 145.4, 313.4 152.2\nQ 313.4 159.1, 310.0 163.0\nQ 306.6 166.9, 300.4 166.9\nQ 294.1 166.9, 290.7 163.0\nQ 287.4 159.2, 287.4 152.2\nM 300.4 163.7\nQ 304.7 163.7, 307.0 160.8\nQ 309.4 157.9, 309.4 152.2\nQ 309.4 146.7, 307.0 143.9\nQ 304.7 141.0, 300.4 141.0\nQ 296.1 141.0, 293.7 143.8\nQ 291.4 146.6, 291.4 152.2\nQ 291.4 158.0, 293.7 160.8\nQ 296.1 163.7, 300.4 163.7\n' fill='#FF0000'/>\n<path class='atom-1' d='M 317.8 138.2\nL 321.6 138.2\nL 321.6 150.2\nL 336.1 150.2\nL 336.1 138.2\nL 340.0 138.2\nL 340.0 166.5\nL 336.1 166.5\nL 336.1 153.4\nL 321.6 153.4\nL 321.6 166.5\nL 317.8 166.5\nL 317.8 138.2\n' fill='#FF0000'/>\n</svg>\n"
+      }
+    },
+    {
+      "id": "explicit-hydrogen",
+      "schemaVersion": 1,
+      "kind": "rdkit-preparation",
+      "document": {
+        "schemaVersion": 1,
+        "kind": "prepared-molecule",
+        "id": "explicit-hydrogen",
+        "original": {
+          "format": "smiles",
+          "data": "[H]OC",
+          "source": {
+            "owner": "molsyssketcher-synthetic-corpus",
+            "id": "explicit-hydrogen",
+            "generation": "1"
+          }
+        },
+        "context": {
+          "molecule": {
+            "owner": "molsyssketcher-synthetic-corpus",
+            "id": "explicit-hydrogen",
+            "generation": "1"
+          },
+          "chemicalState": "declared-smiles",
+          "structure": "no-physical-structure",
+          "preparation": {
+            "owner": "molsyssketcher-rdkit-corpus",
+            "id": "explicit-hydrogen",
+            "generation": "1"
+          }
+        },
+        "provider": {
+          "name": "RDKit",
+          "version": "2026.09.2",
+          "route": "python-rdkit-source",
+          "options": {
+            "parser": {
+              "sanitize": true,
+              "removeHs": false,
+              "parseName": false,
+              "allowCXSMILES": false
+            },
+            "layout": {
+              "canonOrient": true,
+              "clearConfs": true,
+              "nFlipsPerSample": 0,
+              "nSample": 0,
+              "sampleSeed": 0,
+              "permuteDeg4Nodes": false,
+              "bondLength": -1.0,
+              "forceRDKit": true,
+              "useRingTemplates": false,
+              "usePathAngleExpansion": true
+            },
+            "preparation": {
+              "kekulize": true,
+              "addChiralHs": false,
+              "wedgeBonds": true,
+              "forceCoords": false,
+              "wavyBonds": false
+            },
+            "drawingCoordinates": "nonphysical",
+            "verification": "sanitized-owned-drawing-copy",
+            "molBlockExport": {
+              "basis": "sanitized-owned-drawing-copy",
+              "kekulize": true
+            },
+            "maxAtoms": 256
+          }
+        },
+        "atoms": [
+          {
+            "id": "atom:0",
+            "providerIndex": 0,
+            "element": "H",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 0
+          },
+          {
+            "id": "atom:1",
+            "providerIndex": 1,
+            "element": "O",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 0
+          },
+          {
+            "id": "atom:2",
+            "providerIndex": 2,
+            "element": "C",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 3
+          }
+        ],
+        "bonds": [
+          {
+            "id": "bond:0",
+            "providerIndex": 0,
+            "atoms": [
+              "atom:0",
+              "atom:1"
+            ]
+          },
+          {
+            "id": "bond:1",
+            "providerIndex": 1,
+            "atoms": [
+              "atom:1",
+              "atom:2"
+            ]
+          }
+        ],
+        "depiction": {
+          "generation": "1",
+          "profile": "supplied-bijective@1",
+          "coordinates": "drawing",
+          "axes": "x-right-y-up",
+          "atoms": [
+            {
+              "id": "display-atom:0",
+              "atomId": "atom:0",
+              "origin": "mapped",
+              "x": 1.299038105676658,
+              "y": -0.25000000000000033,
+              "label": "H"
+            },
+            {
+              "id": "display-atom:1",
+              "atomId": "atom:1",
+              "origin": "mapped",
+              "x": 0.0,
+              "y": 0.5000000000000001,
+              "label": "O"
+            },
+            {
+              "id": "display-atom:2",
+              "atomId": "atom:2",
+              "origin": "mapped",
+              "x": -1.299038105676658,
+              "y": -0.2499999999999997,
+              "label": ""
+            }
+          ],
+          "bonds": [
+            {
+              "id": "display-bond:0",
+              "bondId": "bond:0",
+              "atoms": [
+                "display-atom:0",
+                "display-atom:1"
+              ],
+              "style": "single"
+            },
+            {
+              "id": "display-bond:1",
+              "bondId": "bond:1",
+              "atoms": [
+                "display-atom:1",
+                "display-atom:2"
+              ],
+              "style": "single"
+            }
+          ],
+          "coverage": {
+            "status": "complete",
+            "missing": []
+          }
+        }
+      },
+      "reference": {
+        "isomericSmiles": "[H]OC",
+        "molBlock": "\n     RDKit          2D\n\n  3  2  0  0  0  0  0  0  0  0999 V2000\n    1.2990   -0.2500    0.0000 H   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000    0.5000    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.2990   -0.2500    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  3  1  0\nM  END\n",
+        "svg": "<?xml version='1.0' encoding='iso-8859-1'?>\n<svg version='1.1' baseProfile='full'\n              xmlns='http://www.w3.org/2000/svg'\n                      xmlns:rdkit='http://www.rdkit.org/xml'\n                      xmlns:xlink='http://www.w3.org/1999/xlink'\n                  xml:space='preserve'\nwidth='400px' height='300px' viewBox='0 0 400 300'>\n<!-- END OF HEADER -->\n<rect style='opacity:1.0;fill:#FFFFFF;stroke:none' width='400.0' height='300.0' x='0.0' y='0.0'> </rect>\n<path class='bond-0 atom-0 atom-1' d='M 346.1,188.8 L 280.0,150.6' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-0 atom-0 atom-1' d='M 280.0,150.6 L 213.9,112.5' style='fill:none;fill-rule:evenodd;stroke:#FF0000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-1 atom-1 atom-2' d='M 175.0,112.5 L 100.1,155.7' style='fill:none;fill-rule:evenodd;stroke:#FF0000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-1 atom-1 atom-2' d='M 100.1,155.7 L 25.3,198.9' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='atom-0' d='M 352.6 184.8\nL 356.4 184.8\nL 356.4 196.8\nL 370.9 196.8\nL 370.9 184.8\nL 374.7 184.8\nL 374.7 213.1\nL 370.9 213.1\nL 370.9 200.0\nL 356.4 200.0\nL 356.4 213.1\nL 352.6 213.1\nL 352.6 184.8\n' fill='#000000'/>\n<path class='atom-1' d='M 181.5 101.3\nQ 181.5 94.5, 184.8 90.7\nQ 188.2 86.9, 194.5 86.9\nQ 200.7 86.9, 204.1 90.7\nQ 207.5 94.5, 207.5 101.3\nQ 207.5 108.2, 204.1 112.1\nQ 200.7 116.0, 194.5 116.0\nQ 188.2 116.0, 184.8 112.1\nQ 181.5 108.2, 181.5 101.3\nM 194.5 112.8\nQ 198.8 112.8, 201.1 109.9\nQ 203.5 107.0, 203.5 101.3\nQ 203.5 95.8, 201.1 93.0\nQ 198.8 90.1, 194.5 90.1\nQ 190.1 90.1, 187.8 92.9\nQ 185.5 95.7, 185.5 101.3\nQ 185.5 107.0, 187.8 109.9\nQ 190.1 112.8, 194.5 112.8\n' fill='#FF0000'/>\n</svg>\n"
+      }
+    },
+    {
+      "id": "tetra-a",
+      "schemaVersion": 1,
+      "kind": "rdkit-preparation",
+      "document": {
+        "schemaVersion": 1,
+        "kind": "prepared-molecule",
+        "id": "tetra-a",
+        "original": {
+          "format": "smiles",
+          "data": "N[C@@H](C)C(=O)O",
+          "source": {
+            "owner": "molsyssketcher-synthetic-corpus",
+            "id": "tetra-a",
+            "generation": "1"
+          }
+        },
+        "context": {
+          "molecule": {
+            "owner": "molsyssketcher-synthetic-corpus",
+            "id": "tetra-a",
+            "generation": "1"
+          },
+          "chemicalState": "declared-smiles",
+          "structure": "no-physical-structure",
+          "preparation": {
+            "owner": "molsyssketcher-rdkit-corpus",
+            "id": "tetra-a",
+            "generation": "1"
+          }
+        },
+        "provider": {
+          "name": "RDKit",
+          "version": "2026.09.2",
+          "route": "python-rdkit-source",
+          "options": {
+            "parser": {
+              "sanitize": true,
+              "removeHs": false,
+              "parseName": false,
+              "allowCXSMILES": false
+            },
+            "layout": {
+              "canonOrient": true,
+              "clearConfs": true,
+              "nFlipsPerSample": 0,
+              "nSample": 0,
+              "sampleSeed": 0,
+              "permuteDeg4Nodes": false,
+              "bondLength": -1.0,
+              "forceRDKit": true,
+              "useRingTemplates": false,
+              "usePathAngleExpansion": true
+            },
+            "preparation": {
+              "kekulize": true,
+              "addChiralHs": false,
+              "wedgeBonds": true,
+              "forceCoords": false,
+              "wavyBonds": false
+            },
+            "drawingCoordinates": "nonphysical",
+            "verification": "sanitized-owned-drawing-copy",
+            "molBlockExport": {
+              "basis": "sanitized-owned-drawing-copy",
+              "kekulize": true
+            },
+            "maxAtoms": 256
+          }
+        },
+        "atoms": [
+          {
+            "id": "atom:0",
+            "providerIndex": 0,
+            "element": "N",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 2
+          },
+          {
+            "id": "atom:1",
+            "providerIndex": 1,
+            "element": "C",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 1
+          },
+          {
+            "id": "atom:2",
+            "providerIndex": 2,
+            "element": "C",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 3
+          },
+          {
+            "id": "atom:3",
+            "providerIndex": 3,
+            "element": "C",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 0
+          },
+          {
+            "id": "atom:4",
+            "providerIndex": 4,
+            "element": "O",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 0
+          },
+          {
+            "id": "atom:5",
+            "providerIndex": 5,
+            "element": "O",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 1
+          }
+        ],
+        "bonds": [
+          {
+            "id": "bond:0",
+            "providerIndex": 0,
+            "atoms": [
+              "atom:0",
+              "atom:1"
+            ]
+          },
+          {
+            "id": "bond:1",
+            "providerIndex": 1,
+            "atoms": [
+              "atom:1",
+              "atom:2"
+            ]
+          },
+          {
+            "id": "bond:2",
+            "providerIndex": 2,
+            "atoms": [
+              "atom:1",
+              "atom:3"
+            ]
+          },
+          {
+            "id": "bond:3",
+            "providerIndex": 3,
+            "atoms": [
+              "atom:3",
+              "atom:4"
+            ]
+          },
+          {
+            "id": "bond:4",
+            "providerIndex": 4,
+            "atoms": [
+              "atom:3",
+              "atom:5"
+            ]
+          }
+        ],
+        "depiction": {
+          "generation": "1",
+          "profile": "supplied-bijective@1",
+          "coordinates": "drawing",
+          "axes": "x-right-y-up",
+          "atoms": [
+            {
+              "id": "display-atom:0",
+              "atomId": "atom:0",
+              "origin": "mapped",
+              "x": 1.5000000000000018,
+              "y": -1.2990381056766565,
+              "label": "NH2"
+            },
+            {
+              "id": "display-atom:1",
+              "atomId": "atom:1",
+              "origin": "mapped",
+              "x": 0.7500000000000002,
+              "y": 7.216449660063518e-16,
+              "label": ""
+            },
+            {
+              "id": "display-atom:2",
+              "atomId": "atom:2",
+              "origin": "mapped",
+              "x": 1.4999999999999987,
+              "y": 1.2990381056766593,
+              "label": ""
+            },
+            {
+              "id": "display-atom:3",
+              "atomId": "atom:3",
+              "origin": "mapped",
+              "x": -0.7500000000000002,
+              "y": -7.216449660063518e-16,
+              "label": ""
+            },
+            {
+              "id": "display-atom:4",
+              "atomId": "atom:4",
+              "origin": "mapped",
+              "x": -1.500000000000002,
+              "y": 1.299038105676657,
+              "label": "O"
+            },
+            {
+              "id": "display-atom:5",
+              "atomId": "atom:5",
+              "origin": "mapped",
+              "x": -1.4999999999999987,
+              "y": -1.2990381056766596,
+              "label": "OH"
+            }
+          ],
+          "bonds": [
+            {
+              "id": "display-bond:0",
+              "bondId": "bond:0",
+              "atoms": [
+                "display-atom:0",
+                "display-atom:1"
+              ],
+              "style": "single"
+            },
+            {
+              "id": "display-bond:1",
+              "bondId": "bond:1",
+              "atoms": [
+                "display-atom:1",
+                "display-atom:2"
+              ],
+              "style": "hashed-wedge",
+              "from": "display-atom:1"
+            },
+            {
+              "id": "display-bond:2",
+              "bondId": "bond:2",
+              "atoms": [
+                "display-atom:1",
+                "display-atom:3"
+              ],
+              "style": "single"
+            },
+            {
+              "id": "display-bond:3",
+              "bondId": "bond:3",
+              "atoms": [
+                "display-atom:3",
+                "display-atom:4"
+              ],
+              "style": "double"
+            },
+            {
+              "id": "display-bond:4",
+              "bondId": "bond:4",
+              "atoms": [
+                "display-atom:3",
+                "display-atom:5"
+              ],
+              "style": "single"
+            }
+          ],
+          "coverage": {
+            "status": "complete",
+            "missing": []
+          }
+        }
+      },
+      "reference": {
+        "isomericSmiles": "C[C@H](N)C(=O)O",
+        "molBlock": "\n     RDKit          2D\n\n  6  5  0  0  0  0  0  0  0  0999 V2000\n    1.5000   -1.2990    0.0000 N   0  0  0  0  0  0  0  0  0  0  0  0\n    0.7500    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.5000    1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.7500   -0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.5000    1.2990    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.5000   -1.2990    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  3  1  6\n  2  4  1  0\n  4  5  2  0\n  4  6  1  0\nM  END\n",
+        "svg": "<?xml version='1.0' encoding='iso-8859-1'?>\n<svg version='1.1' baseProfile='full'\n              xmlns='http://www.w3.org/2000/svg'\n                      xmlns:rdkit='http://www.rdkit.org/xml'\n                      xmlns:xlink='http://www.w3.org/1999/xlink'\n                  xml:space='preserve'\nwidth='400px' height='300px' viewBox='0 0 400 300'>\n<!-- END OF HEADER -->\n<rect style='opacity:1.0;fill:#FFFFFF;stroke:none' width='400.0' height='300.0' x='0.0' y='0.0'> </rect>\n<path class='bond-0 atom-0 atom-1' d='M 302.9,229.7 L 277.8,186.3' style='fill:none;fill-rule:evenodd;stroke:#0000FF;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-0 atom-0 atom-1' d='M 277.8,186.3 L 252.8,143.0' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-1 atom-1 atom-2' d='M 254.3,139.9 L 254.8,140.1' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-1 atom-1 atom-2' d='M 255.8,136.7 L 256.7,137.3' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-1 atom-1 atom-2' d='M 257.3,133.6 L 258.7,134.4' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-1 atom-1 atom-2' d='M 258.8,130.5 L 260.6,131.5' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-1 atom-1 atom-2' d='M 260.3,127.4 L 262.6,128.7' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-1 atom-1 atom-2' d='M 261.8,124.2 L 264.5,125.8' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-1 atom-1 atom-2' d='M 263.4,121.1 L 266.5,122.9' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-1 atom-1 atom-2' d='M 264.9,118.0 L 268.5,120.1' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-1 atom-1 atom-2' d='M 266.4,114.9 L 270.4,117.2' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-1 atom-1 atom-2' d='M 267.9,111.7 L 272.4,114.3' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-1 atom-1 atom-2' d='M 269.4,108.6 L 274.3,111.5' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-1 atom-1 atom-2' d='M 270.9,105.5 L 276.3,108.6' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-1 atom-1 atom-2' d='M 272.4,102.4 L 278.2,105.7' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-1 atom-1 atom-2' d='M 273.9,99.2 L 280.2,102.9' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-1 atom-1 atom-2' d='M 275.4,96.1 L 282.1,100.0' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-1 atom-1 atom-2' d='M 276.9,93.0 L 284.1,97.1' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-1 atom-1 atom-2' d='M 278.4,89.9 L 286.0,94.3' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-1 atom-1 atom-2' d='M 279.9,86.7 L 288.0,91.4' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-1 atom-1 atom-2' d='M 281.4,83.6 L 289.9,88.5' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-1 atom-1 atom-2' d='M 282.9,80.5 L 291.9,85.7' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-1 atom-1 atom-2' d='M 284.4,77.4 L 293.9,82.8' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-1 atom-1 atom-2' d='M 285.9,74.2 L 295.8,80.0' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-1 atom-1 atom-2' d='M 287.4,71.1 L 297.8,77.1' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-1 atom-1 atom-2' d='M 288.9,68.0 L 299.7,74.2' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-1 atom-1 atom-2' d='M 290.4,64.9 L 301.7,71.4' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-1 atom-1 atom-2' d='M 291.9,61.7 L 303.6,68.5' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-1 atom-1 atom-2' d='M 293.4,58.6 L 305.6,65.6' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-1 atom-1 atom-2' d='M 295.0,55.5 L 307.5,62.8' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-1 atom-1 atom-2' d='M 296.5,52.4 L 309.5,59.9' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-1 atom-1 atom-2' d='M 298.0,49.2 L 311.4,57.0' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-1 atom-1 atom-2' d='M 299.5,46.1 L 313.4,54.2' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-1 atom-1 atom-2' d='M 301.0,43.0 L 315.4,51.3' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-1 atom-1 atom-2' d='M 302.5,39.9 L 317.3,48.4' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-1 atom-1 atom-2' d='M 304.0,36.7 L 319.3,45.6' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-1 atom-1 atom-2' d='M 305.5,33.6 L 321.2,42.7' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-2 atom-1 atom-3' d='M 252.8,143.0 L 131.8,143.0' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-3 atom-3 atom-4' d='M 142.2,143.0 L 116.1,97.7' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-3 atom-3 atom-4' d='M 116.1,97.7 L 89.9,52.4' style='fill:none;fill-rule:evenodd;stroke:#FF0000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-3 atom-3 atom-4' d='M 126.5,152.1 L 100.3,106.8' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-3 atom-3 atom-4' d='M 100.3,106.8 L 74.2,61.5' style='fill:none;fill-rule:evenodd;stroke:#FF0000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-4 atom-3 atom-5' d='M 131.8,143.0 L 106.8,186.3' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-4 atom-3 atom-5' d='M 106.8,186.3 L 81.8,229.5' style='fill:none;fill-rule:evenodd;stroke:#FF0000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path d='M 254.1,145.2 L 252.8,143.0 L 246.8,143.0' style='fill:none;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />\n<path d='M 137.8,143.0 L 131.8,143.0 L 130.5,145.2' style='fill:none;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />\n<path class='atom-0' d='M 307.1 233.7\nL 316.4 248.7\nQ 317.3 250.2, 318.8 252.8\nQ 320.3 255.5, 320.3 255.7\nL 320.3 233.7\nL 324.1 233.7\nL 324.1 262.0\nL 320.2 262.0\nL 310.3 245.6\nQ 309.1 243.7, 307.9 241.5\nQ 306.7 239.3, 306.3 238.6\nL 306.3 262.0\nL 302.6 262.0\nL 302.6 233.7\nL 307.1 233.7\n' fill='#0000FF'/>\n<path class='atom-0' d='M 329.5 233.7\nL 333.3 233.7\nL 333.3 245.7\nL 347.8 245.7\nL 347.8 233.7\nL 351.7 233.7\nL 351.7 262.0\nL 347.8 262.0\nL 347.8 248.9\nL 333.3 248.9\nL 333.3 262.0\nL 329.5 262.0\nL 329.5 233.7\n' fill='#0000FF'/>\n<path class='atom-0' d='M 357.2 261.0\nQ 357.9 259.2, 359.5 258.3\nQ 361.2 257.3, 363.4 257.3\nQ 366.3 257.3, 367.8 258.8\nQ 369.4 260.3, 369.4 263.0\nQ 369.4 265.8, 367.4 268.4\nQ 365.3 271.0, 361.1 274.1\nL 369.7 274.1\nL 369.7 276.2\nL 357.2 276.2\nL 357.2 274.4\nQ 360.6 271.9, 362.7 270.1\nQ 364.8 268.2, 365.8 266.6\nQ 366.8 264.9, 366.8 263.2\nQ 366.8 261.4, 365.9 260.4\nQ 365.0 259.4, 363.4 259.4\nQ 361.9 259.4, 360.9 260.0\nQ 359.9 260.6, 359.2 261.9\nL 357.2 261.0\n' fill='#0000FF'/>\n<path class='atom-4' d='M 58.2 38.2\nQ 58.2 31.4, 61.6 27.6\nQ 64.9 23.8, 71.2 23.8\nQ 77.5 23.8, 80.9 27.6\nQ 84.2 31.4, 84.2 38.2\nQ 84.2 45.1, 80.8 49.0\nQ 77.4 52.9, 71.2 52.9\nQ 65.0 52.9, 61.6 49.0\nQ 58.2 45.2, 58.2 38.2\nM 71.2 49.7\nQ 75.5 49.7, 77.9 46.8\nQ 80.2 43.9, 80.2 38.2\nQ 80.2 32.7, 77.9 29.9\nQ 75.5 27.0, 71.2 27.0\nQ 66.9 27.0, 64.5 29.8\nQ 62.2 32.6, 62.2 38.2\nQ 62.2 44.0, 64.5 46.8\nQ 66.9 49.7, 71.2 49.7\n' fill='#FF0000'/>\n<path class='atom-5' d='M 30.3 233.8\nL 34.1 233.8\nL 34.1 245.9\nL 48.6 245.9\nL 48.6 233.8\nL 52.4 233.8\nL 52.4 262.2\nL 48.6 262.2\nL 48.6 249.1\nL 34.1 249.1\nL 34.1 262.2\nL 30.3 262.2\nL 30.3 233.8\n' fill='#FF0000'/>\n<path class='atom-5' d='M 58.2 247.9\nQ 58.2 241.1, 61.6 237.3\nQ 64.9 233.5, 71.2 233.5\nQ 77.5 233.5, 80.9 237.3\nQ 84.2 241.1, 84.2 247.9\nQ 84.2 254.8, 80.8 258.7\nQ 77.4 262.6, 71.2 262.6\nQ 65.0 262.6, 61.6 258.7\nQ 58.2 254.8, 58.2 247.9\nM 71.2 259.4\nQ 75.5 259.4, 77.9 256.5\nQ 80.2 253.6, 80.2 247.9\nQ 80.2 242.4, 77.9 239.6\nQ 75.5 236.7, 71.2 236.7\nQ 66.9 236.7, 64.5 239.5\nQ 62.2 242.3, 62.2 247.9\nQ 62.2 253.6, 64.5 256.5\nQ 66.9 259.4, 71.2 259.4\n' fill='#FF0000'/>\n</svg>\n"
+      }
+    },
+    {
+      "id": "tetra-b",
+      "schemaVersion": 1,
+      "kind": "rdkit-preparation",
+      "document": {
+        "schemaVersion": 1,
+        "kind": "prepared-molecule",
+        "id": "tetra-b",
+        "original": {
+          "format": "smiles",
+          "data": "N[C@H](C)C(=O)O",
+          "source": {
+            "owner": "molsyssketcher-synthetic-corpus",
+            "id": "tetra-b",
+            "generation": "1"
+          }
+        },
+        "context": {
+          "molecule": {
+            "owner": "molsyssketcher-synthetic-corpus",
+            "id": "tetra-b",
+            "generation": "1"
+          },
+          "chemicalState": "declared-smiles",
+          "structure": "no-physical-structure",
+          "preparation": {
+            "owner": "molsyssketcher-rdkit-corpus",
+            "id": "tetra-b",
+            "generation": "1"
+          }
+        },
+        "provider": {
+          "name": "RDKit",
+          "version": "2026.09.2",
+          "route": "python-rdkit-source",
+          "options": {
+            "parser": {
+              "sanitize": true,
+              "removeHs": false,
+              "parseName": false,
+              "allowCXSMILES": false
+            },
+            "layout": {
+              "canonOrient": true,
+              "clearConfs": true,
+              "nFlipsPerSample": 0,
+              "nSample": 0,
+              "sampleSeed": 0,
+              "permuteDeg4Nodes": false,
+              "bondLength": -1.0,
+              "forceRDKit": true,
+              "useRingTemplates": false,
+              "usePathAngleExpansion": true
+            },
+            "preparation": {
+              "kekulize": true,
+              "addChiralHs": false,
+              "wedgeBonds": true,
+              "forceCoords": false,
+              "wavyBonds": false
+            },
+            "drawingCoordinates": "nonphysical",
+            "verification": "sanitized-owned-drawing-copy",
+            "molBlockExport": {
+              "basis": "sanitized-owned-drawing-copy",
+              "kekulize": true
+            },
+            "maxAtoms": 256
+          }
+        },
+        "atoms": [
+          {
+            "id": "atom:0",
+            "providerIndex": 0,
+            "element": "N",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 2
+          },
+          {
+            "id": "atom:1",
+            "providerIndex": 1,
+            "element": "C",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 1
+          },
+          {
+            "id": "atom:2",
+            "providerIndex": 2,
+            "element": "C",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 3
+          },
+          {
+            "id": "atom:3",
+            "providerIndex": 3,
+            "element": "C",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 0
+          },
+          {
+            "id": "atom:4",
+            "providerIndex": 4,
+            "element": "O",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 0
+          },
+          {
+            "id": "atom:5",
+            "providerIndex": 5,
+            "element": "O",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 1
+          }
+        ],
+        "bonds": [
+          {
+            "id": "bond:0",
+            "providerIndex": 0,
+            "atoms": [
+              "atom:0",
+              "atom:1"
+            ]
+          },
+          {
+            "id": "bond:1",
+            "providerIndex": 1,
+            "atoms": [
+              "atom:1",
+              "atom:2"
+            ]
+          },
+          {
+            "id": "bond:2",
+            "providerIndex": 2,
+            "atoms": [
+              "atom:1",
+              "atom:3"
+            ]
+          },
+          {
+            "id": "bond:3",
+            "providerIndex": 3,
+            "atoms": [
+              "atom:3",
+              "atom:4"
+            ]
+          },
+          {
+            "id": "bond:4",
+            "providerIndex": 4,
+            "atoms": [
+              "atom:3",
+              "atom:5"
+            ]
+          }
+        ],
+        "depiction": {
+          "generation": "1",
+          "profile": "supplied-bijective@1",
+          "coordinates": "drawing",
+          "axes": "x-right-y-up",
+          "atoms": [
+            {
+              "id": "display-atom:0",
+              "atomId": "atom:0",
+              "origin": "mapped",
+              "x": 1.5000000000000018,
+              "y": -1.2990381056766565,
+              "label": "NH2"
+            },
+            {
+              "id": "display-atom:1",
+              "atomId": "atom:1",
+              "origin": "mapped",
+              "x": 0.7500000000000002,
+              "y": 7.216449660063518e-16,
+              "label": ""
+            },
+            {
+              "id": "display-atom:2",
+              "atomId": "atom:2",
+              "origin": "mapped",
+              "x": 1.4999999999999987,
+              "y": 1.2990381056766593,
+              "label": ""
+            },
+            {
+              "id": "display-atom:3",
+              "atomId": "atom:3",
+              "origin": "mapped",
+              "x": -0.7500000000000002,
+              "y": -7.216449660063518e-16,
+              "label": ""
+            },
+            {
+              "id": "display-atom:4",
+              "atomId": "atom:4",
+              "origin": "mapped",
+              "x": -1.500000000000002,
+              "y": 1.299038105676657,
+              "label": "O"
+            },
+            {
+              "id": "display-atom:5",
+              "atomId": "atom:5",
+              "origin": "mapped",
+              "x": -1.4999999999999987,
+              "y": -1.2990381056766596,
+              "label": "OH"
+            }
+          ],
+          "bonds": [
+            {
+              "id": "display-bond:0",
+              "bondId": "bond:0",
+              "atoms": [
+                "display-atom:0",
+                "display-atom:1"
+              ],
+              "style": "single"
+            },
+            {
+              "id": "display-bond:1",
+              "bondId": "bond:1",
+              "atoms": [
+                "display-atom:1",
+                "display-atom:2"
+              ],
+              "style": "solid-wedge",
+              "from": "display-atom:1"
+            },
+            {
+              "id": "display-bond:2",
+              "bondId": "bond:2",
+              "atoms": [
+                "display-atom:1",
+                "display-atom:3"
+              ],
+              "style": "single"
+            },
+            {
+              "id": "display-bond:3",
+              "bondId": "bond:3",
+              "atoms": [
+                "display-atom:3",
+                "display-atom:4"
+              ],
+              "style": "double"
+            },
+            {
+              "id": "display-bond:4",
+              "bondId": "bond:4",
+              "atoms": [
+                "display-atom:3",
+                "display-atom:5"
+              ],
+              "style": "single"
+            }
+          ],
+          "coverage": {
+            "status": "complete",
+            "missing": []
+          }
+        }
+      },
+      "reference": {
+        "isomericSmiles": "C[C@@H](N)C(=O)O",
+        "molBlock": "\n     RDKit          2D\n\n  6  5  0  0  0  0  0  0  0  0999 V2000\n    1.5000   -1.2990    0.0000 N   0  0  0  0  0  0  0  0  0  0  0  0\n    0.7500    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.5000    1.2990    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.7500   -0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.5000    1.2990    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.5000   -1.2990    0.0000 O   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  3  1  1\n  2  4  1  0\n  4  5  2  0\n  4  6  1  0\nM  END\n",
+        "svg": "<?xml version='1.0' encoding='iso-8859-1'?>\n<svg version='1.1' baseProfile='full'\n              xmlns='http://www.w3.org/2000/svg'\n                      xmlns:rdkit='http://www.rdkit.org/xml'\n                      xmlns:xlink='http://www.w3.org/1999/xlink'\n                  xml:space='preserve'\nwidth='400px' height='300px' viewBox='0 0 400 300'>\n<!-- END OF HEADER -->\n<rect style='opacity:1.0;fill:#FFFFFF;stroke:none' width='400.0' height='300.0' x='0.0' y='0.0'> </rect>\n<path class='bond-0 atom-0 atom-1' d='M 302.9,229.7 L 277.8,186.3' style='fill:none;fill-rule:evenodd;stroke:#0000FF;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-0 atom-0 atom-1' d='M 277.8,186.3 L 252.8,143.0' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-1 atom-1 atom-2' d='M 252.8,143.0 L 305.5,33.6 L 321.2,42.7 Z' style='fill:#000000;fill-rule:evenodd;fill-opacity:1;stroke:#000000;stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />\n<path class='bond-2 atom-1 atom-3' d='M 252.8,143.0 L 131.8,143.0' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-3 atom-3 atom-4' d='M 142.2,143.0 L 116.1,97.7' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-3 atom-3 atom-4' d='M 116.1,97.7 L 89.9,52.4' style='fill:none;fill-rule:evenodd;stroke:#FF0000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-3 atom-3 atom-4' d='M 126.5,152.1 L 100.3,106.8' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-3 atom-3 atom-4' d='M 100.3,106.8 L 74.2,61.5' style='fill:none;fill-rule:evenodd;stroke:#FF0000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-4 atom-3 atom-5' d='M 131.8,143.0 L 106.8,186.3' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-4 atom-3 atom-5' d='M 106.8,186.3 L 81.8,229.5' style='fill:none;fill-rule:evenodd;stroke:#FF0000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path d='M 254.1,145.2 L 252.8,143.0 L 246.8,143.0' style='fill:none;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />\n<path d='M 137.8,143.0 L 131.8,143.0 L 130.5,145.2' style='fill:none;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />\n<path class='atom-0' d='M 307.1 233.7\nL 316.4 248.7\nQ 317.3 250.2, 318.8 252.8\nQ 320.3 255.5, 320.3 255.7\nL 320.3 233.7\nL 324.1 233.7\nL 324.1 262.0\nL 320.2 262.0\nL 310.3 245.6\nQ 309.1 243.7, 307.9 241.5\nQ 306.7 239.3, 306.3 238.6\nL 306.3 262.0\nL 302.6 262.0\nL 302.6 233.7\nL 307.1 233.7\n' fill='#0000FF'/>\n<path class='atom-0' d='M 329.5 233.7\nL 333.3 233.7\nL 333.3 245.7\nL 347.8 245.7\nL 347.8 233.7\nL 351.7 233.7\nL 351.7 262.0\nL 347.8 262.0\nL 347.8 248.9\nL 333.3 248.9\nL 333.3 262.0\nL 329.5 262.0\nL 329.5 233.7\n' fill='#0000FF'/>\n<path class='atom-0' d='M 357.2 261.0\nQ 357.9 259.2, 359.5 258.3\nQ 361.2 257.3, 363.4 257.3\nQ 366.3 257.3, 367.8 258.8\nQ 369.4 260.3, 369.4 263.0\nQ 369.4 265.8, 367.4 268.4\nQ 365.3 271.0, 361.1 274.1\nL 369.7 274.1\nL 369.7 276.2\nL 357.2 276.2\nL 357.2 274.4\nQ 360.6 271.9, 362.7 270.1\nQ 364.8 268.2, 365.8 266.6\nQ 366.8 264.9, 366.8 263.2\nQ 366.8 261.4, 365.9 260.4\nQ 365.0 259.4, 363.4 259.4\nQ 361.9 259.4, 360.9 260.0\nQ 359.9 260.6, 359.2 261.9\nL 357.2 261.0\n' fill='#0000FF'/>\n<path class='atom-4' d='M 58.2 38.2\nQ 58.2 31.4, 61.6 27.6\nQ 64.9 23.8, 71.2 23.8\nQ 77.5 23.8, 80.9 27.6\nQ 84.2 31.4, 84.2 38.2\nQ 84.2 45.1, 80.8 49.0\nQ 77.4 52.9, 71.2 52.9\nQ 65.0 52.9, 61.6 49.0\nQ 58.2 45.2, 58.2 38.2\nM 71.2 49.7\nQ 75.5 49.7, 77.9 46.8\nQ 80.2 43.9, 80.2 38.2\nQ 80.2 32.7, 77.9 29.9\nQ 75.5 27.0, 71.2 27.0\nQ 66.9 27.0, 64.5 29.8\nQ 62.2 32.6, 62.2 38.2\nQ 62.2 44.0, 64.5 46.8\nQ 66.9 49.7, 71.2 49.7\n' fill='#FF0000'/>\n<path class='atom-5' d='M 30.3 233.8\nL 34.1 233.8\nL 34.1 245.9\nL 48.6 245.9\nL 48.6 233.8\nL 52.4 233.8\nL 52.4 262.2\nL 48.6 262.2\nL 48.6 249.1\nL 34.1 249.1\nL 34.1 262.2\nL 30.3 262.2\nL 30.3 233.8\n' fill='#FF0000'/>\n<path class='atom-5' d='M 58.2 247.9\nQ 58.2 241.1, 61.6 237.3\nQ 64.9 233.5, 71.2 233.5\nQ 77.5 233.5, 80.9 237.3\nQ 84.2 241.1, 84.2 247.9\nQ 84.2 254.8, 80.8 258.7\nQ 77.4 262.6, 71.2 262.6\nQ 65.0 262.6, 61.6 258.7\nQ 58.2 254.8, 58.2 247.9\nM 71.2 259.4\nQ 75.5 259.4, 77.9 256.5\nQ 80.2 253.6, 80.2 247.9\nQ 80.2 242.4, 77.9 239.6\nQ 75.5 236.7, 71.2 236.7\nQ 66.9 236.7, 64.5 239.5\nQ 62.2 242.3, 62.2 247.9\nQ 62.2 253.6, 64.5 256.5\nQ 66.9 259.4, 71.2 259.4\n' fill='#FF0000'/>\n</svg>\n"
+      }
+    },
+    {
+      "id": "alkene-a",
+      "schemaVersion": 1,
+      "kind": "rdkit-preparation",
+      "document": {
+        "schemaVersion": 1,
+        "kind": "prepared-molecule",
+        "id": "alkene-a",
+        "original": {
+          "format": "smiles",
+          "data": "F/C=C/F",
+          "source": {
+            "owner": "molsyssketcher-synthetic-corpus",
+            "id": "alkene-a",
+            "generation": "1"
+          }
+        },
+        "context": {
+          "molecule": {
+            "owner": "molsyssketcher-synthetic-corpus",
+            "id": "alkene-a",
+            "generation": "1"
+          },
+          "chemicalState": "declared-smiles",
+          "structure": "no-physical-structure",
+          "preparation": {
+            "owner": "molsyssketcher-rdkit-corpus",
+            "id": "alkene-a",
+            "generation": "1"
+          }
+        },
+        "provider": {
+          "name": "RDKit",
+          "version": "2026.09.2",
+          "route": "python-rdkit-source",
+          "options": {
+            "parser": {
+              "sanitize": true,
+              "removeHs": false,
+              "parseName": false,
+              "allowCXSMILES": false
+            },
+            "layout": {
+              "canonOrient": true,
+              "clearConfs": true,
+              "nFlipsPerSample": 0,
+              "nSample": 0,
+              "sampleSeed": 0,
+              "permuteDeg4Nodes": false,
+              "bondLength": -1.0,
+              "forceRDKit": true,
+              "useRingTemplates": false,
+              "usePathAngleExpansion": true
+            },
+            "preparation": {
+              "kekulize": true,
+              "addChiralHs": false,
+              "wedgeBonds": true,
+              "forceCoords": false,
+              "wavyBonds": false
+            },
+            "drawingCoordinates": "nonphysical",
+            "verification": "sanitized-owned-drawing-copy",
+            "molBlockExport": {
+              "basis": "sanitized-owned-drawing-copy",
+              "kekulize": true
+            },
+            "maxAtoms": 256
+          }
+        },
+        "atoms": [
+          {
+            "id": "atom:0",
+            "providerIndex": 0,
+            "element": "F",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 0
+          },
+          {
+            "id": "atom:1",
+            "providerIndex": 1,
+            "element": "C",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 1
+          },
+          {
+            "id": "atom:2",
+            "providerIndex": 2,
+            "element": "C",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 1
+          },
+          {
+            "id": "atom:3",
+            "providerIndex": 3,
+            "element": "F",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 0
+          }
+        ],
+        "bonds": [
+          {
+            "id": "bond:0",
+            "providerIndex": 0,
+            "atoms": [
+              "atom:0",
+              "atom:1"
+            ]
+          },
+          {
+            "id": "bond:1",
+            "providerIndex": 1,
+            "atoms": [
+              "atom:1",
+              "atom:2"
+            ]
+          },
+          {
+            "id": "bond:2",
+            "providerIndex": 2,
+            "atoms": [
+              "atom:2",
+              "atom:3"
+            ]
+          }
+        ],
+        "depiction": {
+          "generation": "1",
+          "profile": "supplied-bijective@1",
+          "coordinates": "drawing",
+          "axes": "x-right-y-up",
+          "atoms": [
+            {
+              "id": "display-atom:0",
+              "atomId": "atom:0",
+              "origin": "mapped",
+              "x": -1.9796130625337671,
+              "y": -0.13649953349985822,
+              "label": "F"
+            },
+            {
+              "id": "display-atom:1",
+              "atomId": "atom:1",
+              "origin": "mapped",
+              "x": -0.5993786074712484,
+              "y": 0.4508273338051134,
+              "label": ""
+            },
+            {
+              "id": "display-atom:2",
+              "atomId": "atom:2",
+              "origin": "mapped",
+              "x": 0.5993786074712484,
+              "y": -0.4508273338051134,
+              "label": ""
+            },
+            {
+              "id": "display-atom:3",
+              "atomId": "atom:3",
+              "origin": "mapped",
+              "x": 1.9796130625337671,
+              "y": 0.136499533499858,
+              "label": "F"
+            }
+          ],
+          "bonds": [
+            {
+              "id": "display-bond:0",
+              "bondId": "bond:0",
+              "atoms": [
+                "display-atom:0",
+                "display-atom:1"
+              ],
+              "style": "single"
+            },
+            {
+              "id": "display-bond:1",
+              "bondId": "bond:1",
+              "atoms": [
+                "display-atom:1",
+                "display-atom:2"
+              ],
+              "style": "double"
+            },
+            {
+              "id": "display-bond:2",
+              "bondId": "bond:2",
+              "atoms": [
+                "display-atom:2",
+                "display-atom:3"
+              ],
+              "style": "single"
+            }
+          ],
+          "coverage": {
+            "status": "complete",
+            "missing": []
+          }
+        }
+      },
+      "reference": {
+        "isomericSmiles": "F/C=C/F",
+        "molBlock": "\n     RDKit          2D\n\n  4  3  0  0  0  0  0  0  0  0999 V2000\n   -1.9796   -0.1365    0.0000 F   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.5994    0.4508    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.5994   -0.4508    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.9796    0.1365    0.0000 F   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  3  2  0\n  3  4  1  0\nM  END\n",
+        "svg": "<?xml version='1.0' encoding='iso-8859-1'?>\n<svg version='1.1' baseProfile='full'\n              xmlns='http://www.w3.org/2000/svg'\n                      xmlns:rdkit='http://www.rdkit.org/xml'\n                      xmlns:xlink='http://www.w3.org/1999/xlink'\n                  xml:space='preserve'\nwidth='400px' height='300px' viewBox='0 0 400 300'>\n<!-- END OF HEADER -->\n<rect style='opacity:1.0;fill:#FFFFFF;stroke:none' width='400.0' height='300.0' x='0.0' y='0.0'> </rect>\n<path class='bond-0 atom-0 atom-1' d='M 43.4,148.6 L 96.1,126.2' style='fill:none;fill-rule:evenodd;stroke:#33CCCC;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-0 atom-0 atom-1' d='M 96.1,126.2 L 148.8,103.8' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-1 atom-1 atom-2' d='M 148.8,103.8 L 251.2,180.8' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-1 atom-1 atom-2' d='M 146.1,125.8 L 239.7,196.2' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-2 atom-2 atom-3' d='M 251.2,180.8 L 303.9,158.4' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-2 atom-2 atom-3' d='M 303.9,158.4 L 356.6,136.0' style='fill:none;fill-rule:evenodd;stroke:#33CCCC;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path d='M 146.1,104.9 L 148.8,103.8 L 153.9,107.6' style='fill:none;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />\n<path d='M 246.1,177.0 L 251.2,180.8 L 253.9,179.7' style='fill:none;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />\n<path class='atom-0' d='M 22.4 139.8\nL 39.2 139.8\nL 39.2 143.1\nL 26.2 143.1\nL 26.2 151.7\nL 37.8 151.7\nL 37.8 154.9\nL 26.2 154.9\nL 26.2 168.1\nL 22.4 168.1\nL 22.4 139.8\n' fill='#33CCCC'/>\n<path class='atom-3' d='M 360.8 116.5\nL 377.6 116.5\nL 377.6 119.7\nL 364.6 119.7\nL 364.6 128.3\nL 376.2 128.3\nL 376.2 131.6\nL 364.6 131.6\nL 364.6 144.8\nL 360.8 144.8\nL 360.8 116.5\n' fill='#33CCCC'/>\n</svg>\n"
+      }
+    },
+    {
+      "id": "alkene-b",
+      "schemaVersion": 1,
+      "kind": "rdkit-preparation",
+      "document": {
+        "schemaVersion": 1,
+        "kind": "prepared-molecule",
+        "id": "alkene-b",
+        "original": {
+          "format": "smiles",
+          "data": "F/C=C\\F",
+          "source": {
+            "owner": "molsyssketcher-synthetic-corpus",
+            "id": "alkene-b",
+            "generation": "1"
+          }
+        },
+        "context": {
+          "molecule": {
+            "owner": "molsyssketcher-synthetic-corpus",
+            "id": "alkene-b",
+            "generation": "1"
+          },
+          "chemicalState": "declared-smiles",
+          "structure": "no-physical-structure",
+          "preparation": {
+            "owner": "molsyssketcher-rdkit-corpus",
+            "id": "alkene-b",
+            "generation": "1"
+          }
+        },
+        "provider": {
+          "name": "RDKit",
+          "version": "2026.09.2",
+          "route": "python-rdkit-source",
+          "options": {
+            "parser": {
+              "sanitize": true,
+              "removeHs": false,
+              "parseName": false,
+              "allowCXSMILES": false
+            },
+            "layout": {
+              "canonOrient": true,
+              "clearConfs": true,
+              "nFlipsPerSample": 0,
+              "nSample": 0,
+              "sampleSeed": 0,
+              "permuteDeg4Nodes": false,
+              "bondLength": -1.0,
+              "forceRDKit": true,
+              "useRingTemplates": false,
+              "usePathAngleExpansion": true
+            },
+            "preparation": {
+              "kekulize": true,
+              "addChiralHs": false,
+              "wedgeBonds": true,
+              "forceCoords": false,
+              "wavyBonds": false
+            },
+            "drawingCoordinates": "nonphysical",
+            "verification": "sanitized-owned-drawing-copy",
+            "molBlockExport": {
+              "basis": "sanitized-owned-drawing-copy",
+              "kekulize": true
+            },
+            "maxAtoms": 256
+          }
+        },
+        "atoms": [
+          {
+            "id": "atom:0",
+            "providerIndex": 0,
+            "element": "F",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 0
+          },
+          {
+            "id": "atom:1",
+            "providerIndex": 1,
+            "element": "C",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 1
+          },
+          {
+            "id": "atom:2",
+            "providerIndex": 2,
+            "element": "C",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 1
+          },
+          {
+            "id": "atom:3",
+            "providerIndex": 3,
+            "element": "F",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 0
+          }
+        ],
+        "bonds": [
+          {
+            "id": "bond:0",
+            "providerIndex": 0,
+            "atoms": [
+              "atom:0",
+              "atom:1"
+            ]
+          },
+          {
+            "id": "bond:1",
+            "providerIndex": 1,
+            "atoms": [
+              "atom:1",
+              "atom:2"
+            ]
+          },
+          {
+            "id": "bond:2",
+            "providerIndex": 2,
+            "atoms": [
+              "atom:2",
+              "atom:3"
+            ]
+          }
+        ],
+        "depiction": {
+          "generation": "1",
+          "profile": "supplied-bijective@1",
+          "coordinates": "drawing",
+          "axes": "x-right-y-up",
+          "atoms": [
+            {
+              "id": "display-atom:0",
+              "atomId": "atom:0",
+              "origin": "mapped",
+              "x": -1.4999999999999998,
+              "y": -0.649519052838329,
+              "label": "F"
+            },
+            {
+              "id": "display-atom:1",
+              "atomId": "atom:1",
+              "origin": "mapped",
+              "x": -0.75,
+              "y": 0.649519052838329,
+              "label": ""
+            },
+            {
+              "id": "display-atom:2",
+              "atomId": "atom:2",
+              "origin": "mapped",
+              "x": 0.75,
+              "y": 0.649519052838329,
+              "label": ""
+            },
+            {
+              "id": "display-atom:3",
+              "atomId": "atom:3",
+              "origin": "mapped",
+              "x": 1.5,
+              "y": -0.649519052838329,
+              "label": "F"
+            }
+          ],
+          "bonds": [
+            {
+              "id": "display-bond:0",
+              "bondId": "bond:0",
+              "atoms": [
+                "display-atom:0",
+                "display-atom:1"
+              ],
+              "style": "single"
+            },
+            {
+              "id": "display-bond:1",
+              "bondId": "bond:1",
+              "atoms": [
+                "display-atom:1",
+                "display-atom:2"
+              ],
+              "style": "double"
+            },
+            {
+              "id": "display-bond:2",
+              "bondId": "bond:2",
+              "atoms": [
+                "display-atom:2",
+                "display-atom:3"
+              ],
+              "style": "single"
+            }
+          ],
+          "coverage": {
+            "status": "complete",
+            "missing": []
+          }
+        }
+      },
+      "reference": {
+        "isomericSmiles": "F/C=C\\F",
+        "molBlock": "\n     RDKit          2D\n\n  4  3  0  0  0  0  0  0  0  0999 V2000\n   -1.5000   -0.6495    0.0000 F   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.7500    0.6495    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.7500    0.6495    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.5000   -0.6495    0.0000 F   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  3  2  0\n  3  4  1  0\nM  END\n",
+        "svg": "<?xml version='1.0' encoding='iso-8859-1'?>\n<svg version='1.1' baseProfile='full'\n              xmlns='http://www.w3.org/2000/svg'\n                      xmlns:rdkit='http://www.rdkit.org/xml'\n                      xmlns:xlink='http://www.w3.org/1999/xlink'\n                  xml:space='preserve'\nwidth='400px' height='300px' viewBox='0 0 400 300'>\n<!-- END OF HEADER -->\n<rect style='opacity:1.0;fill:#FFFFFF;stroke:none' width='400.0' height='300.0' x='0.0' y='0.0'> </rect>\n<path class='bond-0 atom-0 atom-1' d='M 45.3,195.2 L 81.2,133.1' style='fill:none;fill-rule:evenodd;stroke:#33CCCC;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-0 atom-0 atom-1' d='M 81.2,133.1 L 117.0,71.0' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-1 atom-1 atom-2' d='M 117.0,71.0 L 283.0,71.0' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-1 atom-1 atom-2' d='M 131.4,95.9 L 268.6,95.9' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-2 atom-2 atom-3' d='M 283.0,71.0 L 318.8,133.1' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-2 atom-2 atom-3' d='M 318.8,133.1 L 354.7,195.2' style='fill:none;fill-rule:evenodd;stroke:#33CCCC;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path d='M 115.2,74.1 L 117.0,71.0 L 125.3,71.0' style='fill:none;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />\n<path d='M 274.7,71.0 L 283.0,71.0 L 284.8,74.1' style='fill:none;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />\n<path class='atom-0' d='M 25.6 200.6\nL 42.4 200.6\nL 42.4 203.9\nL 29.4 203.9\nL 29.4 212.5\nL 41.0 212.5\nL 41.0 215.8\nL 29.4 215.8\nL 29.4 229.0\nL 25.6 229.0\nL 25.6 200.6\n' fill='#33CCCC'/>\n<path class='atom-3' d='M 357.6 200.6\nL 374.4 200.6\nL 374.4 203.9\nL 361.4 203.9\nL 361.4 212.5\nL 373.0 212.5\nL 373.0 215.8\nL 361.4 215.8\nL 361.4 229.0\nL 357.6 229.0\nL 357.6 200.6\n' fill='#33CCCC'/>\n</svg>\n"
+      }
+    },
+    {
+      "id": "pyrrole",
+      "schemaVersion": 1,
+      "kind": "rdkit-preparation",
+      "document": {
+        "schemaVersion": 1,
+        "kind": "prepared-molecule",
+        "id": "pyrrole",
+        "original": {
+          "format": "smiles",
+          "data": "c1cc[nH]c1",
+          "source": {
+            "owner": "molsyssketcher-synthetic-corpus",
+            "id": "pyrrole",
+            "generation": "1"
+          }
+        },
+        "context": {
+          "molecule": {
+            "owner": "molsyssketcher-synthetic-corpus",
+            "id": "pyrrole",
+            "generation": "1"
+          },
+          "chemicalState": "declared-smiles",
+          "structure": "no-physical-structure",
+          "preparation": {
+            "owner": "molsyssketcher-rdkit-corpus",
+            "id": "pyrrole",
+            "generation": "1"
+          }
+        },
+        "provider": {
+          "name": "RDKit",
+          "version": "2026.09.2",
+          "route": "python-rdkit-source",
+          "options": {
+            "parser": {
+              "sanitize": true,
+              "removeHs": false,
+              "parseName": false,
+              "allowCXSMILES": false
+            },
+            "layout": {
+              "canonOrient": true,
+              "clearConfs": true,
+              "nFlipsPerSample": 0,
+              "nSample": 0,
+              "sampleSeed": 0,
+              "permuteDeg4Nodes": false,
+              "bondLength": -1.0,
+              "forceRDKit": true,
+              "useRingTemplates": false,
+              "usePathAngleExpansion": true
+            },
+            "preparation": {
+              "kekulize": true,
+              "addChiralHs": false,
+              "wedgeBonds": true,
+              "forceCoords": false,
+              "wavyBonds": false
+            },
+            "drawingCoordinates": "nonphysical",
+            "verification": "sanitized-owned-drawing-copy",
+            "molBlockExport": {
+              "basis": "sanitized-owned-drawing-copy",
+              "kekulize": true
+            },
+            "maxAtoms": 256
+          }
+        },
+        "atoms": [
+          {
+            "id": "atom:0",
+            "providerIndex": 0,
+            "element": "C",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 1
+          },
+          {
+            "id": "atom:1",
+            "providerIndex": 1,
+            "element": "C",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 1
+          },
+          {
+            "id": "atom:2",
+            "providerIndex": 2,
+            "element": "C",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 1
+          },
+          {
+            "id": "atom:3",
+            "providerIndex": 3,
+            "element": "N",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 1
+          },
+          {
+            "id": "atom:4",
+            "providerIndex": 4,
+            "element": "C",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 1
+          }
+        ],
+        "bonds": [
+          {
+            "id": "bond:0",
+            "providerIndex": 0,
+            "atoms": [
+              "atom:0",
+              "atom:1"
+            ]
+          },
+          {
+            "id": "bond:1",
+            "providerIndex": 1,
+            "atoms": [
+              "atom:1",
+              "atom:2"
+            ]
+          },
+          {
+            "id": "bond:2",
+            "providerIndex": 2,
+            "atoms": [
+              "atom:2",
+              "atom:3"
+            ]
+          },
+          {
+            "id": "bond:3",
+            "providerIndex": 3,
+            "atoms": [
+              "atom:3",
+              "atom:4"
+            ]
+          },
+          {
+            "id": "bond:4",
+            "providerIndex": 4,
+            "atoms": [
+              "atom:4",
+              "atom:0"
+            ]
+          }
+        ],
+        "depiction": {
+          "generation": "1",
+          "profile": "supplied-bijective@1",
+          "coordinates": "drawing",
+          "axes": "x-right-y-up",
+          "atoms": [
+            {
+              "id": "display-atom:0",
+              "atomId": "atom:0",
+              "origin": "mapped",
+              "x": 1.2759762125280598,
+              "y": -4.4408920985006264e-17,
+              "label": ""
+            },
+            {
+              "id": "display-atom:1",
+              "atomId": "atom:1",
+              "origin": "mapped",
+              "x": 0.3942983340893503,
+              "y": 1.213525491562421,
+              "label": ""
+            },
+            {
+              "id": "display-atom:2",
+              "atomId": "atom:2",
+              "origin": "mapped",
+              "x": -1.03228644035338,
+              "y": 0.7500000000000001,
+              "label": ""
+            },
+            {
+              "id": "display-atom:3",
+              "atomId": "atom:3",
+              "origin": "mapped",
+              "x": -1.0322864403533802,
+              "y": -0.7499999999999998,
+              "label": "NH"
+            },
+            {
+              "id": "display-atom:4",
+              "atomId": "atom:4",
+              "origin": "mapped",
+              "x": 0.39429833408935,
+              "y": -1.2135254915624212,
+              "label": ""
+            }
+          ],
+          "bonds": [
+            {
+              "id": "display-bond:0",
+              "bondId": "bond:0",
+              "atoms": [
+                "display-atom:0",
+                "display-atom:1"
+              ],
+              "style": "single"
+            },
+            {
+              "id": "display-bond:1",
+              "bondId": "bond:1",
+              "atoms": [
+                "display-atom:1",
+                "display-atom:2"
+              ],
+              "style": "double"
+            },
+            {
+              "id": "display-bond:2",
+              "bondId": "bond:2",
+              "atoms": [
+                "display-atom:2",
+                "display-atom:3"
+              ],
+              "style": "single"
+            },
+            {
+              "id": "display-bond:3",
+              "bondId": "bond:3",
+              "atoms": [
+                "display-atom:3",
+                "display-atom:4"
+              ],
+              "style": "single"
+            },
+            {
+              "id": "display-bond:4",
+              "bondId": "bond:4",
+              "atoms": [
+                "display-atom:4",
+                "display-atom:0"
+              ],
+              "style": "double"
+            }
+          ],
+          "coverage": {
+            "status": "complete",
+            "missing": []
+          }
+        }
+      },
+      "reference": {
+        "isomericSmiles": "c1cc[nH]c1",
+        "molBlock": "\n     RDKit          2D\n\n  5  5  0  0  0  0  0  0  0  0999 V2000\n    1.2760   -0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.3943    1.2135    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.0323    0.7500    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.0323   -0.7500    0.0000 N   0  0  0  0  0  0  0  0  0  0  0  0\n    0.3943   -1.2135    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  3  2  0\n  3  4  1  0\n  4  5  1  0\n  5  1  2  0\nM  END\n",
+        "svg": "<?xml version='1.0' encoding='iso-8859-1'?>\n<svg version='1.1' baseProfile='full'\n              xmlns='http://www.w3.org/2000/svg'\n                      xmlns:rdkit='http://www.rdkit.org/xml'\n                      xmlns:xlink='http://www.w3.org/1999/xlink'\n                  xml:space='preserve'\nwidth='400px' height='300px' viewBox='0 0 400 300'>\n<!-- END OF HEADER -->\n<rect style='opacity:1.0;fill:#FFFFFF;stroke:none' width='400.0' height='300.0' x='0.0' y='0.0'> </rect>\n<path class='bond-0 atom-0 atom-1' d='M 347.6,150.0 L 249.6,15.0' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-1 atom-1 atom-2' d='M 249.6,15.0 L 90.8,66.6' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-1 atom-1 atom-2' d='M 240.0,44.4 L 115.9,84.8' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-2 atom-2 atom-3' d='M 90.8,66.6 L 90.8,140.2' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-2 atom-2 atom-3' d='M 90.8,140.2 L 90.8,213.8' style='fill:none;fill-rule:evenodd;stroke:#0000FF;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-3 atom-3 atom-4' d='M 107.1,238.7 L 178.3,261.9' style='fill:none;fill-rule:evenodd;stroke:#0000FF;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-3 atom-3 atom-4' d='M 178.3,261.9 L 249.6,285.0' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-4 atom-4 atom-0' d='M 249.6,285.0 L 347.6,150.0' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-4 atom-4 atom-0' d='M 240.0,255.6 L 316.7,150.0' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path d='M 342.7,143.2 L 347.6,150.0 L 342.7,156.8' style='fill:none;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />\n<path d='M 254.5,21.8 L 249.6,15.0 L 241.6,17.6' style='fill:none;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />\n<path d='M 98.8,64.0 L 90.8,66.6 L 90.8,70.2' style='fill:none;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />\n<path d='M 246.0,283.8 L 249.6,285.0 L 254.5,278.2' style='fill:none;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />\n<path class='atom-3' d='M 52.4 219.3\nL 56.2 219.3\nL 56.2 231.3\nL 70.7 231.3\nL 70.7 219.3\nL 74.5 219.3\nL 74.5 247.6\nL 70.7 247.6\nL 70.7 234.5\nL 56.2 234.5\nL 56.2 247.6\nL 52.4 247.6\nL 52.4 219.3\n' fill='#0000FF'/>\n<path class='atom-3' d='M 84.6 219.3\nL 93.9 234.3\nQ 94.8 235.8, 96.3 238.4\nQ 97.7 241.1, 97.8 241.3\nL 97.8 219.3\nL 101.6 219.3\nL 101.6 247.6\nL 97.7 247.6\nL 87.7 231.2\nQ 86.6 229.3, 85.3 227.1\nQ 84.1 224.9, 83.8 224.2\nL 83.8 247.6\nL 80.1 247.6\nL 80.1 219.3\nL 84.6 219.3\n' fill='#0000FF'/>\n</svg>\n"
+      }
+    },
+    {
+      "id": "fused",
+      "schemaVersion": 1,
+      "kind": "rdkit-preparation",
+      "document": {
+        "schemaVersion": 1,
+        "kind": "prepared-molecule",
+        "id": "fused",
+        "original": {
+          "format": "smiles",
+          "data": "c1ccc2ccccc2c1",
+          "source": {
+            "owner": "molsyssketcher-synthetic-corpus",
+            "id": "fused",
+            "generation": "1"
+          }
+        },
+        "context": {
+          "molecule": {
+            "owner": "molsyssketcher-synthetic-corpus",
+            "id": "fused",
+            "generation": "1"
+          },
+          "chemicalState": "declared-smiles",
+          "structure": "no-physical-structure",
+          "preparation": {
+            "owner": "molsyssketcher-rdkit-corpus",
+            "id": "fused",
+            "generation": "1"
+          }
+        },
+        "provider": {
+          "name": "RDKit",
+          "version": "2026.09.2",
+          "route": "python-rdkit-source",
+          "options": {
+            "parser": {
+              "sanitize": true,
+              "removeHs": false,
+              "parseName": false,
+              "allowCXSMILES": false
+            },
+            "layout": {
+              "canonOrient": true,
+              "clearConfs": true,
+              "nFlipsPerSample": 0,
+              "nSample": 0,
+              "sampleSeed": 0,
+              "permuteDeg4Nodes": false,
+              "bondLength": -1.0,
+              "forceRDKit": true,
+              "useRingTemplates": false,
+              "usePathAngleExpansion": true
+            },
+            "preparation": {
+              "kekulize": true,
+              "addChiralHs": false,
+              "wedgeBonds": true,
+              "forceCoords": false,
+              "wavyBonds": false
+            },
+            "drawingCoordinates": "nonphysical",
+            "verification": "sanitized-owned-drawing-copy",
+            "molBlockExport": {
+              "basis": "sanitized-owned-drawing-copy",
+              "kekulize": true
+            },
+            "maxAtoms": 256
+          }
+        },
+        "atoms": [
+          {
+            "id": "atom:0",
+            "providerIndex": 0,
+            "element": "C",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 1
+          },
+          {
+            "id": "atom:1",
+            "providerIndex": 1,
+            "element": "C",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 1
+          },
+          {
+            "id": "atom:2",
+            "providerIndex": 2,
+            "element": "C",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 1
+          },
+          {
+            "id": "atom:3",
+            "providerIndex": 3,
+            "element": "C",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 0
+          },
+          {
+            "id": "atom:4",
+            "providerIndex": 4,
+            "element": "C",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 1
+          },
+          {
+            "id": "atom:5",
+            "providerIndex": 5,
+            "element": "C",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 1
+          },
+          {
+            "id": "atom:6",
+            "providerIndex": 6,
+            "element": "C",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 1
+          },
+          {
+            "id": "atom:7",
+            "providerIndex": 7,
+            "element": "C",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 1
+          },
+          {
+            "id": "atom:8",
+            "providerIndex": 8,
+            "element": "C",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 0
+          },
+          {
+            "id": "atom:9",
+            "providerIndex": 9,
+            "element": "C",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 1
+          }
+        ],
+        "bonds": [
+          {
+            "id": "bond:0",
+            "providerIndex": 0,
+            "atoms": [
+              "atom:0",
+              "atom:1"
+            ]
+          },
+          {
+            "id": "bond:1",
+            "providerIndex": 1,
+            "atoms": [
+              "atom:1",
+              "atom:2"
+            ]
+          },
+          {
+            "id": "bond:2",
+            "providerIndex": 2,
+            "atoms": [
+              "atom:2",
+              "atom:3"
+            ]
+          },
+          {
+            "id": "bond:3",
+            "providerIndex": 3,
+            "atoms": [
+              "atom:3",
+              "atom:4"
+            ]
+          },
+          {
+            "id": "bond:4",
+            "providerIndex": 4,
+            "atoms": [
+              "atom:4",
+              "atom:5"
+            ]
+          },
+          {
+            "id": "bond:5",
+            "providerIndex": 5,
+            "atoms": [
+              "atom:5",
+              "atom:6"
+            ]
+          },
+          {
+            "id": "bond:6",
+            "providerIndex": 6,
+            "atoms": [
+              "atom:6",
+              "atom:7"
+            ]
+          },
+          {
+            "id": "bond:7",
+            "providerIndex": 7,
+            "atoms": [
+              "atom:7",
+              "atom:8"
+            ]
+          },
+          {
+            "id": "bond:8",
+            "providerIndex": 8,
+            "atoms": [
+              "atom:8",
+              "atom:9"
+            ]
+          },
+          {
+            "id": "bond:9",
+            "providerIndex": 9,
+            "atoms": [
+              "atom:9",
+              "atom:0"
+            ]
+          },
+          {
+            "id": "bond:10",
+            "providerIndex": 10,
+            "atoms": [
+              "atom:8",
+              "atom:3"
+            ]
+          }
+        ],
+        "depiction": {
+          "generation": "1",
+          "profile": "supplied-bijective@1",
+          "coordinates": "drawing",
+          "axes": "x-right-y-up",
+          "atoms": [
+            {
+              "id": "display-atom:0",
+              "atomId": "atom:0",
+              "origin": "mapped",
+              "x": 2.598076211353316,
+              "y": -0.7500000000000001,
+              "label": ""
+            },
+            {
+              "id": "display-atom:1",
+              "atomId": "atom:1",
+              "origin": "mapped",
+              "x": 2.5980762113533165,
+              "y": 0.7499999999999996,
+              "label": ""
+            },
+            {
+              "id": "display-atom:2",
+              "atomId": "atom:2",
+              "origin": "mapped",
+              "x": 1.2990381056766587,
+              "y": 1.5000000000000002,
+              "label": ""
+            },
+            {
+              "id": "display-atom:3",
+              "atomId": "atom:3",
+              "origin": "mapped",
+              "x": 5.551115123125783e-17,
+              "y": 0.7500000000000004,
+              "label": ""
+            },
+            {
+              "id": "display-atom:4",
+              "atomId": "atom:4",
+              "origin": "mapped",
+              "x": -1.2990381056766576,
+              "y": 1.5000000000000004,
+              "label": ""
+            },
+            {
+              "id": "display-atom:5",
+              "atomId": "atom:5",
+              "origin": "mapped",
+              "x": -2.598076211353316,
+              "y": 0.7500000000000003,
+              "label": ""
+            },
+            {
+              "id": "display-atom:6",
+              "atomId": "atom:6",
+              "origin": "mapped",
+              "x": -2.598076211353316,
+              "y": -0.7499999999999998,
+              "label": ""
+            },
+            {
+              "id": "display-atom:7",
+              "atomId": "atom:7",
+              "origin": "mapped",
+              "x": -1.2990381056766587,
+              "y": -1.5000000000000002,
+              "label": ""
+            },
+            {
+              "id": "display-atom:8",
+              "atomId": "atom:8",
+              "origin": "mapped",
+              "x": -6.106226635438361e-16,
+              "y": -0.7499999999999993,
+              "label": ""
+            },
+            {
+              "id": "display-atom:9",
+              "atomId": "atom:9",
+              "origin": "mapped",
+              "x": 1.2990381056766567,
+              "y": -1.5000000000000002,
+              "label": ""
+            }
+          ],
+          "bonds": [
+            {
+              "id": "display-bond:0",
+              "bondId": "bond:0",
+              "atoms": [
+                "display-atom:0",
+                "display-atom:1"
+              ],
+              "style": "double"
+            },
+            {
+              "id": "display-bond:1",
+              "bondId": "bond:1",
+              "atoms": [
+                "display-atom:1",
+                "display-atom:2"
+              ],
+              "style": "single"
+            },
+            {
+              "id": "display-bond:2",
+              "bondId": "bond:2",
+              "atoms": [
+                "display-atom:2",
+                "display-atom:3"
+              ],
+              "style": "double"
+            },
+            {
+              "id": "display-bond:3",
+              "bondId": "bond:3",
+              "atoms": [
+                "display-atom:3",
+                "display-atom:4"
+              ],
+              "style": "single"
+            },
+            {
+              "id": "display-bond:4",
+              "bondId": "bond:4",
+              "atoms": [
+                "display-atom:4",
+                "display-atom:5"
+              ],
+              "style": "double"
+            },
+            {
+              "id": "display-bond:5",
+              "bondId": "bond:5",
+              "atoms": [
+                "display-atom:5",
+                "display-atom:6"
+              ],
+              "style": "single"
+            },
+            {
+              "id": "display-bond:6",
+              "bondId": "bond:6",
+              "atoms": [
+                "display-atom:6",
+                "display-atom:7"
+              ],
+              "style": "double"
+            },
+            {
+              "id": "display-bond:7",
+              "bondId": "bond:7",
+              "atoms": [
+                "display-atom:7",
+                "display-atom:8"
+              ],
+              "style": "single"
+            },
+            {
+              "id": "display-bond:8",
+              "bondId": "bond:8",
+              "atoms": [
+                "display-atom:8",
+                "display-atom:9"
+              ],
+              "style": "double"
+            },
+            {
+              "id": "display-bond:9",
+              "bondId": "bond:9",
+              "atoms": [
+                "display-atom:9",
+                "display-atom:0"
+              ],
+              "style": "single"
+            },
+            {
+              "id": "display-bond:10",
+              "bondId": "bond:10",
+              "atoms": [
+                "display-atom:8",
+                "display-atom:3"
+              ],
+              "style": "single"
+            }
+          ],
+          "coverage": {
+            "status": "complete",
+            "missing": []
+          }
+        }
+      },
+      "reference": {
+        "isomericSmiles": "c1ccc2ccccc2c1",
+        "molBlock": "\n     RDKit          2D\n\n 10 11  0  0  0  0  0  0  0  0999 V2000\n    2.5981   -0.7500    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.5981    0.7500    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2990    1.5000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000    0.7500    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.2990    1.5000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.5981    0.7500    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.5981   -0.7500    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.2990   -1.5000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.0000   -0.7500    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.2990   -1.5000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  2  0\n  2  3  1  0\n  3  4  2  0\n  4  5  1  0\n  5  6  2  0\n  6  7  1  0\n  7  8  2  0\n  8  9  1  0\n  9 10  2  0\n 10  1  1  0\n  9  4  1  0\nM  END\n",
+        "svg": "<?xml version='1.0' encoding='iso-8859-1'?>\n<svg version='1.1' baseProfile='full'\n              xmlns='http://www.w3.org/2000/svg'\n                      xmlns:rdkit='http://www.rdkit.org/xml'\n                      xmlns:xlink='http://www.w3.org/1999/xlink'\n                  xml:space='preserve'\nwidth='400px' height='300px' viewBox='0 0 400 300'>\n<!-- END OF HEADER -->\n<rect style='opacity:1.0;fill:#FFFFFF;stroke:none' width='400.0' height='300.0' x='0.0' y='0.0'> </rect>\n<path class='bond-0 atom-0 atom-1' d='M 380.0,202.0 L 380.0,98.0' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-0 atom-0 atom-1' d='M 364.4,193.0 L 364.4,107.0' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-1 atom-1 atom-2' d='M 380.0,98.0 L 290.0,46.1' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-2 atom-2 atom-3' d='M 290.0,46.1 L 200.0,98.0' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-2 atom-2 atom-3' d='M 290.0,64.1 L 215.6,107.0' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-3 atom-3 atom-4' d='M 200.0,98.0 L 110.0,46.1' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-4 atom-4 atom-5' d='M 110.0,46.1 L 20.0,98.0' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-4 atom-4 atom-5' d='M 110.0,64.1 L 35.6,107.0' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-5 atom-5 atom-6' d='M 20.0,98.0 L 20.0,202.0' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-6 atom-6 atom-7' d='M 20.0,202.0 L 110.0,253.9' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-6 atom-6 atom-7' d='M 35.6,193.0 L 110.0,235.9' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-7 atom-7 atom-8' d='M 110.0,253.9 L 200.0,202.0' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-8 atom-8 atom-9' d='M 200.0,202.0 L 290.0,253.9' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-8 atom-8 atom-9' d='M 215.6,193.0 L 290.0,235.9' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-9 atom-9 atom-0' d='M 290.0,253.9 L 380.0,202.0' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-10 atom-8 atom-3' d='M 200.0,202.0 L 200.0,98.0' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path d='M 380.0,196.8 L 380.0,202.0 L 375.5,204.6' style='fill:none;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />\n<path d='M 380.0,103.2 L 380.0,98.0 L 375.5,95.4' style='fill:none;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />\n<path d='M 294.5,48.7 L 290.0,46.1 L 285.5,48.7' style='fill:none;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />\n<path d='M 114.5,48.7 L 110.0,46.1 L 105.5,48.7' style='fill:none;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />\n<path d='M 24.5,95.4 L 20.0,98.0 L 20.0,103.2' style='fill:none;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />\n<path d='M 20.0,196.8 L 20.0,202.0 L 24.5,204.6' style='fill:none;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />\n<path d='M 105.5,251.3 L 110.0,253.9 L 114.5,251.3' style='fill:none;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />\n<path d='M 285.5,251.3 L 290.0,253.9 L 294.5,251.3' style='fill:none;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />\n</svg>\n"
+      }
+    },
+    {
+      "id": "macrocycle",
+      "schemaVersion": 1,
+      "kind": "rdkit-preparation",
+      "document": {
+        "schemaVersion": 1,
+        "kind": "prepared-molecule",
+        "id": "macrocycle",
+        "original": {
+          "format": "smiles",
+          "data": "C1CCCCCCCCCCC1",
+          "source": {
+            "owner": "molsyssketcher-synthetic-corpus",
+            "id": "macrocycle",
+            "generation": "1"
+          }
+        },
+        "context": {
+          "molecule": {
+            "owner": "molsyssketcher-synthetic-corpus",
+            "id": "macrocycle",
+            "generation": "1"
+          },
+          "chemicalState": "declared-smiles",
+          "structure": "no-physical-structure",
+          "preparation": {
+            "owner": "molsyssketcher-rdkit-corpus",
+            "id": "macrocycle",
+            "generation": "1"
+          }
+        },
+        "provider": {
+          "name": "RDKit",
+          "version": "2026.09.2",
+          "route": "python-rdkit-source",
+          "options": {
+            "parser": {
+              "sanitize": true,
+              "removeHs": false,
+              "parseName": false,
+              "allowCXSMILES": false
+            },
+            "layout": {
+              "canonOrient": true,
+              "clearConfs": true,
+              "nFlipsPerSample": 0,
+              "nSample": 0,
+              "sampleSeed": 0,
+              "permuteDeg4Nodes": false,
+              "bondLength": -1.0,
+              "forceRDKit": true,
+              "useRingTemplates": false,
+              "usePathAngleExpansion": true
+            },
+            "preparation": {
+              "kekulize": true,
+              "addChiralHs": false,
+              "wedgeBonds": true,
+              "forceCoords": false,
+              "wavyBonds": false
+            },
+            "drawingCoordinates": "nonphysical",
+            "verification": "sanitized-owned-drawing-copy",
+            "molBlockExport": {
+              "basis": "sanitized-owned-drawing-copy",
+              "kekulize": true
+            },
+            "maxAtoms": 256
+          }
+        },
+        "atoms": [
+          {
+            "id": "atom:0",
+            "providerIndex": 0,
+            "element": "C",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 2
+          },
+          {
+            "id": "atom:1",
+            "providerIndex": 1,
+            "element": "C",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 2
+          },
+          {
+            "id": "atom:2",
+            "providerIndex": 2,
+            "element": "C",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 2
+          },
+          {
+            "id": "atom:3",
+            "providerIndex": 3,
+            "element": "C",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 2
+          },
+          {
+            "id": "atom:4",
+            "providerIndex": 4,
+            "element": "C",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 2
+          },
+          {
+            "id": "atom:5",
+            "providerIndex": 5,
+            "element": "C",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 2
+          },
+          {
+            "id": "atom:6",
+            "providerIndex": 6,
+            "element": "C",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 2
+          },
+          {
+            "id": "atom:7",
+            "providerIndex": 7,
+            "element": "C",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 2
+          },
+          {
+            "id": "atom:8",
+            "providerIndex": 8,
+            "element": "C",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 2
+          },
+          {
+            "id": "atom:9",
+            "providerIndex": 9,
+            "element": "C",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 2
+          },
+          {
+            "id": "atom:10",
+            "providerIndex": 10,
+            "element": "C",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 2
+          },
+          {
+            "id": "atom:11",
+            "providerIndex": 11,
+            "element": "C",
+            "isotope": null,
+            "formalCharge": 0,
+            "hydrogenCount": 2
+          }
+        ],
+        "bonds": [
+          {
+            "id": "bond:0",
+            "providerIndex": 0,
+            "atoms": [
+              "atom:0",
+              "atom:1"
+            ]
+          },
+          {
+            "id": "bond:1",
+            "providerIndex": 1,
+            "atoms": [
+              "atom:1",
+              "atom:2"
+            ]
+          },
+          {
+            "id": "bond:2",
+            "providerIndex": 2,
+            "atoms": [
+              "atom:2",
+              "atom:3"
+            ]
+          },
+          {
+            "id": "bond:3",
+            "providerIndex": 3,
+            "atoms": [
+              "atom:3",
+              "atom:4"
+            ]
+          },
+          {
+            "id": "bond:4",
+            "providerIndex": 4,
+            "atoms": [
+              "atom:4",
+              "atom:5"
+            ]
+          },
+          {
+            "id": "bond:5",
+            "providerIndex": 5,
+            "atoms": [
+              "atom:5",
+              "atom:6"
+            ]
+          },
+          {
+            "id": "bond:6",
+            "providerIndex": 6,
+            "atoms": [
+              "atom:6",
+              "atom:7"
+            ]
+          },
+          {
+            "id": "bond:7",
+            "providerIndex": 7,
+            "atoms": [
+              "atom:7",
+              "atom:8"
+            ]
+          },
+          {
+            "id": "bond:8",
+            "providerIndex": 8,
+            "atoms": [
+              "atom:8",
+              "atom:9"
+            ]
+          },
+          {
+            "id": "bond:9",
+            "providerIndex": 9,
+            "atoms": [
+              "atom:9",
+              "atom:10"
+            ]
+          },
+          {
+            "id": "bond:10",
+            "providerIndex": 10,
+            "atoms": [
+              "atom:10",
+              "atom:11"
+            ]
+          },
+          {
+            "id": "bond:11",
+            "providerIndex": 11,
+            "atoms": [
+              "atom:11",
+              "atom:0"
+            ]
+          }
+        ],
+        "depiction": {
+          "generation": "1",
+          "profile": "supplied-bijective@1",
+          "coordinates": "drawing",
+          "axes": "x-right-y-up",
+          "atoms": [
+            {
+              "id": "display-atom:0",
+              "atomId": "atom:0",
+              "origin": "mapped",
+              "x": 2.8977774788672064,
+              "y": -3.700743415417188e-17,
+              "label": ""
+            },
+            {
+              "id": "display-atom:1",
+              "atomId": "atom:1",
+              "origin": "mapped",
+              "x": 2.5095489112134253,
+              "y": 1.4488887394336027,
+              "label": ""
+            },
+            {
+              "id": "display-atom:2",
+              "atomId": "atom:2",
+              "origin": "mapped",
+              "x": 1.4488887394336034,
+              "y": 2.5095489112134244,
+              "label": ""
+            },
+            {
+              "id": "display-atom:3",
+              "atomId": "atom:3",
+              "origin": "mapped",
+              "x": 5.105046030943475e-16,
+              "y": 2.897777478867206,
+              "label": ""
+            },
+            {
+              "id": "display-atom:4",
+              "atomId": "atom:4",
+              "origin": "mapped",
+              "x": -1.448888739433602,
+              "y": 2.509548911213425,
+              "label": ""
+            },
+            {
+              "id": "display-atom:5",
+              "atomId": "atom:5",
+              "origin": "mapped",
+              "x": -2.509548911213424,
+              "y": 1.4488887394336039,
+              "label": ""
+            },
+            {
+              "id": "display-atom:6",
+              "atomId": "atom:6",
+              "origin": "mapped",
+              "x": -2.8977774788672055,
+              "y": 3.1786795725942917e-16,
+              "label": ""
+            },
+            {
+              "id": "display-atom:7",
+              "atomId": "atom:7",
+              "origin": "mapped",
+              "x": -2.509548911213425,
+              "y": -1.448888739433602,
+              "label": ""
+            },
+            {
+              "id": "display-atom:8",
+              "atomId": "atom:8",
+              "origin": "mapped",
+              "x": -1.4488887394336039,
+              "y": -2.509548911213424,
+              "label": ""
+            },
+            {
+              "id": "display-atom:9",
+              "atomId": "atom:9",
+              "origin": "mapped",
+              "x": -1.9924617973285465e-16,
+              "y": -2.897777478867206,
+              "label": ""
+            },
+            {
+              "id": "display-atom:10",
+              "atomId": "atom:10",
+              "origin": "mapped",
+              "x": 1.4488887394336012,
+              "y": -2.5095489112134257,
+              "label": ""
+            },
+            {
+              "id": "display-atom:11",
+              "atomId": "atom:11",
+              "origin": "mapped",
+              "x": 2.5095489112134244,
+              "y": -1.4488887394336043,
+              "label": ""
+            }
+          ],
+          "bonds": [
+            {
+              "id": "display-bond:0",
+              "bondId": "bond:0",
+              "atoms": [
+                "display-atom:0",
+                "display-atom:1"
+              ],
+              "style": "single"
+            },
+            {
+              "id": "display-bond:1",
+              "bondId": "bond:1",
+              "atoms": [
+                "display-atom:1",
+                "display-atom:2"
+              ],
+              "style": "single"
+            },
+            {
+              "id": "display-bond:2",
+              "bondId": "bond:2",
+              "atoms": [
+                "display-atom:2",
+                "display-atom:3"
+              ],
+              "style": "single"
+            },
+            {
+              "id": "display-bond:3",
+              "bondId": "bond:3",
+              "atoms": [
+                "display-atom:3",
+                "display-atom:4"
+              ],
+              "style": "single"
+            },
+            {
+              "id": "display-bond:4",
+              "bondId": "bond:4",
+              "atoms": [
+                "display-atom:4",
+                "display-atom:5"
+              ],
+              "style": "single"
+            },
+            {
+              "id": "display-bond:5",
+              "bondId": "bond:5",
+              "atoms": [
+                "display-atom:5",
+                "display-atom:6"
+              ],
+              "style": "single"
+            },
+            {
+              "id": "display-bond:6",
+              "bondId": "bond:6",
+              "atoms": [
+                "display-atom:6",
+                "display-atom:7"
+              ],
+              "style": "single"
+            },
+            {
+              "id": "display-bond:7",
+              "bondId": "bond:7",
+              "atoms": [
+                "display-atom:7",
+                "display-atom:8"
+              ],
+              "style": "single"
+            },
+            {
+              "id": "display-bond:8",
+              "bondId": "bond:8",
+              "atoms": [
+                "display-atom:8",
+                "display-atom:9"
+              ],
+              "style": "single"
+            },
+            {
+              "id": "display-bond:9",
+              "bondId": "bond:9",
+              "atoms": [
+                "display-atom:9",
+                "display-atom:10"
+              ],
+              "style": "single"
+            },
+            {
+              "id": "display-bond:10",
+              "bondId": "bond:10",
+              "atoms": [
+                "display-atom:10",
+                "display-atom:11"
+              ],
+              "style": "single"
+            },
+            {
+              "id": "display-bond:11",
+              "bondId": "bond:11",
+              "atoms": [
+                "display-atom:11",
+                "display-atom:0"
+              ],
+              "style": "single"
+            }
+          ],
+          "coverage": {
+            "status": "complete",
+            "missing": []
+          }
+        }
+      },
+      "reference": {
+        "isomericSmiles": "C1CCCCCCCCCCC1",
+        "molBlock": "\n     RDKit          2D\n\n 12 12  0  0  0  0  0  0  0  0999 V2000\n    2.8978   -0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.5095    1.4489    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.4489    2.5095    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    0.0000    2.8978    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.4489    2.5095    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.5095    1.4489    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.8978    0.0000    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -2.5095   -1.4489    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -1.4489   -2.5095    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n   -0.0000   -2.8978    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    1.4489   -2.5095    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n    2.5095   -1.4489    0.0000 C   0  0  0  0  0  0  0  0  0  0  0  0\n  1  2  1  0\n  2  3  1  0\n  3  4  1  0\n  4  5  1  0\n  5  6  1  0\n  6  7  1  0\n  7  8  1  0\n  8  9  1  0\n  9 10  1  0\n 10 11  1  0\n 11 12  1  0\n 12  1  1  0\nM  END\n",
+        "svg": "<?xml version='1.0' encoding='iso-8859-1'?>\n<svg version='1.1' baseProfile='full'\n              xmlns='http://www.w3.org/2000/svg'\n                      xmlns:rdkit='http://www.rdkit.org/xml'\n                      xmlns:xlink='http://www.w3.org/1999/xlink'\n                  xml:space='preserve'\nwidth='400px' height='300px' viewBox='0 0 400 300'>\n<!-- END OF HEADER -->\n<rect style='opacity:1.0;fill:#FFFFFF;stroke:none' width='400.0' height='300.0' x='0.0' y='0.0'> </rect>\n<path class='bond-0 atom-0 atom-1' d='M 335.0,150.0 L 316.9,82.5' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-1 atom-1 atom-2' d='M 316.9,82.5 L 267.5,33.1' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-2 atom-2 atom-3' d='M 267.5,33.1 L 200.0,15.0' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-3 atom-3 atom-4' d='M 200.0,15.0 L 132.5,33.1' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-4 atom-4 atom-5' d='M 132.5,33.1 L 83.1,82.5' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-5 atom-5 atom-6' d='M 83.1,82.5 L 65.0,150.0' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-6 atom-6 atom-7' d='M 65.0,150.0 L 83.1,217.5' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-7 atom-7 atom-8' d='M 83.1,217.5 L 132.5,266.9' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-8 atom-8 atom-9' d='M 132.5,266.9 L 200.0,285.0' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-9 atom-9 atom-10' d='M 200.0,285.0 L 267.5,266.9' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-10 atom-10 atom-11' d='M 267.5,266.9 L 316.9,217.5' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path class='bond-11 atom-11 atom-0' d='M 316.9,217.5 L 335.0,150.0' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />\n<path d='M 334.1,146.6 L 335.0,150.0 L 334.1,153.4' style='fill:none;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />\n<path d='M 317.8,85.9 L 316.9,82.5 L 314.4,80.0' style='fill:none;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />\n<path d='M 270.0,35.6 L 267.5,33.1 L 264.1,32.2' style='fill:none;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />\n<path d='M 203.4,15.9 L 200.0,15.0 L 196.6,15.9' style='fill:none;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />\n<path d='M 135.9,32.2 L 132.5,33.1 L 130.0,35.6' style='fill:none;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />\n<path d='M 85.6,80.0 L 83.1,82.5 L 82.2,85.9' style='fill:none;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />\n<path d='M 65.9,146.6 L 65.0,150.0 L 65.9,153.4' style='fill:none;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />\n<path d='M 82.2,214.1 L 83.1,217.5 L 85.6,220.0' style='fill:none;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />\n<path d='M 130.0,264.4 L 132.5,266.9 L 135.9,267.8' style='fill:none;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />\n<path d='M 196.6,284.1 L 200.0,285.0 L 203.4,284.1' style='fill:none;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />\n<path d='M 264.1,267.8 L 267.5,266.9 L 270.0,264.4' style='fill:none;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />\n<path d='M 314.4,220.0 L 316.9,217.5 L 317.8,214.1' style='fill:none;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1;' />\n</svg>\n"
+      }
+    }
+  ]
+}

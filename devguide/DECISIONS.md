@@ -15,7 +15,7 @@ the task ledger.
 | D07 | accepted boundary | Preserve original source declarations and distinguish layout, chemistry, calculated layers and drafts | Every document/provider/consumer contract change |
 | D08 | accepted boundary | Require explicit model correspondence for coordinated 2D/3D selection | Actual provider receiving; absent mapping remains visible |
 | D09 | accepted planning | Use stages/microsteps and evidence-based checkpoints; do not equate documentation with implementation | Every task closeout and milestone review |
-| D10 | partially resolved | D19 selects license/toolchain/private package layout; first provider access route, actual platform claims and public release version remain open | P0.4/P0.6 and P5 |
+| D10 | partially resolved | D19 selects license/toolchain/private package layout and D22 selects a first RDKit source route; production transport/adapter, actual platform claims and public release version remain open | P0.4/P0.6 and P5 |
 | D11 | proposed refinement | Separate chemical interpretation, prepared depiction and scene with explicit generated/display mappings | P1.6; source basis in CONCEPTUAL_REVIEW.md |
 | D12 | proposed refinement | One live-document writer, atomic candidate acceptance and independent lifecycle/document/request states | P1.1/P1.7 |
 | D13 | proposed refinement | Use monotonic generations, destination intent and declared dependencies for async applicability, including undo | P1.4/P2.5 |
@@ -27,6 +27,7 @@ the task ledger.
 | D19 | accepted, 2026-11-15 | Maintainer selected MIT; first private package uses Node 24.22.1, npm 11.19.1, TypeScript 5.9.3, Prettier 3.6.2, native Node tests, ESM and declarations | Component #1; actual browser/provider/artifact milestones |
 | D20 | bounded implementation | Start with supplied attributed documents, explicit bijective preparation and shared replacement/reference controls; no live engine is loaded implicitly | SUPPLIED_INPUT_PROFILE.md; extend using actual provider receiving |
 | D21 | accepted direction, 2026-11-15 | Maintainer selects Conda distribution and exact X.Y.Z library versions without prefixes/suffixes; generic-resource recipe is provisional until suite profile and actual archive receiving | Suite #199 and P5.3/P5.4; no publication from the draft recipe |
+| D22 | bounded implementation, 2026-11-15 | Receive explicit Python RDKit source preparation before an own scene: retain explicit H, disable generated chiral H, preserve actual origin maps and native references; refuse outside-profile chemistry | Component #2 and RDKIT_PROVIDER.md; production transport/adapter distribution and richer profiles remain pending |
 
 ## Consequences
 
