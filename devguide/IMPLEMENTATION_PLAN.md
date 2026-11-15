@@ -183,7 +183,7 @@ Standalone 2D milestones can be received without a 3D runtime. The linked
 profile needs an actual mapped journey; an unavailable-state guard alone no
 longer completes P4.4.
 
-## P5 — Joint exploration qualification and delivery (todo)
+## P5 — Joint exploration qualification and delivery (partial)
 
 | ID | Status | Required result / completion evidence |
 | --- | --- | --- |

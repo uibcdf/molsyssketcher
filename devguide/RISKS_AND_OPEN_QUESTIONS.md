@@ -11,7 +11,7 @@ provider issues should own concrete implementation work as it is opened.
 | R03 | Viewer state may not support invalid editing drafts | Separate graph/draft envelope and validate the early edit/undo experiment | P1.4, P2.5 |
 | R04 | Index/order changes may corrupt overlays or 2D/3D selection | Stable IDs, exact maps and revision-bound results; explicit unavailable mapping | P1, P3, P4 |
 | R05 | RDKit WASM may lack a required native operation | Inventory actual APIs; choose one route; report reusable missing capabilities to the owner | P0.6, P1.2 |
-| R06 | Reference code may bring licensing obligations or maintenance burden | Record immutable origin and review actual licenses/notices before adaptation; select project license | P0.5 and each reuse |
+| R06 | Reference code may bring licensing obligations or maintenance burden | MIT selected for the project; record immutable origin and review actual third-party licenses/notices before adaptation | Each reuse and P5 |
 | R07 | Browser success may hide Qt/WASM/worker/asset failures | Receive the production bundle in the actual QWebEngine host | P4.2 |
 | R08 | UI and memory promises may lack measured scope or bounded pending work | Agree budgets and bound admission/queues; measure cold/warm load and repeated lifecycle | P0.6/P1.4/P5.2 |
 | R09 | Generic infrastructure may grow before concrete needs | One renderer, one provider route and a small public boundary first | P1/P2 review |
@@ -36,8 +36,10 @@ provider issues should own concrete implementation work as it is opened.
 - Which RDKit access route is first, and which MolSysMT APIs already cover it?
 - Which drawing-preparation fields can that route actually supply with exact
   semantic/display correspondence?
-- Which toolchain and test runner fit a framework-independent TypeScript core?
-- What project license and third-party notices apply to the actual artifacts?
+- Which additional browser/Qt/provider tools are required beyond the selected
+  Node/TypeScript/Prettier/native-test foundation?
+- Which third-party notices apply to future incorporated runtime assets beyond
+  the project's selected MIT license?
 - What controlled artifact will Sabueso first consume, and how will it verify
   production module identity?
 - Which measured responsiveness, memory and graphical-quality budgets will

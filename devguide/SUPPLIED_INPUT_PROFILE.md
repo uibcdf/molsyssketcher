@@ -86,7 +86,7 @@ scale or performance claims. Inputs must be plain JSON data with finite numbers;
 cycles, accessors, symbols, sparse arrays and runtime objects are refused.
 
 The synthetic corpus exercises reordered semantic/provider/display identifiers,
-retained source newlines, charged/isotopic fields, explicit wedge origins,
+retained source newlines, explicit wedge origins,
 missing mappings, partial preparation, stale structure/preparation references,
 duplicate labels across owners, failed replacement, burst replacement,
 uncancellable work, callback re-entry and independent instance disposal.
