@@ -22,7 +22,9 @@ function refuses(
 
 test("retains original bytes and explicit provider/semantic/display maps independently of ordering", () => {
   const input = molecule();
+  input.provider.build = "synthetic-builder";
   const accepted = prepareSuppliedMolecule(input);
+  assert.equal(accepted.provider.build, "synthetic-builder");
   assert.equal(accepted.original.data, "CO\n");
   assert.equal(accepted.atoms[0].id, "oxygen");
   assert.equal(accepted.depiction.atoms[0].atomId, "carbon");
@@ -36,6 +38,8 @@ test("retains original bytes and explicit provider/semantic/display maps indepen
   assert.throws(() => {
     accepted.provider.options.changed = true;
   }, TypeError);
+  input.provider.build = 123;
+  refuses(input);
 });
 
 test("rejects broken identities, mappings and bond correspondence", () => {

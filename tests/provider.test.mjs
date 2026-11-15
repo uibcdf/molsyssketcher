@@ -17,6 +17,8 @@ test("receives every real RDKit preparation through the built public molecular c
     const document = prepareSuppliedMolecule(entry.document);
     assert.equal(document.provider.name, "RDKit");
     assert.equal(document.provider.version, "2026.09.2");
+    assert.equal(typeof document.provider.build, "string");
+    assert.ok(document.provider.build.length > 0);
     assert.equal(document.provider.options.parser.removeHs, false);
     assert.equal(document.provider.options.preparation.addChiralHs, false);
     assert.equal(document.provider.options.drawingCoordinates, "nonphysical");

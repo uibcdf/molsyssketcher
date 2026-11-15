@@ -75,6 +75,7 @@ export interface PreparedMolecule {
   readonly provider: {
     readonly name: string;
     readonly version: string;
+    readonly build?: string;
     readonly route: string;
     readonly options: { readonly [key: string]: JsonValue };
   };

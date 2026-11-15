@@ -37,6 +37,7 @@
         "provider": {
           "name": "RDKit",
           "version": "2026.09.2",
+          "build": "Linux|7.0.0-1019-azure|UNIX|GNU|64-bit",
           "route": "python-rdkit-source",
           "options": {
             "parser": {
@@ -181,6 +182,7 @@
         "provider": {
           "name": "RDKit",
           "version": "2026.09.2",
+          "build": "Linux|7.0.0-1019-azure|UNIX|GNU|64-bit",
           "route": "python-rdkit-source",
           "options": {
             "parser": {
@@ -474,6 +476,7 @@
         "provider": {
           "name": "RDKit",
           "version": "2026.09.2",
+          "build": "Linux|7.0.0-1019-azure|UNIX|GNU|64-bit",
           "route": "python-rdkit-source",
           "options": {
             "parser": {
@@ -599,6 +602,7 @@
         "provider": {
           "name": "RDKit",
           "version": "2026.09.2",
+          "build": "Linux|7.0.0-1019-azure|UNIX|GNU|64-bit",
           "route": "python-rdkit-source",
           "options": {
             "parser": {
@@ -743,6 +747,7 @@
         "provider": {
           "name": "RDKit",
           "version": "2026.09.2",
+          "build": "Linux|7.0.0-1019-azure|UNIX|GNU|64-bit",
           "route": "python-rdkit-source",
           "options": {
             "parser": {
@@ -920,6 +925,7 @@
         "provider": {
           "name": "RDKit",
           "version": "2026.09.2",
+          "build": "Linux|7.0.0-1019-azure|UNIX|GNU|64-bit",
           "route": "python-rdkit-source",
           "options": {
             "parser": {
@@ -1197,6 +1203,7 @@
         "provider": {
           "name": "RDKit",
           "version": "2026.09.2",
+          "build": "Linux|7.0.0-1019-azure|UNIX|GNU|64-bit",
           "route": "python-rdkit-source",
           "options": {
             "parser": {
@@ -1474,6 +1481,7 @@
         "provider": {
           "name": "RDKit",
           "version": "2026.09.2",
+          "build": "Linux|7.0.0-1019-azure|UNIX|GNU|64-bit",
           "route": "python-rdkit-source",
           "options": {
             "parser": {
@@ -1684,6 +1692,7 @@
         "provider": {
           "name": "RDKit",
           "version": "2026.09.2",
+          "build": "Linux|7.0.0-1019-azure|UNIX|GNU|64-bit",
           "route": "python-rdkit-source",
           "options": {
             "parser": {
@@ -1894,6 +1903,7 @@
         "provider": {
           "name": "RDKit",
           "version": "2026.09.2",
+          "build": "Linux|7.0.0-1019-azure|UNIX|GNU|64-bit",
           "route": "python-rdkit-source",
           "options": {
             "parser": {
@@ -2154,6 +2164,7 @@
         "provider": {
           "name": "RDKit",
           "version": "2026.09.2",
+          "build": "Linux|7.0.0-1019-azure|UNIX|GNU|64-bit",
           "route": "python-rdkit-source",
           "options": {
             "parser": {
@@ -2596,6 +2607,7 @@
         "provider": {
           "name": "RDKit",
           "version": "2026.09.2",
+          "build": "Linux|7.0.0-1019-azure|UNIX|GNU|64-bit",
           "route": "python-rdkit-source",
           "options": {
             "parser": {

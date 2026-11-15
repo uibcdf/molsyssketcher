@@ -209,7 +209,14 @@ export function prepareSuppliedMolecule(input: unknown): PreparedMolecule {
   reference(original.source, "$.original.source");
   context(value.context, "$.context");
   const provider = record(value.provider, "$.provider");
-  fields(provider, ["name", "version", "route", "options"], [], "$.provider");
+  fields(
+    provider,
+    ["name", "version", "route", "options"],
+    ["build"],
+    "$.provider",
+  );
+  if (Object.hasOwn(provider, "build"))
+    string(provider.build, "$.provider.build");
   for (const key of ["name", "version", "route"])
     string(provider[key], `$.provider.${key}`);
   record(provider.options, "$.provider.options");

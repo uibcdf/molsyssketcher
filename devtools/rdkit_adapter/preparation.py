@@ -255,6 +255,7 @@ def prepare_smiles(request):
         "provider": {
             "name": "RDKit",
             "version": rdBase.rdkitVersion,
+            "build": rdBase.rdkitBuild,
             "route": "python-rdkit-source",
             "options": {
                 "parser": dict(PARSER_OPTIONS),

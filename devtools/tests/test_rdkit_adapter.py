@@ -8,7 +8,7 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 
 import pytest
-from rdkit import Chem
+from rdkit import Chem, rdBase
 from rdkit.Chem import rdDepictor
 from rdkit.Chem.Draw import rdMolDraw2D
 
@@ -33,6 +33,7 @@ def test_native_preparation_retains_input_maps_and_admitted_mol_round_trip(case)
     original = copy.deepcopy(request)
     result = prepare_smiles(request)
     document, reference = result["document"], result["reference"]
+    assert document["provider"]["build"] == rdBase.rdkitBuild
     assert request == original
     assert document["original"]["data"] == case["smiles"]
     assert document["context"] == request["context"]

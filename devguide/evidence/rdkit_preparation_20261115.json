@@ -4,7 +4,7 @@
   "owning_issue": "https://github.com/uibcdf/molsyssketcher/issues/2",
   "source_identity": "the Git commit containing this receipt; exact-head CI evidence in the owning issue",
   "scope": "source-development Python RDKit preparation, native reference round trips and built TypeScript receiving",
-  "provider": {"name": "RDKit", "version": "2026.09.2", "installed_distribution": "2026.9.2", "route": "python-rdkit-source"},
+  "provider": {"name": "RDKit", "version": "2026.09.2", "build": "Linux|7.0.0-1019-azure|UNIX|GNU|64-bit", "installed_distribution": "2026.9.2", "route": "python-rdkit-source"},
   "local_python": "3.14.10",
   "local_pytest": "9.2.0",
   "local_pytest_receptor": "1.2.3+2.ga02820f",

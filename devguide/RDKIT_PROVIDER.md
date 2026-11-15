@@ -43,7 +43,7 @@ artifact unchanged.
 | Native MOL reference | RDKit writer with kekulization enabled on the verified copy; admitted cases round-trip through the native reader with explicit H retained |
 | Native SVG reference | RDKit draws the already prepared copy with automatic drawing preparation disabled; this reference does not qualify our future renderer |
 
-The detailed engine version and every parser/layout/preparation option travel
+The engine version, its provider-reported build tag and every parser/layout/preparation option travel
 in `document.provider`. Chemical fields/H counts come from RDKit. Plain supplied
 label text is a first-profile label declaration; coherent typographic layout,
 font metrics and hit geometry still belong to the future scene.
