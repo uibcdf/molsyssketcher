@@ -55,7 +55,7 @@ try {
     join(temporary, "consumer.mjs"),
     `
 import assert from 'node:assert/strict';
-import { createMolecularController, createInteractionController, createMolecularSvgView, buildMolecularScene, hitTestMolecularScene } from '@uibcdf/molsyssketcher';
+import { createMolecularController, createInteractionController, createMolecularSvgView, buildMolecularScene, hitTestMolecularScene, fitViewport, zoomViewport } from '@uibcdf/molsyssketcher';
 assert.equal(typeof createMolecularSvgView, 'function');
 const molecular = createMolecularController({ instanceId: 'clean-molecule' });
 const diagram = createInteractionController({ instanceId: 'clean-diagram' });
@@ -67,6 +67,7 @@ const scene = buildMolecularScene(moleculeResult.snapshot.document,
   (text, size) => ({x:0, y:-size, width:text.length * size / 2, height:size}),
   {instanceId:'clean-scene', generation:1});
 assert.equal(hitTestMolecularScene(scene, scene.atoms[0].position).semanticId, scene.atoms[0].semanticId);
+assert.equal(zoomViewport(scene.bounds, fitViewport(scene.bounds), 2).zoom, 2);
 assert.equal(diagramResult.status, 'accepted');
 assert.equal(diagramResult.snapshot.document.parents.length, 2);
 molecular.dispose(); diagram.dispose();
@@ -84,6 +85,12 @@ import { createMolecularController, createMolecularSvgView, type PreparedMolecul
 const mount = document.createElement('div');
 const surface = createMolecularSvgView(mount, {instanceId:'typed-surface'});
 surface.subscribeSelection((pick: ScenePick | null) => console.log(pick?.context));
+surface.subscribeHover((pick: ScenePick | null) => console.log(pick?.context));
+surface.fit(); surface.zoomBy(2); surface.panBy(5, 10);
+if (surface.state.viewport) {
+  // @ts-expect-error Camera state is read-only.
+  surface.state.viewport.center.x = 2;
+}
 if (surface.state.accepted) {
   // @ts-expect-error Accepted scene geometry is read-only.
   surface.state.accepted.scene.atoms[0].position.x = 7;

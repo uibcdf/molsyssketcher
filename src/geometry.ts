@@ -113,11 +113,13 @@ export function unionRects(boxes: readonly Rect[]): Rect {
 }
 
 export function validateViewportTransform(matrix: AffineTransform): void {
+  const determinant = matrix.a * matrix.d - matrix.b * matrix.c;
   if (
     ![matrix.a, matrix.b, matrix.c, matrix.d, matrix.e, matrix.f].every(
       Number.isFinite,
     ) ||
-    matrix.a * matrix.d - matrix.b * matrix.c <= 0
+    !Number.isFinite(determinant) ||
+    determinant <= 0
   ) {
     throw new SketcherError(
       "unsupported-feature",

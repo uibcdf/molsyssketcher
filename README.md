@@ -18,7 +18,7 @@ an early feasibility check to protect that path.
 **Current status:** an experimental TypeScript document/transaction foundation
 accepts supplied prepared molecular data and exact interaction-result references.
 An experimental read-only molecular SVG surface now renders prepared documents,
-with measured labels, semantic selection, fit/resize and graphical export.
+with measured labels, semantic selection/hover, pan/zoom, fit/resize and graphical export.
 Production provider/host adapters and the interaction-diagram surface remain pending.
 An explicit [RDKit source-development route](devguide/RDKIT_PROVIDER.md) now
 prepares a finite real-provider corpus for this foundation; it is separate from

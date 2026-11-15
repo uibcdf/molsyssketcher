@@ -41,3 +41,11 @@ export type {
   ViewReplacementResult,
 } from "./view.js";
 export type { Point, Rect, AffineTransform } from "./geometry.js";
+export {
+  fitViewport,
+  panViewport,
+  zoomViewport,
+  viewportBounds,
+  VIEWPORT_LIMITS,
+} from "./viewport.js";
+export type { ViewportState } from "./viewport.js";

@@ -29,6 +29,7 @@ the task ledger.
 | D21 | accepted direction, 2026-11-15 | Maintainer selects Conda distribution and exact X.Y.Z library versions without prefixes/suffixes; generic-resource recipe is provisional until suite profile and actual archive receiving | Suite #199 and P5.3/P5.4; no publication from the draft recipe |
 | D22 | bounded implementation, 2026-11-15 | Receive explicit Python RDKit source preparation before an own scene: retain explicit H, disable generated chiral H, preserve actual origin maps and native references; refuse outside-profile chemistry | Component #2 and RDKIT_PROVIDER.md; production transport/adapter distribution and richer profiles remain pending |
 | D23 | bounded implementation, 2026-11-15 | Use own immutable SVG primitives with actual generic sans-serif metrics, positive fit transforms and scoped semantic selection; receive actual DOM bond geometry through native RDKit independently of source style tags | Component #3 and MOLECULAR_SVG_PROFILE.md; crowded structures, pan/zoom, full accessibility, Qt and complete primary views remain pending |
+| D24 | bounded implementation, 2026-11-15 | Keep viewport camera/hover separate from accepted chemistry and immutable scene; bounded positive pan/zoom/fit preserve identity, export records current crop, contextual hover retires with navigation/lifecycle | Component #4 and MOLECULAR_SVG_PROFILE.md; pinch, dense scenes, native interaction composition and complete host receiving remain pending |
 
 ## Consequences
 

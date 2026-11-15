@@ -84,7 +84,8 @@ def reconstruct(item):
             first, second = second, first
         assert distance(narrow, positions[first]) < 0.001
         # Final hatch is intentionally inset; all other centers meet endpoints.
-        assert distance(wide, positions[second]) < (4 if len(shapes) == 8 else 0.001)
+        inset = distance(positions[first], positions[second]) / 16 if len(shapes) == 8 else 0
+        assert distance(wide, positions[second]) < inset + 0.001
         molecule.AddBond(
             indices[first],
             indices[second],

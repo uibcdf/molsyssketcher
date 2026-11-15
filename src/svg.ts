@@ -131,10 +131,11 @@ export function renderMolecularSvg(
   });
   root.style.display = "block";
   root.style.background = colors.background;
+  root.style.overflow = "hidden";
   const title = create("title", { id: `${prefix}-title` });
   title.textContent = `Molecule ${scene.documentId}: ${scene.atoms.length} atoms, ${scene.bonds.length} bonds.`;
   const description = create("desc", { id: `${prefix}-description` });
-  description.textContent = `Read-only molecular drawing. Arrow keys move between atoms and bonds; Enter selects; Escape clears selection. Preparation: ${scene.coverage.status}. ${scene.coverage.missing.join("; ")}`;
+  description.textContent = `Read-only molecular drawing. Drag to pan; wheel to zoom at the cursor. Arrow keys move between atoms and bonds; Enter selects; Escape clears selection. W/A/S/D pan; +/- zoom; Home fits the molecule. Preparation: ${scene.coverage.status}. ${scene.coverage.missing.join("; ")}`;
   const metadata = create("metadata");
   metadata.textContent = JSON.stringify({
     schemaVersion: 1,
@@ -259,6 +260,11 @@ export function renderMolecularSvg(
     }),
     create("g", {
       "data-layer": "focus",
+      "aria-hidden": "true",
+      "pointer-events": "none",
+    }),
+    create("g", {
+      "data-layer": "hover",
       "aria-hidden": "true",
       "pointer-events": "none",
     }),

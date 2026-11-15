@@ -6,8 +6,9 @@ provider observations. Their projection is defined in
 [INTERACTION_DIAGRAMS.md](INTERACTION_DIAGRAMS.md).
 
 Status: the bounded [first molecular SVG profile](MOLECULAR_SVG_PROFILE.md)
-implements own primitives, actual font metrics, semantic selection, fit/resize,
-export and owned lifecycle. The broader behavior below remains a requirement
+implements own primitives, actual font metrics, semantic selection/hover,
+bounded pan/zoom/fit, resize, current-viewport export and owned lifecycle.
+The broader behavior below remains a requirement
 until its applicable receiving; native interaction diagrams remain pending.
 
 ## Scene

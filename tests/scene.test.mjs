@@ -102,6 +102,23 @@ test("viewport hit testing follows rendered labels and bond primitives at differ
     "oxygen",
   );
   assert.equal(hitTestMolecularScene(scene, { x: 10000, y: 10000 }), null);
+  for (const scale of [0.5, 8]) {
+    const matrix = { a: scale, b: 0, c: 0, d: scale, e: 0, f: 0 };
+    const point = {
+      x: ((a.x + b.x) / 2) * scale,
+      y: ((a.y + b.y) / 2) * scale + 0.8 * scale,
+    };
+    assert.equal(hitTestMolecularScene(scene, point, matrix, 0)?.kind, "bond");
+    assert.equal(
+      hitTestMolecularScene(
+        scene,
+        { ...point, y: point.y + 0.4 * scale },
+        matrix,
+        0,
+      ),
+      null,
+    );
+  }
   assert.throws(
     () =>
       hitTestMolecularScene(

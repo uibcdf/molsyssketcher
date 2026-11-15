@@ -1,6 +1,6 @@
 # Current checkpoint
 
-Updated: **2026-11-15**. Current milestone: partial M0/P1 and first molecular SVG increment.
+Updated: **2026-11-15**. Current milestone: partial M0/P1 and molecular SVG navigation.
 
 ## Product direction
 
@@ -31,7 +31,8 @@ bounded preparation queues and stale/disposal guards. MIT was selected by the
 maintainer. Node/npm and development dependencies are pinned.
 
 The first own SVG renderer has measured typography, pointer/keyboard selection,
-fit/resize, contextual SVG export and owned-resource disposal. There is no
+bounded pan/zoom/fit, contextual hover, resize, contextual SVG export and
+owned-resource disposal. There is no
 production chemical/native-result adapter, production editor, published package
 or fully qualified browser/Qt/platform profile. A bounded real
 RDKit source-development route and its native chemical controls now exist;
@@ -99,7 +100,7 @@ dated historical record, not a live plan counter.
 
 Documentation checks cover local file/anchor links, task IDs/status counts,
 decision/readiness consistency, historical-record preservation and whitespace.
-`npm run check` executes canonical version/lock consistency, strict types, source formatting, 28 synthetic/real-provider-fixture
+`npm run check` executes canonical version/lock consistency, strict types, source formatting, 31 synthetic/real-provider-fixture
 document/controller/scene tests and local link/anchor/ledger checks. `npm run pack:check`
 checks the local tarball's contents, offline independent consumer imports,
 declarations and read-only types. `npm run example` exercises both supplied
@@ -170,10 +171,36 @@ the native chemistry and metric checks. See [the exact profile](MOLECULAR_SVG_PR
 and [source receipt](evidence/molecular_svg_20261115.json); exact-head CI and
 retained browser artifacts are linked in issue #3.
 
-Pan/zoom, crowded-structure policy, hover/scientific layers, full accessibility,
+Crowded-structure policy, scientific layers, full accessibility,
 Qt, installed visual-consumer receiving and the Interaction View remain pending.
 Generic fonts are not embedded in SVG exports. This increment completes no
 primary-view or joint delivery gate.
+
+## Received molecular navigation and hover
+
+[Component #4](https://github.com/uibcdf/molsyssketcher/issues/4) extends the
+first surface with an independent immutable camera, cursor-centered wheel/API
+zoom, primary-pointer pan, explicit fit, keyboard alternatives and scoped hover.
+Relative zoom is bounded to 0.25–8; positive uniform transforms preserve chemical
+orientation. Camera/hover changes do not revise accepted chemistry or the scene.
+Export retains the current camera/viewBox/crop and excludes transient indicators.
+
+Fifteen actual-browser controls now cover navigation and the existing surface.
+They include drag versus click, CSS-pixel displacement/tolerance, wheel delta
+modes, high pixel density, keyboard pan/zoom/fit, explicit and observed resize,
+capture loss before acquisition, blur/cancel, stale DOM events, bounded hover,
+unsubscription, callback reentry, independent instances and disposal. Thirty-one
+Node tests include pure camera invariants. Native RDKit receives all twelve
+drawings after their actual DOM screen transforms, zoom and pan; its four
+reflection controls retain the prior independent chemical scope.
+
+The [profile](MOLECULAR_SVG_PROFILE.md) documents API, units, limits and reusable
+tool ownership. The new [receipt](evidence/molecular_navigation_20261115.json)
+records source-local results; the owning issue receives exact-head CI and retained
+artifacts. The earlier scene/provider receipts remain historical. Pinch, crowded
+structures, full accessible inspection, native interaction diagrams and actual
+Qt/Conda visual delivery remain pending. P2.4/P3.1 remain partial with their
+remaining acceptance visible; task counts are unchanged.
 
 ## Resume here
 
@@ -183,9 +210,10 @@ primary-view or joint delivery gate.
    finish the needed finite operation/loss/corpus and measured-budget decisions.
 3. Receive the first owner-native interaction result with actual molecular
    parent/participant/coverage context; preserve independent pillar progress.
-4. Extend the first SVG foundation with pan/zoom, crowded-structure controls
-   and scientific layers; reuse prepared fragments for ligand-centered and
-   two-sided composition. Receive native interaction results independently.
+4. Perform the bounded internal editing/undo feasibility experiment P2.5;
+   continue crowded-structure controls and scientific layers, and reuse prepared
+   fragments for ligand-centered/two-sided composition. Receive native
+   interaction results independently.
 5. Continue the joint slice through native observations, save/reopen/export and
    actual browser/Qt receiving. Keep P6 production chemical editing last.
 

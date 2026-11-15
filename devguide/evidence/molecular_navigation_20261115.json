@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-15",
+  "owning_issue": "https://github.com/uibcdf/molsyssketcher/issues/4",
+  "source_identity": "the Git commit containing this receipt; exact-head CI is recorded in the owning issue",
+  "scope": "bounded nonphysical SVG viewport navigation, contextual hover and actual transformed drawing receiving",
+  "execution_status": "local checks passed; see owning issue for subsequent exact-head CI evidence",
+  "local_browser": {
+    "executable": "/usr/bin/google-chrome",
+    "version": "157.0.8103.38",
+    "driver": "playwright 1.57.0",
+    "hit_test_device_scale_factor": 2
+  },
+  "camera_limits": {
+    "min_zoom": 0.25,
+    "max_zoom": 8,
+    "center_pan_extent_fitted_widths_heights": 4,
+    "drag_threshold_css_pixels": 4,
+    "keyboard_pan_css_pixels": 40
+  },
+  "node_tests": 31,
+  "browser_tests": 15,
+  "native_rdkit": {
+    "version": "2026.09.2",
+    "cases": 12,
+    "reflection_controls": 4,
+    "input_coordinates": "actual DOM client CSS pixels after zoom 1.4 and pan 12,-8"
+  },
+  "reviewed_reference": {
+    "repository": "uibcdf/molsysviewer",
+    "commit": "0dcdd6ce574d3c99483480cb38c16c1e3cc4782f",
+    "file": "molsysviewer/viewer/camera.py",
+    "scope": "native 3D camera with physical focus radii; new pure nonphysical 2D camera remains in the sketcher scene owner; no code incorporated"
+  },
+  "support_boundary": "existing Python support-library integration retained; CSS/nonphysical scene coordinates introduce no physical quantity conversion or new Python runtime dependency",
+  "evidence_directory": "/tmp/molsyssketcher-navigation-review",
+  "plan": {
+    "total": 69,
+    "done": 6,
+    "partial": 19,
+    "todo": 44
+  },
+  "remaining": [
+    "pinch gestures",
+    "crowded structures",
+    "full accessibility and scientific layers",
+    "internal edit/undo feasibility",
+    "native interaction diagrams",
+    "Qt and installed visual consumers",
+    "actual Conda archive and suite admission"
+  ],
+  "python_regression_tests": 40,
+  "checks": [
+    {
+      "command": "npm ci --cache /tmp/molsyssketcher-npm-cache",
+      "exit_code": 0
+    },
+    {
+      "command": "npm run check",
+      "exit_code": 0
+    },
+    {
+      "command": "npm run pack:check",
+      "exit_code": 0
+    },
+    {
+      "command": "npm run pack:conda:check",
+      "exit_code": 0
+    },
+    {
+      "command": "npm run example",
+      "exit_code": 0
+    },
+    {
+      "command": "MOLSYSSKETCHER_BROWSER_EXECUTABLE=/usr/bin/google-chrome MOLSYSSKETCHER_BROWSER_EVIDENCE_DIR=/tmp/molsyssketcher-navigation-review npm run test:browser",
+      "exit_code": 0
+    },
+    {
+      "command": "python devtools/check_svg_chemistry.py /tmp/molsyssketcher-navigation-review/drawings.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m pytest --receptor=llm devtools/tests",
+      "exit_code": 0
+    },
+    {
+      "command": "npm run corpus:check",
+      "exit_code": 0
+    },
+    {
+      "command": "ruff check devtools/rdkit_adapter devtools/tests devtools/check_svg_chemistry.py",
+      "exit_code": 0
+    },
+    {
+      "command": "ruff format --check devtools/rdkit_adapter devtools/tests devtools/check_svg_chemistry.py",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "evidence_sha256": {
+    "drawings.json": "34cd64df68dd578fc033c200ad7fba17bb6c8ca6b5266c9665adaa29a1b210a4",
+    "browser.json": "192f1ff312737569c908cc8e5f503ce2be2705cbfd921c8287f40181416484db",
+    "gallery-light.png": "b5dc5e5cda892d140145f18fe8fbf7429535521fa3dfed552f74cf5e6dd22aca",
+    "gallery-dark.png": "b243185b0b16eb212e99eb1b70fd2cad329f6e391705409f9946bdafc13dd86a",
+    "navigation.png": "206609ea761269461b8ada7cbd3f0cedf844b4032a8ac51e9c18444ac59d7d9d"
+  },
+  "max_glyph_bound_error_scene_units": 1.6997683331965163e-06,
+  "artifact_scope": {
+    "files": 25,
+    "received": "offline independent ESM/types/pure viewport tools and relocated Conda resource prefix",
+    "pending": "actual Conda archive and installed visual journeys"
+  },
+  "visual_review": "finite engineering inspection of fitted light/dark native controls and intentional camera crop with separate focus/selection; no maintainer scientific or accessibility qualification"
+}

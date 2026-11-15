@@ -55,13 +55,27 @@
         margin: 0;
         min-width: 0;
       }
+      .controls {
+        display: flex;
+        gap: 6px;
+        margin: 8px 0;
+      }
+      button {
+        padding: 5px 10px;
+      }
+      output {
+        display: block;
+        min-height: 1.5em;
+        font-size: 12px;
+      }
     </style>
   </head>
   <body>
     <h1>Molecular depiction controls</h1>
     <p>
       MolSysSketcher SVG primitives beside their RDKit reference. Select atoms
-      or bonds in the left drawing.
+      or bonds in the left drawing. Drag to pan, use the wheel to zoom, or focus
+      a drawing and use W/A/S/D, +/− and Home.
     </p>
     <main></main>
     <script type="module">
@@ -106,6 +120,30 @@
           theme,
         });
         views.push(view);
+        const controls = document.createElement("div"),
+          status = document.createElement("output");
+        controls.className = "controls";
+        controls.setAttribute("role", "group");
+        controls.setAttribute("aria-label", `Navigation for ${item.id}`);
+        for (const [label, action] of [
+          ["Zoom in", () => view.zoomBy(1.25)],
+          ["Zoom out", () => view.zoomBy(0.8)],
+          ["Fit molecule", () => view.fit()],
+        ]) {
+          const button = document.createElement("button");
+          button.type = "button";
+          button.textContent = label;
+          button.addEventListener("click", action);
+          controls.append(button);
+        }
+        const show = (pick) =>
+          (status.textContent = pick
+            ? `${pick.kind}: ${pick.semanticId}`
+            : "Hover or select an atom or bond.");
+        view.subscribeHover((pick) => show(pick ?? view.state.selection));
+        view.subscribeSelection(show);
+        show(null);
+        article.append(controls, status);
         await view.replace(item.document);
       }
       window.galleryReady = true;

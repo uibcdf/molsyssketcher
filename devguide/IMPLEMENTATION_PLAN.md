@@ -1,6 +1,6 @@
 # Living implementation plan
 
-Updated: 2026-11-15. Current milestone: partial M0/P1 and first molecular SVG increment.
+Updated: 2026-11-15. Current milestone: partial M0/P1 and molecular SVG navigation.
 
 This is the single microstep ledger for two equally important product pillars:
 Molecular View and Interaction View. Shared work is implemented once. Both
@@ -81,7 +81,7 @@ molecular/analysis contexts can be composed without implicit identity changes.
 | P2.1 | partial | Own immutable molecular primitives, measured label masks, positive fit transforms and semantic hits execute in Chromium; interaction-fragment composition remains pending |
 | P2.2 | partial | Twelve real RDKit drawings, native reconstruction from DOM strokes/wedges, tetrahedral/E/Z pairs and axis/endpoint controls pass; broader chemical matrix/scientific review remains pending |
 | P2.3 | partial | Actual generic sans-serif glyph bounds at multiple viewport sizes, light/dark galleries and label hits pass; custom fonts and crowded-structure acceptance remain pending |
-| P2.4 | partial | Molecular fit/resize, contextual SVG export, coherent replacement and owned disposal execute in the browser; pan/zoom and complete two-view receiving remain pending |
+| P2.4 | partial | Molecular bounded pan/zoom/fit/resize, current-viewport contextual SVG export, coherent replacement and owned disposal execute in Chromium; complete two-view/host receiving remains pending |
 | P2.5 | todo | Early internal edit/undo/validation/stale-response/read-only experiment in EDITOR.md |
 
 Gate: usable molecular representation and an exercised future editing path.
@@ -91,10 +91,10 @@ P2.5 does not deliver the production editor.
 
 | ID | Status | Required result / completion evidence |
 | --- | --- | --- |
-| P3.1 | partial | Read-only pointer/keyboard atom/bond selection returns exact context and separate focus; hover, full inspection/accessibility and scientific layers remain pending |
+| P3.1 | partial | Read-only pointer/keyboard selection and deduplicated hover return exact context; navigation retains CSS-pixel picking and distinct focus. Full inspection/accessibility and scientific layers remain pending |
 | P3.2 | todo | Anchored labels, halos, arrows/regions, layer roles and explicit pointer policy |
 | P3.3 | todo | Shared typed scientific-layer surface with exact dependencies, mappings, units, legends and missing-value policy |
-| P3.4 | partial | Bounded selection subscriptions, independent molecular instances, unsubscription, retired DOM events and disposal have actual browser controls; full layer/interaction callback surface remains pending |
+| P3.4 | partial | Bounded selection/hover subscriptions, independent molecular instances, reentry, unsubscription, retired DOM events, gesture/resize ownership and disposal have browser controls; full layer/interaction callbacks remain pending |
 
 Gate: a host can explore an admitted molecule and a meaningful scientific layer
 without modifying its original declaration.

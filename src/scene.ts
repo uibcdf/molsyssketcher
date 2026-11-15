@@ -475,16 +475,25 @@ export function hitTestMolecularScene(
   if (atomScores[0] && atomScores[0].distance <= tolerance)
     return pick("atom", atomScores[0].atom);
   let best: { bond: SceneBond; distance: number } | null = null;
+  // Largest singular value: exact painted round-stroke radius for the view's
+  // uniform camera, conservative under an externally supplied shear/stretch.
+  const strokeRadius =
+    (scene.strokeWidth / 4) *
+    (Math.hypot(transform.a + transform.d, transform.b - transform.c) +
+      Math.hypot(transform.a - transform.d, transform.b + transform.c));
   for (const bond of scene.bonds)
     for (const primitive of bond.primitives) {
       const points = primitive.points.map((p) => transformPoint(p, transform));
       const distance =
         primitive.kind === "polygon"
           ? distanceToPolygon(point, points)
-          : Math.min(
-              ...points
-                .slice(1)
-                .map((p, i) => distanceToSegment(point, points[i]!, p)),
+          : Math.max(
+              0,
+              Math.min(
+                ...points
+                  .slice(1)
+                  .map((p, i) => distanceToSegment(point, points[i]!, p)),
+              ) - strokeRadius,
             );
       if (distance <= tolerance && (!best || distance < best.distance))
         best = { bond, distance };
