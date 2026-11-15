@@ -1,0 +1,42 @@
+{
+  "name": "@uibcdf/molsyssketcher",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Shared scientific document foundation for molecular 2D views and interaction diagrams",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "packageManager": "npm@11.19.1",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "check:version": "node devtools/check-version.mjs",
+    "build": "node devtools/build.mjs",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "npm run build && node --test --test-isolation=none tests/*.test.mjs",
+    "check:docs": "node devtools/check-docs.mjs",
+    "check": "npm run check:version && npm run typecheck && npm run format:check && npm run test && npm run check:docs",
+    "example": "npm run build && node examples/supplied-documents.mjs",
+    "pack:check": "npm run build && node devtools/check-package.mjs",
+    "pack:conda:check": "npm run build && node devtools/check-conda-layout.mjs",
+    "prepack": "npm run build"
+  },
+  "devDependencies": {
+    "prettier": "3.6.2",
+    "typescript": "5.9.3"
+  }
+}

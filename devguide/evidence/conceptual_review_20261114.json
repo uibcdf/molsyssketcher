@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-14",
+  "owning_issue": "https://github.com/uibcdf/molsyssuite/issues/199",
+  "scope": "source-backed conceptual review; no runtime qualification",
+  "source_inputs": [
+    {
+      "project": "smiles",
+      "repository": "reymond-group/smilesDrawer",
+      "commit": "2cdf95907fc3534a14124bcf41c5b247eeb72a4d",
+      "path": "src/Atom.js",
+      "source_url": "https://raw.githubusercontent.com/reymond-group/smilesDrawer/2cdf95907fc3534a14124bcf41c5b247eeb72a4d/src/Atom.js",
+      "inspected_bytes": 14903,
+      "inspected_copy_sha256": "92c5d0ba19797834e8d4e6dc1191716e45673b02d87b45aed94cfe6ba2e37687"
+    },
+    {
+      "project": "smiles",
+      "repository": "reymond-group/smilesDrawer",
+      "commit": "2cdf95907fc3534a14124bcf41c5b247eeb72a4d",
+      "path": "src/DrawerBase.js",
+      "source_url": "https://raw.githubusercontent.com/reymond-group/smilesDrawer/2cdf95907fc3534a14124bcf41c5b247eeb72a4d/src/DrawerBase.js",
+      "inspected_bytes": 147033,
+      "inspected_copy_sha256": "a0ec262b11770626560d1c0b4906bc1dcbd016d7e04a95806d700c1e067495be"
+    },
+    {
+      "project": "smiles",
+      "repository": "reymond-group/smilesDrawer",
+      "commit": "2cdf95907fc3534a14124bcf41c5b247eeb72a4d",
+      "path": "src/SvgDrawer.js",
+      "source_url": "https://raw.githubusercontent.com/reymond-group/smilesDrawer/2cdf95907fc3534a14124bcf41c5b247eeb72a4d/src/SvgDrawer.js",
+      "inspected_bytes": 22994,
+      "inspected_copy_sha256": "3cee0905d9ee6418bae462936ef9f1e896209ef1c9c4b24f8f6e7d1606a30d18"
+    },
+    {
+      "project": "smiles",
+      "repository": "reymond-group/smilesDrawer",
+      "commit": "2cdf95907fc3534a14124bcf41c5b247eeb72a4d",
+      "path": "src/SvgWrapper.js",
+      "source_url": "https://raw.githubusercontent.com/reymond-group/smilesDrawer/2cdf95907fc3534a14124bcf41c5b247eeb72a4d/src/SvgWrapper.js",
+      "inspected_bytes": 40677,
+      "inspected_copy_sha256": "c0d9c2c238e851cb18f4262f2c2e19987a3a68d7455d81478db6b44724b61f3a"
+    },
+    {
+      "project": "ketcher",
+      "repository": "epam/ketcher",
+      "commit": "cfbc2c84a4d9d3476ec4388eb595e30f9df77a2f",
+      "path": "packages/ketcher-core/src/application/editor/EditorHistory.ts",
+      "source_url": "https://raw.githubusercontent.com/epam/ketcher/cfbc2c84a4d9d3476ec4388eb595e30f9df77a2f/packages/ketcher-core/src/application/editor/EditorHistory.ts",
+      "inspected_bytes": 5139,
+      "inspected_copy_sha256": "9ba66b6ea003be03bdefe2fef21cdae70c85947a971b999eb05fb426a798132a"
+    },
+    {
+      "project": "ketcher",
+      "repository": "epam/ketcher",
+      "commit": "cfbc2c84a4d9d3476ec4388eb595e30f9df77a2f",
+      "path": "packages/ketcher-core/src/domain/entities/bond.ts",
+      "source_url": "https://raw.githubusercontent.com/epam/ketcher/cfbc2c84a4d9d3476ec4388eb595e30f9df77a2f/packages/ketcher-core/src/domain/entities/bond.ts",
+      "inspected_bytes": 11100,
+      "inspected_copy_sha256": "d84a24e3c907bd1d8c0ad7805262911ef913127c96e019ca0666bc41a88b92f1"
+    },
+    {
+      "project": "ketcher",
+      "repository": "epam/ketcher",
+      "commit": "cfbc2c84a4d9d3476ec4388eb595e30f9df77a2f",
+      "path": "packages/ketcher-core/src/domain/entities/atom.ts",
+      "source_url": "https://raw.githubusercontent.com/epam/ketcher/cfbc2c84a4d9d3476ec4388eb595e30f9df77a2f/packages/ketcher-core/src/domain/entities/atom.ts",
+      "inspected_bytes": 32037,
+      "inspected_copy_sha256": "1ec49d6f9c5375f83a0a910d39057a7db7cbea589c50a0a4e158c239fd9044a3"
+    },
+    {
+      "project": "ketcher",
+      "repository": "epam/ketcher",
+      "commit": "cfbc2c84a4d9d3476ec4388eb595e30f9df77a2f",
+      "path": "packages/ketcher-core/src/domain/entities/struct.ts",
+      "source_url": "https://raw.githubusercontent.com/epam/ketcher/cfbc2c84a4d9d3476ec4388eb595e30f9df77a2f/packages/ketcher-core/src/domain/entities/struct.ts",
+      "inspected_bytes": 62215,
+      "inspected_copy_sha256": "fc42b13a62652e316447204f6b38aed8761d68a3450bfde900c436d09b52310b"
+    },
+    {
+      "project": "rdkit",
+      "repository": "rdkit/rdkit",
+      "commit": "79045367d04b6f9d11e29ae73f3e1d6b210d9641",
+      "path": "Code/MinimalLib/minilib.h",
+      "source_url": "https://raw.githubusercontent.com/rdkit/rdkit/79045367d04b6f9d11e29ae73f3e1d6b210d9641/Code/MinimalLib/minilib.h",
+      "inspected_bytes": 16343,
+      "inspected_copy_sha256": "1d2c71be4cc032ec4da455611d7894d3c90c539f76de41a2266b0ebef8e2c213"
+    },
+    {
+      "project": "rdkit",
+      "repository": "rdkit/rdkit",
+      "commit": "79045367d04b6f9d11e29ae73f3e1d6b210d9641",
+      "path": "Code/GraphMol/MolDraw2D/MolDraw2DUtils.h",
+      "source_url": "https://raw.githubusercontent.com/rdkit/rdkit/79045367d04b6f9d11e29ae73f3e1d6b210d9641/Code/GraphMol/MolDraw2D/MolDraw2DUtils.h",
+      "inspected_bytes": 11410,
+      "inspected_copy_sha256": "de82c6818565dd7894d12887895571ad740e0ebba2175d29188c722b839883df"
+    },
+    {
+      "project": "ketcher",
+      "repository": "epam/ketcher",
+      "commit": "cfbc2c84a4d9d3476ec4388eb595e30f9df77a2f",
+      "path": "packages/ketcher-core/src/application/editor/actions/bondStereo.ts",
+      "source_url": "https://raw.githubusercontent.com/epam/ketcher/cfbc2c84a4d9d3476ec4388eb595e30f9df77a2f/packages/ketcher-core/src/application/editor/actions/bondStereo.ts",
+      "inspected_bytes": 3015,
+      "inspected_copy_sha256": "8c4600459cc5de3402954484ee2b2b522066d35c8a9a1a488611bc7cd380d7fa"
+    },
+    {
+      "project": "rdkit",
+      "repository": "rdkit/rdkit",
+      "commit": "79045367d04b6f9d11e29ae73f3e1d6b210d9641",
+      "path": "Code/GraphMol/MolDraw2D/MolDraw2DUtils.cpp",
+      "source_url": "https://raw.githubusercontent.com/rdkit/rdkit/79045367d04b6f9d11e29ae73f3e1d6b210d9641/Code/GraphMol/MolDraw2D/MolDraw2DUtils.cpp",
+      "inspected_bytes": 15522,
+      "inspected_copy_sha256": "9f5c51cba36ac2252e7b0e4a18eec4f412bf242c2d2e371ce6a8ab775b7be660"
+    },
+    {
+      "project": "smiles",
+      "repository": "reymond-group/smilesDrawer",
+      "commit": "2cdf95907fc3534a14124bcf41c5b247eeb72a4d",
+      "path": "LICENSE.md",
+      "source_url": "https://raw.githubusercontent.com/reymond-group/smilesDrawer/2cdf95907fc3534a14124bcf41c5b247eeb72a4d/LICENSE.md",
+      "inspected_bytes": 1085,
+      "inspected_copy_sha256": "05136fae56914844c83e7e5b72b8f796ef93adf3e093af5e0dad10313f5d6aad"
+    },
+    {
+      "project": "ketcher",
+      "repository": "epam/ketcher",
+      "commit": "cfbc2c84a4d9d3476ec4388eb595e30f9df77a2f",
+      "path": "LICENSE",
+      "source_url": "https://raw.githubusercontent.com/epam/ketcher/cfbc2c84a4d9d3476ec4388eb595e30f9df77a2f/LICENSE",
+      "inspected_bytes": 11343,
+      "inspected_copy_sha256": "d45ecb9e5b052df192210daa54e8a0325b6971c73fe58281373b7c2c239520bf"
+    },
+    {
+      "project": "rdkit",
+      "repository": "rdkit/rdkit",
+      "commit": "79045367d04b6f9d11e29ae73f3e1d6b210d9641",
+      "path": "license.txt",
+      "source_url": "https://raw.githubusercontent.com/rdkit/rdkit/79045367d04b6f9d11e29ae73f3e1d6b210d9641/license.txt",
+      "inspected_bytes": 1580,
+      "inspected_copy_sha256": "daeb8d194502cbcf34c05c39541a0d02be65bc9bada5b891c1974cd24e9fca30"
+    }
+  ],
+  "code_incorporated": false,
+  "dependencies_installed": false,
+  "third_party_builds_or_tests_executed": false,
+  "molecular_runtime_implemented": false,
+  "performance_comparison_performed": false,
+  "finding_ids": [
+    "C01",
+    "C02",
+    "C03",
+    "C04",
+    "C05",
+    "C06",
+    "C07"
+  ],
+  "new_ledger_steps": {
+    "P0.7": "done: documentation/source review",
+    "P1.6": "todo: prepared depiction contract receiving",
+    "P1.7": "todo: atomic accepted-state/controller receiving"
+  },
+  "plan_totals": {
+    "microsteps": 38,
+    "done": 4,
+    "todo": 34
+  },
+  "disposition": "Proposed contract refinements recorded in maintained docs; actual controls remain pending in their implementation stages. No upstream defect is asserted.",
+  "coordination_update_url": "https://github.com/uibcdf/molsyssuite/issues/199#issuecomment-6886016230"
+}

@@ -1,0 +1,30 @@
+# Draft generic-resource profile: central receiving remains in MolSysSuite #199.
+package:
+  name: molsyssketcher
+  version: "{{ environ['MOLSYSSKETCHER_VERSION'] }}"
+
+source:
+  path: ../../
+
+build:
+  noarch: generic
+  number: 0
+  script: bash devtools/conda-build/build.sh
+
+requirements:
+  build:
+    - nodejs 24.22.1
+
+test:
+  requires:
+    - nodejs >=24
+  source_files:
+    - devtools/conda-build/run_test.mjs
+  commands:
+    - node devtools/conda-build/run_test.mjs
+
+about:
+  home: https://github.com/uibcdf/molsyssketcher
+  license: MIT
+  license_file: LICENSE
+  summary: Molecular 2D and interaction-diagram document foundation (experimental).

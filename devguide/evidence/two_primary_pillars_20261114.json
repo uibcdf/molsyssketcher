@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-14",
+  "owning_issue": "https://github.com/uibcdf/molsyssuite/issues/199",
+  "decision": "Maintainer adopts molecular representation and molecular interaction diagrams as equal primary product pillars.",
+  "adoption_scope": "Local product and implementation-plan direction; formal suite admission and scientific/runtime qualification remain pending.",
+  "previous_plan": {
+    "microsteps": 38,
+    "done": 4,
+    "todo": 34,
+    "sha256": "d5423430e3147c3e709adf4f9e42646596bcec95a642df58468000ec67492c38"
+  },
+  "current_plan": {
+    "microsteps": 69,
+    "done": 5,
+    "todo": 64
+  },
+  "added_task_ids": [
+    "P0.8",
+    "P1.8",
+    "I1.1",
+    "I1.2",
+    "I1.3",
+    "I1.4",
+    "I1.5",
+    "I1.6",
+    "I2.1",
+    "I2.2",
+    "I2.3",
+    "I2.4",
+    "I2.5",
+    "I2.6",
+    "I3.1",
+    "I3.2",
+    "I3.3",
+    "I3.4",
+    "I3.5",
+    "I3.6",
+    "I4.1",
+    "I4.2",
+    "I4.3",
+    "I4.4",
+    "I4.5",
+    "I4.6",
+    "I5.1",
+    "I5.2",
+    "I5.3",
+    "I5.4",
+    "I5.5"
+  ],
+  "documentation_completion_added": "P0.8",
+  "runtime_implementation_or_tests_executed": false,
+  "dependency_or_registry_changes": false,
+  "release_or_platform_claims": false,
+  "historical_source_receipt_preserved": {
+    "path": "devguide/evidence/conceptual_review_20261114.json",
+    "sha256": "ee2aa536d0540247aaedde739dba2231c75889fdf6f3345241305773bb85e779"
+  },
+  "superseded_assessment": {
+    "original_path": "devguide/INTERACTION_DIAGRAMS_PROPOSAL.md",
+    "original_sha256": "c1d8b777a92fa34922cc936b12ae2f1901eb60c3fa2138668b05f0860ec2062d",
+    "archive_path": "devguide/archive/interaction_diagrams_inclusion_assessment_20261114.md"
+  },
+  "current_contract": "devguide/INTERACTION_DIAGRAMS.md",
+  "readiness_axes": [
+    "shared foundation",
+    "Molecular View",
+    "Interaction View",
+    "production chemical editor"
+  ],
+  "acceptance": "Both finite primary minimum profiles and actual joint-host evidence are required for joint exploration completion. Richer profiles remain explicit pending work.",
+  "coordination_update_url": "https://github.com/uibcdf/molsyssuite/issues/199#issuecomment-6886729818"
+}

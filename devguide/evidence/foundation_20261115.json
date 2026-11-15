@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-15",
+  "owning_issue": "https://github.com/uibcdf/molsyssketcher/issues/1",
+  "coordination_issue": "https://github.com/uibcdf/molsyssuite/issues/199",
+  "scope": "TypeScript supplied-document/reference/transaction foundation; synthetic contracts and local packed consumer",
+  "source_identity": "the Git commit containing this receipt; later remote head and CI evidence in the owning issue",
+  "license": "MIT, selected by the maintainer on 2026-11-15",
+  "tools": {
+    "node": "24.22.1",
+    "npm": "11.19.1",
+    "typescript": "5.9.3",
+    "prettier": "3.6.2",
+    "tests": "native node:test, --test-isolation=none"
+  },
+  "checks": [
+    "npm ci --offline --cache /tmp/molsyssketcher-npm-cache",
+    "npm run check",
+    "npm run pack:check",
+    "npm run pack:conda:check",
+    "npm run example",
+    "git diff --check"
+  ],
+  "contract_tests": 21,
+  "local_result": "listed checks passed; 21 tests, zero failures/skips; Conda check covers prefix layout only",
+  "plan": { "total": 69, "done": 6, "partial": 9, "todo": 54 },
+  "distribution": "Conda intended; draft noarch: generic resource profile pending central/actual archive receiving",
+  "version_rule": "X.Y.Z, no prefixes or suffixes",
+  "implemented_scope": [
+    "immutable owned supplied molecular and exact interaction-reference documents",
+    "structural/mapping/schema/ingress guards and explicit unsupported/partial preparation",
+    "single-writer atomic replacement preserving accepted data on failure",
+    "one running and one newest queued preparation per controller",
+    "stale success/failure, cancellation occupancy, callback re-entry and disposal controls",
+    "private ESM/declaration artifact and independent offline packed consumer",
+    "proposed Conda prefix payload, relocation and file/version identity checks"
+  ],
+  "pending": [
+    "formal admission, TypeScript-first central profile and registered guide synchronization",
+    "actual chemical/native-result adapters and scientific support-library boundary integration",
+    "chemical/observation fidelity and public molecule/complex/interface corpora",
+    "rendering, scene/font/hit geometry, browser and Qt receiving",
+    "save/reopen/export, actual linked 3D, measured budgets and human scientific review",
+    "public package, platform or release qualification"
+  ],
+  "third_party_code_incorporated": false,
+  "scientific_or_visual_qualification_claimed": false,
+  "package_publication_authorized_or_performed": false
+}
