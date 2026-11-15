@@ -4,7 +4,7 @@
   "owning_issue": "https://github.com/uibcdf/molsyssketcher/issues/3",
   "source_identity": "the Git commit containing this receipt; exact-head CI evidence in the owning issue",
   "scope": "experimental read-only molecular SVG, actual generic sans-serif metrics and finite native drawing controls",
-  "execution_status": "local checks passed; exact-head CI received separately in the owning issue",
+  "execution_status": "local checks passed; see owning issue for subsequent exact-head CI evidence",
   "local_browser": {
     "executable": "/usr/bin/google-chrome",
     "version": "157.0.8103.38",
@@ -105,5 +105,16 @@
     "files": 23,
     "scope": "offline ESM/declarations and pure scene imports; no installed-browser claim"
   },
-  "conda_scope": "23 staged files with relocated prefix/identity/import receiving; no actual Conda archive"
+  "conda_scope": "23 staged files with relocated prefix/identity/import receiving; no actual Conda archive",
+  "ci_runtime": {
+    "provider_browser_runner": "ubuntu-24.04",
+    "first_attempt": {
+      "url": "https://github.com/uibcdf/molsyssketcher/actions/runs/43747832294",
+      "source": "59b2db14f1a2a70ed0d27ccc922920864fab9a4b",
+      "foundation": "passed",
+      "provider_checks": "passed",
+      "browser_install": "Playwright 1.57.0 refuses chromium on ubuntu26.04-x64",
+      "browser_and_drawn_chemistry": "not executed"
+    }
+  }
 }

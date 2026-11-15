@@ -93,7 +93,10 @@ For an explicitly selected installed browser, set
 `/usr/bin/google-chrome`, version **157.0.8103.38**. Playwright **1.57.0** is an
 exact development dependency (Apache-2.0); no browser or test runner is shipped
 in the library. CI installs Playwright's own Chromium and records its actual
-version. Neither route qualifies Firefox, Safari or Qt/QWebEngine.
+version on an explicit Ubuntu 24.04 runner. Playwright 1.57.0 refused the first
+CI attempt on the moving Ubuntu 26.04 default before executing browser controls;
+the provider/browser job now selects its supported Ubuntu runtime explicitly.
+Neither route qualifies Firefox, Safari or Qt/QWebEngine.
 
 The eight real-browser tests cover the twelve actual RDKit preparations, glyph
 bounds at multiple viewport sizes, pointer labels/atoms/bonds, keyboard focus

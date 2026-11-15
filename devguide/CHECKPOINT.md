@@ -158,6 +158,9 @@ pointer labels/atoms/bonds, keyboard shortcuts, axis/endpoint variants, burst an
 failed replacement, old DOM events, safe text/export and independent disposal
 are exercised. The local browser is Google Chrome 157.0.8103.38; the CI job
 installs Playwright's pinned Chromium separately and records its actual version.
+The first CI attempt passed foundation/provider checks but refused browser
+installation on the moving Ubuntu 26.04 default. The provider/browser job now
+pins Ubuntu 24.04; the owning issue records the exact replacement CI run.
 
 Native RDKit reconstructs all twelve isomeric results from DOM stroke counts
 and wedge geometry, with supplied atom identity/endpoint membership. Four
