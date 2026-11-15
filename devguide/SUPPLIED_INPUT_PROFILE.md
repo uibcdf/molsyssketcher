@@ -2,7 +2,8 @@
 
 Implemented under [MolSysSketcher #1](https://github.com/uibcdf/molsyssketcher/issues/1),
 2026-11-15. This experimental foundation accepts attributed, already prepared
-JSON documents. The web runtime does not render or parse chemistry; the separate
+JSON documents. The web runtime does not parse chemistry; its first
+[molecular SVG surface](MOLECULAR_SVG_PROFILE.md) renders this prepared profile. The separate
 [RDKit source route](RDKIT_PROVIDER.md) now prepares actual molecular controls
 for this boundary. Owner-native interaction reading remains pending. The private package's
 `0.0.0` is a build placeholder, not a selected public release.
@@ -42,7 +43,7 @@ Each mounted host instance must supply its own live `instanceId`.
 | Molecular context | Owner-scoped molecular and preparation references, chemical state and structure | No identity inference or 2D/3D mapping |
 | Semantic projection | Stable atom/bond handles and unique provider indices, explicit bond endpoints, supplied element/isotope/charge/H fields | Structural checks do not establish chemical validity or source-to-graph chemical fidelity |
 | Prepared depiction | `supplied-bijective@1`, separate display IDs, exact atom/bond bijections, finite drawing coordinates and explicit axes | Generated/condensed objects, other profiles and reflection conventions are refused |
-| Bond presentation | Supplied single/double/triple/wavy strokes and solid/hashed wedges with an explicit originating display endpoint | No stereo perception, CIP assignment, rendering or graphical correctness claim |
+| Bond presentation | Supplied single/double/triple/wavy strokes and solid/hashed wedges with an explicit originating display endpoint | The document validator does not perceive stereo or establish graphical correctness; the separate SVG profile receives finite drawing controls |
 | Coverage | Complete versus partial preparation, with explicit missing information | Partial data is never promoted to complete preparation |
 | Interaction document | Either mode label, exact immutable parents and owner-native analysis references | No contacts, participants, coverage query, side layout or result codec yet |
 | Replacement | Immutable candidate/accepted snapshots, generations, latest intent, bounded queue and failure preservation | One destination; no edit history, independent scientific jobs or shared service scheduler |
@@ -96,4 +97,5 @@ Synthetic labels and coordinates are not an RDKit or molecular-science oracle.
 P0.6 still needs the production provider route, public complex/interface
 corpora, chemical operation/loss matrices, browser/Qt scenarios and accepted
 numerical performance budgets. Full native observations, both visual journeys,
-save/reopen and graphical export remain the next joint-slice work.
+save/reopen and both complete graphical journeys remain joint-slice work;
+the molecular SVG profile now supplies a bounded first graphical export.

@@ -1,6 +1,6 @@
 # Living implementation plan
 
-Updated: 2026-11-15. Current milestone: M0 with a first shared P1 increment.
+Updated: 2026-11-15. Current milestone: partial M0/P1 and first molecular SVG increment.
 
 This is the single microstep ledger for two equally important product pillars:
 Molecular View and Interaction View. Shared work is implemented once. Both
@@ -19,10 +19,11 @@ results, owning issue and limits in CHECKPOINT.md or a linked receipt. A source
 description, a closed upstream issue or an unavailable-provider test is not
 executed integration evidence.
 
-There are **69 microsteps: 6 done, 12 partial and 51 todo**. Five completed steps
+There are **69 microsteps: 6 done, 19 partial and 44 todo**. Five completed steps
 are documentation/source review; P0.5 supplies the tested toolchain and license.
 Counts are unweighted, not effort percentages. Initial implementation evidence
-and explicit remaining acceptance are in CHECKPOINT.md and SUPPLIED_INPUT_PROFILE.md.
+and explicit remaining acceptance are in CHECKPOINT.md, SUPPLIED_INPUT_PROFILE.md
+and MOLECULAR_SVG_PROFILE.md.
 
 ## Tracks and dependencies
 
@@ -67,33 +68,33 @@ local product decision.
 | P1.4 | partial | One replacement destination has request intent, one running/one newest queued call, honest cancellation occupancy and stale/disposal rejection; independent destinations, undo and selected-provider size/time/service receiving remain pending |
 | P1.5 | partial | Twelve real-provider controls receive native round trips, parser/preparation provenance, original declarations and nonphysical drawing coordinates; native scientific quantities/external correspondence and full consumer receiving remain pending |
 | P1.6 | partial | Actual RDKit preparation supplies exact bijections, explicit wedges/H/charges/isotopes and native references; generated objects are refused. Broader preparation/scene coverage remains pending |
-| P1.7 | partial | Document candidate acceptance is atomic, state dimensions are independent and failures preserve accepted data; complete interpretation/depiction/scene acceptance remains pending |
-| P1.8 | partial | Shared immutable owner/generation/state/structure/preparation references and independent document controllers exist; scene composition and native provider receiving remain pending |
+| P1.7 | partial | Supplied document and measured molecular scene/SVG publish coherently; failures preserve accepted data and stale candidates retire. Production interpretation/depiction/scene and history receiving remain pending |
+| P1.8 | partial | Shared immutable owner/generation/state/structure/preparation references, independent controllers and molecular scenes exist; interaction composition and native result receiving remain pending |
 
 Gate: admitted molecular input can enter the depiction path, and referenced
 molecular/analysis contexts can be composed without implicit identity changes.
 
-## P2 — Molecular View: representation (todo)
+## P2 — Molecular View: representation (partial)
 
 | ID | Status | Required result / completion evidence |
 | --- | --- | --- |
-| P2.1 | todo | SVG chemical primitives, semantic geometry, transforms and hit regions reusable by both views |
-| P2.2 | todo | Declared chemical feature matrix, directed stereo/axis controls and reference comparison |
-| P2.3 | todo | Actual font metrics, coherent label/hit geometry, themes and crowded-structure review |
-| P2.4 | todo | Fit/pan/zoom, resize, graphical export, replacement and owned-resource disposal |
+| P2.1 | partial | Own immutable molecular primitives, measured label masks, positive fit transforms and semantic hits execute in Chromium; interaction-fragment composition remains pending |
+| P2.2 | partial | Twelve real RDKit drawings, native reconstruction from DOM strokes/wedges, tetrahedral/E/Z pairs and axis/endpoint controls pass; broader chemical matrix/scientific review remains pending |
+| P2.3 | partial | Actual generic sans-serif glyph bounds at multiple viewport sizes, light/dark galleries and label hits pass; custom fonts and crowded-structure acceptance remain pending |
+| P2.4 | partial | Molecular fit/resize, contextual SVG export, coherent replacement and owned disposal execute in the browser; pan/zoom and complete two-view receiving remain pending |
 | P2.5 | todo | Early internal edit/undo/validation/stale-response/read-only experiment in EDITOR.md |
 
 Gate: usable molecular representation and an exercised future editing path.
 P2.5 does not deliver the production editor.
 
-## P3 — Molecular View: scientific exploration (todo)
+## P3 — Molecular View: scientific exploration (partial)
 
 | ID | Status | Required result / completion evidence |
 | --- | --- | --- |
-| P3.1 | todo | Hover/selection, keyboard path, contextual events and enforced nonmutating exploration |
+| P3.1 | partial | Read-only pointer/keyboard atom/bond selection returns exact context and separate focus; hover, full inspection/accessibility and scientific layers remain pending |
 | P3.2 | todo | Anchored labels, halos, arrows/regions, layer roles and explicit pointer policy |
 | P3.3 | todo | Shared typed scientific-layer surface with exact dependencies, mappings, units, legends and missing-value policy |
-| P3.4 | todo | Bounded callbacks, independent instances, unsubscription, stale-event and lifecycle controls |
+| P3.4 | partial | Bounded selection subscriptions, independent molecular instances, unsubscription, retired DOM events and disposal have actual browser controls; full layer/interaction callback surface remains pending |
 
 Gate: a host can explore an admitted molecule and a meaningful scientific layer
 without modifying its original declaration.
@@ -169,11 +170,11 @@ Future ADMET/allostery science is outside these currently defined profiles.
 Gate: interaction readiness has independent evidence. Molecular View tests,
 screenshots or a single happy-path diagram do not replace these checks.
 
-## P4 — Joint consumer and host integration (todo)
+## P4 — Joint consumer and host integration (partial)
 
 | ID | Status | Required result / completion evidence |
 | --- | --- | --- |
-| P4.1 | todo | Both production view surfaces embed in a portable browser with correct assets and lifecycle |
+| P4.1 | partial | First molecular SVG surface mounts and exercises lifecycle in real Chromium; production host/installed browser assets and Interaction View remain pending |
 | P4.2 | todo | Both surfaces and their composition execute in actual PySide6/QWebEngine with readiness, resize and shutdown |
 | P4.3 | todo | Sabueso source-linked molecular and complex/interface journeys preserve original Cards and distinguish calculated layers |
 | P4.4 | todo | Actual current 2D/3D coordinated selection plus absent/partial/stale safeguards for the linked profile |

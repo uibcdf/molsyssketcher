@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <meta charset="utf-8" />
+  <title>MolSysSketcher browser controls</title>
+  <style>
+    .host {
+      width: 440px;
+      height: 300px;
+      display: inline-block;
+      vertical-align: top;
+    }
+  </style>
+  <div id="a" class="host"></div>
+  <div id="b" class="host"></div>
+  <div id="c" class="host"></div>
+  <script type="module">
+    window.api = await import("/dist/index.js");
+    window.corpus = (
+      await (await fetch("/tests/data/rdkit-prepared.json")).json()
+    ).cases;
+    window.ready = true;
+  </script>
+</html>

@@ -1,4 +1,4 @@
-name: TypeScript foundation
+name: Core and molecular SVG
 
 on:
   push:
@@ -54,7 +54,22 @@ jobs:
               versions[distribution] = importlib.metadata.version(distribution)
           print(json.dumps({'python': sys.version, 'installed': versions}, sort_keys=True))
           PY
-      - run: ruff check devtools/rdkit_adapter devtools/tests
-      - run: ruff format --check devtools/rdkit_adapter devtools/tests
+      - run: ruff check devtools/rdkit_adapter devtools/tests devtools/check_svg_chemistry.py
+      - run: ruff format --check devtools/rdkit_adapter devtools/tests devtools/check_svg_chemistry.py
       - run: python -m pytest --receptor=ci devtools/tests
       - run: npm run corpus:check
+      - name: Install isolated Chromium test runtime
+        run: npx playwright install --with-deps chromium
+      - name: Receive molecular SVG in a real browser
+        env:
+          MOLSYSSKETCHER_BROWSER_EVIDENCE_DIR: test-results/svg
+        run: npm run test:browser
+      - name: Receive actual drawn stereo and bond orders with RDKit
+        run: python devtools/check_svg_chemistry.py test-results/svg/drawings.json
+      - name: Retain finite browser drawing evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: molecular-svg-evidence
+          path: test-results/svg
+          retention-days: 14

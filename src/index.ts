@@ -20,3 +20,24 @@ export {
 export { SketcherError } from "./diagnostics.js";
 export type { DiagnosticCode } from "./diagnostics.js";
 export { INPUT_LIMITS } from "./json.js";
+export { buildMolecularScene, hitTestMolecularScene } from "./scene.js";
+export type {
+  MolecularScene,
+  SceneOptions,
+  SceneAtom,
+  SceneBond,
+  SceneGlyph,
+  ScenePick,
+  TextMeasurer,
+  Theme,
+  BondPrimitive,
+} from "./scene.js";
+export { createBrowserTextMeasurer, renderMolecularSvg } from "./svg.js";
+export type { BrowserTextMeasurer } from "./svg.js";
+export { MolecularSvgView, createMolecularSvgView } from "./view.js";
+export type {
+  MolecularSvgViewOptions,
+  AcceptedMolecularView,
+  ViewReplacementResult,
+} from "./view.js";
+export type { Point, Rect, AffineTransform } from "./geometry.js";

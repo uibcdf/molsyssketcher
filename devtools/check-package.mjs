@@ -55,13 +55,18 @@ try {
     join(temporary, "consumer.mjs"),
     `
 import assert from 'node:assert/strict';
-import { createMolecularController, createInteractionController } from '@uibcdf/molsyssketcher';
+import { createMolecularController, createInteractionController, createMolecularSvgView, buildMolecularScene, hitTestMolecularScene } from '@uibcdf/molsyssketcher';
+assert.equal(typeof createMolecularSvgView, 'function');
 const molecular = createMolecularController({ instanceId: 'clean-molecule' });
 const diagram = createInteractionController({ instanceId: 'clean-diagram' });
 const moleculeResult = await molecular.replace(${JSON.stringify(molecule())});
 const diagramResult = await diagram.replace(${JSON.stringify(interaction())});
 assert.equal(moleculeResult.status, 'accepted');
 assert.equal(moleculeResult.snapshot.document.original.data, 'CO\\n');
+const scene = buildMolecularScene(moleculeResult.snapshot.document,
+  (text, size) => ({x:0, y:-size, width:text.length * size / 2, height:size}),
+  {instanceId:'clean-scene', generation:1});
+assert.equal(hitTestMolecularScene(scene, scene.atoms[0].position).semanticId, scene.atoms[0].semanticId);
 assert.equal(diagramResult.status, 'accepted');
 assert.equal(diagramResult.snapshot.document.parents.length, 2);
 molecular.dispose(); diagram.dispose();
@@ -75,7 +80,14 @@ assert.equal(molecular.state.accepted, null);
   writeFileSync(
     join(temporary, "consumer.ts"),
     `
-import { createMolecularController, type PreparedMolecule } from '@uibcdf/molsyssketcher';
+import { createMolecularController, createMolecularSvgView, type PreparedMolecule, type ScenePick } from '@uibcdf/molsyssketcher';
+const mount = document.createElement('div');
+const surface = createMolecularSvgView(mount, {instanceId:'typed-surface'});
+surface.subscribeSelection((pick: ScenePick | null) => console.log(pick?.context));
+if (surface.state.accepted) {
+  // @ts-expect-error Accepted scene geometry is read-only.
+  surface.state.accepted.scene.atoms[0].position.x = 7;
+}
 const controller = createMolecularController({ instanceId: 'typed-consumer' });
 const result = await controller.replace({});
 if (result.status === 'accepted') {

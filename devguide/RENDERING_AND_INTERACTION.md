@@ -5,7 +5,10 @@ means pointer/keyboard behavior here; scientific molecular interactions are
 provider observations. Their projection is defined in
 [INTERACTION_DIAGRAMS.md](INTERACTION_DIAGRAMS.md).
 
-Status: proposed viewer behavior; SVG is the first implementation to evaluate.
+Status: the bounded [first molecular SVG profile](MOLECULAR_SVG_PROFILE.md)
+implements own primitives, actual font metrics, semantic selection, fit/resize,
+export and owned lifecycle. The broader behavior below remains a requirement
+until its applicable receiving; native interaction diagrams remain pending.
 
 ## Scene
 

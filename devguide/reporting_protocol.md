@@ -46,3 +46,11 @@ qualify chemistry, rendering, browser, Qt or a published package.
 relocation, version/digests and imports. Conda distribution, canonical X.Y.Z
 versions and a draft generic-resource recipe are recorded; no Conda archive
 or public channel is qualified by that layout check.
+
+For the finite molecular browser boundary use `npm run test:browser` with
+Playwright's installed Chromium, or an explicit `MOLSYSSKETCHER_BROWSER_EXECUTABLE`.
+Preserve its native Node exit status. Receive extracted DOM bond geometry using
+`python devtools/check_svg_chemistry.py <evidence-directory>/drawings.json` in
+the provisioned native RDKit environment. Browser evidence, the native chemical
+oracle and graphical review have different scopes; none qualifies Qt or the
+complete primary views. See [the profile](MOLECULAR_SVG_PROFILE.md).

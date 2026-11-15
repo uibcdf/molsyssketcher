@@ -17,7 +17,9 @@ an early feasibility check to protect that path.
 
 **Current status:** an experimental TypeScript document/transaction foundation
 accepts supplied prepared molecular data and exact interaction-result references.
-Rendering, production provider/host adapters and the two visual surfaces remain pending.
+An experimental read-only molecular SVG surface now renders prepared documents,
+with measured labels, semantic selection, fit/resize and graphical export.
+Production provider/host adapters and the interaction-diagram surface remain pending.
 An explicit [RDKit source-development route](devguide/RDKIT_PROVIDER.md) now
 prepares a finite real-provider corpus for this foundation; it is separate from
 the shipped web runtime and the future production host adapter.
@@ -53,4 +55,10 @@ is described below. Licensed under MIT.
 For the selected RDKit source route in a provisioned Python environment, run
 `npm run test:provider` and `npm run corpus:check`. The 12-case native corpus is
 also received by the Node tests. These controls qualify the declared preparation
-route and native chemical round trips; our own renderer remains pending.
+route and native chemical round trips.
+
+For the first molecular SVG controls, run `npx playwright install --with-deps chromium`
+and `npm run test:browser`. `npm run demo` prints a local comparison-gallery URL.
+See the [molecular SVG profile](devguide/MOLECULAR_SVG_PROFILE.md) for the API,
+actual browser/native drawing checks and remaining limits. This finite surface
+does not complete either primary view or qualify Qt, a public package or all platforms.

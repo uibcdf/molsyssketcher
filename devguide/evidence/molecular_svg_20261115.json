@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-15",
+  "owning_issue": "https://github.com/uibcdf/molsyssketcher/issues/3",
+  "source_identity": "the Git commit containing this receipt; exact-head CI evidence in the owning issue",
+  "scope": "experimental read-only molecular SVG, actual generic sans-serif metrics and finite native drawing controls",
+  "execution_status": "local checks passed; exact-head CI received separately in the owning issue",
+  "local_browser": {
+    "executable": "/usr/bin/google-chrome",
+    "version": "157.0.8103.38",
+    "platform": "Linux",
+    "driver": "playwright 1.57.0"
+  },
+  "native_oracle": {
+    "name": "RDKit",
+    "version": "2026.09.2",
+    "source": "actual DOM primitives plus supplied atom attributes/endpoint membership",
+    "does_not_read": [
+      "source depiction styles",
+      "source wedge from",
+      "source chemical coordinates",
+      "source stereo tags"
+    ]
+  },
+  "node_tests": 28,
+  "browser_tests": 8,
+  "native_cases": 12,
+  "native_reflection_controls": 4,
+  "local_browser_evidence_directory": "/tmp/molsyssketcher-svg-review",
+  "visual_review": {
+    "scope": "engineering inspection of twelve native comparison controls in light/dark themes",
+    "limits": "not maintainer/researcher scientific or accessibility acceptance; symmetric double-stroke joins/gaps remain visible"
+  },
+  "plan": {
+    "total": 69,
+    "done": 6,
+    "partial": 19,
+    "todo": 44
+  },
+  "remaining": [
+    "pan/zoom and crowded structures",
+    "hover and scientific layers",
+    "full accessibility and human review",
+    "native Interaction View",
+    "Qt and installed visual-consumer journeys",
+    "actual Conda archive/profile",
+    "formal suite admission",
+    "complete G-M/G-I/G-J gates"
+  ],
+  "checks": [
+    {
+      "command": "npm run check",
+      "exit_code": 0
+    },
+    {
+      "command": "npm run pack:check",
+      "exit_code": 0
+    },
+    {
+      "command": "npm run pack:conda:check",
+      "exit_code": 0
+    },
+    {
+      "command": "npm run example",
+      "exit_code": 0
+    },
+    {
+      "command": "MOLSYSSKETCHER_BROWSER_EXECUTABLE=/usr/bin/google-chrome npm run test:browser",
+      "exit_code": 0
+    },
+    {
+      "command": "python devtools/check_svg_chemistry.py /tmp/molsyssketcher-svg-review/drawings.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m pytest --receptor=llm devtools/tests",
+      "exit_code": 0
+    },
+    {
+      "command": "npm run corpus:check",
+      "exit_code": 0
+    },
+    {
+      "command": "ruff check devtools/rdkit_adapter devtools/tests devtools/check_svg_chemistry.py",
+      "exit_code": 0
+    },
+    {
+      "command": "ruff format --check devtools/rdkit_adapter devtools/tests devtools/check_svg_chemistry.py",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "evidence_sha256": {
+    "drawings.json": "a64a2ab5c3b7cb09a5b3c8551ff206f19735094b9f345168c2cee116837e533a",
+    "browser.json": "192f1ff312737569c908cc8e5f503ce2be2705cbfd921c8287f40181416484db",
+    "gallery-light.png": "41374c155d9ae247b07513e4fe9dd46cc92879c95c42bae2306e4a8606a9a4ba",
+    "gallery-dark.png": "85e6fcd90c79b94939af314e1e571622d2eb0fd40c46339b36f7b1ee4cbe8744"
+  },
+  "max_glyph_bound_error_scene_units": 1.6997683331965163e-06,
+  "python_regression_tests": 40,
+  "packed_consumer": {
+    "files": 23,
+    "scope": "offline ESM/declarations and pure scene imports; no installed-browser claim"
+  },
+  "conda_scope": "23 staged files with relocated prefix/identity/import receiving; no actual Conda archive"
+}

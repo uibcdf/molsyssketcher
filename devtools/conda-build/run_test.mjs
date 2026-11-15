@@ -40,9 +40,14 @@ for (const file of manifest.files) {
   );
 }
 assert.ok(manifest.files.some(({ path }) => path === "dist/index.d.ts"));
-const { createMolecularController, createInteractionController } = await import(
-  pathToFileURL(join(directory, "dist/index.js")).href
-);
+const {
+  createMolecularController,
+  createInteractionController,
+  createMolecularSvgView,
+  buildMolecularScene,
+} = await import(pathToFileURL(join(directory, "dist/index.js")).href);
+assert.equal(typeof createMolecularSvgView, "function");
+assert.equal(typeof buildMolecularScene, "function");
 const molecular = createMolecularController({
   instanceId: "installed-molecular",
 });

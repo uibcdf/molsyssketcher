@@ -1,0 +1,132 @@
+# First molecular SVG profile
+
+Implemented under [component #3](https://github.com/uibcdf/molsyssketcher/issues/3),
+2026-11-15. This is an experimental read-only molecular surface over the
+[supplied prepared-document contract](SUPPLIED_INPUT_PROFILE.md). It does not
+complete Molecular View or the independent Interaction View. The original
+provider declaration and prepared coordinates are never edited.
+
+## Public API and ownership
+
+The root ESM module exports `buildMolecularScene`, `hitTestMolecularScene`,
+`createBrowserTextMeasurer`, `renderMolecularSvg`, `createMolecularSvgView`,
+`MolecularSvgView` and their immutable public types. Importing the module in
+Node does not allocate browser resources. Constructing a view needs a connected
+HTML container and a browser with SVG text bounds and the font loading API.
+
+```typescript
+import { createMolecularSvgView } from '@uibcdf/molsyssketcher';
+
+const view = createMolecularSvgView(container, {
+  instanceId: 'host-molecule-1',
+  theme: 'light',
+});
+const unsubscribe = view.subscribeSelection(pick => inspect(pick));
+await view.ready;
+const outcome = await view.replace(preparedDocument);
+if (outcome.status === 'accepted') {
+  saveFigure(view.exportSvg());
+}
+// At host teardown:
+unsubscribe();
+view.dispose();
+```
+
+Here `container`, `preparedDocument`, `inspect` and `saveFigure` belong to the
+host. The view creates only its measurement probe and one SVG root; it preserves
+host siblings. Instances have independent documents, masks, listeners, selection
+and disposal. Each host supplies an instance identity. Selection subscriptions
+are limited to 32; unsubscription and disposal remove owned listeners.
+
+`state` separates accepted document/scene, operation status and selection.
+`replace` reports accepted, failed, superseded or disposed. It inherits one
+running/one newest queued preparation and retires stale intent. A document,
+measured scene and detached SVG are prepared before publishing the accepted
+view. A failed candidate keeps the accepted document and actual SVG together.
+Generation gaps are allowed; generations never rewind.
+
+The SVG fits its container using `viewBox` and positive uniform scaling.
+`resize(width, height)` sets an explicit SVG viewport, retained across replacement;
+the host must provide room for it. Pan, zoom and layout cleanup are pending.
+Disposal is idempotent and retires pending replacements.
+
+## Finite representation matrix
+
+| Feature | Received behavior | Remaining scope |
+| --- | --- | --- |
+| Mapping | Exact source/context/provider, semantic/display identities, separate immutable scene | Generated/condensed/grouped objects remain refused by the input profile |
+| Coordinates | Normalize median bond length to 48 scene units; convert declared y-up to screen y-down once | Drawing units are nonphysical; no physical projection or reflection control |
+| Bond strokes | Single, symmetric double, triple, solid directed triangle, eight widening hatches, wavy polyline | No ring perception or inner-ring offset policy; triple/wavy have geometric controls only |
+| Stereo | Explicit wedge origin is independent of tuple order; native tetrahedral/E/Z controls preserve meaning | No CIP/stereo perception in the web core; broader stereo profiles remain refused by the provider |
+| Labels | Provider-supplied labels; matching element/isotope/charge/H declarations become measured element, super/subscript runs | Other labels stay literal text; no chemical text parser, abbreviation expansion or collision solver |
+| Typography | Actual browser SVG `getBBox`, fixed generic sans-serif, regular weight, geometric precision, bounded cache | No bundled/downloaded fonts, custom typography, font embedding or cross-platform font equivalence |
+| Masks/hits | Label masks, bounds and semantic hit regions come from the same measured scene | Overlapping labels are warned; dense/crowded chemistry still needs an accepted corpus and policy |
+| Themes | Light/dark, monochrome chemical strokes and labels; separate selection/focus overlays | Configurable palettes and quantitative scientific legends remain pending |
+| Exploration | Pointer atom/bond selection, CSS-pixel tolerance, arrow navigation, Enter/Space selection, Escape clear | Hover, multiselection, full accessible inspection, scientific layers and human usability receiving remain pending |
+| Export | Own SVG primitives/text with exact context, provider/options, coverage, theme and nonphysical-coordinate record | Selection/focus and original input text are excluded; generic fonts are not embedded; chemical export is separate |
+
+The scene admits at most 256 atoms and 512 bonds; labels have at most 128 UTF-16
+code units and font size is 10–32 scene units (default 18). Raw coordinates are
+bounded to absolute 1,000,000; near-zero median bonds and coincident bonded
+positions refuse explicitly. These are initial admission guards, not measured
+performance budgets or a promise of legibility at maximum size.
+
+Hit testing uses viewport CSS pixels and actual label-mask/bond geometry, with
+atom priority and a default six-pixel tolerance. Picks include instance,
+document, scene/depiction generations and exact molecular context. The host
+owns tooltips, panels and calculations. Keyboard focus is distinct from
+selection. Modified application shortcuts are preserved. No exploration method
+mutates a chemical declaration or invokes a scientific calculation.
+
+## Executed receiving and reproduction
+
+Run the finite browser controls with a managed Chromium runtime:
+
+```bash
+npx playwright install --with-deps chromium
+npm run test:browser
+python devtools/check_svg_chemistry.py /tmp/molsyssketcher-svg-review/drawings.json
+```
+
+For an explicitly selected installed browser, set
+`MOLSYSSKETCHER_BROWSER_EXECUTABLE`. The local run used
+`/usr/bin/google-chrome`, version **157.0.8103.38**. Playwright **1.57.0** is an
+exact development dependency (Apache-2.0); no browser or test runner is shipped
+in the library. CI installs Playwright's own Chromium and records its actual
+version. Neither route qualifies Firefox, Safari or Qt/QWebEngine.
+
+The eight real-browser tests cover the twelve actual RDKit preparations, glyph
+bounds at multiple viewport sizes, pointer labels/atoms/bonds, keyboard focus
+and selection, modified shortcuts, burst/failing replacement, retired DOM events,
+independent disposal, safe literal labels, host typography, export metadata,
+axis/endpoint controls and light/dark comparison galleries. Synthetic geometry
+tests are explicitly separate from real font receiving.
+
+`devtools/check_svg_chemistry.py` receives DOM-extracted primitives: stroke count
+determines order; triangle apex and hatch-width gradient determine wedge origin
+and polarity. Atom identity/attributes and endpoint membership are supplied.
+Native RDKit interprets the reconstructed graph/2D coordinates and round-trips
+it through MOL, comparing isomeric SMILES for all twelve cases. Four reflected
+controls check tetrahedral inversion and unchanged relative E/Z. The oracle
+does not prove label spelling, all pixel visibility or arbitrary chemical-image
+recognition; metrics and visual review address separate concerns. Its pinned
+native coordinate-stereo function is exposed with a deprecated Python binding;
+it is confined to developer verification.
+
+`MOLSYSSKETCHER_BROWSER_EVIDENCE_DIR` selects an owned evidence directory; the
+default is `/tmp/molsyssketcher-svg-review`. It contains browser version,
+DOM geometry/context, exported SVGs and two gallery screenshots. CI retains
+these synthetic, nonprivate controls for 14 days. The source receipt is
+[molecular_svg_20261115.json](evidence/molecular_svg_20261115.json).
+
+Use `npm run demo` to open the printed local gallery URL, or append
+`?theme=dark`. It serves only the built modules and explicit public fixtures;
+it is a development demo, not a production server or published site.
+
+Visual inspection of this finite gallery found the declared labels, wedges,
+fragment separation and native E/Z pair distinguishable. Symmetric double
+strokes have visible corner joins/gaps relative to RDKit's inner-ring style.
+The gallery is an engineering review, not maintainer/researcher scientific or
+accessibility acceptance. Crowded structures, pan/zoom, edit feasibility,
+native interaction diagrams, actual Qt and both installed visual journeys
+remain pending; no G-M/G-I/G-J gate is complete.

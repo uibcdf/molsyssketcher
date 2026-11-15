@@ -28,6 +28,7 @@ the task ledger.
 | D20 | bounded implementation | Start with supplied attributed documents, explicit bijective preparation and shared replacement/reference controls; no live engine is loaded implicitly | SUPPLIED_INPUT_PROFILE.md; extend using actual provider receiving |
 | D21 | accepted direction, 2026-11-15 | Maintainer selects Conda distribution and exact X.Y.Z library versions without prefixes/suffixes; generic-resource recipe is provisional until suite profile and actual archive receiving | Suite #199 and P5.3/P5.4; no publication from the draft recipe |
 | D22 | bounded implementation, 2026-11-15 | Receive explicit Python RDKit source preparation before an own scene: retain explicit H, disable generated chiral H, preserve actual origin maps and native references; refuse outside-profile chemistry | Component #2 and RDKIT_PROVIDER.md; production transport/adapter distribution and richer profiles remain pending |
+| D23 | bounded implementation, 2026-11-15 | Use own immutable SVG primitives with actual generic sans-serif metrics, positive fit transforms and scoped semantic selection; receive actual DOM bond geometry through native RDKit independently of source style tags | Component #3 and MOLECULAR_SVG_PROFILE.md; crowded structures, pan/zoom, full accessibility, Qt and complete primary views remain pending |
 
 ## Consequences
 

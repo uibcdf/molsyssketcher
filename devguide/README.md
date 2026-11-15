@@ -4,7 +4,8 @@ This guide records two equally important product pillars: molecular
 representation/exploration and molecular interaction diagrams. It contains
 their shared architecture, independent acceptance, stages and continuation
 checkpoint. An experimental supplied-document and replacement-controller
-foundation is implemented; both visual surfaces and scientific adapters remain pending.
+foundation, a bounded RDKit source adapter and a first molecular SVG surface
+are implemented; full primary views and production scientific adapters remain pending.
 
 Read [PROJECT.md](PROJECT.md), [CHECKPOINT.md](CHECKPOINT.md) and
 [IMPLEMENTATION_PLAN.md](IMPLEMENTATION_PLAN.md) first. The plan is the single
@@ -34,6 +35,7 @@ task ledger; the checkpoint identifies the next work and received evidence.
 | [Engineering](ENGINEERING.md) | How will tooling, dependencies, qualification and distribution be introduced? |
 | [Supplied-input profile](SUPPLIED_INPUT_PROFILE.md) | What does the first executable foundation actually accept and guarantee? |
 | [RDKit preparation](RDKIT_PROVIDER.md) | Which real chemical preparation route and native controls have been executed? |
+| [Molecular SVG profile](MOLECULAR_SVG_PROFILE.md) | Which measured drawing, selection, export and actual-browser controls have been received? |
 | [Local workspace](WORKSPACE.md) | Where are the maintainer-provided source references and support tools? |
 | [Reporting](reporting_protocol.md) | Which owning issues and executable checks apply to current TypeScript work? |
 | [References](REFERENCES.md) | Which sources and owning issues informed the design? |

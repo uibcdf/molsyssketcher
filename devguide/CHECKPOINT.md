@@ -1,6 +1,6 @@
 # Current checkpoint
 
-Updated: **2026-11-15**. Current milestone: M0 with an executable P1 foundation.
+Updated: **2026-11-15**. Current milestone: partial M0/P1 and first molecular SVG increment.
 
 ## Product direction
 
@@ -11,8 +11,9 @@ The maintainer has adopted two equally important MolSysSketcher pillars:
 
 Both use an original framework-independent TypeScript scene/document
 foundation and supported scientific providers. SVG is the first renderer to
-evaluate. Molecular View and Interaction View are working product names,
-not implemented classes. Production chemical editing remains the final stage;
+evaluate. Molecular View and Interaction View are working product names;
+`MolecularSvgView` now implements a first bounded molecular surface.
+Production chemical editing remains the final stage;
 presentation editing of diagrams is part of exploration.
 
 The earlier optional-module framing is superseded. Read
@@ -29,8 +30,10 @@ immutable acceptance, independent controllers, monotonic replacement generations
 bounded preparation queues and stale/disposal guards. MIT was selected by the
 maintainer. Node/npm and development dependencies are pinned.
 
-There is no renderer, production chemical/native-result adapter, production editor,
-published package or qualified browser/Qt/platform profile. A bounded real
+The first own SVG renderer has measured typography, pointer/keyboard selection,
+fit/resize, contextual SVG export and owned-resource disposal. There is no
+production chemical/native-result adapter, production editor, published package
+or fully qualified browser/Qt/platform profile. A bounded real
 RDKit source-development route and its native chemical controls now exist;
 this is separate from a production provider/host adapter. A local
 packed consumer is tested; this does not establish a public installation route.
@@ -39,18 +42,20 @@ Package version `0.0.0` is a private tooling placeholder, not a release decision
 | Readiness axis | State |
 | --- | --- |
 | Shared foundation | partial: executable supplied-document/reference/controller subset; toolchain and license received; formal admission and actual scientific receiving pending |
-| Molecular View | todo: planned representation, exploration and finite acceptance |
+| Molecular View | partial: first measured SVG surface and finite real-browser/native drawing controls; full exploration/Qt/scientific acceptance pending |
 | Interaction View | todo: planned native projection, two diagram modes, investigation and domain profiles |
 | Production editor | todo: final major capability after exploration foundations |
 
 ## Integrated plan
 
-The ledger has **69 microsteps: 6 done, 12 partial and 51 todo**.
+The ledger has **69 microsteps: 6 done, 19 partial and 44 todo**.
 
 Completed items P0.1, P0.2, P0.3, P0.7 and P0.8 are documentation/source-review
 work only. P0.5 is now complete. P0.4/P0.6, P1.1/P1.4/P1.6/P1.7/P1.8 and
 I1.1/P5.3 are partial, with remaining acceptance named in the ledger. P1.2/P1.3/P1.5
-are now partial after actual native RDKit preparation/round-trip receiving. Counts do not
+are partial after actual native RDKit preparation/round-trip receiving.
+P2.1–P2.4, P3.1/P3.4 and P4.1 are now partial after the finite molecular SVG
+increment. Counts do not
 measure effort or imply completion of either primary view.
 
 The expansion from 38 steps adds the documented adoption P0.8, shared reference
@@ -94,8 +99,8 @@ dated historical record, not a live plan counter.
 
 Documentation checks cover local file/anchor links, task IDs/status counts,
 decision/readiness consistency, historical-record preservation and whitespace.
-`npm run check` executes canonical version/lock consistency, strict types, source formatting, 23 synthetic/real-provider-fixture
-document/controller tests and local link/anchor/ledger checks. `npm run pack:check`
+`npm run check` executes canonical version/lock consistency, strict types, source formatting, 28 synthetic/real-provider-fixture
+document/controller/scene tests and local link/anchor/ledger checks. `npm run pack:check`
 checks the local tarball's contents, offline independent consumer imports,
 declarations and read-only types. `npm run example` exercises both supplied
 documents and failed-replacement preservation. Exact scope is in
@@ -138,6 +143,35 @@ reviewed and host-policy preservation tested; drawing positions are nonphysical
 and require no quantity conversion. This adapter is unshipped source tooling,
 not a new installed Python facade or a qualified host service.
 
+## Received first molecular SVG surface
+
+[Component #3](https://github.com/uibcdf/molsyssketcher/issues/3) adds own chemical
+primitives, immutable measured scenes, label masks, semantic viewport hits,
+separate keyboard focus/selection, light/dark themes and contextual SVG export.
+Failed replacements keep the accepted document/scene/DOM together; independent
+instances own and dispose their probes, masks and listeners. The runtime still
+loads no chemical engine or network transport implicitly.
+
+The eight real-browser tests use the twelve actual prepared RDKit controls.
+Actual generic sans-serif glyph bounds agree at multiple viewport sizes;
+pointer labels/atoms/bonds, keyboard shortcuts, axis/endpoint variants, burst and
+failed replacement, old DOM events, safe text/export and independent disposal
+are exercised. The local browser is Google Chrome 157.0.8103.38; the CI job
+installs Playwright's pinned Chromium separately and records its actual version.
+
+Native RDKit reconstructs all twelve isomeric results from DOM stroke counts
+and wedge geometry, with supplied atom identity/endpoint membership. Four
+reflection controls distinguish tetrahedral inversion from relative E/Z.
+Light/dark galleries receive a finite engineering visual review, separate from
+the native chemistry and metric checks. See [the exact profile](MOLECULAR_SVG_PROFILE.md)
+and [source receipt](evidence/molecular_svg_20261115.json); exact-head CI and
+retained browser artifacts are linked in issue #3.
+
+Pan/zoom, crowded-structure policy, hover/scientific layers, full accessibility,
+Qt, installed visual-consumer receiving and the Interaction View remain pending.
+Generic fonts are not embedded in SVG exports. This increment completes no
+primary-view or joint delivery gate.
+
 ## Resume here
 
 1. P0.4: resolve the two-pillar ownership/admission and TypeScript-first
@@ -146,8 +180,9 @@ not a new installed Python facade or a qualified host service.
    finish the needed finite operation/loss/corpus and measured-budget decisions.
 3. Receive the first owner-native interaction result with actual molecular
    parent/participant/coverage context; preserve independent pillar progress.
-4. Build coherent scene/font/hit geometry and first SVG primitives, reusing
-   prepared fragments for molecular, ligand-centered and two-sided cases.
+4. Extend the first SVG foundation with pan/zoom, crowded-structure controls
+   and scientific layers; reuse prepared fragments for ligand-centered and
+   two-sided composition. Receive native interaction results independently.
 5. Continue the joint slice through native observations, save/reopen/export and
    actual browser/Qt receiving. Keep P6 production chemical editing last.
 

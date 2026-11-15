@@ -1,8 +1,9 @@
 # Engineering, dependencies and delivery
 
 Status: the initial TypeScript package/build/test configuration and a Linux
-foundation CI workflow exist. Scientific/visual/platform and public delivery
-qualification remain pending.
+foundation CI workflow exist. The first finite molecular SVG/browser and native
+drawing controls are documented in MOLECULAR_SVG_PROFILE.md. Full
+scientific/visual/platform and public delivery qualification remain pending.
 
 ## Governance and repository setup
 
@@ -62,7 +63,10 @@ are not mandatory dependencies of a TypeScript-only core.
 The maintainer selected MIT on 2026-11-15; see LICENSE. A source reference is
 not incorporation or a third-party license decision. No reference implementation
 was incorporated in the first increment. TypeScript (Apache-2.0) and Prettier
-(MIT) are development tools and are absent from the runtime tarball.
+(MIT) are development tools and are absent from the runtime tarball. Playwright
+1.57.0 (Apache-2.0) is an additional exact development-only browser driver; its
+downloaded browser is not a runtime asset. Typography uses actual browser
+generic sans-serif metrics, with no bundled fonts.
 
 If code is copied or adapted, retain immutable origin, license, notices,
 modifications and required attribution. Review actual files and transitive
@@ -80,7 +84,9 @@ production assets and no host-specific dependency. ESM/type declarations are
 the initial package direction. The private development package is
 `@uibcdf/molsyssketcher`, with `dist/index.js` and `dist/index.d.ts`; its `0.0.0`
 is a tooling placeholder, not a chosen release version. `npm run example`
-is an executable synthetic consumer of this surface. A visual demo is pending.
+is an executable synthetic consumer of this surface. `npm run demo` serves a
+local molecular/reference gallery; `npm run test:browser` exercises actual SVG
+metrics and controls. See MOLECULAR_SVG_PROFILE.md for the browser/runtime scope.
 
 The maintainer selected Conda distribution. npm is currently an internal
 development/build boundary. The draft `devtools/conda-build/` recipe proposes
