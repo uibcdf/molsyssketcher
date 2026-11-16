@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-15",
+  "issue": "https://github.com/uibcdf/molsyssketcher/issues/9",
+  "scope": "First native participant topology/grouping; no positioned diagram, graphical membership, production transport, Qt or published pair qualification",
+  "provider": {
+    "sourceHead": "6deb0200cd7e384128eded46caaf751a57e65bc6",
+    "sourceStatus": "",
+    "runtimeVersion": "0.23.0+904.gff25f1202",
+    "metadataVersion": "0.23.0+904.gff25f1202",
+    "moduleOrigin": "/fast_data/home/liliana/repos@uibcdf/molsysmt/molsysmt/__init__.py",
+    "nativeBinary": "/fast_data/home/liliana/repos@uibcdf/molsysmt/molsysmt/_rust.abi3.so",
+    "nativeBinarySha256": "2dbcf13d148cb3ae13a5908707fcdd61c75a2de5027e50c566ce07de81bdb038",
+    "python": "3.14.10 | packaged by conda-forge | (main, Oct 26 2026, 11:35:38) [GCC 15.3.0]",
+    "support": {
+      "argdigest": {
+        "version": "0.17.1+6.g7be790b",
+        "origin": "/fast_data/home/liliana/repos@uibcdf/argdigest/argdigest/__init__.py"
+      },
+      "depdigest": {
+        "version": "0.15.2+3.g5e93eaf",
+        "origin": "/fast_data/home/liliana/repos@uibcdf/depdigest/depdigest/__init__.py"
+      },
+      "smonitor": {
+        "version": "0.23.0+3.g4a4cd1e",
+        "origin": "/fast_data/home/liliana/repos@uibcdf/smonitor/smonitor/__init__.py"
+      },
+      "pyunitwizard": {
+        "version": "0.29.5+2.gcc51c8e",
+        "origin": "/fast_data/home/liliana/repos@uibcdf/pyunitwizard/pyunitwizard/__init__.py"
+      },
+      "pytest-receptor": {
+        "version": "1.2.3+2.ga02820f",
+        "origin": "/fast_data/home/liliana/repos@uibcdf/pytest-receptor/pytest_receptor/__init__.py"
+      },
+      "rdkit": {
+        "version": "2026.9.2",
+        "origin": "/fast_data/home/liliana/miniconda3/envs/molsyssuite@uibcdf_3.14/lib/python3.14/site-packages/rdkit/__init__.py"
+      }
+    },
+    "scope": "Separate source/runtime/binary observations; source HEAD alone does not authenticate a pre-existing native build"
+  },
+  "controls": {
+    "newNativePages": 8,
+    "originalIonicPagesUnchanged": 7,
+    "newNodeTopologyControls": 10,
+    "newPythonNativeControls": 18,
+    "pythonNativeControlsTotal": 36,
+    "nativeMethods": [
+      "ionic/minimum_distance/native",
+      "pi_pi/centroid_angle_offset/least_squares",
+      "hbonds/baker_hubbard/nitrogen_oxygen",
+      "water_bridges/hbond_water_path/indexed_water exact order 1/2"
+    ],
+    "analyticalGeometry": {
+      "parallelRingDistanceNm": 0.35,
+      "edgeRingDistanceNm": 0.4,
+      "waterLegDonorAcceptorNm": 0.3,
+      "waterLegHydrogenAcceptorNm": 0.2,
+      "waterLegDhaRadians": "pi"
+    },
+    "reversedMiddleLeg": true,
+    "periodicRepeatedMediatorImages": true,
+    "chemicalInput": "Public RDKit SMILES/H preparation and public MolSysMT conversion; source strings/version/build retained in fixture metadata"
+  },
+  "executed": {
+    "newNodeSelector": "tests/interaction-topology.test.mjs: 10 pass",
+    "nativePythonSelector": "devtools/molsysmt_adapter/tests: 36 pass with pytest-receptor",
+    "freshNativePagesToBuiltPublicTopology": true,
+    "nondefaultAngstromDegreePolicy": true,
+    "nativeProducerSeparateFromReader": true,
+    "pythonQuantityVerification": "Public PyUnitWizard qrec/0.3 field/nm/e/radians contracts",
+    "browserQuantityVerification": false,
+    "coreNodeControls": 49,
+    "internalExperimentControls": 6,
+    "previousPythonProviderControls": 44,
+    "molecularBrowserControls": 18,
+    "browserVersion": "157.0.8103.38",
+    "nativeDrawingReconstructions": 12,
+    "nativeMirrorControls": 4,
+    "strictTypesFormattingDocsVersion": "pass",
+    "ruff": "pass",
+    "packedIndependentConsumer": {
+      "files": 29,
+      "nativeMembershipAndReadOnlyDeclarations": "pass"
+    },
+    "proposedCondaLayoutRelocation": "pass; no Conda archive built or installed",
+    "dependencyRoutePreflight": "Conda dry-run resolves revised disposable native test closure including RDKit 2026.09.2; no shared-prefix installation",
+    "publicConversionSourceIdentity": "Native atom IDs/names/order checked before declaring fixture atom/fragment bindings"
+  },
+  "pendingLocal": [],
+  "ci": "Exact source-containing candidate run and origin/fresh-page artifacts are received in the owning issue",
+  "limits": [
+    "Analytical geometries are not relaxed molecular complexes or detector benchmarks",
+    "Topology has no positions, drawing, visual hits or automatic chemical grouping",
+    "Whole participant groups retain all original roles, atoms and images; no observation merging or quantity aggregation",
+    "Instance/generation/exact-analysis/frame visual IDs require host generation advancement on rebuild",
+    "Caller establishes actual source identity before declaring bindings",
+    "Quantity records remain opaque in TypeScript pending uibcdf/pyunitwizard#159",
+    "Local source HEAD/runtime stamp/pre-existing binary identity are separate; CI rebuilds the exact source",
+    "I1.3 remains partial; no primary-view delivery gate completed"
+  ],
+  "taskLedger": {
+    "total": 69,
+    "done": 7,
+    "partial": 22,
+    "todo": 40
+  }
+}

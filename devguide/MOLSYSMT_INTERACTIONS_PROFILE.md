@@ -3,7 +3,9 @@
 [Component #7](https://github.com/uibcdf/molsyssketcher/issues/7) receives a finite
 I1.2/I1.4 increment. The unshipped Python adapter reads an existing native
 `molsysmt.Interactions`; the dependency-free TypeScript package receives its
-bounded inspection envelope. MolSysMT owns interaction calculation, classification,
+bounded inspection envelope. [Component #9](https://github.com/uibcdf/molsyssketcher/issues/9)
+extends this route with [native participant topology](INTERACTION_TOPOLOGY_PROFILE.md).
+MolSysMT owns interaction calculation, classification,
 queries, native identifiers and scientific provenance. No interaction diagram,
 production transport, linked 3D journey or installed Python facade is delivered.
 
@@ -14,11 +16,12 @@ explicit reference document, exact result reference, one structure index, page
 offset/limit and caller-declared atom/frame correspondences. The received source
 route is MolSysMT commit
 [`6deb0200`](https://github.com/uibcdf/molsysmt/commit/6deb0200cd7e384128eded46caaf751a57e65bc6),
-using its public ionic `minimum_distance`/`native` result and
-`query(structure_indices=[...]).to_page(...)` API with schema
-`molsysmt.interactions.page@1`. Other producer methods refuse explicitly in this
-source adapter. No full occurrence-dictionary serialization or fallback
-calculation is used.
+using its public `query(structure_indices=[...]).to_page(...)` API with schema
+`molsysmt.interactions.page@1`. The original ionic `minimum_distance`/`native`
+profile is now joined by exact pi-pi, Baker-Hubbard and one/two-water contracts
+listed in the [extended inventory](INTERACTION_TOPOLOGY_PROFILE.md#extended-native-source-inventory).
+Other method/profile/definition combinations refuse explicitly. No full
+occurrence-dictionary serialization or fallback calculation is used.
 
 The adapter retains the native page's producer function, selected method/profile,
 method definition, parameters, attribution, producer software, execution records,
@@ -41,9 +44,10 @@ Native occurrence and relation handles remain local to the exact analysis.
 Compact catalog positions are separate from relation handles, including on
 later pages. Participants retain roles and variable-length constituent atom
 sets; inspection never flattens a compound participant to an invented pair.
-Actual compound/directed/mediated detector profiles and reversible visual maps
-remain I1.3 work. A clearly synthetic receiving control exercises a compound
-constituent list without claiming such detection.
+Actual compound/directed/mediated source controls and reversible presentation
+membership now exist in the [I1.3 profile](INTERACTION_TOPOLOGY_PROFILE.md);
+positioned diagrams and graphical membership remain pending. The original
+synthetic compound-list guard retains its separate contract-only scope.
 
 ## Coverage and bounds
 
@@ -70,7 +74,8 @@ pending.
 Native distance and charge columns retain their declared units. Python builds
 PyUnitWizard `QuantityRecord` records and receives them through
 `QuantityRecord.from_dict(...).to_quantity(field=..., unit=..., form="pint")`,
-with explicit receiver units `nm` and `e`. Field/seal/incompatible-unit or column
+with explicit receiver units `nm`, `e` and (in the extended profiles) `radians`.
+Field/seal/incompatible-unit or column
 correspondence failures refuse. No host standard-unit policy is consulted for
 these handshakes or overwritten by this adapter.
 
@@ -131,7 +136,8 @@ node --test --test-isolation=none tests/interaction-page.test.mjs
 python -m devtools.molsysmt_adapter.corpus --output /tmp/native-pages.json
 ```
 
-The Python selector has 18 actual-provider/unit/identity/failure/policy controls,
+The original Python subset has 18 actual-provider/unit/identity/failure/policy controls
+(the extended participant subset adds 18, for 36 total),
 including fresh native JSON received by the built public Node module. Eight
 additional Node controls receive recorded native pages, inspect exact roles and
 coverage, reject malformed bindings/columns, and retire stale replacements.

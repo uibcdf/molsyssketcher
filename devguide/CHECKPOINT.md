@@ -1,6 +1,6 @@
 # Current checkpoint
 
-Updated: **2026-11-15**. Current milestone: first native MolSysMT interaction inspection, alongside the molecular SVG surface.
+Updated: **2026-11-15**. Current milestone: native participant topology and reversible grouping, alongside the molecular SVG surface.
 
 ## Product direction
 
@@ -44,17 +44,17 @@ Package version `0.0.0` is a private tooling placeholder, not a release decision
 | --- | --- |
 | Shared foundation | partial: executable supplied-document/reference/controller subset; toolchain and license received; formal admission and actual scientific receiving pending |
 | Molecular View | partial: first measured SVG surface and finite real-browser/native drawing controls; full exploration/Qt/scientific acceptance pending |
-| Interaction View | partial: bounded native ionic page inspection; two diagram modes, investigation and domain profiles remain pending |
+| Interaction View | partial: bounded native pages and reversible compound/mediated participant topology; positioned diagrams, investigation and domain profiles remain pending |
 | Production editor | todo: final major capability after exploration foundations |
 
 ## Integrated plan
 
-The ledger has **69 microsteps: 7 done, 21 partial and 41 todo**.
+The ledger has **69 microsteps: 7 done, 22 partial and 40 todo**.
 
 Completed items P0.1, P0.2, P0.3, P0.7 and P0.8 are documentation/source-review
 work only. P0.5 and the bounded P2.5 architectural experiment are complete.
 P0.4/P0.6, P1.1/P1.4/P1.6/P1.7/P1.8 and
-I1.1/I1.2/I1.4/P5.3 are partial, with remaining acceptance named in the ledger. P1.2/P1.3/P1.5
+I1.1/I1.2/I1.3/I1.4/P5.3 are partial, with remaining acceptance named in the ledger. P1.2/P1.3/P1.5
 are partial after actual native RDKit preparation/round-trip receiving.
 P2.1–P2.4, P3.1/P3.4 and P4.1 are now partial after the finite molecular SVG
 increment. Counts do not
@@ -101,7 +101,7 @@ dated historical record, not a live plan counter.
 
 Documentation checks cover local file/anchor links, task IDs/status counts,
 decision/readiness consistency, historical-record preservation and whitespace.
-`npm run check` executes canonical version/lock consistency, strict types, source formatting, 39 synthetic/real-provider-fixture
+`npm run check` executes canonical version/lock consistency, strict types, source formatting, 49 synthetic/real-provider-fixture
 document/controller/scene tests and local link/anchor/ledger checks, plus six
 separately compiled internal experiment tests. `npm run pack:check`
 checks the local tarball's contents, offline independent consumer imports,
@@ -262,6 +262,36 @@ I1.2/I1.4 are partial. Real compound/mediated/native-complex profiles, two-mode
 composition, live parent invalidation, browser/Qt transport and delivery gates
 remain pending.
 
+## Received native participant topology and grouping
+
+[Component #9](https://github.com/uibcdf/molsyssketcher/issues/9) extends the
+finite source inventory to pi-pi, Baker-Hubbard hydrogen bonds and exact
+one/two-water paths. Eight additional native pages use public RDKit/MolSysMT
+preparation/calculation; they retain compound constituents, directed roles,
+parallel contacts, repeated mediators, original quantities/provenance and
+periodic participant images. Versioned native method/leg definitions are
+checked explicitly; TypeScript quantities remain opaque.
+
+`buildInteractionTopology`, `findInteractionParticipantNode` and
+`inspectInteractionTopology` supply immutable explicit grouping with complete
+forward/reverse native membership and exact parent/analysis/frame context.
+Every native occurrence remains a distinct ordered hyperedge, including repeated
+node IDs after grouping. Expansion rebuilds from the unchanged native page.
+Unknown/overlapping/partial groups refuse; retired instance/generation/analysis/
+frame visual IDs do not resolve. This is membership for future diagrams, with
+no layout, drawing or contact recalculation.
+
+Ten added Node controls and eighteen added Python controls receive the bounded
+profile (49 core Node, 36 native adapter Python controls total). The independent
+packed consumer exercises mediated membership and read-only declarations. CI
+builds the pinned MolSysMT native source and retains fresh participant pages;
+exact candidate receiving is in issue #9. The
+[topology profile](INTERACTION_TOPOLOGY_PROFILE.md) and
+[local receipt](evidence/interaction_topology_20261115.json) name source identity,
+analytical controls and limits. I1.3 is partial: positioned two-mode diagrams,
+graphical membership/hits, real complex/interface and browser/Qt receiving
+remain pending. Earlier receipts retain their historical scope.
+
 ## Resume here
 
 1. P0.4: resolve the two-pillar ownership/admission and TypeScript-first
@@ -270,7 +300,7 @@ remain pending.
    finish the needed finite operation/loss/corpus and measured-budget decisions.
 3. Extend owner-native interaction receiving with actual molecular
    parent/participant/coverage context beyond the received ionic inspection profile;
-   add native compound/directed/mediated controls and first two-mode composition.
+   build first two-mode positioned composition from the received native participant topology.
 4. Continue crowded-structure controls and scientific layers, and reuse prepared
    fragments for ligand-centered/two-sided composition. Preserve the now-received
    P2.5 generation/selection seams while keeping production editing in P6.

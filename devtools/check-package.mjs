@@ -9,6 +9,9 @@ const root = resolve(import.meta.dirname, "..");
 const nativePage = JSON.parse(
   readFileSync(join(root, "tests/data/molsysmt-interactions.json")),
 ).cases[0].projection;
+const participantPage = JSON.parse(
+  readFileSync(join(root, "tests/data/molsysmt-participants.json")),
+).cases.find((c) => c.id === "two-water").projection;
 const temporary = mkdtempSync(join(tmpdir(), "molsyssketcher-consumer-"));
 try {
   const [artifact] = JSON.parse(
@@ -62,7 +65,7 @@ try {
     join(temporary, "consumer.mjs"),
     `
 import assert from 'node:assert/strict';
-import { createMolecularController, createInteractionController, createInteractionPageController, inspectInteractionPage, createMolecularSvgView, buildMolecularScene, hitTestMolecularScene, fitViewport, zoomViewport } from '@uibcdf/molsyssketcher';
+import { createMolecularController, createInteractionController, createInteractionPageController, inspectInteractionPage, buildInteractionTopology, inspectInteractionTopology, findInteractionParticipantNode, createMolecularSvgView, buildMolecularScene, hitTestMolecularScene, fitViewport, zoomViewport } from '@uibcdf/molsyssketcher';
 assert.equal(typeof createMolecularSvgView, 'function');
 const molecular = createMolecularController({ instanceId: 'clean-molecule' });
 const diagram = createInteractionController({ instanceId: 'clean-diagram' });
@@ -82,6 +85,12 @@ const nativeResult = await native.replace(${JSON.stringify(nativePage)});
 assert.equal(nativeResult.status, 'accepted');
 assert.equal(inspectInteractionPage(nativeResult.snapshot.document).observations.length, 2);
 native.dispose();
+const participantKey={occurrenceIndex:0,participantIndex:2};
+const topology=buildInteractionTopology(${JSON.stringify(participantPage)}, {instanceId:'clean-topology',generation:1,
+  groups:[{id:'water',label:'Mediator',members:[participantKey,{occurrenceIndex:0,participantIndex:3}]}]});
+const node=findInteractionParticipantNode(topology,participantKey);
+assert.equal(inspectInteractionTopology(topology,node.id).memberships.length,2);
+assert.equal(topology.observations[0].participants.length,9);
 molecular.dispose(); diagram.dispose();
 assert.equal(molecular.state.accepted, null);
 `,
@@ -93,8 +102,16 @@ assert.equal(molecular.state.accepted, null);
   writeFileSync(
     join(temporary, "consumer.ts"),
     `
-import { createMolecularController, createMolecularSvgView, prepareInteractionPage, type PreparedMolecule, type ScenePick } from '@uibcdf/molsyssketcher';
+import { createMolecularController, createMolecularSvgView, prepareInteractionPage, buildInteractionTopology, inspectInteractionTopology, type PreparedMolecule, type ScenePick } from '@uibcdf/molsyssketcher';
 const page = prepareInteractionPage({});
+const topology=buildInteractionTopology(page,{instanceId:'typed-topology',generation:1});
+// @ts-expect-error Native compound constituents are read-only.
+topology.nodes[0].memberships[0].atoms.pop();
+const pick=inspectInteractionTopology(topology,'visual-id');
+if(pick) {
+  // @ts-expect-error Exact parent context is read-only.
+  pick.parents[0].structure='mutated';
+}
 // @ts-expect-error Native provenance is read-only.
 page.native.page.method = 'changed';
 // @ts-expect-error Participant membership is read-only.

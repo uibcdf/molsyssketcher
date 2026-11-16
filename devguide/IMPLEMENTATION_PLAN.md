@@ -1,6 +1,6 @@
 # Living implementation plan
 
-Updated: 2026-11-15. Current milestone: first native MolSysMT interaction inspection, alongside the molecular SVG surface.
+Updated: 2026-11-15. Current milestone: native participant topology and reversible grouping, alongside the molecular SVG surface.
 
 This is the single microstep ledger for two equally important product pillars:
 Molecular View and Interaction View. Shared work is implemented once. Both
@@ -19,7 +19,7 @@ results, owning issue and limits in CHECKPOINT.md or a linked receipt. A source
 description, a closed upstream issue or an unavailable-provider test is not
 executed integration evidence.
 
-There are **69 microsteps: 7 done, 21 partial and 41 todo**. Five completed steps
+There are **69 microsteps: 7 done, 22 partial and 40 todo**. Five completed steps
 are documentation/source review; P0.5 supplies the tested toolchain and license.
 Counts are unweighted, not effort percentages. Initial implementation evidence
 and explicit remaining acceptance are in CHECKPOINT.md, SUPPLIED_INPUT_PROFILE.md
@@ -50,7 +50,7 @@ P6 is the final production capability.
 | P0.3 | done | Staged plan, decisions, risks and continuation checkpoint recorded and documentation links checked |
 | P0.4 | partial | Local instructions/reporting route and central handoff exist; formal admission, TypeScript-first profile and registered guide synchronization remain in suite #199 |
 | P0.5 | done | MIT selected by maintainer; Node/npm, TypeScript/Prettier pins, lockfile, ESM/declarations, executable local checks and clean packed-consumer route committed under component #1 |
-| P0.6 | partial | Supplied-input and RDKit source-route matrices, 12 native molecular controls and ingress/queue bounds exist; native interaction/public complex corpora, full operation matrices and accepted measured budgets remain pending |
+| P0.6 | partial | Supplied-input/provider matrices, 12 native molecular and 15 native interaction pages plus ingress/queue bounds exist; public complex/interface corpora, full operation matrices and accepted measured budgets remain pending |
 | P0.7 | done | Source-backed conceptual review and prepared-depiction/transaction requirements recorded in CONCEPTUAL_REVIEW.md |
 | P0.8 | done | Maintainer's equal-pillar direction, complete interaction contract, separate readiness and integrated work ledger recorded |
 
@@ -66,10 +66,10 @@ local product decision.
 | P1.2 | partial | Real bounded RDKit Python source adapter has lazy dependency/argument/catalog controls and a finite capability inventory; production host/transport and distributed adapter receiving remain pending |
 | P1.3 | partial | Native SMILES interpretation, generated 2D preparation, exact maps and retained input feed TypeScript; MOL/SMILES references round-trip for 12 controls. General format/export APIs and broader operation scope remain pending |
 | P1.4 | partial | One replacement destination has request intent, one running/one newest queued call, honest cancellation occupancy and stale/disposal rejection; independent destinations, undo and selected-provider size/time/service receiving remain pending |
-| P1.5 | partial | Twelve real-provider controls receive native round trips, parser/preparation provenance, original declarations and nonphysical drawing coordinates; native scientific quantities/external correspondence and full consumer receiving remain pending |
+| P1.5 | partial | Twelve real-provider controls receive native round trips, parser/preparation provenance, original declarations and nonphysical drawing coordinates; physical records are received in Python, while broader quantity/external correspondence and full consumer receiving remain pending |
 | P1.6 | partial | Actual RDKit preparation supplies exact bijections, explicit wedges/H/charges/isotopes and native references; generated objects are refused. Broader preparation/scene coverage remains pending |
 | P1.7 | partial | Supplied document and measured molecular scene/SVG publish coherently; failures preserve accepted data and stale candidates retire. Production interpretation/depiction/scene and history receiving remain pending |
-| P1.8 | partial | Shared immutable owner/generation/state/structure/preparation references, independent controllers and molecular scenes exist; interaction composition and native result receiving remain pending |
+| P1.8 | partial | Shared exact references, independent controllers, molecular scenes and finite native participant topology exist; positioned interaction composition and full host receiving remain pending |
 
 Gate: admitted molecular input can enter the depiction path, and referenced
 molecular/analysis contexts can be composed without implicit identity changes.
@@ -104,8 +104,8 @@ without modifying its original declaration.
 | ID | Status | Required result / completion evidence |
 | --- | --- | --- |
 | I1.1 | partial | Exact multi-parent/reference documents and first native ionic page projection exist; complete two-mode visual document remains pending |
-| I1.2 | partial | Bounded real MolSysMT ionic source adapter retains native method/profile, producer, analysis-local identifiers, roles and Python-verified quantity records; production host/transport and browser quantity receiving remain pending |
-| I1.3 | todo | Directed/symmetric, compound, parallel and mediated participant relationships with reversible visual membership maps |
+| I1.2 | partial | Bounded real MolSysMT ionic/pi-pi/hydrogen-bond/water-path source profiles retain native method/profile, producer, analysis-local identifiers, roles and Python-verified quantity records; production host/transport and browser quantity receiving remain pending |
+| I1.3 | partial | Actual compound rings, directed hydrogen bonds, parallel contacts and one/two-water paths retain roles, constituents and images through immutable reversible grouping; positioned diagrams, graphical maps/hits and complex/interface receiving remain pending |
 | I1.4 | partial | Native single-frame pages distinguish evaluated-empty, unevaluated and partial scope with bounded copies; broader filters and native failure/missing profiles remain pending |
 | I1.5 | todo | Atomic multi-parent context replacement and dependency invalidation; no promotion of stale observations or source identity |
 | I1.6 | todo | Public read-only diagram input/inspection contract and meaningful native/reference/provenance controls |

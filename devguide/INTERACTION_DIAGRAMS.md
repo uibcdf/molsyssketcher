@@ -277,3 +277,12 @@ coverage. Python verifies physical records through PyUnitWizard; TypeScript
 retains them opaquely pending the supported browser reader. This is I1.2/I1.4
 partial progress, with no graphical diagram or production host profile. The
 remaining requirements above retain their scope.
+
+## Received participant topology (2026-11-15)
+
+The [I1.3 topology profile](INTERACTION_TOPOLOGY_PROFILE.md) adds actual compound
+rings, directed hydrogen bonds, parallel contacts and exact one/two-water native
+paths with reversible explicit presentation grouping. Native occurrence identity,
+ordered roles, constituent atoms, repeated mediator membership and PBC images
+remain intact. This is a partial semantic foundation for the positioned two-mode
+diagrams above; no interaction drawing or graphical hit profile is received.

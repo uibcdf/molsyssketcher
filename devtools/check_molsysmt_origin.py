@@ -28,6 +28,7 @@ def main():
         ("smonitor", "smonitor"),
         ("pyunitwizard", "pyunitwizard"),
         ("pytest_receptor", "pytest-receptor"),
+        ("rdkit", "rdkit"),
     ]:
         module = importlib.import_module(name)
         if options.installed_support:

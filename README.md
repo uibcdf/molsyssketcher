@@ -69,9 +69,15 @@ actual browser restoration. `npm run demo` links to it. Experimental tooling is
 excluded from distribution; production editing remains the final stage.
 
 The [first native interaction profile](devguide/MOLSYSMT_INTERACTIONS_PROFILE.md)
-receives bounded MolSysMT ionic pages with exact declared parent mappings,
+receives bounded MolSysMT pages with exact declared parent mappings,
 role-bearing participants, native provenance and explicit coverage. In a
 provisioned source environment, `npm run test:interactions` exercises actual
 native calculations and Python quantity verification. TypeScript retains
 quantity records opaquely; interaction drawings and production transport
 remain pending.
+
+The [native participant topology](devguide/INTERACTION_TOPOLOGY_PROFILE.md)
+now preserves compound rings, directed hydrogen bonds and one/two-water paths
+through explicit reversible grouping. Each native observation remains distinct,
+with complete roles, atom membership and source context. Positioned diagram
+layout and graphical interaction receiving remain pending.

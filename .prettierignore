@@ -6,4 +6,5 @@ tests/data/rdkit-prepared.json
 devguide/
 tests/data/editor-experiment.json
 tests/data/molsysmt-interactions.json
+tests/data/molsysmt-participants.json
 .experiment/

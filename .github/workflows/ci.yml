@@ -111,6 +111,8 @@ jobs:
       - run: python -m pytest --receptor=ci devtools/molsysmt_adapter/tests
       - name: Retain fresh native pages with their actual producer metadata
         run: python -m devtools.molsysmt_adapter.corpus --output test-results/interactions/native-pages.json
+      - name: Retain fresh compound and mediated native controls
+        run: python -m devtools.molsysmt_adapter.participant_corpus --output test-results/interactions/participant-pages.json
       - name: Retain finite native receiving evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4

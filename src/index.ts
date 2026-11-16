@@ -59,3 +59,18 @@ export type {
   NativeInteractionPage,
   InteractionAtomBinding,
 } from "./interaction-page.js";
+export {
+  buildInteractionTopology,
+  findInteractionParticipantNode,
+  inspectInteractionTopology,
+} from "./interaction-topology.js";
+export type {
+  InteractionParticipantKey,
+  InteractionPresentationGroup,
+  InteractionTopologyOptions,
+  InteractionMembership,
+  InteractionTopologyNode,
+  InteractionTopologyObservation,
+  InteractionTopology,
+  InteractionTopologyPick,
+} from "./interaction-topology.js";

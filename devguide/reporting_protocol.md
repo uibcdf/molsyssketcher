@@ -69,3 +69,10 @@ the built public Node module. CI builds the exact native provider source and
 retains its runtime/binary identity separately. See the
 [native profile](MOLSYSMT_INTERACTIONS_PROFILE.md); this receives inspection,
 not interaction drawings, a published provider pair or Qt.
+
+The I1.3 selectors are `tests/interaction-topology.test.mjs` and
+`devtools/molsysmt_adapter/tests/test_participants.py`. The latter uses the same
+pytest-receptor command/CI native source build. Fresh native participant pages
+cross the built public topology API; these are analytical membership controls,
+not graphical interaction evidence. See the
+[topology profile](INTERACTION_TOPOLOGY_PROFILE.md).

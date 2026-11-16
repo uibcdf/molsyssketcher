@@ -7,6 +7,7 @@ from depdigest import check_dependency
 from smonitor import METADATA_ONLY, signal
 
 from ._private import arguments  # noqa: F401  # registers bounded request digestion
+from ._private.profiles import physical_fields
 from ._private.smonitor import (
     CorrespondenceError,
     MissingProviderError,
@@ -14,9 +15,6 @@ from ._private.smonitor import (
     QuantityError,
     UnsupportedProfileError,
 )
-
-METHOD = "molsysmt.interactions.ionic.get_ionic_interactions"
-UNITS = {"distance": "nm", "positive_charge": "e", "negative_charge": "e"}
 
 
 def _json(value, np):
@@ -43,13 +41,14 @@ def verify_quantity_records(page, records):
     import pyunitwizard as puw
 
     try:
+        units = physical_fields(page["method"], page["parameters"])
         if (
-            set(page["measurements"]) != set(UNITS)
-            or set(page["measure_units"]) != set(UNITS)
-            or set(records) != set(UNITS)
+            set(page["measurements"]) != set(units)
+            or set(page["measure_units"]) != set(units)
+            or set(records) != set(units)
         ):
             raise ValueError("physical column contract")
-        for name, unit in UNITS.items():
+        for name, unit in units.items():
             record = puw.QuantityRecord.from_dict(records[name])
             verified = record.to_quantity(field=name, unit=unit, form="pint")
             native = puw.quantity(
@@ -102,14 +101,7 @@ def project_interactions(analysis, request):
         or request["structureIndex"] >= analysis.n_structures
     ):
         raise UnsupportedProfileError(reason="native axis extent")
-    if (
-        analysis.method != METHOD
-        or analysis.parameters.get("method") != "minimum_distance"
-        or analysis.parameters.get("profile") != "native"
-        or analysis.parameters.get("method_definition")
-        != "molsysmt.ionic.minimum_distance.native@1"
-    ):
-        raise UnsupportedProfileError(reason="the first ionic minimum-distance inspection profile")
+    units = physical_fields(analysis.method, analysis.parameters)
     try:
         page = analysis.query(structure_indices=[request["structureIndex"]]).to_page(
             offset=request["offset"], limit=request["limit"], max_participant_atoms=2048
@@ -138,7 +130,7 @@ def project_interactions(analysis, request):
         raise CorrespondenceError()
     records = {}
     try:
-        if set(page["measurements"]) != set(UNITS) or set(page["measure_units"]) != set(UNITS):
+        if set(page["measurements"]) != set(units) or set(page["measure_units"]) != set(units):
             raise ValueError("physical columns")
         for name, values in page["measurements"].items():
             records[name] = puw.QuantityRecord.from_quantity(
