@@ -116,8 +116,8 @@ function roleLabel(role: string): string {
     acceptor: "Acceptor",
     ring_a: "Ring A",
     ring_b: "Ring B",
-    positive: "Positive ion",
-    negative: "Negative ion",
+    positive: "Positive participant",
+    negative: "Negative participant",
   };
   return leg
     ? `Leg ${leg[1]} · ${labels[leg[2]!]}`

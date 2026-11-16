@@ -83,7 +83,7 @@
     "packedIndependentConsumer": {
       "files": 37,
       "exportsActualSceneAndReadOnlyDeclarations": "pass",
-      "integrity": "sha512-ZWwG4cBstD8WSuED2FJszkByr+e1yM4ScOWpHd+0160PZtv82Z9KxsdHn4tH/99b16Lg/q1dvlWju9FCeo8f7g=="
+      "integrity": "sha512-qzbgrN8Hr/MnL1MuSt9GnJn5cDOEhMfmCOoQNioXS7QUpOExAUGKur6EaUUiC9Zp4ueMue71K/DETcIhjkGgAw=="
     },
     "proposedCondaLayout": "pass; no Conda archive built or installed",
     "engineeringVisualReview": "finite light/dark ligand and interface figures inspected separately from native scientific controls",
@@ -110,5 +110,12 @@
     "done": 7,
     "partial": 29,
     "todo": 33
+  },
+  "roleCaptionFollowup": {
+    "initialImplementation": "e35abc4107a6c1df1eb9450a9033d72c11143101",
+    "initialCi": "https://github.com/uibcdf/molsyssketcher/actions/runs/43798597357",
+    "change": "Positive/negative participant captions do not assume isolated ions; compound membership and original native role remain intact",
+    "localChecks": "strict build, eleven diagram controls including six-atom positive-role caption, and independent packed consumer pass",
+    "finalCi": "Exact final head recorded in issue #10"
   }
 }

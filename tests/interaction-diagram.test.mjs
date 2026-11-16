@@ -207,8 +207,11 @@ test("native PBC images remain scientific records rather than physical diagram t
 test("unknown type is explicit, with no prototype lookup or assumed scientific glyph", () => {
   const input = fixture();
   input.page.native.page.relation_types = ["constructor"];
+  input.page.native.page.participant_roles[0] = "positive";
   const scene = buildInteractionDiagramScene(input, measure, options);
   assert.equal(scene.observations[0].known, false);
+  assert.match(scene.incidences[0].label.text, /Positive participant/);
+  assert.doesNotMatch(scene.incidences[0].label.text, /ion ·/);
   assert.match(scene.observations[0].title.text, /Unknown interaction/);
 });
 test("evaluated-empty coverage and finite drawing refusal are explicit", () => {
