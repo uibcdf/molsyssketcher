@@ -141,7 +141,10 @@ same pinned MolSysMT source/Rust extension, verifies dependency closure, and
 retains origin plus fresh ionic/participant pages with their actual producer
 metadata. The [local receipt](evidence/interaction_topology_20261115.json)
 keeps local source/runtime/native binary identity separate; exact candidate
-CI and artifact identity are recorded in issue #9. No shared environment,
+CI and artifact identity are recorded in issue #9. The existing molecular
+selection control now receives the observer-reported target viewport before
+measuring native click coordinates, retaining gesture-cancellation guards.
+No shared environment,
 sibling source, release or public distribution artifact is changed.
 
 I1.3 is partial. Positioned ligand-centered/interface-centered diagrams,

@@ -105,5 +105,29 @@
     "done": 7,
     "partial": 22,
     "todo": 40
+  },
+  "browserReceivingFollowup": {
+    "initialCi": "https://github.com/uibcdf/molsyssketcher/actions/runs/43790030162",
+    "initialHead": "e08a0435990ae19d0782a2ef6c6cfcdc054f2749",
+    "initialResults": {
+      "foundation": "pass",
+      "molsysmt-provider": "pass",
+      "rdkit-provider": "failed resized label selection: 17/18 browser controls; native drawing step skipped, not qualified"
+    },
+    "correction": "Selection control waits for observer-reported target SVG size before measuring/clicking; production interaction code and original assertions unchanged",
+    "diagnostic": {
+      "browser": "143.0.7499.4 (Playwright 1200 isolated /tmp runtime)",
+      "host": "Ubuntu 26.04 fallback diagnostic only; no new platform qualification",
+      "browserControls": 18,
+      "nativeDrawingReconstructions": 12,
+      "mirrorControls": 4,
+      "sizeSynchronizedProbe": {
+        "contexts": 40,
+        "viewportTransitions": 120,
+        "nativeClicks": 240,
+        "failures": 0
+      }
+    },
+    "finalCi": "Replacement exact-head complete receiving is recorded in owning issue #9"
   }
 }

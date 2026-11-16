@@ -193,9 +193,28 @@ test("pointer picks remain CSS-pixel scoped after resizing and return exact IDs/
       await view.replace(corpus.find((x) => x.id === "methanol").document);
     });
     for (const width of [220, 440, 760]) {
-      const point = await page.evaluate((width) => {
+      await page.evaluate((width) => {
+        // A delivered resize cancels an in-flight pointer gesture. Receive the
+        // actual size before measuring/clicking, rather than racing that guard.
+        window.pickViewportSize = null;
+        const observer = new ResizeObserver(([entry]) => {
+          window.pickViewportSize = {
+            width: entry.contentRect.width,
+            height: entry.contentRect.height,
+          };
+          observer.disconnect();
+        });
+        observer.observe(document.querySelector("#a svg"));
         document.querySelector("#a").style.width = `${width}px`;
         view.resize(width, 280);
+      }, width);
+      await page.waitForFunction(
+        (width) =>
+          window.pickViewportSize?.width === width &&
+          window.pickViewportSize.height === 280,
+        width,
+      );
+      const point = await page.evaluate(() => {
         const scene = view.state.accepted.scene,
           atom = scene.atoms[0];
         const p = new DOMPoint(
@@ -203,7 +222,7 @@ test("pointer picks remain CSS-pixel scoped after resizing and return exact IDs/
           atom.position.y,
         ).matrixTransform(document.querySelector("#a svg").getScreenCTM());
         return { x: p.x, y: p.y, semanticId: atom.semanticId };
-      }, width);
+      });
       await page.mouse.click(point.x, point.y);
       const event = await page.evaluate(() => events.at(-1));
       assert.equal(event.kind, "atom");
