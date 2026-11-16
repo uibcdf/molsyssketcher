@@ -286,3 +286,12 @@ paths with reversible explicit presentation grouping. Native occurrence identity
 ordered roles, constituent atoms, repeated mediator membership and PBC images
 remain intact. This is a partial semantic foundation for the positioned two-mode
 diagrams above; no interaction drawing or graphical hit profile is received.
+
+## Received first two-mode SVG (2026-11-15)
+
+The [finite SVG profile](INTERACTION_SVG_PROFILE.md) now composes exact prepared
+parents with native topology in both modes. Fixed chemical geometry, explicit
+sides/mediators, complete role/constituent picks, measured labels, guarded atomic
+replacement and figure context execute in Chromium. Stored and freshly generated
+native controls retain their distinct CI paths. This starts I2 without closing
+its full layout/grammar, real-complex, quantitative or host acceptance above.

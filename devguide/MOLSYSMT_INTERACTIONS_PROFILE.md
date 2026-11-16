@@ -7,7 +7,9 @@ bounded inspection envelope. [Component #9](https://github.com/uibcdf/molsyssket
 extends this route with [native participant topology](INTERACTION_TOPOLOGY_PROFILE.md).
 MolSysMT owns interaction calculation, classification,
 queries, native identifiers and scientific provenance. No interaction diagram,
-production transport, linked 3D journey or installed Python facade is delivered.
+production transport, linked 3D journey or installed Python facade is delivered
+by this boundary. The later [first SVG surface](INTERACTION_SVG_PROFILE.md) composes
+its prepared parents with this native envelope.
 
 ## Native boundary
 

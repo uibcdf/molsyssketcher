@@ -1,6 +1,6 @@
 # Living implementation plan
 
-Updated: 2026-11-15. Current milestone: native participant topology and reversible grouping, alongside the molecular SVG surface.
+Updated: 2026-11-15. Current milestone: first supplied ligand-centered/interface-centered SVG composition.
 
 This is the single microstep ledger for two equally important product pillars:
 Molecular View and Interaction View. Shared work is implemented once. Both
@@ -19,7 +19,7 @@ results, owning issue and limits in CHECKPOINT.md or a linked receipt. A source
 description, a closed upstream issue or an unavailable-provider test is not
 executed integration evidence.
 
-There are **69 microsteps: 7 done, 22 partial and 40 todo**. Five completed steps
+There are **69 microsteps: 7 done, 29 partial and 33 todo**. Five completed steps
 are documentation/source review; P0.5 supplies the tested toolchain and license.
 Counts are unweighted, not effort percentages. Initial implementation evidence
 and explicit remaining acceptance are in CHECKPOINT.md, SUPPLIED_INPUT_PROFILE.md
@@ -69,7 +69,7 @@ local product decision.
 | P1.5 | partial | Twelve real-provider controls receive native round trips, parser/preparation provenance, original declarations and nonphysical drawing coordinates; physical records are received in Python, while broader quantity/external correspondence and full consumer receiving remain pending |
 | P1.6 | partial | Actual RDKit preparation supplies exact bijections, explicit wedges/H/charges/isotopes and native references; generated objects are refused. Broader preparation/scene coverage remains pending |
 | P1.7 | partial | Supplied document and measured molecular scene/SVG publish coherently; failures preserve accepted data and stale candidates retire. Production interpretation/depiction/scene and history receiving remain pending |
-| P1.8 | partial | Shared exact references, independent controllers, molecular scenes and finite native participant topology exist; positioned interaction composition and full host receiving remain pending |
+| P1.8 | partial | Shared exact references, independent controllers, molecular scenes and first native SVG composition exist; full host/operation receiving remains pending |
 
 Gate: admitted molecular input can enter the depiction path, and referenced
 molecular/analysis contexts can be composed without implicit identity changes.
@@ -78,7 +78,7 @@ molecular/analysis contexts can be composed without implicit identity changes.
 
 | ID | Status | Required result / completion evidence |
 | --- | --- | --- |
-| P2.1 | partial | Own immutable molecular primitives, measured label masks, positive fit transforms and semantic hits execute in Chromium; interaction-fragment composition remains pending |
+| P2.1 | partial | Own immutable molecular primitives, measured label masks, positive fit transforms and semantic hits execute in Chromium; first native interaction-fragment composition is received; broader scene/grammar receiving remains pending |
 | P2.2 | partial | Twelve real RDKit drawings, native reconstruction from DOM strokes/wedges, tetrahedral/E/Z pairs and axis/endpoint controls pass; broader chemical matrix/scientific review remains pending |
 | P2.3 | partial | Actual generic sans-serif glyph bounds at multiple viewport sizes, light/dark galleries and label hits pass; custom fonts and crowded-structure acceptance remain pending |
 | P2.4 | partial | Molecular bounded pan/zoom/fit/resize, current-viewport contextual SVG export, coherent replacement and owned disposal execute in Chromium; complete two-view/host receiving remains pending |
@@ -107,22 +107,22 @@ without modifying its original declaration.
 | I1.2 | partial | Bounded real MolSysMT ionic/pi-pi/hydrogen-bond/water-path source profiles retain native method/profile, producer, analysis-local identifiers, roles and Python-verified quantity records; production host/transport and browser quantity receiving remain pending |
 | I1.3 | partial | Actual compound rings, directed hydrogen bonds, parallel contacts and one/two-water paths retain roles, constituents and images through immutable reversible grouping; positioned diagrams, graphical maps/hits and complex/interface receiving remain pending |
 | I1.4 | partial | Native single-frame pages distinguish evaluated-empty, unevaluated and partial scope with bounded copies; broader filters and native failure/missing profiles remain pending |
-| I1.5 | todo | Atomic multi-parent context replacement and dependency invalidation; no promotion of stale observations or source identity |
-| I1.6 | todo | Public read-only diagram input/inspection contract and meaningful native/reference/provenance controls |
+| I1.5 | partial | Atomic supplied multi-parent depiction/native/scene/DOM replacement and failed/stale candidate retirement execute; live external parent invalidation remains pending |
+| I1.6 | partial | Public exact supplied diagram/inspection contract receives nine native mapped controls, export context and real-browser role/atom picks; full host/native profile qualification remains pending |
 
 Gate: native results project into a coherent multi-participant visual document,
 with no new detector or competing interactions codec.
 
-## I2 — Interaction View: diagram and visual grammar (todo)
+## I2 — Interaction View: diagram and visual grammar (partial)
 
 | ID | Status | Required result / completion evidence |
 | --- | --- | --- |
-| I2.1 | todo | Ligand-centered mode with fixed prepared depiction, exact partner anchors and typed contacts |
-| I2.2 | todo | Interface-centered mode with two declared/composite sides and no required central ligand |
-| I2.3 | todo | Constrained reproducible layout, label/edge routing, user pins, bounded re-layout and candidate comparison |
-| I2.4 | todo | Role-aware glyphs, physical-measure tooltips, legends and accessible unknown/missing states |
+| I2.1 | partial | First measured ligand-centered SVG fixes the prepared focus geometry and retains complete typed native participant anchors; real ligand complexes and full interaction grammar remain pending |
+| I2.2 | partial | First measured interface SVG receives explicit composite sides and mediator lanes without a central ligand; real protein/peptide interfaces and accepted dense policy remain pending |
+| I2.3 | partial | Deterministic bounded fixed-fragment lanes and measured native role cards execute; collision-aware routing, pins, stable updates, solver comparison and accepted budgets remain pending |
+| I2.4 | partial | Measured generic native type/role labels, unknown/coverage states and source inspection execute; specialist glyphs, quantitative tooltips and full accessibility remain pending |
 | I2.5 | todo | Residue/feature summaries and reversible chemical detail/grouping; explicit dense-interface presentation policy |
-| I2.6 | todo | Keyboard/pointer selection, expansion, filters and coherent hit geometry across both diagram modes |
+| I2.6 | partial | Pointer/keyboard native selection, chemical hits, explicit group summaries and coherent resize execute; full filtering, chemical-detail expansion and navigation remain pending |
 
 Gate: both diagram modes are usable and scientifically interpretable. Chemical
 atoms stay fixed during context layout; drawing length is not physical distance.
@@ -174,7 +174,7 @@ screenshots or a single happy-path diagram do not replace these checks.
 
 | ID | Status | Required result / completion evidence |
 | --- | --- | --- |
-| P4.1 | partial | First molecular SVG surface mounts and exercises lifecycle in real Chromium; production host/installed browser assets and Interaction View remain pending |
+| P4.1 | partial | Both finite SVG surfaces mount and exercise lifecycle in Chromium; installed visual assets, production host and full consumer qualification remain pending |
 | P4.2 | todo | Both surfaces and their composition execute in actual PySide6/QWebEngine with readiness, resize and shutdown |
 | P4.3 | todo | Sabueso source-linked molecular and complex/interface journeys preserve original Cards and distinguish calculated layers |
 | P4.4 | todo | Actual current 2D/3D coordinated selection plus absent/partial/stale safeguards for the linked profile |

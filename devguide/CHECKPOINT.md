@@ -1,6 +1,6 @@
 # Current checkpoint
 
-Updated: **2026-11-15**. Current milestone: native participant topology and reversible grouping, alongside the molecular SVG surface.
+Updated: **2026-11-15**. Current milestone: first supplied ligand-centered/interface-centered SVG composition.
 
 ## Product direction
 
@@ -42,14 +42,14 @@ Package version `0.0.0` is a private tooling placeholder, not a release decision
 
 | Readiness axis | State |
 | --- | --- |
-| Shared foundation | partial: executable supplied-document/reference/controller subset; toolchain and license received; formal admission and actual scientific receiving pending |
+| Shared foundation | partial: executable supplied-document/reference/controller subset; toolchain and license received; formal admission and full scientific/host receiving pending |
 | Molecular View | partial: first measured SVG surface and finite real-browser/native drawing controls; full exploration/Qt/scientific acceptance pending |
-| Interaction View | partial: bounded native pages and reversible compound/mediated participant topology; positioned diagrams, investigation and domain profiles remain pending |
+| Interaction View | partial: first two-mode supplied SVG composition and native participant inspection; full grammar, investigation, real-complex and host receiving remain pending |
 | Production editor | todo: final major capability after exploration foundations |
 
 ## Integrated plan
 
-The ledger has **69 microsteps: 7 done, 22 partial and 40 todo**.
+The ledger has **69 microsteps: 7 done, 29 partial and 33 todo**.
 
 Completed items P0.1, P0.2, P0.3, P0.7 and P0.8 are documentation/source-review
 work only. P0.5 and the bounded P2.5 architectural experiment are complete.
@@ -101,7 +101,7 @@ dated historical record, not a live plan counter.
 
 Documentation checks cover local file/anchor links, task IDs/status counts,
 decision/readiness consistency, historical-record preservation and whitespace.
-`npm run check` executes canonical version/lock consistency, strict types, source formatting, 49 synthetic/real-provider-fixture
+`npm run check` executes canonical version/lock consistency, strict types, source formatting, 60 synthetic/real-provider-fixture
 document/controller/scene tests and local link/anchor/ledger checks, plus six
 separately compiled internal experiment tests. `npm run pack:check`
 checks the local tarball's contents, offline independent consumer imports,
@@ -292,6 +292,34 @@ analytical controls and limits. I1.3 is partial: positioned two-mode diagrams,
 graphical membership/hits, real complex/interface and browser/Qt receiving
 remain pending. Earlier receipts retain their historical scope.
 
+## Received first two-mode interaction SVG composition
+
+[Component #10](https://github.com/uibcdf/molsyssketcher/issues/10) adds the atomic
+supplied diagram contract, measured scene, reused chemical SVG composition and
+independent `InteractionSvgView`. Ligand mode fixes the focus's internal geometry;
+interface mode receives explicit composite sides and mediator lanes. Native
+occurrences remain distinct role-bearing cards, with every compound constituent,
+repeated mediator, exact parent binding and original image inspectable.
+
+Nine actual source controls join public MolSysMT observations and RDKit fragment
+depictions through verified atom-map/bond correspondence. The browser receives
+all 26 composed fragments; native RDKit reconstructs their actual DOM bond
+primitives and screen-transformed coordinates. Eleven Node, five Python and
+seven browser controls are added (60 core Node, 41 native adapter Python and
+25 browser controls total). Failure preserves the accepted bundle; stale DOM,
+burst/disposal, callbacks, exact-generation selection, unknown/coverage states,
+CSS resize, light/dark and figure context are received. The local demo now links
+to a two-mode gallery. Physical quantity records remain opaque.
+
+The [profile](INTERACTION_SVG_PROFILE.md) and
+[local receipt](evidence/interaction_svg_20261115.json) separate analytical,
+scientific, graphical and installed-artifact scope. CI receives stored diagrams
+in the RDKit job and freshly generated native/depiction bytes in the rebuilt
+MolSysMT browser job. Exact-head CI/artifacts are recorded in issue #10.
+I1.5/I1.6 and I2.1–I2.4/I2.6 are partial. Layout/pins, richer grammar, real
+complex/interface corpora, quantitative inspection and live browser/Qt/3D host
+receiving retain their remaining acceptance. No primary-view gate is complete.
+
 ## Resume here
 
 1. P0.4: resolve the two-pillar ownership/admission and TypeScript-first
@@ -300,7 +328,8 @@ remain pending. Earlier receipts retain their historical scope.
    finish the needed finite operation/loss/corpus and measured-budget decisions.
 3. Extend owner-native interaction receiving with actual molecular
    parent/participant/coverage context beyond the received ionic inspection profile;
-   build first two-mode positioned composition from the received native participant topology.
+   extend the received two-mode SVG composition into real complexes/interfaces,
+   collision-aware routing, pins, accessible inspection and quantitative grammar.
 4. Continue crowded-structure controls and scientific layers, and reuse prepared
    fragments for ligand-centered/two-sided composition. Preserve the now-received
    P2.5 generation/selection seams while keeping production editing in P6.

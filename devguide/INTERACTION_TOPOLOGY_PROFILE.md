@@ -147,7 +147,8 @@ measuring native click coordinates, retaining gesture-cancellation guards.
 No shared environment,
 sibling source, release or public distribution artifact is changed.
 
-I1.3 is partial. Positioned ligand-centered/interface-centered diagrams,
-role-aware graphical grammar, actual visual membership/hits, complex/interface
+I1.3 is partial. A [first SVG composition](INTERACTION_SVG_PROFILE.md) now receives
+both modes; complete positioned diagram grammar,
+specialist graphical grammar, broad visual membership/hits, complex/interface
 corpora and browser/Qt host receiving remain pending. No primary-view delivery
 gate is completed by this topology.

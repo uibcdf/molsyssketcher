@@ -13,10 +13,12 @@ export async function startBrowserServer() {
       [
         "/examples/molecular-gallery.html",
         "/examples/editor-experiment.html",
+        "/examples/interaction-gallery.html",
         "/.experiment/editor_experiment/session.js",
         "/tests/browser/harness.html",
         "/tests/data/rdkit-prepared.json",
         "/tests/data/editor-experiment.json",
+        "/tests/data/interaction-diagrams.json",
       ].includes(path);
     if (!allowed) {
       response.writeHead(404);

@@ -12,6 +12,9 @@ const nativePage = JSON.parse(
 const participantPage = JSON.parse(
   readFileSync(join(root, "tests/data/molsysmt-participants.json")),
 ).cases.find((c) => c.id === "two-water").projection;
+const diagramInput = JSON.parse(
+  readFileSync(join(root, "tests/data/interaction-diagrams.json")),
+).cases[0].input;
 const temporary = mkdtempSync(join(tmpdir(), "molsyssketcher-consumer-"));
 try {
   const [artifact] = JSON.parse(
@@ -65,7 +68,7 @@ try {
     join(temporary, "consumer.mjs"),
     `
 import assert from 'node:assert/strict';
-import { createMolecularController, createInteractionController, createInteractionPageController, inspectInteractionPage, buildInteractionTopology, inspectInteractionTopology, findInteractionParticipantNode, createMolecularSvgView, buildMolecularScene, hitTestMolecularScene, fitViewport, zoomViewport } from '@uibcdf/molsyssketcher';
+import { createMolecularController, createInteractionController, createInteractionPageController, inspectInteractionPage, buildInteractionTopology, inspectInteractionTopology, findInteractionParticipantNode, createMolecularSvgView, buildMolecularScene, hitTestMolecularScene, fitViewport, zoomViewport, prepareInteractionDiagram, buildInteractionDiagramScene, createInteractionSvgView } from '@uibcdf/molsyssketcher';
 assert.equal(typeof createMolecularSvgView, 'function');
 const molecular = createMolecularController({ instanceId: 'clean-molecule' });
 const diagram = createInteractionController({ instanceId: 'clean-diagram' });
@@ -91,6 +94,11 @@ const topology=buildInteractionTopology(${JSON.stringify(participantPage)}, {ins
 const node=findInteractionParticipantNode(topology,participantKey);
 assert.equal(inspectInteractionTopology(topology,node.id).memberships.length,2);
 assert.equal(topology.observations[0].participants.length,9);
+assert.equal(typeof createInteractionSvgView,'function');
+const diagramScene=buildInteractionDiagramScene(prepareInteractionDiagram(${JSON.stringify(diagramInput)}),
+  (text,size)=>({x:0,y:-size,width:text.length*size/2,height:size}),{instanceId:'clean-diagram-scene',generation:1});
+assert.equal(diagramScene.fragments.length,2);
+assert.equal(diagramScene.incidences[0].atoms.length,6);
 molecular.dispose(); diagram.dispose();
 assert.equal(molecular.state.accepted, null);
 `,
@@ -102,7 +110,14 @@ assert.equal(molecular.state.accepted, null);
   writeFileSync(
     join(temporary, "consumer.ts"),
     `
-import { createMolecularController, createMolecularSvgView, prepareInteractionPage, buildInteractionTopology, inspectInteractionTopology, type PreparedMolecule, type ScenePick } from '@uibcdf/molsyssketcher';
+import { createMolecularController, createMolecularSvgView, prepareInteractionPage, buildInteractionTopology, inspectInteractionTopology, buildInteractionDiagramScene, createInteractionSvgView, type PreparedMolecule, type ScenePick } from '@uibcdf/molsyssketcher';
+const diagramView=createInteractionSvgView(document.createElement('div'),{instanceId:'typed-diagram'});
+diagramView.subscribeSelection(pick=>console.log(pick?.kind));
+const diagramScene=buildInteractionDiagramScene({},(text,size)=>({x:0,y:-size,width:text.length*size,height:size}),{instanceId:'typed-diagram-scene',generation:1});
+// @ts-expect-error Composed fragment geometry is read-only.
+diagramScene.fragments[0].offset.x=99;
+// @ts-expect-error Native scientific context is read-only.
+diagramScene.document.page.analysis.generation='changed';
 const page = prepareInteractionPage({});
 const topology=buildInteractionTopology(page,{instanceId:'typed-topology',generation:1});
 // @ts-expect-error Native compound constituents are read-only.

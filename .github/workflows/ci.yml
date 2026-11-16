@@ -54,8 +54,8 @@ jobs:
               versions[distribution] = importlib.metadata.version(distribution)
           print(json.dumps({'python': sys.version, 'installed': versions}, sort_keys=True))
           PY
-      - run: ruff check devtools/rdkit_adapter devtools/tests devtools/editor_experiment devtools/check_svg_chemistry.py
-      - run: ruff format --check devtools/rdkit_adapter devtools/tests devtools/editor_experiment devtools/check_svg_chemistry.py
+      - run: ruff check devtools/rdkit_adapter devtools/tests devtools/editor_experiment devtools/check_svg_chemistry.py devtools/check_interaction_svg.py
+      - run: ruff format --check devtools/rdkit_adapter devtools/tests devtools/editor_experiment devtools/check_svg_chemistry.py devtools/check_interaction_svg.py
       - run: python -m pytest --receptor=ci devtools/tests
       - run: npm run corpus:check
       - run: npm run corpus:experiment:check
@@ -64,15 +64,20 @@ jobs:
       - name: Receive molecular SVG in a real browser
         env:
           MOLSYSSKETCHER_BROWSER_EVIDENCE_DIR: test-results/svg
+          MOLSYSSKETCHER_INTERACTION_EVIDENCE_DIR: test-results/interaction-svg
         run: npm run test:browser
       - name: Receive actual drawn stereo and bond orders with RDKit
         run: python devtools/check_svg_chemistry.py test-results/svg/drawings.json
+      - name: Receive composed interaction fragment drawings with RDKit
+        run: python -m devtools.check_interaction_svg test-results/interaction-svg/drawings.json
       - name: Retain finite browser drawing evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: molecular-svg-evidence
-          path: test-results/svg
+          path: |
+            test-results/svg
+            test-results/interaction-svg
           retention-days: 14
 
   molsysmt-provider:
@@ -113,6 +118,18 @@ jobs:
         run: python -m devtools.molsysmt_adapter.corpus --output test-results/interactions/native-pages.json
       - name: Retain fresh compound and mediated native controls
         run: python -m devtools.molsysmt_adapter.participant_corpus --output test-results/interactions/participant-pages.json
+      - name: Prepare fresh mapped two-mode diagram controls
+        run: |
+          python -m devtools.molsysmt_adapter.diagram_corpus --output test-results/interactions/diagram-pages.json
+          cp test-results/interactions/diagram-pages.json tests/data/interaction-diagrams.json
+      - name: Install isolated native-diagram Chromium runtime
+        run: npx playwright install --with-deps chromium
+      - name: Receive fresh native diagrams in a real browser
+        env:
+          MOLSYSSKETCHER_INTERACTION_EVIDENCE_DIR: test-results/interactions/svg
+        run: node --test --test-isolation=none tests/browser/interactions.browser.mjs
+      - name: Receive fresh composed fragment drawings with RDKit
+        run: python -m devtools.check_interaction_svg test-results/interactions/svg/drawings.json
       - name: Retain finite native receiving evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4

@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MolSysSketcher · Interaction diagrams</title>
+  <style>
+    :root {
+      font-family: system-ui, sans-serif;
+      color: #193342;
+      background: #edf3f6;
+    }
+    body {
+      margin: 0;
+      padding: 24px;
+    }
+    main {
+      max-width: 1250px;
+      margin: auto;
+    }
+    h1 {
+      font-size: 26px;
+      margin: 0 0 8px;
+    }
+    p {
+      line-height: 1.5;
+      max-width: 85ch;
+    }
+    nav {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 20px 0;
+    }
+    label {
+      font-size: 14px;
+    }
+    select,
+    button {
+      font: inherit;
+      padding: 7px 10px;
+      border: 1px solid #9baeb8;
+      border-radius: 6px;
+      background: white;
+      color: inherit;
+    }
+    #diagram {
+      height: 780px;
+      background: white;
+      border: 1px solid #c7d5dd;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    pre {
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+      padding: 16px;
+      background: #e2ebf0;
+      border-radius: 8px;
+      font-size: 13px;
+    }
+    a {
+      color: #075b7c;
+    }
+    #status {
+      font-size: 14px;
+    }
+  </style>
+  <main>
+    <h1>Interaction diagrams</h1>
+    <p>
+      Explore the complete atoms and roles behind each native observation.
+      Select a chemical atom, a role row or an observation; use arrow keys and
+      Enter to inspect roles. The drawings use schematic coordinates.
+    </p>
+    <nav>
+      <label
+        >Analytical control
+        <select id="case"></select
+      ></label>
+      <label
+        >Theme
+        <select id="theme">
+          <option>light</option>
+          <option>dark</option>
+        </select></label
+      >
+      <button id="grouping">Hide group summaries</button>
+      <button id="export">Save SVG</button>
+      <a href="/">Molecular gallery</a>
+    </nav>
+    <p id="status" aria-live="polite"></p>
+    <div id="diagram"></div>
+    <pre id="inspection" aria-live="polite">
+Select a native observation or participant.</pre
+    >
+  </main>
+  <script type="module">
+    import { createInteractionSvgView } from "/dist/index.js";
+    const cases = (
+      await (await fetch("/tests/data/interaction-diagrams.json")).json()
+    ).cases;
+    const choice = document.querySelector("#case"),
+      theme = document.querySelector("#theme"),
+      grouping = document.querySelector("#grouping"),
+      inspection = document.querySelector("#inspection");
+    for (const item of cases) {
+      const option = document.createElement("option");
+      option.value = item.id;
+      option.textContent = item.id.replaceAll("-", " ");
+      choice.append(option);
+    }
+    let view,
+      expanded = false,
+      intent = 0;
+    async function show() {
+      const ticket = ++intent;
+      document.querySelector("#export").disabled = true;
+      view?.dispose();
+      view = createInteractionSvgView(document.querySelector("#diagram"), {
+        instanceId: `interaction-gallery-${ticket}`,
+        theme: theme.value,
+      });
+      view.subscribeSelection((pick) => {
+        if (!pick) {
+          inspection.textContent =
+            "Select a native observation or participant.";
+          return;
+        }
+        const accepted = view.state.accepted.document;
+        const members =
+          pick.kind === "molecular"
+            ? pick.memberships
+            : pick.member
+              ? [pick.member]
+              : pick.native.memberships;
+        const method = accepted.page.native.page.parameters;
+        const lines = [
+          `Selection: ${pick.kind}`,
+          `Frame: ${accepted.page.structureIndex}`,
+          `Method: ${method.method} / ${method.profile}`,
+        ];
+        for (const member of members) {
+          const names = member.atoms.map(
+            (atom) =>
+              `${accepted.parents.find((p) => p.parentIndex === atom.parentIndex).label}: ${atom.atomId}`,
+          );
+          lines.push(
+            `${member.role.replaceAll("_", " ")} — ${names.join(", ")}`,
+          );
+        }
+        if (!members.length)
+          lines.push("No displayed observation involves this atom.");
+        lines.push(
+          "Connection geometry is schematic. Measurements are retained; numerical inspection is not available yet.",
+        );
+        inspection.textContent = lines.join("\n");
+      });
+      const input = structuredClone(
+        cases.find((c) => c.id === choice.value).input,
+      );
+      if (expanded) input.groups = [];
+      const current = view;
+      const result = await current.replace(input);
+      if (ticket !== intent) return;
+      document.querySelector("#export").disabled = result.status !== "accepted";
+      document.querySelector("#status").textContent =
+        result.status === "accepted"
+          ? `${input.composition.mode} · ${result.accepted.scene.topology.coverage} · ${result.accepted.scene.observations.length} native observation(s)`
+          : `Unable to display: ${result.status}`;
+      grouping.textContent = expanded
+        ? "Show group summaries"
+        : "Hide group summaries";
+      inspection.textContent = "Select a native observation or participant.";
+    }
+    choice.onchange = show;
+    theme.onchange = show;
+    grouping.onclick = () => {
+      expanded = !expanded;
+      show();
+    };
+    document.querySelector("#export").onclick = () => {
+      const link = document.createElement("a"),
+        url = URL.createObjectURL(
+          new Blob([view.exportSvg()], { type: "image/svg+xml" }),
+        );
+      link.href = url;
+      link.download = `${choice.value}.svg`;
+      link.click();
+      URL.revokeObjectURL(url);
+    };
+    window.addEventListener("pagehide", () => view?.dispose(), { once: true });
+    await show();
+  </script>
+</html>

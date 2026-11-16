@@ -7,4 +7,5 @@ devguide/
 tests/data/editor-experiment.json
 tests/data/molsysmt-interactions.json
 tests/data/molsysmt-participants.json
+tests/data/interaction-diagrams.json
 .experiment/

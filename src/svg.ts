@@ -17,7 +17,7 @@ export const SVG_COLORS = Object.freeze({
   }),
 });
 
-function textStyle(text: SVGTextElement, size: number): void {
+export function textStyle(text: SVGTextElement, size: number): void {
   for (const [name, value] of Object.entries({
     "font-family": "sans-serif",
     "font-size": `${size}px`,

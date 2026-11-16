@@ -64,6 +64,40 @@ export {
   findInteractionParticipantNode,
   inspectInteractionTopology,
 } from "./interaction-topology.js";
+export {
+  prepareInteractionDiagram,
+  createInteractionDiagramController,
+  INTERACTION_DIAGRAM_LIMITS,
+} from "./interaction-diagram.js";
+export type {
+  InteractionDiagram,
+  InteractionDiagramParent,
+  InteractionComposition,
+} from "./interaction-diagram.js";
+export {
+  buildInteractionDiagramScene,
+  hitTestInteractionDiagramScene,
+  inspectDiagramTarget,
+} from "./interaction-scene.js";
+export type {
+  InteractionDiagramScene,
+  InteractionDiagramPick,
+  DiagramFragment,
+  DiagramIncidence,
+  DiagramObservation,
+  DiagramGroup,
+  DiagramText,
+} from "./interaction-scene.js";
+export { renderInteractionDiagramSvg } from "./interaction-svg.js";
+export {
+  InteractionSvgView,
+  createInteractionSvgView,
+} from "./interaction-view.js";
+export type {
+  InteractionSvgViewOptions,
+  AcceptedInteractionView,
+  InteractionViewReplacementResult,
+} from "./interaction-view.js";
 export type {
   InteractionParticipantKey,
   InteractionPresentationGroup,

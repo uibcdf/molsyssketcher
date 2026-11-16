@@ -76,3 +76,11 @@ pytest-receptor command/CI native source build. Fresh native participant pages
 cross the built public topology API; these are analytical membership controls,
 not graphical interaction evidence. See the
 [topology profile](INTERACTION_TOPOLOGY_PROFILE.md).
+
+The first interaction SVG selectors are `tests/interaction-diagram.test.mjs`,
+`tests/browser/interactions.browser.mjs` and
+`devtools/molsysmt_adapter/tests/test_diagrams.py`. Browser drawing evidence is
+received by `python -m devtools.check_interaction_svg <path>/drawings.json`,
+reusing the established RDKit primitive oracle. CI runs both stored diagrams and
+fresh diagrams generated after the exact native provider build. See the
+[SVG profile](INTERACTION_SVG_PROFILE.md) for their independent finite scopes.

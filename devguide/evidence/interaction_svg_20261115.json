@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-15",
+  "issue": "https://github.com/uibcdf/molsyssketcher/issues/10",
+  "scope": "First bounded supplied/native two-mode SVG composition; not full interaction exploration, native detector benchmark, published artifact or Qt/3D receiving",
+  "provider": {
+    "sourceHead": "6deb0200cd7e384128eded46caaf751a57e65bc6",
+    "sourceStatus": "",
+    "runtimeVersion": "0.23.0+904.gff25f1202",
+    "metadataVersion": "0.23.0+904.gff25f1202",
+    "moduleOrigin": "/fast_data/home/liliana/repos@uibcdf/molsysmt/molsysmt/__init__.py",
+    "nativeBinary": "/fast_data/home/liliana/repos@uibcdf/molsysmt/molsysmt/_rust.abi3.so",
+    "nativeBinarySha256": "2dbcf13d148cb3ae13a5908707fcdd61c75a2de5027e50c566ce07de81bdb038",
+    "python": "3.14.10 | packaged by conda-forge | (main, Oct 26 2026, 11:35:38) [GCC 15.3.0]",
+    "support": {
+      "argdigest": {
+        "version": "0.17.1+6.g7be790b",
+        "origin": "/fast_data/home/liliana/repos@uibcdf/argdigest/argdigest/__init__.py"
+      },
+      "depdigest": {
+        "version": "0.15.2+3.g5e93eaf",
+        "origin": "/fast_data/home/liliana/repos@uibcdf/depdigest/depdigest/__init__.py"
+      },
+      "smonitor": {
+        "version": "0.23.0+3.g4a4cd1e",
+        "origin": "/fast_data/home/liliana/repos@uibcdf/smonitor/smonitor/__init__.py"
+      },
+      "pyunitwizard": {
+        "version": "0.29.5+2.gcc51c8e",
+        "origin": "/fast_data/home/liliana/repos@uibcdf/pyunitwizard/pyunitwizard/__init__.py"
+      },
+      "pytest-receptor": {
+        "version": "1.2.3+2.ga02820f",
+        "origin": "/fast_data/home/liliana/repos@uibcdf/pytest-receptor/pytest_receptor/__init__.py"
+      },
+      "rdkit": {
+        "version": "2026.9.2",
+        "origin": "/fast_data/home/liliana/miniconda3/envs/molsyssuite@uibcdf_3.14/lib/python3.14/site-packages/rdkit/__init__.py"
+      }
+    },
+    "scope": "Separate source/runtime/binary observations; source HEAD alone does not authenticate a pre-existing native build"
+  },
+  "controls": {
+    "nativeDiagrams": 9,
+    "mappedPreparedFragments": 26,
+    "nodeDiagramControls": 11,
+    "newPythonDiagramControls": 5,
+    "nativePythonControlsTotal": 41,
+    "newBrowserControls": 7,
+    "totalBrowserControls": 25,
+    "sourceMapping": "Standard atom-map labels in retained fragment SMILES, verified actual atom and complete fragment bond correspondence",
+    "drawingCoordinates": "nonphysical schematic; native physical records remain opaque",
+    "layout": "fixed-fragments-lanes@1",
+    "knownFiniteBounds": {
+      "parents": 8,
+      "totalAtoms": 128,
+      "occurrences": 8,
+      "participantIncidences": 48,
+      "axisExtent": 16384
+    }
+  },
+  "executed": {
+    "nodeDiagramSelector": "11 pass",
+    "pythonNativeSelector": "41 pass with pytest-receptor; includes actual last-page partial scope in the public diagram scene",
+    "composedDomFragmentOracle": {
+      "rdkit": "2026.09.2",
+      "fragments": 26
+    },
+    "strictTypes": "pass",
+    "browserQuantityReader": false,
+    "browserFullRun": {
+      "version": "157.0.8103.38",
+      "total": 25,
+      "newInteractionControls": 7,
+      "passed": 25
+    },
+    "originalNativeDrawingControls": {
+      "cases": 12,
+      "mirrorControls": 4
+    },
+    "coreNodeControls": 60,
+    "internalExperimentControls": 6,
+    "packedIndependentConsumer": {
+      "files": 37,
+      "exportsActualSceneAndReadOnlyDeclarations": "pass",
+      "integrity": "sha512-ZWwG4cBstD8WSuED2FJszkByr+e1yM4ScOWpHd+0160PZtv82Z9KxsdHn4tH/99b16Lg/q1dvlWju9FCeo8f7g=="
+    },
+    "proposedCondaLayout": "pass; no Conda archive built or installed",
+    "engineeringVisualReview": "finite light/dark ligand and interface figures inspected separately from native scientific controls",
+    "previousPythonPreparationControls": 44,
+    "versionTypesFormattingDocs": "pass",
+    "ruff": "pass",
+    "exportViewport": "Current CSS-pixel width/height and viewBox retained; scientific input remains unchanged"
+  },
+  "pendingLocal": [],
+  "ci": "Exact source-containing candidate CI/artifact identity is recorded in owning issue #10. Native job rebuilds the provider, generates fresh diagram bytes and receives those same bytes in Chromium/RDKit. Stored fixture receiving remains separate.",
+  "limits": [
+    "Analytical geometries are not real ligand complexes/protein interfaces or independently validated detector benchmarks",
+    "Local source HEAD does not authenticate pre-existing native binary; runtime/metadata stamp is preserved separately",
+    "Fixed chemical geometry and deterministic lanes are not collision-free routing, pins or accepted dense-interface budgets",
+    "Exact declared bindings are checked; arbitrary host source authority is not authenticated",
+    "Supplied snapshots do not subscribe to live external parent invalidation",
+    "Specialist glyphs, quantitative tooltips, full accessibility/navigation/filtering and real host/Qt/3D receiving remain pending",
+    "Generic sans-serif fonts are not embedded in SVG exports",
+    "TypeScript quantity records remain opaque under uibcdf/pyunitwizard#159",
+    "No primary-view delivery gate or release/publication is qualified"
+  ],
+  "taskLedger": {
+    "total": 69,
+    "done": 7,
+    "partial": 29,
+    "todo": 33
+  }
+}
