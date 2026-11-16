@@ -1,0 +1,664 @@
+<!--
+SYNCHRONIZED MOLSYSSUITE GUIDE — DO NOT EDIT COMPONENT COPIES.
+Canonical source: https://github.com/uibcdf/argdigest/blob/main/standards/ARGDIGEST_GUIDE.md
+-->
+
+# ArgDigest Guide (Canonical)
+
+Source of truth for integrating and using **ArgDigest** in this library.
+
+Metadata
+- Source repository: `argdigest`
+- Source document: `standards/ARGDIGEST_GUIDE.md`
+- Source version: `argdigest@main` (published contract baseline: 0.17.1)
+- Last synced: 2026-11-05
+
+Version boundaries: declaration-only diagnostics below are public since ArgDigest
+0.16.0. Explicit contract ownership and the alias/staticmethod repairs are public
+since 0.17.0. The call-shape, optional-checker and consumer-diagnostic corrections
+below are public in 0.17.1; earlier releases do not provide those corrections.
+Release qualification and publication are tracked in `uibcdf/argdigest#51`;
+release-specific consumer receiving is coordinated in `uibcdf/molsyssuite#169`,
+with contract and guide follow-up in `uibcdf/molsyssuite#164`.
+MolSysSuite developers own distribution of this canonical revision to all clients;
+the maintainer's delegation is retained in `uibcdf/molsyssuite#125`. Provider
+editing does not update client copies. Original 0.17.0 evidence remains in
+`uibcdf/argdigest#40` and `uibcdf/molsyssuite#123`.
+
+`0.12.0` changed this guide in two ways that affect an integration: `*args` and
+positional-only parameters are supported and documented (§5), and the `ValidatedPayload`
+passport was **removed** rather than replaced, leaving `skip_digestion` as the single
+mechanism (§6).
+
+## Corrections published in 0.17.1
+
+The following corrections are published in 0.17.1 after exact-file qualification
+under `uibcdf/argdigest#51`. Public 0.17.0 retains its original bytes and behavior.
+
+- Literal keywords matching the `**kwargs` parameter name are preserved as
+  ordinary options. A mapping supplied as `kwargs={"file_name": ...}` is not
+  expanded again and cannot replace an explicitly bound `file_name`. Normal
+  alias/domain checks still admit or refuse that literal keyword.
+- `UnknownArgumentError` and `MissingArgumentError` also inherit `TypeError`,
+  preserving Python call-shape catches while retaining their existing
+  `FunctionContractError`/`DigestError` classes, catalog codes and context.
+  Inconsistent value groups and invalid domain declarations keep their separate
+  existing exception families. No consumer wrapper or skip policy is needed.
+- Optional Beartype absence produces one `ARG-WARN-TYPECHECK-001` warning per
+  affected decoration, with no required-library error. Calls do not repeat that
+  warning. A present but broken engine, including a transitive import failure,
+  propagates its original error rather than silently disabling type checking.
+- The optional PyUnitWizard extra now requires >=0.22.0: its canonical pipelines
+  use `fast_track`, which 0.11.0 does not export. Basic core installation remains
+  independent of scientific packages.
+- Ambiguous consumer digester signatures retain `DigestNotDigestedError` but
+  receive `ARG-ERR-DIGESTER-001`, identifying the consumer, registered argument,
+  digester and parameter names. Name the value parameter after the registered
+  argument when declaring additional dependency/context parameters. The error
+  does not attribute the invalid consumer registration to an ArgDigest defect;
+  restrictive diagnostics do not format defaults, annotations or values.
+  Valid unambiguous callables do not require diagnostic identity lookups;
+  unavailable labels cannot replace the configuration error (#53).
+
+Provider issues: `uibcdf/argdigest#43`, #46, #47, #48, #50 and #53. Consumers must
+receive and qualify the published correction before treating it as adopted.
+
+## What is ArgDigest
+
+ArgDigest is a lightweight toolkit for **auditing, validating, and normalizing** function arguments in scientific libraries. It decouples complex input-handling logic from scientific code by providing a standardized orchestration layer.
+
+It covers **two axes**, and an integration is only complete when both are declared:
+
+| Axis | Question it answers | You declare |
+| --- | --- | --- |
+| **1. The function argument contract** | *May this function receive this argument at all, and does it have what it needs?* | `FunctionContract` and `Domain` |
+| **2. The argument value contract** | *Given an argument name, is its value valid and in canonical form?* | one digester per argument name |
+
+Axis 2 has always been the visible half. Axis 1 arrived in `0.10.0`, and without it
+function-dependent rules have nowhere to live: they end up scattered across per-argument
+digesters, one `if caller == ...` at a time, and the contract of a function is never
+written down in one readable place.
+
+## Why this matters in this library
+
+- **Consistency**: All functions share the same argument-handling logic.
+- **Interoperability**: Coerces heterogeneous inputs (dictionaries, strings, etc.) into canonical internal objects.
+- **Diagnostics**: Produces consistent error messages with actionable hints.
+- **Traceability**: Integrates with `smonitor` to provide execution breadcrumbs.
+
+## 1. Required Configuration (`_argdigest.py`)
+
+Create a file named `_argdigest.py` in your package root. ArgDigest uses the module name of the decorated function to find this file automatically.
+
+```python
+# MyLibrary/_argdigest.py
+
+# Axis 2 -- the value contract of each argument.
+DIGESTION_SOURCE = "MyLibrary._private.argdigest.argument"
+DIGESTION_STYLE = "package"
+STRICTNESS = "warn"  # missing digester for a declared parameter
+
+# Axis 1 -- the argument contract of each function.
+FUNCTION_SOURCE = "MyLibrary._private.argdigest.function"
+DOMAIN_SOURCE = "MyLibrary._private.argdigest.domain"
+UNKNOWN_ARGUMENT = "error"  # keyword outside the function's contract
+
+# Declared aliases, applied before both axes.
+NORMALIZATION_SOURCE = "MyLibrary._private.argdigest.normalization"
+```
+
+`STRICTNESS` and `UNKNOWN_ARGUMENT` answer different questions and address different
+people. A missing digester is a to-do for the library author, so `warn` is right. A
+keyword nobody declared is a mistake by whoever made the call, and warning is not enough:
+warnings are routinely filtered off exactly where users read output.
+
+### Advanced Configuration
+You can also load configurations from external files:
+```python
+from argdigest.config import load_from_file
+
+cfg = load_from_file("rules.yaml")  # Supports .py, .yaml, .json
+```
+
+## 1.1 Runtime Dependency Contract
+
+ArgDigest requires:
+- `smonitor` for diagnostics and telemetry.
+- `depdigest` for conditional dependency checks via `@dep_digest`.
+
+From ArgDigest 0.14.0, NumPy is optional. Basic argument contracts and `std`
+pipelines neither install nor import it. Consumers using `data` or `sci` NumPy pipelines
+should install `argdigest[science]`; the `pyunitwizard` extra includes NumPy as well.
+Scientific pipelines raise a clear missing-dependency error if NumPy is absent.
+
+Do not replace `depdigest` integration with local no-op fallbacks in runtime code.
+If dependency checks are disabled silently, behavior diverges across environments and
+diagnostic quality degrades.
+
+## 2. Core API for Developers
+
+### 2.1 The `@arg_digest` Decorator
+The primary entry point. It handles both argument-centric discovery and explicit mapping.
+
+```python
+from argdigest import arg_digest
+
+
+@arg_digest(type_check=True)  # Optional beartype integration
+def my_function(molecular_system, selection="all"): ...
+```
+
+Select argument-centric digestion independently of configuration using
+`argument_digestion`: `None` retains historical inference, `True` enables
+digesters and missing-digester checks, and `False` skips only digester discovery
+and execution. Pipeline-only processing still binds the signature, normalizes
+aliases, enforces declared function/domain contracts, runs the standardizer and
+pipelines, and performs requested type checks. It is separate from
+`skip_digestion=True` and from the discovery choice `digestion_style`.
+
+The selector is accepted by `arg_digest`, `arg_digest.map` and `DigestConfig`.
+Module/Python-file configuration uses `ARGUMENT_DIGESTION`; JSON/YAML uses
+`argument_digestion`. Explicit decorator overrides, including `None`, take
+precedence. Plans expose requested `argument_digestion` and effective
+`enable_argument_digestion`; the audit command displays both. Consumers that
+only require pipelines should set `False` when supplying configuration rather
+than relying on automatic inference.
+
+#### Warning attribution inside decorated functions
+
+A `warnings.warn(..., stacklevel=2)` call inside a digested function can point to
+`argdigest/core/decorator.py` instead of the user's call site. The current normal path
+adds `_invoke`, `_run_digestion`, and `wrapper` frames; other decorators, including
+SMonitor's `@signal`, add their own frames. The count is an implementation detail and is
+not a stable `stacklevel` contract.
+
+On Python 3.12 or newer, a warning emitted by the consumer can use
+[`skip_file_prefixes`](https://docs.python.org/3/library/warnings.html#warnings.warn)
+to skip ArgDigest's package directory, plus any other decorator
+packages in the call chain. On Python 3.11, consumers that require user-call attribution
+must calculate the stack level from the active frames. Do not hand-count a fixed level
+across decorator compositions. ArgDigest's own warnings remain separate from warnings
+raised by the decorated function.
+
+### 2.2 Explicit Mapping (`arg_digest.map`)
+Use this when you need specific pipelines for specific arguments. Global `kind` and `rules` will apply to any argument not explicitly mapped.
+
+```python
+@arg_digest.map(
+    item={"kind": "topology", "rules": ["is_valid"]},
+    value={"kind": "std", "rules": ["to_bool"]},
+)
+def process(item, value): ...
+```
+
+## 3. Mandatory Registration Pattern
+
+Define reusable pipelines in your library to ensure consistency:
+
+```python
+from argdigest import register_pipeline
+
+
+@register_pipeline(kind="feature", name="feature.base")
+def coerce_feature(obj, ctx):
+    # Transformation logic
+    return obj
+```
+
+**Note**: ArgDigest natively supports **Pydantic models** as rules. If a rule is a class with `.model_validate()`, it will be executed automatically.
+
+## 4. Science-Aware Features
+
+### 4.1 PyUnitWizard Integration
+Manage physical quantities by passing a `puw_context`:
+
+```python
+@arg_digest(puw_context={"standard_units": ["nm", "ps"], "form": "pint"})
+def simulate(time): ...
+```
+
+### 4.2 Profiling
+Enable performance tracking for your digestion pipelines:
+
+```python
+@arg_digest(profiling=True)
+def heavy_func(data): ...
+
+
+# After execution, access the audit log:
+print(heavy_func.audit_log)
+```
+
+## 4.3 Declared normalization (argument-name aliases)
+
+A library should accept the names its users type. Declare them as data, one module per
+family of rules in `NORMALIZATION_SOURCE`:
+
+```python
+from argdigest import AliasTable
+
+# everywhere
+table = AliasTable(aliases={"residue_index": "group_index"})
+
+# only in one function, or a family
+AliasTable(
+    applies_to="mylib.basic.compare.compare",
+    aliases={"attributes_type": "attribute_type"},
+)
+AliasTable(applies_to="mylib.form.*", aliases={"idx": "index"})
+
+# guarded on another argument of the same call
+AliasTable(
+    applies_to="mylib.basic.get.get",
+    when={"element": "atom"},
+    aliases={"name": "atom_name", "index": "atom_index"},
+)
+```
+
+Tables compose most-specific-first, renaming is a single pass, and argument order is
+preserved.
+
+**Scope the table to the callers where the alias means what it says.** A name that is an
+attribute in one function is often an ordinary parameter in another; declaring an
+attribute synonym globally in MolSysMT rewrote a real adapter parameter and broke 76
+tests.
+
+**Write the tables out; do not generate them.** A `{element}_{name}` template is shorter
+and admits names that do not exist -- it produced six attributes nothing defines, so a
+wrong name failed far from where it was written.
+
+Normalization runs **before** the function contract, so declaring a contract never breaks
+a library's aliases, while a genuine typo survives unchanged and is refused.
+
+The `standardizer` hook still runs, after the declared tables, and remains the escape
+hatch for a rename that cannot be stated as a table. Its contract is
+`(caller, kwargs) -> mapping`, checked at both decoration and call time.
+
+## 4.4 Caller-aware optional semantics
+
+ArgDigest must support public APIs whose valid input contract depends on the
+callable that is being digested. This is not an escape hatch; it is a normal
+requirement in scientific libraries with editable builders and staged
+construction APIs.
+
+Examples of valid caller-specific optional semantics:
+- `molecular_system=None` in a helper that creates a new editable system when no
+  input is provided;
+- `atom_type=None` in a builder method that infers atom type from `atom_name`;
+- `entity_name=None` in a builder method that deliberately leaves the value
+  undeclared until a later crystallization step.
+
+The recommended pattern is:
+- keep `@arg_digest` on the public callable;
+- encode the optional semantics in the digester, keyed by caller;
+- use `argdigest.core.caller.normalize_caller`, `caller_matches`,
+  `caller_is_one_of`, and `caller_startswith` instead of open-coding caller
+  string logic downstream.
+
+Do not push valid public APIs outside digestion just because some arguments are
+optional for specific callables. If the API contract is legitimate, ArgDigest
+should express it.
+
+Caller-keyed digesters remain the right tool for **value** semantics that depend on the
+callable. What does *not* belong there is which arguments a function accepts at all: that
+is axis 1, and it has its own place since `0.10.0`. See section 4.5.
+
+By default, the `caller` passed to a digester remains the contract key
+`<owner module>.<method>`; changing it would break registered function contracts and
+standardizers. A digester may also declare an optional `qualname` parameter. ArgDigest
+then passes `<runtime class module>.<runtime class>.<method>` for bound methods,
+including inherited and mixin-assembled methods. Use `caller` for contract decisions and
+`qualname` for user-facing refusal messages:
+
+```python
+from argdigest import argument_digest
+
+
+@argument_digest("policy")
+def digest_policy(policy, caller=None, qualname=None):
+    if policy not in {"strict", "permissive"}:
+        raise ValueError(f"{qualname} cannot take policy={policy!r}")
+    return policy
+```
+
+Free functions receive their normal qualified function name. Digesters that do not
+declare `qualname` keep their existing call signature and behavior.
+
+### Explicit contract ownership (since 0.17.0)
+
+`DigestConfig.contract_owner` separates lookup from diagnostic display. `None`
+preserves existing caller resolution exactly, including its legacy descriptor
+behavior. Select `"definition"` when inherited implementations should keep their
+defining contract:
+
+```python
+from argdigest import DigestConfig, arg_digest
+
+inherited_contracts = DigestConfig(contract_owner="definition")
+
+
+class Base:
+    @arg_digest(config=inherited_contracts)
+    def process(self, value):
+        return value
+
+
+class Child(Base):
+    pass
+```
+
+Definition mode resolves each decorated function's `module.function` once,
+without a class component. A shared configuration therefore resolves separately
+for each method and separately decorated override. Same-name methods in one
+module share that existing namespace. To distinguish them, or select a logical
+owner different from the implementation, use a dedicated configuration such as
+`DigestConfig(contract_owner="mylib.native.model.__init__")`.
+
+Exact keys contain two or more dotted Python identifiers, without patterns or
+whitespace. Validation checks their spelling; it does not import the named
+owner or require a declaration to exist. Normal matching and fallback still
+apply. Review the resolved contract rather than assuming a valid key matched.
+
+One selected key drives declared aliases, standardizers, function/domain
+contracts and digester `caller`. Bound instance/class methods retain the runtime
+class in `qualname` and explicit-policy contract refusal messages. Static methods
+and free functions have no receiver and keep their defining qualified name.
+Both staticmethod decorator orders preserve access through class and instance
+from 0.17.0. Signature binding and value validation remain active.
+
+Both decorator forms accept this option through `config=DigestConfig(...)`.
+Python configuration uses `CONTRACT_OWNER`; JSON/YAML uses `contract_owner`.
+`arg_digest(contract_owner=...)` alone remains arbitrary digester context and
+does not select the policy. A wrapped-function call cannot override the policy.
+Plans expose `contract_owner` and resolved `contract_caller` (`None` means
+runtime lookup); CLI audit reports both.
+
+Alias normalization from 0.17.0 also preserves which canonical
+arguments were explicitly supplied. Required/co-required/exclusive checks use
+those names, including aliases on closed signatures; `*args` does not make an
+omitted keyword-only default count as supplied. Genuine unknown keywords are
+still refused. The standardizer retains its existing mapping contract.
+
+Consumer migration is opt-in. First qualify the installed provider and then
+exercise the consumer's inherited constructors, overrides and mixins, aliases,
+defaults and invalid inputs. Keep existing consumer context/workarounds until
+their owning receiving tests justify changing them. Source support alone does
+not establish adoption by MolSysMT or any other consumer.
+
+## 4.5 The function argument contract (axis 1)
+
+### Why the default is strict
+
+Plain Python raises `TypeError` for an unexpected keyword. **ArgDigest must never end up
+more permissive than the language it wraps**, so `UNKNOWN_ARGUMENT` defaults to `error`.
+This restores parity rather than inventing a policy, and it closes a defect class that is
+the worst kind in a scientific library: a mistyped argument that runs with the default and
+returns a plausible wrong answer.
+
+### What you get for free
+
+| Your function | Its default contract | You declare |
+| --- | --- | --- |
+| closed signature | held to its own parameters | nothing |
+| declares `**kwargs` | admits anything | a domain, or it stays permissive |
+
+A closed signature already *is* a domain, so most functions are protected without a line
+of configuration. A function with `**kwargs` opened its door deliberately and ArgDigest
+cannot guess what it meant.
+
+### Declaring a domain
+
+A `Domain` is a named, introspectable set of admissible keyword names. Point it at your
+library's own source of truth rather than copying names into a list, so the two cannot
+drift apart:
+
+```python
+# MyLibrary/_private/argdigest/domain/attribute.py
+from argdigest import Domain
+from MyLibrary.attribute import attributes, is_attribute
+
+domain = Domain(
+    name="attribute",
+    contains=is_attribute,
+    members=lambda: tuple(attributes),
+    description="canonical attribute names",
+)
+```
+
+`contains` decides membership; `members` enumerates it when possible, which is what
+enables near-miss suggestions and introspection. Either is enough.
+
+### A domain that depends on another argument
+
+Sometimes which keywords are admissible depends on a value in the same call: an engine, an
+output type, a mode. Declare the table and the argument it keys on:
+
+```python
+Domain(
+    name="engine_options",
+    depends_on="engine",
+    by_value={
+        "MolSysMT": ("threshold", "parallel"),
+        "OpenMM": ("threshold", "platform"),
+    },
+)
+```
+
+`depends_on` may name several arguments, in which case the table is keyed by a tuple.
+
+It is still data: `describe_contract` renders the whole table, so the options each value
+accepts can be documented rather than discovered by reading code.
+
+**A value with no entry does not refuse anything.** It means the domain cannot decide for
+this call — usually because that value is itself wrong — and the argument carrying it is
+about to be rejected by its own digester, which explains the real problem far better than
+a complaint about an unknown argument would.
+
+**Key on an argument, not on a derivation.** The table is consulted per call, so the value
+must be cheap to read. If deciding the domain requires computing something expensive from
+another argument, the mechanism costs more than it saves and the function is better left
+permissive with the reason recorded.
+
+### Declaring a contract
+
+```python
+# MyLibrary/_private/argdigest/function/get.py
+from argdigest import FunctionContract
+
+contract = FunctionContract(
+    caller="MyLibrary.basic.get.get",
+    admits="attribute",  # signature + this domain
+)
+```
+
+A module may declare one `contract`, or several through a `CONTRACTS` list. Beyond
+`admits`, a contract can declare `requires_any_of`, `mutually_exclusive` and
+`co_required`.
+
+Use `caller_pattern` instead of `caller` to cover a family, with `fnmatch` syntax:
+
+```python
+contract = FunctionContract(
+    caller_pattern="MyLibrary.form.*.to_file_h5msm", admits="signature"
+)
+```
+
+Resolution is **most specific first**: exact caller, then the longest matching pattern,
+then the default.
+
+### Where it runs, and why there
+
+```
+bind_arguments -> standardizer -> function contract -> digestion
+```
+
+After the standardizer, so an alias that has just become its canonical name is never
+mistaken for a typo. Before digestion, because validating the value of an argument that
+should not be there is wasted work ending in a confusing failure.
+
+### Reading a contract back
+
+`describe_contract(contract, domains)` renders it as plain data. This is why a contract is
+declarative rather than an opaque callable: the accepted domain of a `**kwargs` function
+is invisible to `inspect.signature`, and this is what makes it readable again for
+documentation, IDEs and agents.
+
+### Known gap
+
+A **delegating** domain, whose admissible keywords depend on values resolved at call time
+-- a converter chosen by a `to_form` argument, for instance -- is not expressible, because
+a `Domain` decides membership from the keyword alone. Those functions keep the permissive
+default.
+
+## 5. Required behavior (non-negotiable)
+
+1.  **Lazy Digestion**: Digestion only happens when the function is called.
+2.  **No Top-Level Imports**: Guard optional dependencies (like Pydantic or Beartype) inside your pipelines or use ArgDigest's native support.
+3.  **Support skip_digestion**: All decorated functions should allow bypassing digestion via a `skip_digestion` parameter for internal performance-critical calls. Only the literal boolean `True` enables the bypass, by name or position. Other values pass through normal digestion; register a digester for `skip_digestion` to reject non-booleans at a public boundary.
+4.  **Argument Dependencies**: Digesters can request other (already digested) arguments by simply adding them to their signature. ArgDigest handles the topological sort and cycle detection.
+5.  **Caller-aware Optionality**: Downstream libraries may accept `None` or otherwise relaxed values for specific public callables. These semantics belong in digesters, not in bypasses around `@arg_digest`.
+6.  **Do not re-digest what you already digested**: pass `skip_digestion=True` on internal calls carrying values your library just built. It is the only mechanism for this, and it never belongs on a public API boundary. See §6.
+7.  **Declare both axes**: a function taking `**kwargs` must declare the domain those keywords come from. Leaving it undeclared means the function accepts anything, which is the defect axis 1 exists to prevent. If a domain genuinely cannot be expressed, record why.
+
+### Functions taking `*args` or positional-only parameters
+
+Both are supported and keep their call shape: `*args` is unpacked back into operands,
+and a positional-only parameter is passed positionally.
+
+One consequence is worth knowing before you write the digester: **`*args` is bound as a
+single tuple and digested once**, under the parameter's own name. A digester named
+`digest_items` for `def combine(*items)` receives `('a', 'b')`, not `'a'` and then `'b'`.
+That is deliberate — it is what lets the digester assert something about the group, such
+as requiring at least one operand — but it means the digester must be written against a
+collection.
+
+## SMonitor Integration
+
+### Registration and application policy (public since 0.16.0)
+
+With SMonitor 0.20.0 or newer, importing ArgDigest registers its diagnostic
+catalog without applying application policy, installing handlers or activating
+warning/exception hooks. `argdigest.register_diagnostics()` exposes that
+idempotent declaration-only operation. Applications own diagnostics setup:
+
+```python
+from argdigest import configure_diagnostics, register_diagnostics
+
+register_diagnostics()  # Requires the SMonitor 0.20.0 capability.
+configure_diagnostics()  # First-use bootstrap; preserves existing application policy.
+```
+
+Only explicit `configure_diagnostics(use_provider_policy=True)` requests ArgDigest
+recommendations over existing policy, and requires provider support. The CLI
+configures its own session. Older supported providers retain legacy import
+initialization and reject an explicit registration-only request with a capability
+error. The core SMonitor dependency floor remains 0.16.0; it does not promise
+the newer registration-only capability. Consumer receiving must test the
+provider version on which its selected diagnostics behavior depends.
+
+ArgDigest is heavily instrumented with `@smonitor.signal`:
+- The core decorator uses `tags=["digestion"]`.
+- `Registry.run` uses `tags=["pipeline"]`.
+- Every digestion attempt is traceable in the global breadcrumb trail.
+
+### Nested exception observation (SMonitor >=0.22.1)
+
+ArgDigest's decorator uses a DEBUG exception signal. With public SMonitor
+0.22.1 or newer, a filtered or silenced inner signal leaves an eligible outer
+ERROR signal observable. An already admitted DEBUG observation remains the
+single observation; an enclosing ERROR wrapper does not escalate it. Disabled
+diagnostics remain disabled. Native exception identity, arguments, causes,
+application configuration and restrictive capture remain intact. Formatter or
+template callback diagnostics have independent admission (`uibcdf/smonitor#59`
+and `uibcdf/smonitor#61`).
+
+Applications relying on that nested-observation guarantee need SMonitor
+>=0.22.1. Earlier supported providers retain their original observation behavior
+and may suppress an outer ERROR after a filtered inner DEBUG. ArgDigest's core
+dependency floor remains >=0.16.0; it does not promise this newer correction.
+The 0.17.1 full installed qualification selected public 0.22.1 and the explicit
+receiving controls under `uibcdf/argdigest#49` and #51. Consumers retain their own
+installed qualification; additional visible diagnostics require deliberate QA review.
+
+### Emission Failures
+
+Do not swallow SMonitor emission failures with `except Exception: pass`.
+If an emission fails in a non-critical path, emit a fallback warning/log message that
+includes approved execution context. Original exception text is permitted only
+when the active SMonitor capture policy allows it. In restrictive mode use a
+fixed catalog description; diagnostic and fallback failures must not replace an
+active native exception or prevent a successful result.
+
+### Scoped diagnostic capture
+
+`@arg_digest(capture_policy="metadata_only")` and
+`DigestConfig(capture_policy="metadata_only")` consume SMonitor's public scoped
+policy before ArgDigest-owned instrumentation and payload construction. `None`
+inherits the active policy; `"detailed"` cannot weaken an enclosing restriction.
+SMonitor `CapturePolicy` instances are accepted. Python modules declare
+`CAPTURE_POLICY`; JSON/YAML configurations use the named `capture_policy` field.
+
+Restrictive mode prevents diagnostic value repr/native error stringification,
+excludes free-text details and context values from telemetry, and preserves
+validation, normalization and native failure semantics. Runtime validator
+contexts still carry their values. Direct rules keep native exception identity;
+adapter translations keep their existing type and original cause. User validator
+formatting and independently implemented provider conversions are outside this
+guarantee. SMonitor owns scope nesting and task/thread propagation.
+
+SMonitor 0.19.0 provides this capability in its public Conda package. Earlier
+supported providers retain detailed compatibility. Explicit restrictive requests fail closed
+with `ARG-ERR-CAPTURE-001` on older providers; existing detailed defaults retain
+the declared dependency floor. ArgDigest 0.15.0 release qualification is tracked
+in `uibcdf/argdigest#31`; consumer adoption remains under its own owner and
+`uibcdf/molsyssuite#106` coordination.
+
+---
+*Document created on February 6, 2026, as the authority for ArgDigest integration.*
+
+## 6. Not re-digesting what you already digested
+
+There is **one** mechanism, and it is the one you already know:
+
+```python
+result = internal_helper(coordinates, skip_digestion=True)
+```
+
+`skip_digestion=True` turns digestion off for that call. Measured, it costs 1.8 µs
+against 21.6 µs for the decorator's ordinary path, and on a real digester —
+`molsysmt_MolSys.has_attribute` — 7.5 µs against 65.6 µs.
+
+**Use it for internal calls, with values your library just built. Never on a public API
+boundary**, where the value comes from a user and there is no trust to claim.
+
+### If digestion dominates an operation, find out why first
+
+A bypass is not the answer to a slow path, and reaching for one hides the reason. The
+one measured case in this ecosystem was a predicate whose body is 7.5 µs wearing a
+boundary-grade digester nine times its weight, called 434 times for a single user
+action. No bypass fixes that; correct placement does.
+
+Digestion belongs at API boundaries. A digester on an internal predicate is a placement
+problem.
+
+### On the passport that used to be here
+
+Earlier versions offered a `ValidatedPayload` — a container carrying a value plus its
+verified metadata, which the decorator unwrapped and let past its digester. It was
+removed, and the reasoning is worth keeping because it applies to anything proposed in
+its place.
+
+The container changed the value's **type**, so it had to be unwrapped before the
+function body ran, so it stopped travelling at the first body it met — a value passing
+through five nested calls was re-digested four times anyway. And the claim it carried
+described the *value* rather than the *verification*, so a payload issued by one
+library's digester silenced another library's digester for the same argument name.
+
+A design that fixed both — certifying the value by identity, with the claim bound to the
+digester that issued it — was built and measured. It worked, and it was still declined:
+it asked every digester author to learn three new concepts to solve a problem no
+consumer had actually hit. Measured across MolSysMT, MolSysViewer and PyUnitWizard, the
+passport had zero users.
+
+If you find yourself needing it, that is a measurement worth reporting, not a mechanism
+worth reinventing locally.
