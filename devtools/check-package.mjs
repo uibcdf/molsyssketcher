@@ -28,6 +28,10 @@ try {
   assert.ok(files.includes("dist/index.d.ts"));
   assert.ok(files.includes("LICENSE"));
   assert.ok(
+    !files.some((path) => /editor|experiment/.test(path)),
+    "The internal experiment must remain unshipped.",
+  );
+  assert.ok(
     files.every(
       (path) =>
         path.startsWith("dist/") ||
@@ -87,6 +91,7 @@ const surface = createMolecularSvgView(mount, {instanceId:'typed-surface'});
 surface.subscribeSelection((pick: ScenePick | null) => console.log(pick?.context));
 surface.subscribeHover((pick: ScenePick | null) => console.log(pick?.context));
 surface.fit(); surface.zoomBy(2); surface.panBy(5, 10);
+surface.setSelection(null, 1);
 if (surface.state.viewport) {
   // @ts-expect-error Camera state is read-only.
   surface.state.viewport.center.x = 2;

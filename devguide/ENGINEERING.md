@@ -35,8 +35,11 @@ document/link/ledger checks; historical evidence is not reformatted.
 
 Run `npm ci`, `npm run check`, `npm run pack:check`, `npm run pack:conda:check`
 and `npm run example`.
-Native Node tests import built exports and run with explicit no-isolation mode;
-the packed-consumer check also verifies declarations and read-only types in a
+Native Node tests import built exports and run with explicit no-isolation mode.
+the P2.5 internal experiment has a separate typed build under ignored `.experiment/`,
+six Node model controls and native/browser receiving described in EDITOR.md.
+Its code, fixtures and Python tooling are excluded from distribution.
+The packed-consumer check also verifies declarations and read-only types in a
 temporary independent offline installation. CI pins checkout/setup-node commits
 and exact Node/npm tools. Its first execution is recorded in CHECKPOINT.md.
 

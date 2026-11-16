@@ -140,6 +140,14 @@ owns tooltips, panels and calculations. Keyboard focus is distinct from
 selection. Modified application shortcuts are preserved. No exploration method
 mutates a chemical declaration or invokes a scientific calculation.
 
+The P2.5 experiment adds host-controlled selection:
+`setSelection({kind, semanticId}, expectedSceneGeneration)` (or null to clear).
+The host obtains the expected generation from the newly accepted scene; a stale
+generation, unknown semantic target or unsafe JSON input refuses without changing
+selection. Returned events use that scene's exact display/context IDs. This is
+a read-only exploration seam, not a chemical edit or implicit cross-view mapping.
+See [the internal experiment](EDITOR.md#received-p25-experiment-2026-11-15).
+
 ## Executed receiving and reproduction
 
 Run the finite browser controls with a managed Chromium runtime:
@@ -160,7 +168,7 @@ CI attempt on the moving Ubuntu 26.04 default before executing browser controls;
 the provider/browser job now selects its supported Ubuntu runtime explicitly.
 Neither route qualifies Firefox, Safari or Qt/QWebEngine.
 
-The fifteen real-browser tests cover the twelve actual RDKit preparations, glyph
+The eighteen real-browser tests cover the twelve actual RDKit preparations, glyph
 bounds at multiple viewport sizes and relative zooms 0.25/1.75/8, pointer labels/atoms/bonds, keyboard focus
 and selection, modified shortcuts, burst/failing replacement, retired DOM events,
 independent disposal, safe literal labels, host typography, export metadata,

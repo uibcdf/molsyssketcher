@@ -15,6 +15,7 @@ import {
 } from "./svg.js";
 import type { BrowserTextMeasurer } from "./svg.js";
 import type { PreparedMolecule } from "./types.js";
+import { snapshotJson } from "./json.js";
 import type { Point } from "./geometry.js";
 import {
   fitViewport,
@@ -266,6 +267,64 @@ export class MolecularSvgView {
       );
     this.#hoverListeners.add(listener);
     return () => this.#hoverListeners.delete(listener);
+  }
+
+  /** Host-controlled exploration selection; never infer a target across scenes. */
+  setSelection(
+    target: Pick<ScenePick, "kind" | "semanticId"> | null,
+    expectedSceneGeneration: number,
+  ): void {
+    this.#liveCamera();
+    const input = snapshotJson(target);
+    const { scene } = this.#liveCamera();
+    if (expectedSceneGeneration !== scene.generation)
+      throw new SketcherError(
+        "invalid-input",
+        "The selection targets a retired scene generation.",
+      );
+    if (input === null) {
+      this.#select(null);
+      return;
+    }
+    if (
+      typeof input !== "object" ||
+      Array.isArray(input) ||
+      Object.keys(input).length !== 2
+    )
+      throw new SketcherError(
+        "invalid-input",
+        "A semantic selection requires kind and semanticId.",
+      );
+    const selection = input as {
+      readonly kind: unknown;
+      readonly semanticId: unknown;
+    };
+    const objects =
+      selection.kind === "atom"
+        ? scene.atoms
+        : selection.kind === "bond"
+          ? scene.bonds
+          : [];
+    const object = objects.find(
+      (item) => item.semanticId === selection.semanticId,
+    );
+    if (!object)
+      throw new SketcherError(
+        "invalid-input",
+        "The semantic selection target is unavailable.",
+      );
+    this.#select(
+      Object.freeze({
+        kind: selection.kind as "atom" | "bond",
+        semanticId: object.semanticId,
+        displayId: object.displayId,
+        instanceId: scene.instanceId,
+        documentId: scene.documentId,
+        sceneGeneration: scene.generation,
+        depictionGeneration: scene.depictionGeneration,
+        context: scene.context,
+      }),
+    );
   }
 
   fit(): void {

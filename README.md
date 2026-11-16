@@ -62,3 +62,8 @@ and `npm run test:browser`. `npm run demo` prints a local comparison-gallery URL
 See the [molecular SVG profile](devguide/MOLECULAR_SVG_PROFILE.md) for the API,
 actual browser/native drawing checks and remaining limits. This finite surface
 does not complete either primary view or qualify Qt, a public package or all platforms.
+
+The [internal edit/undo experiment](devguide/EDITOR.md#received-p25-experiment-2026-11-15)
+receives the bounded P2.5 architectural checks with native RDKit fixtures and
+actual browser restoration. `npm run demo` links to it. Experimental tooling is
+excluded from distribution; production editing remains the final stage.

@@ -54,10 +54,11 @@ jobs:
               versions[distribution] = importlib.metadata.version(distribution)
           print(json.dumps({'python': sys.version, 'installed': versions}, sort_keys=True))
           PY
-      - run: ruff check devtools/rdkit_adapter devtools/tests devtools/check_svg_chemistry.py
-      - run: ruff format --check devtools/rdkit_adapter devtools/tests devtools/check_svg_chemistry.py
+      - run: ruff check devtools/rdkit_adapter devtools/tests devtools/editor_experiment devtools/check_svg_chemistry.py
+      - run: ruff format --check devtools/rdkit_adapter devtools/tests devtools/editor_experiment devtools/check_svg_chemistry.py
       - run: python -m pytest --receptor=ci devtools/tests
       - run: npm run corpus:check
+      - run: npm run corpus:experiment:check
       - name: Install isolated Chromium test runtime
         run: npx playwright install --with-deps chromium
       - name: Receive molecular SVG in a real browser

@@ -4,3 +4,5 @@ dist/
 package-lock.json
 tests/data/rdkit-prepared.json
 devguide/
+tests/data/editor-experiment.json
+.experiment/

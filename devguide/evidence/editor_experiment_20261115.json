@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-15",
+  "owning_issue": "https://github.com/uibcdf/molsyssketcher/issues/5",
+  "source_identity": "the Git commit containing this receipt; exact-head CI is received in the owning issue",
+  "scope": "unshipped typed P2.5 experiment; controlled delayed receipts of actual native RDKit validation/preparation fixtures",
+  "execution_status": "local checks passed; see owning issue for subsequent exact-head CI evidence",
+  "core_node_tests": 31,
+  "internal_node_tests": 6,
+  "browser_tests": 18,
+  "python_tests": 44,
+  "native_experiment": {
+    "provider": "RDKit 2026.09.2",
+    "validation_states": 4,
+    "valid_states": 3,
+    "invalid_states": 1,
+    "prepared_layouts": 6,
+    "profile": "fixed neutral nonisotopic C/C/O topology with implicit hydrogens"
+  },
+  "local_browser": {
+    "executable": "/usr/bin/google-chrome",
+    "version": "157.0.8103.38",
+    "driver": "playwright 1.57.0"
+  },
+  "history_limit": 8,
+  "outstanding_receipt_limit_per_destination": 2,
+  "architectural_adjustment": "public read-only setSelection(target, expectedSceneGeneration) restores scoped semantic selection after scene replacement; draft graph/edit/history remain unshipped",
+  "reviewed_reference": {
+    "repository": "epam/ketcher",
+    "commit": "cfbc2c84a4d9d3476ec4388eb595e30f9df77a2f",
+    "paths": [
+      "openspec/specs/undo-redo/spec.md",
+      "packages/ketcher-react/src/script/editor/Editor.history.test.ts"
+    ],
+    "incorporated_code": false
+  },
+  "plan": {
+    "total": 69,
+    "done": 7,
+    "partial": 19,
+    "todo": 43
+  },
+  "limits": [
+    "no live provider job/transport receiving",
+    "no public editing tools or production history",
+    "synthetic unsupported/failed receipts qualify contracts only",
+    "attached observation is reference-only, not native interaction receiving",
+    "no additional chemical classes, Qt or public delivery qualification"
+  ],
+  "checks": [
+    {
+      "command": "npm ci --cache /tmp/molsyssketcher-npm-cache",
+      "exit_code": 0
+    },
+    {
+      "command": "npm run check",
+      "exit_code": 0
+    },
+    {
+      "command": "npm run pack:check",
+      "exit_code": 0
+    },
+    {
+      "command": "npm run pack:conda:check",
+      "exit_code": 0
+    },
+    {
+      "command": "npm run example",
+      "exit_code": 0
+    },
+    {
+      "command": "MOLSYSSKETCHER_BROWSER_EXECUTABLE=/usr/bin/google-chrome MOLSYSSKETCHER_BROWSER_EVIDENCE_DIR=/tmp/molsyssketcher-editor-review npm run test:browser",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m pytest --receptor=llm devtools/tests",
+      "exit_code": 0
+    },
+    {
+      "command": "npm run corpus:experiment:check",
+      "exit_code": 0
+    },
+    {
+      "command": "npm run corpus:check",
+      "exit_code": 0
+    },
+    {
+      "command": "python devtools/check_svg_chemistry.py /tmp/molsyssketcher-editor-review/drawings.json",
+      "exit_code": 0
+    },
+    {
+      "command": "ruff check devtools/rdkit_adapter devtools/tests devtools/editor_experiment devtools/check_svg_chemistry.py",
+      "exit_code": 0
+    },
+    {
+      "command": "ruff format --check devtools/rdkit_adapter devtools/tests devtools/editor_experiment devtools/check_svg_chemistry.py",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0
+    }
+  ],
+  "evidence_directory": "/tmp/molsyssketcher-editor-review",
+  "evidence_sha256": {
+    "editor-experiment.png": "51c307d92259334826063a6a30829666f74a02fa528496a531ed24b6461b97c4",
+    "editor-receipts.json": "e2a7273d0fa75f8c653f7884adf6b52fe1804e072a7925b774fa6d652ae0e1ce",
+    "drawings.json": "34cd64df68dd578fc033c200ad7fba17bb6c8ca6b5266c9665adaa29a1b210a4",
+    "browser.json": "192f1ff312737569c908cc8e5f503ce2be2705cbfd921c8287f40181416484db"
+  },
+  "native_fixture_sha256": "a5c3caa98e610bcd2d3e1e22bd53f5c7614534e4be961c19f02114a41ee1e6a0",
+  "package_scope": {
+    "files": 25,
+    "received": "offline ESM/declarations and relocated generic resource prefix; internal experiment absent",
+    "pending": "actual Conda archive and production editor"
+  },
+  "visual_review": "finite engineering inspection of source restoration and two visible bond-selection indicators; no production usability or scientific qualification"
+}

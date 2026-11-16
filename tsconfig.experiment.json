@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "devtools",
+    "outDir": ".experiment",
+    "declaration": false
+  },
+  "include": ["devtools/editor_experiment/session.ts"]
+}

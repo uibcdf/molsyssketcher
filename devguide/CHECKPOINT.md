@@ -1,6 +1,6 @@
 # Current checkpoint
 
-Updated: **2026-11-15**. Current milestone: partial M0/P1 and molecular SVG navigation.
+Updated: **2026-11-15**. Current milestone: molecular SVG navigation and received internal P2.5 experiment.
 
 ## Product direction
 
@@ -49,10 +49,11 @@ Package version `0.0.0` is a private tooling placeholder, not a release decision
 
 ## Integrated plan
 
-The ledger has **69 microsteps: 6 done, 19 partial and 44 todo**.
+The ledger has **69 microsteps: 7 done, 19 partial and 43 todo**.
 
 Completed items P0.1, P0.2, P0.3, P0.7 and P0.8 are documentation/source-review
-work only. P0.5 is now complete. P0.4/P0.6, P1.1/P1.4/P1.6/P1.7/P1.8 and
+work only. P0.5 and the bounded P2.5 architectural experiment are complete.
+P0.4/P0.6, P1.1/P1.4/P1.6/P1.7/P1.8 and
 I1.1/P5.3 are partial, with remaining acceptance named in the ledger. P1.2/P1.3/P1.5
 are partial after actual native RDKit preparation/round-trip receiving.
 P2.1–P2.4, P3.1/P3.4 and P4.1 are now partial after the finite molecular SVG
@@ -101,7 +102,8 @@ dated historical record, not a live plan counter.
 Documentation checks cover local file/anchor links, task IDs/status counts,
 decision/readiness consistency, historical-record preservation and whitespace.
 `npm run check` executes canonical version/lock consistency, strict types, source formatting, 31 synthetic/real-provider-fixture
-document/controller/scene tests and local link/anchor/ledger checks. `npm run pack:check`
+document/controller/scene tests and local link/anchor/ledger checks, plus six
+separately compiled internal experiment tests. `npm run pack:check`
 checks the local tarball's contents, offline independent consumer imports,
 declarations and read-only types. `npm run example` exercises both supplied
 documents and failed-replacement preservation. Exact scope is in
@@ -202,6 +204,35 @@ structures, full accessible inspection, native interaction diagrams and actual
 Qt/Conda visual delivery remain pending. P2.4/P3.1 remain partial with their
 remaining acceptance visible; task counts are unchanged.
 
+## Received internal editing feasibility (P2.5)
+
+[Component #5](https://github.com/uibcdf/molsyssketcher/issues/5) receives the
+seven architectural checks in [EDITOR.md](EDITOR.md): a typed bond-order edit,
+exact-revision validation, coherent graph/selection/drawing undo and redo,
+monotonic live generations, stale validation rejection, newest same-graph layout
+intent and a read-only mutation barrier. Production editing remains P6.
+
+The unshipped typed model imports the built public library. Four actual RDKit
+validation states (three valid, one oxygen-valence invalid) and six attributed
+layouts have native graph/MOL correspondence checks. Six internal Node controls,
+four additional Python controls (44 total), and the internal Chromium journey
+exercise the finite experiment. The browser suite now has 18 controls. Stored
+native receipts are delivered in controlled order; this is not a live provider
+service or a production job scheduler. A synthetic attached observation stays
+historical after edit/undo; native interaction receiving remains pending.
+
+The necessary public seam is read-only `setSelection(target, expectedSceneGeneration)`:
+history restoration can apply semantic selection to a freshly accepted scene,
+while old generations and unsafe payloads refuse explicitly. Original text and
+provider-native draft declarations remain distinct, and computed H/labels come
+from RDKit. Invalid drafts retain graph data without a fabricated current drawing.
+The package/prefix checks exclude all experimental code and fixtures.
+
+See [the receipt](evidence/editor_experiment_20261115.json); exact-head CI and
+browser artifacts are recorded in the owning issue. P2.5 is done in its stated
+architectural scope. No production editor, native interaction journey, delivery
+gate or public package is qualified by this experiment.
+
 ## Resume here
 
 1. P0.4: resolve the two-pillar ownership/admission and TypeScript-first
@@ -210,10 +241,9 @@ remaining acceptance visible; task counts are unchanged.
    finish the needed finite operation/loss/corpus and measured-budget decisions.
 3. Receive the first owner-native interaction result with actual molecular
    parent/participant/coverage context; preserve independent pillar progress.
-4. Perform the bounded internal editing/undo feasibility experiment P2.5;
-   continue crowded-structure controls and scientific layers, and reuse prepared
-   fragments for ligand-centered/two-sided composition. Receive native
-   interaction results independently.
+4. Continue crowded-structure controls and scientific layers, and reuse prepared
+   fragments for ligand-centered/two-sided composition. Preserve the now-received
+   P2.5 generation/selection seams while keeping production editing in P6.
 5. Continue the joint slice through native observations, save/reopen/export and
    actual browser/Qt receiving. Keep P6 production chemical editing last.
 

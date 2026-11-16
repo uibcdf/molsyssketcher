@@ -1,6 +1,6 @@
 # Living implementation plan
 
-Updated: 2026-11-15. Current milestone: partial M0/P1 and molecular SVG navigation.
+Updated: 2026-11-15. Current milestone: molecular SVG navigation and received internal P2.5 experiment.
 
 This is the single microstep ledger for two equally important product pillars:
 Molecular View and Interaction View. Shared work is implemented once. Both
@@ -19,7 +19,7 @@ results, owning issue and limits in CHECKPOINT.md or a linked receipt. A source
 description, a closed upstream issue or an unavailable-provider test is not
 executed integration evidence.
 
-There are **69 microsteps: 6 done, 19 partial and 44 todo**. Five completed steps
+There are **69 microsteps: 7 done, 19 partial and 43 todo**. Five completed steps
 are documentation/source review; P0.5 supplies the tested toolchain and license.
 Counts are unweighted, not effort percentages. Initial implementation evidence
 and explicit remaining acceptance are in CHECKPOINT.md, SUPPLIED_INPUT_PROFILE.md
@@ -82,7 +82,7 @@ molecular/analysis contexts can be composed without implicit identity changes.
 | P2.2 | partial | Twelve real RDKit drawings, native reconstruction from DOM strokes/wedges, tetrahedral/E/Z pairs and axis/endpoint controls pass; broader chemical matrix/scientific review remains pending |
 | P2.3 | partial | Actual generic sans-serif glyph bounds at multiple viewport sizes, light/dark galleries and label hits pass; custom fonts and crowded-structure acceptance remain pending |
 | P2.4 | partial | Molecular bounded pan/zoom/fit/resize, current-viewport contextual SVG export, coherent replacement and owned disposal execute in Chromium; complete two-view/host receiving remains pending |
-| P2.5 | todo | Early internal edit/undo/validation/stale-response/read-only experiment in EDITOR.md |
+| P2.5 | done | Unshipped typed edit/history experiment receives all seven EDITOR.md checks using native RDKit controls, real-browser graph/selection/depiction restoration and controlled stale/reverse deliveries; production editing remains P6 |
 
 Gate: usable molecular representation and an exercised future editing path.
 P2.5 does not deliver the production editor.

@@ -974,6 +974,195 @@ test("hover callback reentry cannot deliver a retired pick or keep resources aft
     );
   }));
 
+test("host selection uses exact current scene generation and rejects retired or executable targets", async () =>
+  withPage(async (page) => {
+    await mountNavigation(page);
+    const result = await page.evaluate(async () => {
+      const first = view.state.accepted.scene.generation;
+      view.setSelection({ kind: "bond", semanticId: "bond:0" }, first);
+      const pick = view.state.selection;
+      await view.replace(corpus[0].document);
+      const generation = view.state.accepted.scene.generation;
+      view.setSelection({ kind: "atom", semanticId: "atom:1" }, generation);
+      const preserved = view.state.selection;
+      let rejected = 0,
+        executed = 0;
+      const target = {
+        get kind() {
+          executed++;
+          return "atom";
+        },
+        semanticId: "atom:0",
+      };
+      for (const operation of [
+        () => view.setSelection({ kind: "bond", semanticId: "bond:0" }, first),
+        () =>
+          view.setSelection({ kind: "atom", semanticId: "absent" }, generation),
+        () => view.setSelection(target, generation),
+      ]) {
+        try {
+          operation();
+        } catch (error) {
+          if (error.code === "invalid-input") rejected++;
+        }
+      }
+      const same = view.state.selection === preserved;
+      view.setSelection(null, generation);
+      return {
+        pick,
+        rejected,
+        executed,
+        same,
+        cleared: view.state.selection === null,
+        original: view.state.accepted.document.original.data,
+      };
+    });
+    assert.equal(result.pick.kind, "bond");
+    assert.equal(result.pick.context.molecule.id, "methanol");
+    assert.equal(result.rejected, 3);
+    assert.equal(result.executed, 0);
+    assert.equal(result.same, true);
+    assert.equal(result.cleared, true);
+    assert.equal(result.original, "CO\n");
+  }));
+
+test("internal native draft journey restores graph, IDs, selection and actual drawing through undo/redo", async () =>
+  withPage(async (page) => {
+    await page.goto(`${server.url}/examples/editor-experiment.html`);
+    await page.waitForFunction(() => window.ready);
+    await page.evaluate(() => {
+      const { view } = experiment;
+      view.setSelection(
+        { kind: "bond", semanticId: "bond:0" },
+        view.state.accepted.scene.generation,
+      );
+    });
+    const initial = await page.evaluate(() => ({
+      graph: experiment.session.state.graph,
+      document: experiment.view.state.accepted.document,
+      generation: experiment.view.state.accepted.documentGeneration,
+    }));
+    await page.locator("#double").click();
+    await page.waitForFunction(() => window.renderedGeneration === 2);
+    assert.equal(await page.locator("#drawing").isVisible(), false);
+    await page.locator("#validate").click();
+    await page.waitForFunction(
+      () =>
+        experiment.session.state.validation.status === "valid" &&
+        window.renderedGeneration === 2,
+    );
+    assert.equal(await page.locator("#drawing").isVisible(), true);
+    assert.equal(
+      await page.evaluate(
+        () => experiment.view.state.accepted.scene.bonds[0].style,
+      ),
+      "double",
+    );
+    await page.locator("#undo").click();
+    await page.waitForFunction(() => window.renderedGeneration === 3);
+    const restored = await page.evaluate(() => ({
+      graph: experiment.session.state.graph,
+      document: experiment.view.state.accepted.document,
+      generation: experiment.view.state.accepted.documentGeneration,
+      selection: experiment.view.state.selection,
+      observation: experiment.session.state.attachedObservation.current,
+      source: experiment.session.source.original.data,
+    }));
+    assert.deepEqual(restored.graph, initial.graph);
+    assert.deepEqual(restored.document, initial.document);
+    assert.ok(restored.generation > initial.generation);
+    assert.equal(restored.selection.semanticId, "bond:0");
+    assert.equal(
+      await page.locator('#drawing [data-layer="selection"] circle').count(),
+      2,
+    );
+    assert.equal(restored.observation, false);
+    assert.equal(restored.source, "CCO\n");
+    await page.screenshot({
+      path: join(evidence, "editor-experiment.png"),
+      fullPage: true,
+    });
+    await page.locator("#redo").click();
+    await page.waitForFunction(() => window.renderedGeneration === 4);
+    assert.equal(
+      await page.evaluate(
+        () => experiment.view.state.accepted.scene.bonds[0].style,
+      ),
+      "double",
+    );
+    await page.locator("#undo").click();
+    await page.waitForFunction(() => window.renderedGeneration === 5);
+    await page.locator("#invalid").click();
+    await page.locator("#validate").click();
+    await page.waitForFunction(
+      () => experiment.session.state.validation.status === "invalid",
+    );
+    assert.equal(
+      await page.evaluate(() => experiment.session.state.graph.bonds[1].order),
+      3,
+    );
+    assert.equal(await page.locator("#drawing").isVisible(), false);
+    await page.locator("#readonly").click();
+    assert.equal(await page.evaluate(() => window.readonlyRejected), true);
+    assert.equal(await page.locator("#source").textContent(), "CCO\n");
+  }));
+
+test("internal controlled deliveries retire old validation after undo and accept only newest same-graph layout", async () =>
+  withPage(async (page) => {
+    await page.goto(`${server.url}/examples/editor-experiment.html`);
+    await page.waitForFunction(() => window.ready);
+    const result = await page.evaluate(async () => {
+      const { session, fixture, view, render } = experiment;
+      const oldValidation = session.request("validation");
+      let deliver;
+      const oldResult = new Promise((resolve) => (deliver = resolve)).then(
+        (report) => session.receiveValidation(oldValidation, report),
+      );
+      session.apply({ kind: "set-bond-order", bondId: "bond:0", order: 2 });
+      await render();
+      session.undo();
+      await render();
+      deliver(fixture.cases.single.validation);
+      const validation = await oldResult;
+      const old = session.request("layout"),
+        newer = session.request("layout");
+      const entry = fixture.cases.single;
+      const newest = await Promise.resolve({
+        graph: entry.graph,
+        document: entry.layouts[1].document,
+      }).then((report) => session.receiveLayout(newer, report));
+      await render();
+      const document = view.state.accepted.document,
+        accepted = session.state.layout;
+      const retired = await Promise.resolve({
+        graph: entry.graph,
+        document: entry.layouts[0].document,
+      }).then((report) => session.receiveLayout(old, report));
+      return {
+        validation,
+        newest,
+        retired,
+        unchanged:
+          accepted === session.state.layout &&
+          document === view.state.accepted.document,
+        generation: session.state.generation,
+        layoutGeneration: document.depiction.generation,
+        validationStatus: session.state.validation.status,
+      };
+    });
+    assert.equal(result.validation, "stale");
+    assert.equal(result.newest, "accepted");
+    assert.equal(result.retired, "stale");
+    assert.equal(result.unchanged, true);
+    assert.equal(result.generation, 3);
+    assert.equal(result.validationStatus, "unvalidated");
+    assert.match(result.layoutGeneration, /-rotated$/);
+    writeFileSync(
+      join(evidence, "editor-receipts.json"),
+      JSON.stringify(result, null, 2),
+    );
+  }));
+
 test("native-reference gallery renders all twelve controls in both themes for visual review", async () => {
   const context = await browser.newContext({
     viewport: { width: 1440, height: 1000 },

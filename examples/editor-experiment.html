@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Internal editing feasibility experiment</title>
+    <style>
+      body {
+        font: 16px sans-serif;
+        max-width: 1000px;
+        margin: 24px auto;
+        color: #17212b;
+      }
+      button {
+        padding: 8px;
+        margin: 4px;
+      }
+      .drawing {
+        height: 340px;
+        width: 520px;
+        border: 1px solid #b8c3ce;
+      }
+      pre {
+        background: #f2f5f8;
+        padding: 12px;
+        white-space: pre-wrap;
+      }
+      output {
+        display: block;
+        margin: 12px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Internal editing feasibility experiment</h1>
+    <p>
+      Fixed ethanol controls prepared by RDKit. Validation and preparation
+      receive stored native reports; this page does not run a live chemical
+      service.
+    </p>
+    <p>
+      The original declaration is retained separately. A draft without a current
+      preparation stays visible as explicit bond orders below.
+    </p>
+    <div>
+      <button id="double">Set C–C double</button
+      ><button id="invalid">Set C–O triple</button
+      ><button id="validate">Receive native validation</button
+      ><button id="undo">Undo</button><button id="redo">Redo</button
+      ><button id="readonly">Attempt read-only edit</button>
+    </div>
+    <output id="status" aria-live="polite"></output>
+    <div id="drawing" class="drawing"></div>
+    <p id="unprepared" hidden>No current preparation. The draft is retained.</p>
+    <h2>Current draft</h2>
+    <pre id="graph"></pre>
+    <h2>Original declaration</h2>
+    <pre id="source"></pre>
+    <script type="module">
+      import { createMolecularSvgView } from "/dist/index.js";
+      import { EditExperiment } from "/.experiment/editor_experiment/session.js";
+      const fixture = await (
+        await fetch("/tests/data/editor-experiment.json")
+      ).json();
+      const session = new EditExperiment({
+        instanceId: "editable-control",
+        editable: true,
+        source: fixture.source,
+        graph: fixture.initialGraph,
+      });
+      const readonlySession = new EditExperiment({
+        instanceId: "readonly-control",
+        editable: false,
+        source: fixture.source,
+        graph: fixture.initialGraph,
+      });
+      const host = document.querySelector("#drawing"),
+        view = createMolecularSvgView(host, { instanceId: "experiment-view" });
+      let intent = 0;
+      const show = () => {
+        const state = session.state;
+        document.querySelector("#graph").textContent = JSON.stringify(
+          {
+            generation: state.generation,
+            graph: state.graph,
+            selection: state.selection,
+          },
+          null,
+          2,
+        );
+        document.querySelector("#status").textContent =
+          `Draft ${state.generation} · ${state.validation.status} · observation reference ${state.attachedObservation.current ? "current" : "historical"}`;
+        document.querySelector("#source").textContent =
+          session.source.original.data;
+      };
+      async function render() {
+        const id = ++intent,
+          state = session.state;
+        show();
+        host.hidden = !state.layout;
+        document.querySelector("#unprepared").hidden = !!state.layout;
+        if (state.layout) {
+          const result = await view.replace(state.layout.document);
+          if (id !== intent) return;
+          if (result.status !== "accepted")
+            throw new Error("The internal prepared drawing was refused.");
+          window.renderedGeneration = state.generation;
+          view.setSelection(
+            state.selection
+              ? { kind: state.selection.kind, semanticId: state.selection.id }
+              : null,
+            result.accepted.scene.generation,
+          );
+        } else window.renderedGeneration = state.generation;
+      }
+      view.subscribeSelection((pick) => {
+        if (
+          host.hidden ||
+          window.renderedGeneration !== session.state.generation
+        )
+          return;
+        session.select(pick ? { kind: pick.kind, id: pick.semanticId } : null);
+        show();
+      });
+      const bind = (id, action) =>
+        document.querySelector(id).addEventListener("click", async () => {
+          action();
+          await render();
+        });
+      bind("#double", () =>
+        session.apply({ kind: "set-bond-order", bondId: "bond:0", order: 2 }),
+      );
+      bind("#invalid", () =>
+        session.apply({ kind: "set-bond-order", bondId: "bond:1", order: 3 }),
+      );
+      bind("#undo", () => session.undo());
+      bind("#redo", () => session.redo());
+      bind("#validate", () => {
+        const state = session.state,
+          entry = Object.values(fixture.cases).find(
+            (item) =>
+              JSON.stringify(item.graph) === JSON.stringify(state.graph),
+          );
+        const report = entry?.validation ?? {
+          status: "unsupported",
+          graph: state.graph,
+          provider: {
+            name: "fixed-fixture-coverage",
+            version: "1",
+            operation: "lookup",
+          },
+          reason:
+            "No native receipt exists for this draft in the fixed corpus.",
+        };
+        session.receiveValidation(session.request("validation"), report);
+        if (entry?.layouts.length)
+          session.receiveLayout(session.request("layout"), {
+            graph: entry.graph,
+            document: entry.layouts[0].document,
+          });
+      });
+      document.querySelector("#readonly").addEventListener("click", () => {
+        try {
+          readonlySession.apply({
+            kind: "set-bond-order",
+            bondId: "bond:0",
+            order: 2,
+          });
+        } catch (error) {
+          document.querySelector("#status").textContent = error.message;
+          window.readonlyRejected = true;
+        }
+      });
+      window.experiment = { session, readonlySession, fixture, view, render };
+      await render();
+      window.ready = true;
+      window.addEventListener(
+        "pagehide",
+        () => {
+          session.dispose();
+          readonlySession.dispose();
+          view.dispose();
+        },
+        { once: true },
+      );
+    </script>
+  </body>
+</html>

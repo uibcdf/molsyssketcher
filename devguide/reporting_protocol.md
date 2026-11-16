@@ -54,3 +54,9 @@ Preserve its native Node exit status. Receive extracted DOM bond geometry using
 the provisioned native RDKit environment. Browser evidence, the native chemical
 oracle and graphical review have different scopes; none qualifies Qt or the
 complete primary views. See [the profile](MOLECULAR_SVG_PROFILE.md).
+
+The P2.5 internal selector is `devtools/editor_experiment/session.test.mjs`,
+compiled/type-checked and run by `npm run test:experiment`. `npm run check`
+includes that runner. Native controls live in `devtools/tests/test_editor_experiment.py`
+and use pytest-receptor; browser receiving stays in `tests/browser/svg.browser.mjs`.
+These selectors receive a developer experiment, not a shipped editing API.
