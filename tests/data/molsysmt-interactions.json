@@ -1,0 +1,2548 @@
+{
+  "schemaVersion": 1,
+  "scope": "Analytical ionic controls calculated by real MolSysMT; source-development inspection only",
+  "cases": [
+    {
+      "id": "observed",
+      "projection": {
+        "schemaVersion": 1,
+        "kind": "interaction-page",
+        "document": {
+          "schemaVersion": 1,
+          "kind": "interaction-document",
+          "id": "three-ions",
+          "mode": "interface-centered",
+          "parents": [
+            {
+              "molecule": {
+                "owner": "analytical-ion-fixture",
+                "id": "three-ions-cations",
+                "generation": "1"
+              },
+              "chemicalState": "declared-formal-ions",
+              "structure": "frame-0",
+              "preparation": {
+                "owner": "analytical-ion-fixture",
+                "id": "three-ions-preparation",
+                "generation": "1"
+              }
+            },
+            {
+              "molecule": {
+                "owner": "analytical-ion-fixture",
+                "id": "three-ions-anions",
+                "generation": "1"
+              },
+              "chemicalState": "declared-formal-ions",
+              "structure": "frame-0",
+              "preparation": {
+                "owner": "analytical-ion-fixture",
+                "id": "three-ions-preparation",
+                "generation": "1"
+              }
+            }
+          ],
+          "analyses": [
+            {
+              "result": {
+                "owner": "analytical-ion-fixture",
+                "id": "three-ions-ionic-analysis",
+                "generation": "1"
+              },
+              "parents": [
+                {
+                  "molecule": {
+                    "owner": "analytical-ion-fixture",
+                    "id": "three-ions-cations",
+                    "generation": "1"
+                  },
+                  "chemicalState": "declared-formal-ions",
+                  "structure": "frame-0",
+                  "preparation": {
+                    "owner": "analytical-ion-fixture",
+                    "id": "three-ions-preparation",
+                    "generation": "1"
+                  }
+                },
+                {
+                  "molecule": {
+                    "owner": "analytical-ion-fixture",
+                    "id": "three-ions-anions",
+                    "generation": "1"
+                  },
+                  "chemicalState": "declared-formal-ions",
+                  "structure": "frame-0",
+                  "preparation": {
+                    "owner": "analytical-ion-fixture",
+                    "id": "three-ions-preparation",
+                    "generation": "1"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "analysis": {
+          "owner": "analytical-ion-fixture",
+          "id": "three-ions-ionic-analysis",
+          "generation": "1"
+        },
+        "structureIndex": 0,
+        "correspondence": {
+          "authority": "caller-declared@1",
+          "atoms": [
+            {
+              "index": 0,
+              "sourceIndex": 0,
+              "parentIndex": 0,
+              "atomId": "Na"
+            },
+            {
+              "index": 1,
+              "sourceIndex": 1,
+              "parentIndex": 1,
+              "atomId": "Cl"
+            },
+            {
+              "index": 2,
+              "sourceIndex": 2,
+              "parentIndex": 0,
+              "atomId": "K"
+            }
+          ],
+          "frames": [
+            {
+              "parentIndex": 0,
+              "index": 0,
+              "sourceIndex": 0,
+              "structure": "frame-0"
+            },
+            {
+              "parentIndex": 1,
+              "index": 0,
+              "sourceIndex": 0,
+              "structure": "frame-0"
+            }
+          ]
+        },
+        "native": {
+          "page": {
+            "n_atoms": 3,
+            "n_structures": 3,
+            "source_n_atoms": 3,
+            "source_n_structures": 3,
+            "source_id": null,
+            "software": {
+              "molsysmt": "0.23.0+904.gff25f1202"
+            },
+            "execution_records": [
+              {
+                "structure_indices": [
+                  0
+                ],
+                "details": {
+                  "memory_policy": "numeric_working_estimates@1",
+                  "execution": "eager",
+                  "execution_chunks": 1
+                }
+              }
+            ],
+            "evaluated_structure_indices": [
+              0
+            ],
+            "occurrence_indices": [
+              0,
+              1
+            ],
+            "structure_indices": [
+              0,
+              0
+            ],
+            "relation_indices": [
+              0,
+              1
+            ],
+            "evidence": [
+              "formal_charge_geometric_proximity",
+              "formal_charge_geometric_proximity"
+            ],
+            "measurements": {
+              "distance": [
+                0.3,
+                0.3
+              ],
+              "positive_charge": [
+                1.0,
+                1.0
+              ],
+              "negative_charge": [
+                -1.0,
+                -1.0
+              ]
+            },
+            "measure_units": {
+              "distance": "nm",
+              "positive_charge": "e",
+              "negative_charge": "e"
+            },
+            "image_offsets": null,
+            "image_vectors": null,
+            "relation_catalog_indices": [
+              0,
+              1
+            ],
+            "relation_types": [
+              "ionic_contact",
+              "ionic_contact"
+            ],
+            "relation_participant_offsets": [
+              0,
+              2,
+              4
+            ],
+            "participant_roles": [
+              "positive",
+              "negative",
+              "positive",
+              "negative"
+            ],
+            "participant_atom_offsets": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "participant_atoms": [
+              0,
+              1,
+              2,
+              1
+            ],
+            "schema": "molsysmt.interactions.page@1",
+            "total_count": 2,
+            "offset": 0,
+            "limit": 50,
+            "next_offset": null,
+            "method": "molsysmt.interactions.ionic.get_ionic_interactions",
+            "parameters": {
+              "method": "minimum_distance",
+              "distance_threshold": {
+                "value": 0.4,
+                "unit": "nm"
+              },
+              "distance_comparison": "less_than_or_equal",
+              "cutoff_roundoff": "one_float64_ulp",
+              "charge_source": "chemical_states.formal_charge",
+              "participant_definition": "formal_charge",
+              "recognition_rule_version": "formal_charge_centers@1",
+              "chemical_state_index": 0,
+              "charge_evidence": {
+                "kind": "formal_charge",
+                "connectivity_completeness": "unavailable",
+                "assume_complete_connectivity": true,
+                "chemical_state_provenance_index": null
+              },
+              "pbc": false,
+              "image_policy": "whole_participants_anchor_relative_mic",
+              "pbc_policy": "mic_when_box_available",
+              "recognition_scope": "full_source_chemical_state",
+              "intramolecular": "included",
+              "exclude_direct_covalent": true,
+              "profile": "native",
+              "method_definition": "molsysmt.ionic.minimum_distance.native@1",
+              "attribution": {
+                "schema": "molsysmt.scientific_attribution@1",
+                "target": "molsysmt.interactions.ionic.get_ionic_interactions",
+                "items": [
+                  {
+                    "id": "software:molsysmt:0.23.0+904.gff25f1202",
+                    "type": "software",
+                    "title": "MolSysMT",
+                    "authors": [
+                      "Prada-Gracia, Diego",
+                      "Moreno-Vargas, Liliana M."
+                    ],
+                    "doi": "10.5281/zenodo.1298752",
+                    "url": "https://github.com/uibcdf/molsysmt",
+                    "version": "0.23.0+904.gff25f1202",
+                    "roles": [
+                      "executed_software"
+                    ]
+                  }
+                ]
+              }
+            },
+            "atom_source_indices": [
+              0,
+              1,
+              2
+            ],
+            "structure_source_indices": [
+              0,
+              1,
+              2
+            ]
+          },
+          "evaluationScope": {
+            "mode": "internal",
+            "atom_indices": [
+              0,
+              1,
+              2
+            ],
+            "atom_indices_b": null,
+            "universe_indices": [
+              0,
+              1,
+              2
+            ]
+          },
+          "quantityRecords": {
+            "distance": {
+              "manifest": {
+                "format": "qrec/0.3",
+                "field": "distance",
+                "unit": "nanometer",
+                "si": {
+                  "factor": 1e-09,
+                  "offset": 0.0,
+                  "exponents": {
+                    "m": 1
+                  }
+                },
+                "dtype": "float64",
+                "shape": [
+                  2
+                ],
+                "blocks": [
+                  2
+                ]
+              },
+              "values": [
+                0.3,
+                0.3
+              ],
+              "block_digests": [
+                "blake2b-128:ca38c5ab48d3bf65d9bd4c78c7a41eb6"
+              ],
+              "digest": "blake2b-128:5755aa587b1c66ff0906143823d533bd"
+            },
+            "positive_charge": {
+              "manifest": {
+                "format": "qrec/0.3",
+                "field": "positive_charge",
+                "unit": "elementary_charge",
+                "si": {
+                  "factor": 1.602176634e-19,
+                  "offset": 0.0,
+                  "exponents": {
+                    "A": 1,
+                    "s": 1
+                  }
+                },
+                "dtype": "float64",
+                "shape": [
+                  2
+                ],
+                "blocks": [
+                  2
+                ]
+              },
+              "values": [
+                1.0,
+                1.0
+              ],
+              "block_digests": [
+                "blake2b-128:e47aec8ea6bda8a455ca36471bee6fe9"
+              ],
+              "digest": "blake2b-128:63ec6a1b6d180c1d78f63f4612d1eea2"
+            },
+            "negative_charge": {
+              "manifest": {
+                "format": "qrec/0.3",
+                "field": "negative_charge",
+                "unit": "elementary_charge",
+                "si": {
+                  "factor": 1.602176634e-19,
+                  "offset": 0.0,
+                  "exponents": {
+                    "A": 1,
+                    "s": 1
+                  }
+                },
+                "dtype": "float64",
+                "shape": [
+                  2
+                ],
+                "blocks": [
+                  2
+                ]
+              },
+              "values": [
+                -1.0,
+                -1.0
+              ],
+              "block_digests": [
+                "blake2b-128:c62e5c0096c1ae02d72764c208703451"
+              ],
+              "digest": "blake2b-128:d749b35f7278c5f5cd9c82e74391fe02"
+            }
+          }
+        },
+        "reader": {
+          "name": "MolSysMT",
+          "version": "0.23.0+904.gff25f1202",
+          "quantityVerification": "python-only"
+        }
+      }
+    },
+    {
+      "id": "first-page",
+      "projection": {
+        "schemaVersion": 1,
+        "kind": "interaction-page",
+        "document": {
+          "schemaVersion": 1,
+          "kind": "interaction-document",
+          "id": "three-ions",
+          "mode": "interface-centered",
+          "parents": [
+            {
+              "molecule": {
+                "owner": "analytical-ion-fixture",
+                "id": "three-ions-cations",
+                "generation": "1"
+              },
+              "chemicalState": "declared-formal-ions",
+              "structure": "frame-0",
+              "preparation": {
+                "owner": "analytical-ion-fixture",
+                "id": "three-ions-preparation",
+                "generation": "1"
+              }
+            },
+            {
+              "molecule": {
+                "owner": "analytical-ion-fixture",
+                "id": "three-ions-anions",
+                "generation": "1"
+              },
+              "chemicalState": "declared-formal-ions",
+              "structure": "frame-0",
+              "preparation": {
+                "owner": "analytical-ion-fixture",
+                "id": "three-ions-preparation",
+                "generation": "1"
+              }
+            }
+          ],
+          "analyses": [
+            {
+              "result": {
+                "owner": "analytical-ion-fixture",
+                "id": "three-ions-ionic-analysis",
+                "generation": "1"
+              },
+              "parents": [
+                {
+                  "molecule": {
+                    "owner": "analytical-ion-fixture",
+                    "id": "three-ions-cations",
+                    "generation": "1"
+                  },
+                  "chemicalState": "declared-formal-ions",
+                  "structure": "frame-0",
+                  "preparation": {
+                    "owner": "analytical-ion-fixture",
+                    "id": "three-ions-preparation",
+                    "generation": "1"
+                  }
+                },
+                {
+                  "molecule": {
+                    "owner": "analytical-ion-fixture",
+                    "id": "three-ions-anions",
+                    "generation": "1"
+                  },
+                  "chemicalState": "declared-formal-ions",
+                  "structure": "frame-0",
+                  "preparation": {
+                    "owner": "analytical-ion-fixture",
+                    "id": "three-ions-preparation",
+                    "generation": "1"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "analysis": {
+          "owner": "analytical-ion-fixture",
+          "id": "three-ions-ionic-analysis",
+          "generation": "1"
+        },
+        "structureIndex": 0,
+        "correspondence": {
+          "authority": "caller-declared@1",
+          "atoms": [
+            {
+              "index": 0,
+              "sourceIndex": 0,
+              "parentIndex": 0,
+              "atomId": "Na"
+            },
+            {
+              "index": 1,
+              "sourceIndex": 1,
+              "parentIndex": 1,
+              "atomId": "Cl"
+            },
+            {
+              "index": 2,
+              "sourceIndex": 2,
+              "parentIndex": 0,
+              "atomId": "K"
+            }
+          ],
+          "frames": [
+            {
+              "parentIndex": 0,
+              "index": 0,
+              "sourceIndex": 0,
+              "structure": "frame-0"
+            },
+            {
+              "parentIndex": 1,
+              "index": 0,
+              "sourceIndex": 0,
+              "structure": "frame-0"
+            }
+          ]
+        },
+        "native": {
+          "page": {
+            "n_atoms": 3,
+            "n_structures": 3,
+            "source_n_atoms": 3,
+            "source_n_structures": 3,
+            "source_id": null,
+            "software": {
+              "molsysmt": "0.23.0+904.gff25f1202"
+            },
+            "execution_records": [
+              {
+                "structure_indices": [
+                  0
+                ],
+                "details": {
+                  "memory_policy": "numeric_working_estimates@1",
+                  "execution": "eager",
+                  "execution_chunks": 1
+                }
+              }
+            ],
+            "evaluated_structure_indices": [
+              0
+            ],
+            "occurrence_indices": [
+              0
+            ],
+            "structure_indices": [
+              0
+            ],
+            "relation_indices": [
+              0
+            ],
+            "evidence": [
+              "formal_charge_geometric_proximity"
+            ],
+            "measurements": {
+              "distance": [
+                0.3
+              ],
+              "positive_charge": [
+                1.0
+              ],
+              "negative_charge": [
+                -1.0
+              ]
+            },
+            "measure_units": {
+              "distance": "nm",
+              "positive_charge": "e",
+              "negative_charge": "e"
+            },
+            "image_offsets": null,
+            "image_vectors": null,
+            "relation_catalog_indices": [
+              0
+            ],
+            "relation_types": [
+              "ionic_contact"
+            ],
+            "relation_participant_offsets": [
+              0,
+              2
+            ],
+            "participant_roles": [
+              "positive",
+              "negative"
+            ],
+            "participant_atom_offsets": [
+              0,
+              1,
+              2
+            ],
+            "participant_atoms": [
+              0,
+              1
+            ],
+            "schema": "molsysmt.interactions.page@1",
+            "total_count": 2,
+            "offset": 0,
+            "limit": 1,
+            "next_offset": 1,
+            "method": "molsysmt.interactions.ionic.get_ionic_interactions",
+            "parameters": {
+              "method": "minimum_distance",
+              "distance_threshold": {
+                "value": 0.4,
+                "unit": "nm"
+              },
+              "distance_comparison": "less_than_or_equal",
+              "cutoff_roundoff": "one_float64_ulp",
+              "charge_source": "chemical_states.formal_charge",
+              "participant_definition": "formal_charge",
+              "recognition_rule_version": "formal_charge_centers@1",
+              "chemical_state_index": 0,
+              "charge_evidence": {
+                "kind": "formal_charge",
+                "connectivity_completeness": "unavailable",
+                "assume_complete_connectivity": true,
+                "chemical_state_provenance_index": null
+              },
+              "pbc": false,
+              "image_policy": "whole_participants_anchor_relative_mic",
+              "pbc_policy": "mic_when_box_available",
+              "recognition_scope": "full_source_chemical_state",
+              "intramolecular": "included",
+              "exclude_direct_covalent": true,
+              "profile": "native",
+              "method_definition": "molsysmt.ionic.minimum_distance.native@1",
+              "attribution": {
+                "schema": "molsysmt.scientific_attribution@1",
+                "target": "molsysmt.interactions.ionic.get_ionic_interactions",
+                "items": [
+                  {
+                    "id": "software:molsysmt:0.23.0+904.gff25f1202",
+                    "type": "software",
+                    "title": "MolSysMT",
+                    "authors": [
+                      "Prada-Gracia, Diego",
+                      "Moreno-Vargas, Liliana M."
+                    ],
+                    "doi": "10.5281/zenodo.1298752",
+                    "url": "https://github.com/uibcdf/molsysmt",
+                    "version": "0.23.0+904.gff25f1202",
+                    "roles": [
+                      "executed_software"
+                    ]
+                  }
+                ]
+              }
+            },
+            "atom_source_indices": [
+              0,
+              1,
+              2
+            ],
+            "structure_source_indices": [
+              0,
+              1,
+              2
+            ]
+          },
+          "evaluationScope": {
+            "mode": "internal",
+            "atom_indices": [
+              0,
+              1,
+              2
+            ],
+            "atom_indices_b": null,
+            "universe_indices": [
+              0,
+              1,
+              2
+            ]
+          },
+          "quantityRecords": {
+            "distance": {
+              "manifest": {
+                "format": "qrec/0.3",
+                "field": "distance",
+                "unit": "nanometer",
+                "si": {
+                  "factor": 1e-09,
+                  "offset": 0.0,
+                  "exponents": {
+                    "m": 1
+                  }
+                },
+                "dtype": "float64",
+                "shape": [
+                  1
+                ],
+                "blocks": [
+                  1
+                ]
+              },
+              "values": [
+                0.3
+              ],
+              "block_digests": [
+                "blake2b-128:8d9080b5200472c82276854f33ca94f0"
+              ],
+              "digest": "blake2b-128:ad96fd2330d43b062e7ea5f9f648461c"
+            },
+            "positive_charge": {
+              "manifest": {
+                "format": "qrec/0.3",
+                "field": "positive_charge",
+                "unit": "elementary_charge",
+                "si": {
+                  "factor": 1.602176634e-19,
+                  "offset": 0.0,
+                  "exponents": {
+                    "A": 1,
+                    "s": 1
+                  }
+                },
+                "dtype": "float64",
+                "shape": [
+                  1
+                ],
+                "blocks": [
+                  1
+                ]
+              },
+              "values": [
+                1.0
+              ],
+              "block_digests": [
+                "blake2b-128:cce003cb82d6981ca8f4f85e79904fc4"
+              ],
+              "digest": "blake2b-128:10d66d6211c5c18c45b9b2c2718160ff"
+            },
+            "negative_charge": {
+              "manifest": {
+                "format": "qrec/0.3",
+                "field": "negative_charge",
+                "unit": "elementary_charge",
+                "si": {
+                  "factor": 1.602176634e-19,
+                  "offset": 0.0,
+                  "exponents": {
+                    "A": 1,
+                    "s": 1
+                  }
+                },
+                "dtype": "float64",
+                "shape": [
+                  1
+                ],
+                "blocks": [
+                  1
+                ]
+              },
+              "values": [
+                -1.0
+              ],
+              "block_digests": [
+                "blake2b-128:38dd973c2f67a9ec9d4f0558209abc37"
+              ],
+              "digest": "blake2b-128:da006f907c3930577e20076c6f7a9134"
+            }
+          }
+        },
+        "reader": {
+          "name": "MolSysMT",
+          "version": "0.23.0+904.gff25f1202",
+          "quantityVerification": "python-only"
+        }
+      }
+    },
+    {
+      "id": "last-page",
+      "projection": {
+        "schemaVersion": 1,
+        "kind": "interaction-page",
+        "document": {
+          "schemaVersion": 1,
+          "kind": "interaction-document",
+          "id": "three-ions",
+          "mode": "interface-centered",
+          "parents": [
+            {
+              "molecule": {
+                "owner": "analytical-ion-fixture",
+                "id": "three-ions-cations",
+                "generation": "1"
+              },
+              "chemicalState": "declared-formal-ions",
+              "structure": "frame-0",
+              "preparation": {
+                "owner": "analytical-ion-fixture",
+                "id": "three-ions-preparation",
+                "generation": "1"
+              }
+            },
+            {
+              "molecule": {
+                "owner": "analytical-ion-fixture",
+                "id": "three-ions-anions",
+                "generation": "1"
+              },
+              "chemicalState": "declared-formal-ions",
+              "structure": "frame-0",
+              "preparation": {
+                "owner": "analytical-ion-fixture",
+                "id": "three-ions-preparation",
+                "generation": "1"
+              }
+            }
+          ],
+          "analyses": [
+            {
+              "result": {
+                "owner": "analytical-ion-fixture",
+                "id": "three-ions-ionic-analysis",
+                "generation": "1"
+              },
+              "parents": [
+                {
+                  "molecule": {
+                    "owner": "analytical-ion-fixture",
+                    "id": "three-ions-cations",
+                    "generation": "1"
+                  },
+                  "chemicalState": "declared-formal-ions",
+                  "structure": "frame-0",
+                  "preparation": {
+                    "owner": "analytical-ion-fixture",
+                    "id": "three-ions-preparation",
+                    "generation": "1"
+                  }
+                },
+                {
+                  "molecule": {
+                    "owner": "analytical-ion-fixture",
+                    "id": "three-ions-anions",
+                    "generation": "1"
+                  },
+                  "chemicalState": "declared-formal-ions",
+                  "structure": "frame-0",
+                  "preparation": {
+                    "owner": "analytical-ion-fixture",
+                    "id": "three-ions-preparation",
+                    "generation": "1"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "analysis": {
+          "owner": "analytical-ion-fixture",
+          "id": "three-ions-ionic-analysis",
+          "generation": "1"
+        },
+        "structureIndex": 0,
+        "correspondence": {
+          "authority": "caller-declared@1",
+          "atoms": [
+            {
+              "index": 0,
+              "sourceIndex": 0,
+              "parentIndex": 0,
+              "atomId": "Na"
+            },
+            {
+              "index": 1,
+              "sourceIndex": 1,
+              "parentIndex": 1,
+              "atomId": "Cl"
+            },
+            {
+              "index": 2,
+              "sourceIndex": 2,
+              "parentIndex": 0,
+              "atomId": "K"
+            }
+          ],
+          "frames": [
+            {
+              "parentIndex": 0,
+              "index": 0,
+              "sourceIndex": 0,
+              "structure": "frame-0"
+            },
+            {
+              "parentIndex": 1,
+              "index": 0,
+              "sourceIndex": 0,
+              "structure": "frame-0"
+            }
+          ]
+        },
+        "native": {
+          "page": {
+            "n_atoms": 3,
+            "n_structures": 3,
+            "source_n_atoms": 3,
+            "source_n_structures": 3,
+            "source_id": null,
+            "software": {
+              "molsysmt": "0.23.0+904.gff25f1202"
+            },
+            "execution_records": [
+              {
+                "structure_indices": [
+                  0
+                ],
+                "details": {
+                  "memory_policy": "numeric_working_estimates@1",
+                  "execution": "eager",
+                  "execution_chunks": 1
+                }
+              }
+            ],
+            "evaluated_structure_indices": [
+              0
+            ],
+            "occurrence_indices": [
+              1
+            ],
+            "structure_indices": [
+              0
+            ],
+            "relation_indices": [
+              1
+            ],
+            "evidence": [
+              "formal_charge_geometric_proximity"
+            ],
+            "measurements": {
+              "distance": [
+                0.3
+              ],
+              "positive_charge": [
+                1.0
+              ],
+              "negative_charge": [
+                -1.0
+              ]
+            },
+            "measure_units": {
+              "distance": "nm",
+              "positive_charge": "e",
+              "negative_charge": "e"
+            },
+            "image_offsets": null,
+            "image_vectors": null,
+            "relation_catalog_indices": [
+              1
+            ],
+            "relation_types": [
+              "ionic_contact"
+            ],
+            "relation_participant_offsets": [
+              0,
+              2
+            ],
+            "participant_roles": [
+              "positive",
+              "negative"
+            ],
+            "participant_atom_offsets": [
+              0,
+              1,
+              2
+            ],
+            "participant_atoms": [
+              2,
+              1
+            ],
+            "schema": "molsysmt.interactions.page@1",
+            "total_count": 2,
+            "offset": 1,
+            "limit": 1,
+            "next_offset": null,
+            "method": "molsysmt.interactions.ionic.get_ionic_interactions",
+            "parameters": {
+              "method": "minimum_distance",
+              "distance_threshold": {
+                "value": 0.4,
+                "unit": "nm"
+              },
+              "distance_comparison": "less_than_or_equal",
+              "cutoff_roundoff": "one_float64_ulp",
+              "charge_source": "chemical_states.formal_charge",
+              "participant_definition": "formal_charge",
+              "recognition_rule_version": "formal_charge_centers@1",
+              "chemical_state_index": 0,
+              "charge_evidence": {
+                "kind": "formal_charge",
+                "connectivity_completeness": "unavailable",
+                "assume_complete_connectivity": true,
+                "chemical_state_provenance_index": null
+              },
+              "pbc": false,
+              "image_policy": "whole_participants_anchor_relative_mic",
+              "pbc_policy": "mic_when_box_available",
+              "recognition_scope": "full_source_chemical_state",
+              "intramolecular": "included",
+              "exclude_direct_covalent": true,
+              "profile": "native",
+              "method_definition": "molsysmt.ionic.minimum_distance.native@1",
+              "attribution": {
+                "schema": "molsysmt.scientific_attribution@1",
+                "target": "molsysmt.interactions.ionic.get_ionic_interactions",
+                "items": [
+                  {
+                    "id": "software:molsysmt:0.23.0+904.gff25f1202",
+                    "type": "software",
+                    "title": "MolSysMT",
+                    "authors": [
+                      "Prada-Gracia, Diego",
+                      "Moreno-Vargas, Liliana M."
+                    ],
+                    "doi": "10.5281/zenodo.1298752",
+                    "url": "https://github.com/uibcdf/molsysmt",
+                    "version": "0.23.0+904.gff25f1202",
+                    "roles": [
+                      "executed_software"
+                    ]
+                  }
+                ]
+              }
+            },
+            "atom_source_indices": [
+              0,
+              1,
+              2
+            ],
+            "structure_source_indices": [
+              0,
+              1,
+              2
+            ]
+          },
+          "evaluationScope": {
+            "mode": "internal",
+            "atom_indices": [
+              0,
+              1,
+              2
+            ],
+            "atom_indices_b": null,
+            "universe_indices": [
+              0,
+              1,
+              2
+            ]
+          },
+          "quantityRecords": {
+            "distance": {
+              "manifest": {
+                "format": "qrec/0.3",
+                "field": "distance",
+                "unit": "nanometer",
+                "si": {
+                  "factor": 1e-09,
+                  "offset": 0.0,
+                  "exponents": {
+                    "m": 1
+                  }
+                },
+                "dtype": "float64",
+                "shape": [
+                  1
+                ],
+                "blocks": [
+                  1
+                ]
+              },
+              "values": [
+                0.3
+              ],
+              "block_digests": [
+                "blake2b-128:8d9080b5200472c82276854f33ca94f0"
+              ],
+              "digest": "blake2b-128:ad96fd2330d43b062e7ea5f9f648461c"
+            },
+            "positive_charge": {
+              "manifest": {
+                "format": "qrec/0.3",
+                "field": "positive_charge",
+                "unit": "elementary_charge",
+                "si": {
+                  "factor": 1.602176634e-19,
+                  "offset": 0.0,
+                  "exponents": {
+                    "A": 1,
+                    "s": 1
+                  }
+                },
+                "dtype": "float64",
+                "shape": [
+                  1
+                ],
+                "blocks": [
+                  1
+                ]
+              },
+              "values": [
+                1.0
+              ],
+              "block_digests": [
+                "blake2b-128:cce003cb82d6981ca8f4f85e79904fc4"
+              ],
+              "digest": "blake2b-128:10d66d6211c5c18c45b9b2c2718160ff"
+            },
+            "negative_charge": {
+              "manifest": {
+                "format": "qrec/0.3",
+                "field": "negative_charge",
+                "unit": "elementary_charge",
+                "si": {
+                  "factor": 1.602176634e-19,
+                  "offset": 0.0,
+                  "exponents": {
+                    "A": 1,
+                    "s": 1
+                  }
+                },
+                "dtype": "float64",
+                "shape": [
+                  1
+                ],
+                "blocks": [
+                  1
+                ]
+              },
+              "values": [
+                -1.0
+              ],
+              "block_digests": [
+                "blake2b-128:38dd973c2f67a9ec9d4f0558209abc37"
+              ],
+              "digest": "blake2b-128:da006f907c3930577e20076c6f7a9134"
+            }
+          }
+        },
+        "reader": {
+          "name": "MolSysMT",
+          "version": "0.23.0+904.gff25f1202",
+          "quantityVerification": "python-only"
+        }
+      }
+    },
+    {
+      "id": "evaluated-empty",
+      "projection": {
+        "schemaVersion": 1,
+        "kind": "interaction-page",
+        "document": {
+          "schemaVersion": 1,
+          "kind": "interaction-document",
+          "id": "three-ions",
+          "mode": "interface-centered",
+          "parents": [
+            {
+              "molecule": {
+                "owner": "analytical-ion-fixture",
+                "id": "three-ions-cations",
+                "generation": "1"
+              },
+              "chemicalState": "declared-formal-ions",
+              "structure": "frame-1",
+              "preparation": {
+                "owner": "analytical-ion-fixture",
+                "id": "three-ions-preparation",
+                "generation": "1"
+              }
+            },
+            {
+              "molecule": {
+                "owner": "analytical-ion-fixture",
+                "id": "three-ions-anions",
+                "generation": "1"
+              },
+              "chemicalState": "declared-formal-ions",
+              "structure": "frame-1",
+              "preparation": {
+                "owner": "analytical-ion-fixture",
+                "id": "three-ions-preparation",
+                "generation": "1"
+              }
+            }
+          ],
+          "analyses": [
+            {
+              "result": {
+                "owner": "analytical-ion-fixture",
+                "id": "three-ions-ionic-analysis",
+                "generation": "1"
+              },
+              "parents": [
+                {
+                  "molecule": {
+                    "owner": "analytical-ion-fixture",
+                    "id": "three-ions-cations",
+                    "generation": "1"
+                  },
+                  "chemicalState": "declared-formal-ions",
+                  "structure": "frame-1",
+                  "preparation": {
+                    "owner": "analytical-ion-fixture",
+                    "id": "three-ions-preparation",
+                    "generation": "1"
+                  }
+                },
+                {
+                  "molecule": {
+                    "owner": "analytical-ion-fixture",
+                    "id": "three-ions-anions",
+                    "generation": "1"
+                  },
+                  "chemicalState": "declared-formal-ions",
+                  "structure": "frame-1",
+                  "preparation": {
+                    "owner": "analytical-ion-fixture",
+                    "id": "three-ions-preparation",
+                    "generation": "1"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "analysis": {
+          "owner": "analytical-ion-fixture",
+          "id": "three-ions-ionic-analysis",
+          "generation": "1"
+        },
+        "structureIndex": 1,
+        "correspondence": {
+          "authority": "caller-declared@1",
+          "atoms": [
+            {
+              "index": 0,
+              "sourceIndex": 0,
+              "parentIndex": 0,
+              "atomId": "Na"
+            },
+            {
+              "index": 1,
+              "sourceIndex": 1,
+              "parentIndex": 1,
+              "atomId": "Cl"
+            },
+            {
+              "index": 2,
+              "sourceIndex": 2,
+              "parentIndex": 0,
+              "atomId": "K"
+            }
+          ],
+          "frames": [
+            {
+              "parentIndex": 0,
+              "index": 1,
+              "sourceIndex": 1,
+              "structure": "frame-1"
+            },
+            {
+              "parentIndex": 1,
+              "index": 1,
+              "sourceIndex": 1,
+              "structure": "frame-1"
+            }
+          ]
+        },
+        "native": {
+          "page": {
+            "n_atoms": 3,
+            "n_structures": 3,
+            "source_n_atoms": 3,
+            "source_n_structures": 3,
+            "source_id": null,
+            "software": {
+              "molsysmt": "0.23.0+904.gff25f1202"
+            },
+            "execution_records": [
+              {
+                "structure_indices": [
+                  1
+                ],
+                "details": {
+                  "memory_policy": "numeric_working_estimates@1",
+                  "execution": "eager",
+                  "execution_chunks": 1
+                }
+              }
+            ],
+            "evaluated_structure_indices": [
+              1
+            ],
+            "occurrence_indices": [],
+            "structure_indices": [],
+            "relation_indices": [],
+            "evidence": [],
+            "measurements": {
+              "distance": [],
+              "positive_charge": [],
+              "negative_charge": []
+            },
+            "measure_units": {
+              "distance": "nm",
+              "positive_charge": "e",
+              "negative_charge": "e"
+            },
+            "image_offsets": null,
+            "image_vectors": null,
+            "relation_catalog_indices": [],
+            "relation_types": [],
+            "relation_participant_offsets": [
+              0
+            ],
+            "participant_roles": [],
+            "participant_atom_offsets": [
+              0
+            ],
+            "participant_atoms": [],
+            "schema": "molsysmt.interactions.page@1",
+            "total_count": 0,
+            "offset": 0,
+            "limit": 50,
+            "next_offset": null,
+            "method": "molsysmt.interactions.ionic.get_ionic_interactions",
+            "parameters": {
+              "method": "minimum_distance",
+              "distance_threshold": {
+                "value": 0.4,
+                "unit": "nm"
+              },
+              "distance_comparison": "less_than_or_equal",
+              "cutoff_roundoff": "one_float64_ulp",
+              "charge_source": "chemical_states.formal_charge",
+              "participant_definition": "formal_charge",
+              "recognition_rule_version": "formal_charge_centers@1",
+              "chemical_state_index": 0,
+              "charge_evidence": {
+                "kind": "formal_charge",
+                "connectivity_completeness": "unavailable",
+                "assume_complete_connectivity": true,
+                "chemical_state_provenance_index": null
+              },
+              "pbc": false,
+              "image_policy": "whole_participants_anchor_relative_mic",
+              "pbc_policy": "mic_when_box_available",
+              "recognition_scope": "full_source_chemical_state",
+              "intramolecular": "included",
+              "exclude_direct_covalent": true,
+              "profile": "native",
+              "method_definition": "molsysmt.ionic.minimum_distance.native@1",
+              "attribution": {
+                "schema": "molsysmt.scientific_attribution@1",
+                "target": "molsysmt.interactions.ionic.get_ionic_interactions",
+                "items": [
+                  {
+                    "id": "software:molsysmt:0.23.0+904.gff25f1202",
+                    "type": "software",
+                    "title": "MolSysMT",
+                    "authors": [
+                      "Prada-Gracia, Diego",
+                      "Moreno-Vargas, Liliana M."
+                    ],
+                    "doi": "10.5281/zenodo.1298752",
+                    "url": "https://github.com/uibcdf/molsysmt",
+                    "version": "0.23.0+904.gff25f1202",
+                    "roles": [
+                      "executed_software"
+                    ]
+                  }
+                ]
+              }
+            },
+            "atom_source_indices": [
+              0,
+              1,
+              2
+            ],
+            "structure_source_indices": [
+              0,
+              1,
+              2
+            ]
+          },
+          "evaluationScope": {
+            "mode": "internal",
+            "atom_indices": [
+              0,
+              1,
+              2
+            ],
+            "atom_indices_b": null,
+            "universe_indices": [
+              0,
+              1,
+              2
+            ]
+          },
+          "quantityRecords": {
+            "distance": {
+              "manifest": {
+                "format": "qrec/0.3",
+                "field": "distance",
+                "unit": "nanometer",
+                "si": {
+                  "factor": 1e-09,
+                  "offset": 0.0,
+                  "exponents": {
+                    "m": 1
+                  }
+                },
+                "dtype": "float64",
+                "shape": [
+                  0
+                ],
+                "blocks": [
+                  0
+                ]
+              },
+              "values": [],
+              "block_digests": [
+                "blake2b-128:a7beafb8d52e21dd0552b9f8532e8274"
+              ],
+              "digest": "blake2b-128:2ccc24b1f14c017380c57f2a5f4d8146"
+            },
+            "positive_charge": {
+              "manifest": {
+                "format": "qrec/0.3",
+                "field": "positive_charge",
+                "unit": "elementary_charge",
+                "si": {
+                  "factor": 1.602176634e-19,
+                  "offset": 0.0,
+                  "exponents": {
+                    "A": 1,
+                    "s": 1
+                  }
+                },
+                "dtype": "float64",
+                "shape": [
+                  0
+                ],
+                "blocks": [
+                  0
+                ]
+              },
+              "values": [],
+              "block_digests": [
+                "blake2b-128:a7beafb8d52e21dd0552b9f8532e8274"
+              ],
+              "digest": "blake2b-128:2f54473d8fb2ea4d26c5cc8157c45ba8"
+            },
+            "negative_charge": {
+              "manifest": {
+                "format": "qrec/0.3",
+                "field": "negative_charge",
+                "unit": "elementary_charge",
+                "si": {
+                  "factor": 1.602176634e-19,
+                  "offset": 0.0,
+                  "exponents": {
+                    "A": 1,
+                    "s": 1
+                  }
+                },
+                "dtype": "float64",
+                "shape": [
+                  0
+                ],
+                "blocks": [
+                  0
+                ]
+              },
+              "values": [],
+              "block_digests": [
+                "blake2b-128:a7beafb8d52e21dd0552b9f8532e8274"
+              ],
+              "digest": "blake2b-128:95db3348d45724f169b2bb65492d4869"
+            }
+          }
+        },
+        "reader": {
+          "name": "MolSysMT",
+          "version": "0.23.0+904.gff25f1202",
+          "quantityVerification": "python-only"
+        }
+      }
+    },
+    {
+      "id": "unevaluated",
+      "projection": {
+        "schemaVersion": 1,
+        "kind": "interaction-page",
+        "document": {
+          "schemaVersion": 1,
+          "kind": "interaction-document",
+          "id": "three-ions",
+          "mode": "interface-centered",
+          "parents": [
+            {
+              "molecule": {
+                "owner": "analytical-ion-fixture",
+                "id": "three-ions-cations",
+                "generation": "1"
+              },
+              "chemicalState": "declared-formal-ions",
+              "structure": "frame-2",
+              "preparation": {
+                "owner": "analytical-ion-fixture",
+                "id": "three-ions-preparation",
+                "generation": "1"
+              }
+            },
+            {
+              "molecule": {
+                "owner": "analytical-ion-fixture",
+                "id": "three-ions-anions",
+                "generation": "1"
+              },
+              "chemicalState": "declared-formal-ions",
+              "structure": "frame-2",
+              "preparation": {
+                "owner": "analytical-ion-fixture",
+                "id": "three-ions-preparation",
+                "generation": "1"
+              }
+            }
+          ],
+          "analyses": [
+            {
+              "result": {
+                "owner": "analytical-ion-fixture",
+                "id": "three-ions-ionic-analysis",
+                "generation": "1"
+              },
+              "parents": [
+                {
+                  "molecule": {
+                    "owner": "analytical-ion-fixture",
+                    "id": "three-ions-cations",
+                    "generation": "1"
+                  },
+                  "chemicalState": "declared-formal-ions",
+                  "structure": "frame-2",
+                  "preparation": {
+                    "owner": "analytical-ion-fixture",
+                    "id": "three-ions-preparation",
+                    "generation": "1"
+                  }
+                },
+                {
+                  "molecule": {
+                    "owner": "analytical-ion-fixture",
+                    "id": "three-ions-anions",
+                    "generation": "1"
+                  },
+                  "chemicalState": "declared-formal-ions",
+                  "structure": "frame-2",
+                  "preparation": {
+                    "owner": "analytical-ion-fixture",
+                    "id": "three-ions-preparation",
+                    "generation": "1"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "analysis": {
+          "owner": "analytical-ion-fixture",
+          "id": "three-ions-ionic-analysis",
+          "generation": "1"
+        },
+        "structureIndex": 2,
+        "correspondence": {
+          "authority": "caller-declared@1",
+          "atoms": [
+            {
+              "index": 0,
+              "sourceIndex": 0,
+              "parentIndex": 0,
+              "atomId": "Na"
+            },
+            {
+              "index": 1,
+              "sourceIndex": 1,
+              "parentIndex": 1,
+              "atomId": "Cl"
+            },
+            {
+              "index": 2,
+              "sourceIndex": 2,
+              "parentIndex": 0,
+              "atomId": "K"
+            }
+          ],
+          "frames": [
+            {
+              "parentIndex": 0,
+              "index": 2,
+              "sourceIndex": 2,
+              "structure": "frame-2"
+            },
+            {
+              "parentIndex": 1,
+              "index": 2,
+              "sourceIndex": 2,
+              "structure": "frame-2"
+            }
+          ]
+        },
+        "native": {
+          "page": {
+            "n_atoms": 3,
+            "n_structures": 3,
+            "source_n_atoms": 3,
+            "source_n_structures": 3,
+            "source_id": null,
+            "software": {
+              "molsysmt": "0.23.0+904.gff25f1202"
+            },
+            "execution_records": [],
+            "evaluated_structure_indices": [],
+            "occurrence_indices": [],
+            "structure_indices": [],
+            "relation_indices": [],
+            "evidence": [],
+            "measurements": {
+              "distance": [],
+              "positive_charge": [],
+              "negative_charge": []
+            },
+            "measure_units": {
+              "distance": "nm",
+              "positive_charge": "e",
+              "negative_charge": "e"
+            },
+            "image_offsets": null,
+            "image_vectors": null,
+            "relation_catalog_indices": [],
+            "relation_types": [],
+            "relation_participant_offsets": [
+              0
+            ],
+            "participant_roles": [],
+            "participant_atom_offsets": [
+              0
+            ],
+            "participant_atoms": [],
+            "schema": "molsysmt.interactions.page@1",
+            "total_count": 0,
+            "offset": 0,
+            "limit": 50,
+            "next_offset": null,
+            "method": "molsysmt.interactions.ionic.get_ionic_interactions",
+            "parameters": {
+              "method": "minimum_distance",
+              "distance_threshold": {
+                "value": 0.4,
+                "unit": "nm"
+              },
+              "distance_comparison": "less_than_or_equal",
+              "cutoff_roundoff": "one_float64_ulp",
+              "charge_source": "chemical_states.formal_charge",
+              "participant_definition": "formal_charge",
+              "recognition_rule_version": "formal_charge_centers@1",
+              "chemical_state_index": 0,
+              "charge_evidence": {
+                "kind": "formal_charge",
+                "connectivity_completeness": "unavailable",
+                "assume_complete_connectivity": true,
+                "chemical_state_provenance_index": null
+              },
+              "pbc": false,
+              "image_policy": "whole_participants_anchor_relative_mic",
+              "pbc_policy": "mic_when_box_available",
+              "recognition_scope": "full_source_chemical_state",
+              "intramolecular": "included",
+              "exclude_direct_covalent": true,
+              "profile": "native",
+              "method_definition": "molsysmt.ionic.minimum_distance.native@1",
+              "attribution": {
+                "schema": "molsysmt.scientific_attribution@1",
+                "target": "molsysmt.interactions.ionic.get_ionic_interactions",
+                "items": [
+                  {
+                    "id": "software:molsysmt:0.23.0+904.gff25f1202",
+                    "type": "software",
+                    "title": "MolSysMT",
+                    "authors": [
+                      "Prada-Gracia, Diego",
+                      "Moreno-Vargas, Liliana M."
+                    ],
+                    "doi": "10.5281/zenodo.1298752",
+                    "url": "https://github.com/uibcdf/molsysmt",
+                    "version": "0.23.0+904.gff25f1202",
+                    "roles": [
+                      "executed_software"
+                    ]
+                  }
+                ]
+              }
+            },
+            "atom_source_indices": [
+              0,
+              1,
+              2
+            ],
+            "structure_source_indices": [
+              0,
+              1,
+              2
+            ]
+          },
+          "evaluationScope": {
+            "mode": "internal",
+            "atom_indices": [
+              0,
+              1,
+              2
+            ],
+            "atom_indices_b": null,
+            "universe_indices": [
+              0,
+              1,
+              2
+            ]
+          },
+          "quantityRecords": {
+            "distance": {
+              "manifest": {
+                "format": "qrec/0.3",
+                "field": "distance",
+                "unit": "nanometer",
+                "si": {
+                  "factor": 1e-09,
+                  "offset": 0.0,
+                  "exponents": {
+                    "m": 1
+                  }
+                },
+                "dtype": "float64",
+                "shape": [
+                  0
+                ],
+                "blocks": [
+                  0
+                ]
+              },
+              "values": [],
+              "block_digests": [
+                "blake2b-128:a7beafb8d52e21dd0552b9f8532e8274"
+              ],
+              "digest": "blake2b-128:2ccc24b1f14c017380c57f2a5f4d8146"
+            },
+            "positive_charge": {
+              "manifest": {
+                "format": "qrec/0.3",
+                "field": "positive_charge",
+                "unit": "elementary_charge",
+                "si": {
+                  "factor": 1.602176634e-19,
+                  "offset": 0.0,
+                  "exponents": {
+                    "A": 1,
+                    "s": 1
+                  }
+                },
+                "dtype": "float64",
+                "shape": [
+                  0
+                ],
+                "blocks": [
+                  0
+                ]
+              },
+              "values": [],
+              "block_digests": [
+                "blake2b-128:a7beafb8d52e21dd0552b9f8532e8274"
+              ],
+              "digest": "blake2b-128:2f54473d8fb2ea4d26c5cc8157c45ba8"
+            },
+            "negative_charge": {
+              "manifest": {
+                "format": "qrec/0.3",
+                "field": "negative_charge",
+                "unit": "elementary_charge",
+                "si": {
+                  "factor": 1.602176634e-19,
+                  "offset": 0.0,
+                  "exponents": {
+                    "A": 1,
+                    "s": 1
+                  }
+                },
+                "dtype": "float64",
+                "shape": [
+                  0
+                ],
+                "blocks": [
+                  0
+                ]
+              },
+              "values": [],
+              "block_digests": [
+                "blake2b-128:a7beafb8d52e21dd0552b9f8532e8274"
+              ],
+              "digest": "blake2b-128:95db3348d45724f169b2bb65492d4869"
+            }
+          }
+        },
+        "reader": {
+          "name": "MolSysMT",
+          "version": "0.23.0+904.gff25f1202",
+          "quantityVerification": "python-only"
+        }
+      }
+    },
+    {
+      "id": "zero-limit",
+      "projection": {
+        "schemaVersion": 1,
+        "kind": "interaction-page",
+        "document": {
+          "schemaVersion": 1,
+          "kind": "interaction-document",
+          "id": "three-ions",
+          "mode": "interface-centered",
+          "parents": [
+            {
+              "molecule": {
+                "owner": "analytical-ion-fixture",
+                "id": "three-ions-cations",
+                "generation": "1"
+              },
+              "chemicalState": "declared-formal-ions",
+              "structure": "frame-0",
+              "preparation": {
+                "owner": "analytical-ion-fixture",
+                "id": "three-ions-preparation",
+                "generation": "1"
+              }
+            },
+            {
+              "molecule": {
+                "owner": "analytical-ion-fixture",
+                "id": "three-ions-anions",
+                "generation": "1"
+              },
+              "chemicalState": "declared-formal-ions",
+              "structure": "frame-0",
+              "preparation": {
+                "owner": "analytical-ion-fixture",
+                "id": "three-ions-preparation",
+                "generation": "1"
+              }
+            }
+          ],
+          "analyses": [
+            {
+              "result": {
+                "owner": "analytical-ion-fixture",
+                "id": "three-ions-ionic-analysis",
+                "generation": "1"
+              },
+              "parents": [
+                {
+                  "molecule": {
+                    "owner": "analytical-ion-fixture",
+                    "id": "three-ions-cations",
+                    "generation": "1"
+                  },
+                  "chemicalState": "declared-formal-ions",
+                  "structure": "frame-0",
+                  "preparation": {
+                    "owner": "analytical-ion-fixture",
+                    "id": "three-ions-preparation",
+                    "generation": "1"
+                  }
+                },
+                {
+                  "molecule": {
+                    "owner": "analytical-ion-fixture",
+                    "id": "three-ions-anions",
+                    "generation": "1"
+                  },
+                  "chemicalState": "declared-formal-ions",
+                  "structure": "frame-0",
+                  "preparation": {
+                    "owner": "analytical-ion-fixture",
+                    "id": "three-ions-preparation",
+                    "generation": "1"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "analysis": {
+          "owner": "analytical-ion-fixture",
+          "id": "three-ions-ionic-analysis",
+          "generation": "1"
+        },
+        "structureIndex": 0,
+        "correspondence": {
+          "authority": "caller-declared@1",
+          "atoms": [
+            {
+              "index": 0,
+              "sourceIndex": 0,
+              "parentIndex": 0,
+              "atomId": "Na"
+            },
+            {
+              "index": 1,
+              "sourceIndex": 1,
+              "parentIndex": 1,
+              "atomId": "Cl"
+            },
+            {
+              "index": 2,
+              "sourceIndex": 2,
+              "parentIndex": 0,
+              "atomId": "K"
+            }
+          ],
+          "frames": [
+            {
+              "parentIndex": 0,
+              "index": 0,
+              "sourceIndex": 0,
+              "structure": "frame-0"
+            },
+            {
+              "parentIndex": 1,
+              "index": 0,
+              "sourceIndex": 0,
+              "structure": "frame-0"
+            }
+          ]
+        },
+        "native": {
+          "page": {
+            "n_atoms": 3,
+            "n_structures": 3,
+            "source_n_atoms": 3,
+            "source_n_structures": 3,
+            "source_id": null,
+            "software": {
+              "molsysmt": "0.23.0+904.gff25f1202"
+            },
+            "execution_records": [
+              {
+                "structure_indices": [
+                  0
+                ],
+                "details": {
+                  "memory_policy": "numeric_working_estimates@1",
+                  "execution": "eager",
+                  "execution_chunks": 1
+                }
+              }
+            ],
+            "evaluated_structure_indices": [
+              0
+            ],
+            "occurrence_indices": [],
+            "structure_indices": [],
+            "relation_indices": [],
+            "evidence": [],
+            "measurements": {
+              "distance": [],
+              "positive_charge": [],
+              "negative_charge": []
+            },
+            "measure_units": {
+              "distance": "nm",
+              "positive_charge": "e",
+              "negative_charge": "e"
+            },
+            "image_offsets": null,
+            "image_vectors": null,
+            "relation_catalog_indices": [],
+            "relation_types": [],
+            "relation_participant_offsets": [
+              0
+            ],
+            "participant_roles": [],
+            "participant_atom_offsets": [
+              0
+            ],
+            "participant_atoms": [],
+            "schema": "molsysmt.interactions.page@1",
+            "total_count": 2,
+            "offset": 0,
+            "limit": 0,
+            "next_offset": null,
+            "method": "molsysmt.interactions.ionic.get_ionic_interactions",
+            "parameters": {
+              "method": "minimum_distance",
+              "distance_threshold": {
+                "value": 0.4,
+                "unit": "nm"
+              },
+              "distance_comparison": "less_than_or_equal",
+              "cutoff_roundoff": "one_float64_ulp",
+              "charge_source": "chemical_states.formal_charge",
+              "participant_definition": "formal_charge",
+              "recognition_rule_version": "formal_charge_centers@1",
+              "chemical_state_index": 0,
+              "charge_evidence": {
+                "kind": "formal_charge",
+                "connectivity_completeness": "unavailable",
+                "assume_complete_connectivity": true,
+                "chemical_state_provenance_index": null
+              },
+              "pbc": false,
+              "image_policy": "whole_participants_anchor_relative_mic",
+              "pbc_policy": "mic_when_box_available",
+              "recognition_scope": "full_source_chemical_state",
+              "intramolecular": "included",
+              "exclude_direct_covalent": true,
+              "profile": "native",
+              "method_definition": "molsysmt.ionic.minimum_distance.native@1",
+              "attribution": {
+                "schema": "molsysmt.scientific_attribution@1",
+                "target": "molsysmt.interactions.ionic.get_ionic_interactions",
+                "items": [
+                  {
+                    "id": "software:molsysmt:0.23.0+904.gff25f1202",
+                    "type": "software",
+                    "title": "MolSysMT",
+                    "authors": [
+                      "Prada-Gracia, Diego",
+                      "Moreno-Vargas, Liliana M."
+                    ],
+                    "doi": "10.5281/zenodo.1298752",
+                    "url": "https://github.com/uibcdf/molsysmt",
+                    "version": "0.23.0+904.gff25f1202",
+                    "roles": [
+                      "executed_software"
+                    ]
+                  }
+                ]
+              }
+            },
+            "atom_source_indices": [
+              0,
+              1,
+              2
+            ],
+            "structure_source_indices": [
+              0,
+              1,
+              2
+            ]
+          },
+          "evaluationScope": {
+            "mode": "internal",
+            "atom_indices": [
+              0,
+              1,
+              2
+            ],
+            "atom_indices_b": null,
+            "universe_indices": [
+              0,
+              1,
+              2
+            ]
+          },
+          "quantityRecords": {
+            "distance": {
+              "manifest": {
+                "format": "qrec/0.3",
+                "field": "distance",
+                "unit": "nanometer",
+                "si": {
+                  "factor": 1e-09,
+                  "offset": 0.0,
+                  "exponents": {
+                    "m": 1
+                  }
+                },
+                "dtype": "float64",
+                "shape": [
+                  0
+                ],
+                "blocks": [
+                  0
+                ]
+              },
+              "values": [],
+              "block_digests": [
+                "blake2b-128:a7beafb8d52e21dd0552b9f8532e8274"
+              ],
+              "digest": "blake2b-128:2ccc24b1f14c017380c57f2a5f4d8146"
+            },
+            "positive_charge": {
+              "manifest": {
+                "format": "qrec/0.3",
+                "field": "positive_charge",
+                "unit": "elementary_charge",
+                "si": {
+                  "factor": 1.602176634e-19,
+                  "offset": 0.0,
+                  "exponents": {
+                    "A": 1,
+                    "s": 1
+                  }
+                },
+                "dtype": "float64",
+                "shape": [
+                  0
+                ],
+                "blocks": [
+                  0
+                ]
+              },
+              "values": [],
+              "block_digests": [
+                "blake2b-128:a7beafb8d52e21dd0552b9f8532e8274"
+              ],
+              "digest": "blake2b-128:2f54473d8fb2ea4d26c5cc8157c45ba8"
+            },
+            "negative_charge": {
+              "manifest": {
+                "format": "qrec/0.3",
+                "field": "negative_charge",
+                "unit": "elementary_charge",
+                "si": {
+                  "factor": 1.602176634e-19,
+                  "offset": 0.0,
+                  "exponents": {
+                    "A": 1,
+                    "s": 1
+                  }
+                },
+                "dtype": "float64",
+                "shape": [
+                  0
+                ],
+                "blocks": [
+                  0
+                ]
+              },
+              "values": [],
+              "block_digests": [
+                "blake2b-128:a7beafb8d52e21dd0552b9f8532e8274"
+              ],
+              "digest": "blake2b-128:95db3348d45724f169b2bb65492d4869"
+            }
+          }
+        },
+        "reader": {
+          "name": "MolSysMT",
+          "version": "0.23.0+904.gff25f1202",
+          "quantityVerification": "python-only"
+        }
+      }
+    },
+    {
+      "id": "periodic",
+      "projection": {
+        "schemaVersion": 1,
+        "kind": "interaction-page",
+        "document": {
+          "schemaVersion": 1,
+          "kind": "interaction-document",
+          "id": "periodic-ions",
+          "mode": "interface-centered",
+          "parents": [
+            {
+              "molecule": {
+                "owner": "analytical-ion-fixture",
+                "id": "periodic-ions-cations",
+                "generation": "1"
+              },
+              "chemicalState": "declared-formal-ions",
+              "structure": "frame-0",
+              "preparation": {
+                "owner": "analytical-ion-fixture",
+                "id": "periodic-ions-preparation",
+                "generation": "1"
+              }
+            },
+            {
+              "molecule": {
+                "owner": "analytical-ion-fixture",
+                "id": "periodic-ions-anions",
+                "generation": "1"
+              },
+              "chemicalState": "declared-formal-ions",
+              "structure": "frame-0",
+              "preparation": {
+                "owner": "analytical-ion-fixture",
+                "id": "periodic-ions-preparation",
+                "generation": "1"
+              }
+            }
+          ],
+          "analyses": [
+            {
+              "result": {
+                "owner": "analytical-ion-fixture",
+                "id": "periodic-ions-ionic-analysis",
+                "generation": "1"
+              },
+              "parents": [
+                {
+                  "molecule": {
+                    "owner": "analytical-ion-fixture",
+                    "id": "periodic-ions-cations",
+                    "generation": "1"
+                  },
+                  "chemicalState": "declared-formal-ions",
+                  "structure": "frame-0",
+                  "preparation": {
+                    "owner": "analytical-ion-fixture",
+                    "id": "periodic-ions-preparation",
+                    "generation": "1"
+                  }
+                },
+                {
+                  "molecule": {
+                    "owner": "analytical-ion-fixture",
+                    "id": "periodic-ions-anions",
+                    "generation": "1"
+                  },
+                  "chemicalState": "declared-formal-ions",
+                  "structure": "frame-0",
+                  "preparation": {
+                    "owner": "analytical-ion-fixture",
+                    "id": "periodic-ions-preparation",
+                    "generation": "1"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "analysis": {
+          "owner": "analytical-ion-fixture",
+          "id": "periodic-ions-ionic-analysis",
+          "generation": "1"
+        },
+        "structureIndex": 0,
+        "correspondence": {
+          "authority": "caller-declared@1",
+          "atoms": [
+            {
+              "index": 0,
+              "sourceIndex": 0,
+              "parentIndex": 0,
+              "atomId": "Na"
+            },
+            {
+              "index": 1,
+              "sourceIndex": 1,
+              "parentIndex": 1,
+              "atomId": "Cl"
+            }
+          ],
+          "frames": [
+            {
+              "parentIndex": 0,
+              "index": 0,
+              "sourceIndex": 0,
+              "structure": "frame-0"
+            },
+            {
+              "parentIndex": 1,
+              "index": 0,
+              "sourceIndex": 0,
+              "structure": "frame-0"
+            }
+          ]
+        },
+        "native": {
+          "page": {
+            "n_atoms": 2,
+            "n_structures": 1,
+            "source_n_atoms": 2,
+            "source_n_structures": 1,
+            "source_id": null,
+            "software": {
+              "molsysmt": "0.23.0+904.gff25f1202"
+            },
+            "execution_records": [
+              {
+                "structure_indices": [
+                  0
+                ],
+                "details": {
+                  "memory_policy": "numeric_working_estimates@1",
+                  "execution": "eager",
+                  "execution_chunks": 1
+                }
+              }
+            ],
+            "evaluated_structure_indices": [
+              0
+            ],
+            "occurrence_indices": [
+              0
+            ],
+            "structure_indices": [
+              0
+            ],
+            "relation_indices": [
+              0
+            ],
+            "evidence": [
+              "formal_charge_geometric_proximity"
+            ],
+            "measurements": {
+              "distance": [
+                0.19999999999999996
+              ],
+              "positive_charge": [
+                1.0
+              ],
+              "negative_charge": [
+                -1.0
+              ]
+            },
+            "measure_units": {
+              "distance": "nm",
+              "positive_charge": "e",
+              "negative_charge": "e"
+            },
+            "image_offsets": [
+              0,
+              2
+            ],
+            "image_vectors": [
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                -1,
+                0,
+                0
+              ]
+            ],
+            "relation_catalog_indices": [
+              0
+            ],
+            "relation_types": [
+              "ionic_contact"
+            ],
+            "relation_participant_offsets": [
+              0,
+              2
+            ],
+            "participant_roles": [
+              "positive",
+              "negative"
+            ],
+            "participant_atom_offsets": [
+              0,
+              1,
+              2
+            ],
+            "participant_atoms": [
+              0,
+              1
+            ],
+            "schema": "molsysmt.interactions.page@1",
+            "total_count": 1,
+            "offset": 0,
+            "limit": 50,
+            "next_offset": null,
+            "method": "molsysmt.interactions.ionic.get_ionic_interactions",
+            "parameters": {
+              "method": "minimum_distance",
+              "distance_threshold": {
+                "value": 0.4,
+                "unit": "nm"
+              },
+              "distance_comparison": "less_than_or_equal",
+              "cutoff_roundoff": "one_float64_ulp",
+              "charge_source": "chemical_states.formal_charge",
+              "participant_definition": "formal_charge",
+              "recognition_rule_version": "formal_charge_centers@1",
+              "chemical_state_index": 0,
+              "charge_evidence": {
+                "kind": "formal_charge",
+                "connectivity_completeness": "unavailable",
+                "assume_complete_connectivity": true,
+                "chemical_state_provenance_index": null
+              },
+              "pbc": true,
+              "image_policy": "whole_participants_anchor_relative_mic",
+              "pbc_policy": "mic_when_box_available",
+              "recognition_scope": "full_source_chemical_state",
+              "intramolecular": "included",
+              "exclude_direct_covalent": true,
+              "profile": "native",
+              "method_definition": "molsysmt.ionic.minimum_distance.native@1",
+              "attribution": {
+                "schema": "molsysmt.scientific_attribution@1",
+                "target": "molsysmt.interactions.ionic.get_ionic_interactions",
+                "items": [
+                  {
+                    "id": "software:molsysmt:0.23.0+904.gff25f1202",
+                    "type": "software",
+                    "title": "MolSysMT",
+                    "authors": [
+                      "Prada-Gracia, Diego",
+                      "Moreno-Vargas, Liliana M."
+                    ],
+                    "doi": "10.5281/zenodo.1298752",
+                    "url": "https://github.com/uibcdf/molsysmt",
+                    "version": "0.23.0+904.gff25f1202",
+                    "roles": [
+                      "executed_software"
+                    ]
+                  }
+                ]
+              }
+            },
+            "atom_source_indices": [
+              0,
+              1
+            ],
+            "structure_source_indices": [
+              0
+            ]
+          },
+          "evaluationScope": {
+            "mode": "internal",
+            "atom_indices": [
+              0,
+              1
+            ],
+            "atom_indices_b": null,
+            "universe_indices": [
+              0,
+              1
+            ]
+          },
+          "quantityRecords": {
+            "distance": {
+              "manifest": {
+                "format": "qrec/0.3",
+                "field": "distance",
+                "unit": "nanometer",
+                "si": {
+                  "factor": 1e-09,
+                  "offset": 0.0,
+                  "exponents": {
+                    "m": 1
+                  }
+                },
+                "dtype": "float64",
+                "shape": [
+                  1
+                ],
+                "blocks": [
+                  1
+                ]
+              },
+              "values": [
+                0.19999999999999996
+              ],
+              "block_digests": [
+                "blake2b-128:adcade54743412cbfb9e508a79ee55b1"
+              ],
+              "digest": "blake2b-128:53b5e31971125c52ed0621db9b574421"
+            },
+            "positive_charge": {
+              "manifest": {
+                "format": "qrec/0.3",
+                "field": "positive_charge",
+                "unit": "elementary_charge",
+                "si": {
+                  "factor": 1.602176634e-19,
+                  "offset": 0.0,
+                  "exponents": {
+                    "A": 1,
+                    "s": 1
+                  }
+                },
+                "dtype": "float64",
+                "shape": [
+                  1
+                ],
+                "blocks": [
+                  1
+                ]
+              },
+              "values": [
+                1.0
+              ],
+              "block_digests": [
+                "blake2b-128:cce003cb82d6981ca8f4f85e79904fc4"
+              ],
+              "digest": "blake2b-128:10d66d6211c5c18c45b9b2c2718160ff"
+            },
+            "negative_charge": {
+              "manifest": {
+                "format": "qrec/0.3",
+                "field": "negative_charge",
+                "unit": "elementary_charge",
+                "si": {
+                  "factor": 1.602176634e-19,
+                  "offset": 0.0,
+                  "exponents": {
+                    "A": 1,
+                    "s": 1
+                  }
+                },
+                "dtype": "float64",
+                "shape": [
+                  1
+                ],
+                "blocks": [
+                  1
+                ]
+              },
+              "values": [
+                -1.0
+              ],
+              "block_digests": [
+                "blake2b-128:38dd973c2f67a9ec9d4f0558209abc37"
+              ],
+              "digest": "blake2b-128:da006f907c3930577e20076c6f7a9134"
+            }
+          }
+        },
+        "reader": {
+          "name": "MolSysMT",
+          "version": "0.23.0+904.gff25f1202",
+          "quantityVerification": "python-only"
+        }
+      }
+    }
+  ]
+}

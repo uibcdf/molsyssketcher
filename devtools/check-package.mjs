@@ -1,11 +1,14 @@
 import assert from "node:assert/strict";
 import { execFileSync } from "node:child_process";
-import { mkdtempSync, rmSync, writeFileSync } from "node:fs";
+import { mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
 import { molecule, interaction } from "../tests/fixtures.mjs";
 
 const root = resolve(import.meta.dirname, "..");
+const nativePage = JSON.parse(
+  readFileSync(join(root, "tests/data/molsysmt-interactions.json")),
+).cases[0].projection;
 const temporary = mkdtempSync(join(tmpdir(), "molsyssketcher-consumer-"));
 try {
   const [artifact] = JSON.parse(
@@ -59,7 +62,7 @@ try {
     join(temporary, "consumer.mjs"),
     `
 import assert from 'node:assert/strict';
-import { createMolecularController, createInteractionController, createMolecularSvgView, buildMolecularScene, hitTestMolecularScene, fitViewport, zoomViewport } from '@uibcdf/molsyssketcher';
+import { createMolecularController, createInteractionController, createInteractionPageController, inspectInteractionPage, createMolecularSvgView, buildMolecularScene, hitTestMolecularScene, fitViewport, zoomViewport } from '@uibcdf/molsyssketcher';
 assert.equal(typeof createMolecularSvgView, 'function');
 const molecular = createMolecularController({ instanceId: 'clean-molecule' });
 const diagram = createInteractionController({ instanceId: 'clean-diagram' });
@@ -74,6 +77,11 @@ assert.equal(hitTestMolecularScene(scene, scene.atoms[0].position).semanticId, s
 assert.equal(zoomViewport(scene.bounds, fitViewport(scene.bounds), 2).zoom, 2);
 assert.equal(diagramResult.status, 'accepted');
 assert.equal(diagramResult.snapshot.document.parents.length, 2);
+const native = createInteractionPageController({instanceId:'clean-native'});
+const nativeResult = await native.replace(${JSON.stringify(nativePage)});
+assert.equal(nativeResult.status, 'accepted');
+assert.equal(inspectInteractionPage(nativeResult.snapshot.document).observations.length, 2);
+native.dispose();
 molecular.dispose(); diagram.dispose();
 assert.equal(molecular.state.accepted, null);
 `,
@@ -85,7 +93,12 @@ assert.equal(molecular.state.accepted, null);
   writeFileSync(
     join(temporary, "consumer.ts"),
     `
-import { createMolecularController, createMolecularSvgView, type PreparedMolecule, type ScenePick } from '@uibcdf/molsyssketcher';
+import { createMolecularController, createMolecularSvgView, prepareInteractionPage, type PreparedMolecule, type ScenePick } from '@uibcdf/molsyssketcher';
+const page = prepareInteractionPage({});
+// @ts-expect-error Native provenance is read-only.
+page.native.page.method = 'changed';
+// @ts-expect-error Participant membership is read-only.
+page.correspondence.atoms[0].atomId = 'changed';
 const mount = document.createElement('div');
 const surface = createMolecularSvgView(mount, {instanceId:'typed-surface'});
 surface.subscribeSelection((pick: ScenePick | null) => console.log(pick?.context));

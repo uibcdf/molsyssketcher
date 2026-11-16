@@ -1,6 +1,6 @@
 # Living implementation plan
 
-Updated: 2026-11-15. Current milestone: molecular SVG navigation and received internal P2.5 experiment.
+Updated: 2026-11-15. Current milestone: first native MolSysMT interaction inspection, alongside the molecular SVG surface.
 
 This is the single microstep ledger for two equally important product pillars:
 Molecular View and Interaction View. Shared work is implemented once. Both
@@ -19,7 +19,7 @@ results, owning issue and limits in CHECKPOINT.md or a linked receipt. A source
 description, a closed upstream issue or an unavailable-provider test is not
 executed integration evidence.
 
-There are **69 microsteps: 7 done, 19 partial and 43 todo**. Five completed steps
+There are **69 microsteps: 7 done, 21 partial and 41 todo**. Five completed steps
 are documentation/source review; P0.5 supplies the tested toolchain and license.
 Counts are unweighted, not effort percentages. Initial implementation evidence
 and explicit remaining acceptance are in CHECKPOINT.md, SUPPLIED_INPUT_PROFILE.md
@@ -103,10 +103,10 @@ without modifying its original declaration.
 
 | ID | Status | Required result / completion evidence |
 | --- | --- | --- |
-| I1.1 | partial | Experimental versioned reference document validates exact multi-parent contexts and original result references for both mode labels; native occurrence/participant projection and complete visual document remain pending |
-| I1.2 | todo | First native interaction-result adapter preserving selected method/profile, quantities, producer and analysis-local identifiers |
+| I1.1 | partial | Exact multi-parent/reference documents and first native ionic page projection exist; complete two-mode visual document remains pending |
+| I1.2 | partial | Bounded real MolSysMT ionic source adapter retains native method/profile, producer, analysis-local identifiers, roles and Python-verified quantity records; production host/transport and browser quantity receiving remain pending |
 | I1.3 | todo | Directed/symmetric, compound, parallel and mediated participant relationships with reversible visual membership maps |
-| I1.4 | todo | Coverage-aware queries, filters and bounded projection preserving evaluated-empty, missing, failed and partial states |
+| I1.4 | partial | Native single-frame pages distinguish evaluated-empty, unevaluated and partial scope with bounded copies; broader filters and native failure/missing profiles remain pending |
 | I1.5 | todo | Atomic multi-parent context replacement and dependency invalidation; no promotion of stale observations or source identity |
 | I1.6 | todo | Public read-only diagram input/inspection contract and meaningful native/reference/provenance controls |
 

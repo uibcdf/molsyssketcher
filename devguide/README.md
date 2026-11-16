@@ -35,6 +35,7 @@ task ledger; the checkpoint identifies the next work and received evidence.
 | [Engineering](ENGINEERING.md) | How will tooling, dependencies, qualification and distribution be introduced? |
 | [Supplied-input profile](SUPPLIED_INPUT_PROFILE.md) | What does the first executable foundation actually accept and guarantee? |
 | [RDKit preparation](RDKIT_PROVIDER.md) | Which real chemical preparation route and native controls have been executed? |
+| [Native interaction inspection](MOLSYSMT_INTERACTIONS_PROFILE.md) | Which bounded native MolSysMT page, mapping, coverage and quantity handshakes have been received? |
 | [Molecular SVG profile](MOLECULAR_SVG_PROFILE.md) | Which measured drawing, selection, export and actual-browser controls have been received? |
 | [Local workspace](WORKSPACE.md) | Where are the maintainer-provided source references and support tools? |
 | [Reporting](reporting_protocol.md) | Which owning issues and executable checks apply to current TypeScript work? |

@@ -49,3 +49,13 @@ export {
   VIEWPORT_LIMITS,
 } from "./viewport.js";
 export type { ViewportState } from "./viewport.js";
+export {
+  prepareInteractionPage,
+  inspectInteractionPage,
+  createInteractionPageController,
+} from "./interaction-page.js";
+export type {
+  InteractionPage,
+  NativeInteractionPage,
+  InteractionAtomBinding,
+} from "./interaction-page.js";

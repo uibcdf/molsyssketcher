@@ -60,3 +60,12 @@ compiled/type-checked and run by `npm run test:experiment`. `npm run check`
 includes that runner. Native controls live in `devtools/tests/test_editor_experiment.py`
 and use pytest-receptor; browser receiving stays in `tests/browser/svg.browser.mjs`.
 These selectors receive a developer experiment, not a shipped editing API.
+
+The first MolSysMT source-provider selector is
+`devtools/molsysmt_adapter/tests/test_projection.py`, using pytest-receptor via
+`npm run test:interactions`. Its recorded native pages cross
+`tests/interaction-page.test.mjs`; Python also sends freshly calculated pages to
+the built public Node module. CI builds the exact native provider source and
+retains its runtime/binary identity separately. See the
+[native profile](MOLSYSMT_INTERACTIONS_PROFILE.md); this receives inspection,
+not interaction drawings, a published provider pair or Qt.

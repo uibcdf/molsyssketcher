@@ -1,7 +1,8 @@
 # Molecular interaction diagrams
 
 Status: **primary product pillar**, adopted by the maintainer on 2026-11-14.
-Scientific profiles, API/schema details and executed qualification remain pending.
+The first bounded native ionic inspection profile exists; full scientific,
+diagram API/layout and graphical qualification remain pending.
 The [living plan](IMPLEMENTATION_PLAN.md) owns implementation states.
 
 The [shared adoption notice](https://github.com/uibcdf/molsyssuite/issues/199#issuecomment-6886729818)
@@ -266,3 +267,13 @@ The [MolSysMT API](https://github.com/uibcdf/molsysmt/blob/main/devguide/interac
 [Viewer consumer contract](https://github.com/uibcdf/molsysviewer/blob/main/devguide/interactions_compatibility_contract.md)
 and [ProLIF examples](https://prolif.readthedocs.io/en/stable/notebooks/md-ligand-protein.html)
 are source references, not evidence of an executed MolSysSketcher integration.
+
+## Received native inspection increment (2026-11-15)
+
+The [finite MolSysMT profile](MOLSYSMT_INTERACTIONS_PROFILE.md) now implements
+owner-native ionic page receiving with role-bearing participants, exact declared
+parent/source bindings, method/producer retention, PBC images and explicit
+coverage. Python verifies physical records through PyUnitWizard; TypeScript
+retains them opaquely pending the supported browser reader. This is I1.2/I1.4
+partial progress, with no graphical diagram or production host profile. The
+remaining requirements above retain their scope.

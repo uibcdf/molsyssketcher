@@ -1,6 +1,6 @@
 # Current checkpoint
 
-Updated: **2026-11-15**. Current milestone: molecular SVG navigation and received internal P2.5 experiment.
+Updated: **2026-11-15**. Current milestone: first native MolSysMT interaction inspection, alongside the molecular SVG surface.
 
 ## Product direction
 
@@ -44,17 +44,17 @@ Package version `0.0.0` is a private tooling placeholder, not a release decision
 | --- | --- |
 | Shared foundation | partial: executable supplied-document/reference/controller subset; toolchain and license received; formal admission and actual scientific receiving pending |
 | Molecular View | partial: first measured SVG surface and finite real-browser/native drawing controls; full exploration/Qt/scientific acceptance pending |
-| Interaction View | todo: planned native projection, two diagram modes, investigation and domain profiles |
+| Interaction View | partial: bounded native ionic page inspection; two diagram modes, investigation and domain profiles remain pending |
 | Production editor | todo: final major capability after exploration foundations |
 
 ## Integrated plan
 
-The ledger has **69 microsteps: 7 done, 19 partial and 43 todo**.
+The ledger has **69 microsteps: 7 done, 21 partial and 41 todo**.
 
 Completed items P0.1, P0.2, P0.3, P0.7 and P0.8 are documentation/source-review
 work only. P0.5 and the bounded P2.5 architectural experiment are complete.
 P0.4/P0.6, P1.1/P1.4/P1.6/P1.7/P1.8 and
-I1.1/P5.3 are partial, with remaining acceptance named in the ledger. P1.2/P1.3/P1.5
+I1.1/I1.2/I1.4/P5.3 are partial, with remaining acceptance named in the ledger. P1.2/P1.3/P1.5
 are partial after actual native RDKit preparation/round-trip receiving.
 P2.1–P2.4, P3.1/P3.4 and P4.1 are now partial after the finite molecular SVG
 increment. Counts do not
@@ -101,7 +101,7 @@ dated historical record, not a live plan counter.
 
 Documentation checks cover local file/anchor links, task IDs/status counts,
 decision/readiness consistency, historical-record preservation and whitespace.
-`npm run check` executes canonical version/lock consistency, strict types, source formatting, 31 synthetic/real-provider-fixture
+`npm run check` executes canonical version/lock consistency, strict types, source formatting, 39 synthetic/real-provider-fixture
 document/controller/scene tests and local link/anchor/ledger checks, plus six
 separately compiled internal experiment tests. `npm run pack:check`
 checks the local tarball's contents, offline independent consumer imports,
@@ -233,14 +233,44 @@ browser artifacts are recorded in the owning issue. P2.5 is done in its stated
 architectural scope. No production editor, native interaction journey, delivery
 gate or public package is qualified by this experiment.
 
+## Received first native interaction inspection
+
+[Component #7](https://github.com/uibcdf/molsyssketcher/issues/7) adds a bounded
+source-development adapter for actual MolSysMT ionic results and public
+immutable TypeScript page receiving/inspection. Native method/profile, producer,
+execution, analysis-local identifiers, roles, original units, PBC images,
+coverage and caller-declared exact parent/atom/frame bindings are retained.
+Single-frame pages distinguish evaluated-empty, unevaluated and partial scope,
+including last and zero-limit pages. Failed/stale replacement preserves accepted
+inspection through the shared controller.
+
+Seven actual native controls include analytical 0.3 nm contacts and a 0.2 nm
+periodic contact. Eighteen Python tests use pytest-receptor and explicit
+PyUnitWizard field/unit/seal handshakes; eight new Node tests receive recorded
+pages and fresh native output also crosses the built public boundary. Host
+nondefault diagnostics/unit policies are preserved. Source tools remain unshipped.
+The browser retains quantity records opaquely: a supported reader is requested in
+[PyUnitWizard #159](https://github.com/uibcdf/pyunitwizard/issues/159).
+No interaction drawing or browser quantity decoding is claimed.
+
+The [profile](MOLSYSMT_INTERACTIONS_PROFILE.md) and
+[local receipt](evidence/molsysmt_interactions_20261115.json) separate the local
+source HEAD, older runtime stamp and pre-existing native binary hash. CI builds
+the exact provider source in a disposable prefix and retains actual origin and
+fresh-page artifacts; exact candidate receiving is recorded in issue #7.
+I1.2/I1.4 are partial. Real compound/mediated/native-complex profiles, two-mode
+composition, live parent invalidation, browser/Qt transport and delivery gates
+remain pending.
+
 ## Resume here
 
 1. P0.4: resolve the two-pillar ownership/admission and TypeScript-first
    repository profile under [suite #199](https://github.com/uibcdf/molsyssuite/issues/199).
 2. Extend the real RDKit preparation route into a received host/transport and
    finish the needed finite operation/loss/corpus and measured-budget decisions.
-3. Receive the first owner-native interaction result with actual molecular
-   parent/participant/coverage context; preserve independent pillar progress.
+3. Extend owner-native interaction receiving with actual molecular
+   parent/participant/coverage context beyond the received ionic inspection profile;
+   add native compound/directed/mediated controls and first two-mode composition.
 4. Continue crowded-structure controls and scientific layers, and reuse prepared
    fragments for ligand-centered/two-sided composition. Preserve the now-received
    P2.5 generation/selection seams while keeping production editing in P6.

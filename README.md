@@ -67,3 +67,11 @@ The [internal edit/undo experiment](devguide/EDITOR.md#received-p25-experiment-2
 receives the bounded P2.5 architectural checks with native RDKit fixtures and
 actual browser restoration. `npm run demo` links to it. Experimental tooling is
 excluded from distribution; production editing remains the final stage.
+
+The [first native interaction profile](devguide/MOLSYSMT_INTERACTIONS_PROFILE.md)
+receives bounded MolSysMT ionic pages with exact declared parent mappings,
+role-bearing participants, native provenance and explicit coverage. In a
+provisioned source environment, `npm run test:interactions` exercises actual
+native calculations and Python quantity verification. TypeScript retains
+quantity records opaquely; interaction drawings and production transport
+remain pending.

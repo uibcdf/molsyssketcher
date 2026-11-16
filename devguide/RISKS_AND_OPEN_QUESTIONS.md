@@ -59,6 +59,13 @@ prerequisites.
 
 ## Final review disposition
 
+The first native ionic inspection retains PyUnitWizard quantity records
+opaquely in TypeScript. The supported browser field/unit/seal receiving route
+is requested in [PyUnitWizard #159](https://github.com/uibcdf/pyunitwizard/issues/159).
+Python handshakes are received; independent browser decoding/verification and
+graphical quantity inspection remain pending. See the
+[finite native profile](MOLSYSMT_INTERACTIONS_PROFILE.md).
+
 The last consistency review clarifies delivery-gate subsets, live versus
 supplied-result qualification and bounded pending work. These are acceptance
 refinements within existing tasks, not additional features. The remaining

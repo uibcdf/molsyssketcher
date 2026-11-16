@@ -1,4 +1,4 @@
-name: Core and molecular SVG
+name: Core and native providers
 
 on:
   push:
@@ -73,4 +73,48 @@ jobs:
         with:
           name: molecular-svg-evidence
           path: test-results/svg
+          retention-days: 14
+
+  molsysmt-provider:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    defaults:
+      run:
+        shell: bash -el {0}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Receive the exact native provider source
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          repository: uibcdf/molsysmt
+          ref: 6deb0200cd7e384128eded46caaf751a57e65bc6
+          fetch-depth: 0
+          path: .providers/molsysmt
+      - uses: mamba-org/setup-micromamba@f457c30a868e4760d3a6fcea5f25dc655b8edf39 # v3.2.1
+        with:
+          environment-file: devtools/conda-envs/molsysmt-provider-py314.yaml
+          cache-environment: true
+      - run: npm install --global npm@11.19.1
+      - run: npm ci
+      - run: npm run build
+      - name: Build the native provider in the disposable CI prefix
+        env:
+          CARGO_BUILD_JOBS: "2"
+        run: |
+          test "$(git -C .providers/molsysmt rev-parse HEAD)" = 6deb0200cd7e384128eded46caaf751a57e65bc6
+          python -m pip install --no-deps --no-build-isolation --editable .providers/molsysmt
+          python -m pip check
+      - name: Record actual source, runtime stamp and native binary separately
+        run: python devtools/check_molsysmt_origin.py .providers/molsysmt test-results/interactions/origin.json --installed-support
+      - run: ruff check devtools/molsysmt_adapter devtools/check_molsysmt_origin.py
+      - run: ruff format --check devtools/molsysmt_adapter devtools/check_molsysmt_origin.py
+      - run: python -m pytest --receptor=ci devtools/molsysmt_adapter/tests
+      - name: Retain fresh native pages with their actual producer metadata
+        run: python -m devtools.molsysmt_adapter.corpus --output test-results/interactions/native-pages.json
+      - name: Retain finite native receiving evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: molsysmt-interaction-evidence
+          path: test-results/interactions
           retention-days: 14

@@ -1,0 +1,33 @@
+# Disposable source-provider CI closure, never applied to the shared workspace.
+name: molsyssketcher-molsysmt-provider
+channels:
+  - uibcdf
+  - conda-forge
+dependencies:
+  - python=3.14.10
+  - nodejs=24.22.1
+  - argdigest=0.17.1
+  - depdigest=0.15.2
+  - smonitor=0.23.0
+  - pyunitwizard=0.29.5
+  - pytest=9.2.0
+  - pytest-receptor=1.1.0
+  - numpy>=1.26
+  - pandas>=2.2.2
+  - jinja2>=3.1.2
+  - h5py>=3.11
+  - networkx>=3.3
+  - tqdm>=4.65
+  - matplotlib>=3.8.4
+  - py-mmcif>=1.1.1
+  - scipy
+  - molsysviewer
+  - setuptools>=77.0.3
+  - versioningit>=3
+  - setuptools-rust>=1.10
+  - rust=1.97.1
+  - c-compiler
+  - cxx-compiler
+  - pip
+  - pip:
+      - ruff==0.16.5

@@ -5,7 +5,8 @@ Implemented under [MolSysSketcher #1](https://github.com/uibcdf/molsyssketcher/i
 JSON documents. The web runtime does not parse chemistry; its first
 [molecular SVG surface](MOLECULAR_SVG_PROFILE.md) renders this prepared profile. The separate
 [RDKit source route](RDKIT_PROVIDER.md) now prepares actual molecular controls
-for this boundary. Owner-native interaction reading remains pending. The private package's
+for this boundary. A separate [native ionic page route](MOLSYSMT_INTERACTIONS_PROFILE.md)
+now receives bounded interaction inspection; diagrams remain pending. The private package's
 `0.0.0` is a build placeholder, not a selected public release.
 
 ## Public surface and example
