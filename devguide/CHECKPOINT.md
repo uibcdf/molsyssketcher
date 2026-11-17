@@ -1,6 +1,6 @@
 # Current checkpoint
 
-Updated: **2026-11-15**. Current milestone: first supplied ligand-centered/interface-centered SVG composition.
+Updated: **2026-11-16**. Current milestone: first supplied ligand-centered/interface-centered SVG composition.
 
 ## Product direction
 
@@ -42,7 +42,7 @@ Package version `0.0.0` is a private tooling placeholder, not a release decision
 
 | Readiness axis | State |
 | --- | --- |
-| Shared foundation | partial: executable supplied-document/reference/controller subset; toolchain and license received; formal admission and full scientific/host receiving pending |
+| Shared foundation | partial: executable supplied-document/reference/controller subset; toolchain and license received; published registration and TypeScript engineering adoption received; full artifact/scientific/host receiving pending |
 | Molecular View | partial: first measured SVG surface and finite real-browser/native drawing controls; full exploration/Qt/scientific acceptance pending |
 | Interaction View | partial: first two-mode supplied SVG composition and native participant inspection; full grammar, investigation, real-complex and host receiving remain pending |
 | Production editor | todo: final major capability after exploration foundations |
@@ -322,8 +322,10 @@ receiving retain their remaining acceptance. No primary-view gate is complete.
 
 ## Resume here
 
-1. P0.4: resolve the two-pillar ownership/admission and TypeScript-first
-   repository profile under [suite #199](https://github.com/uibcdf/molsyssuite/issues/199).
+1. P0.4: retain the remaining original Conda archive/profile, installed visual
+   consumer and resource/host receiving under [component #8](https://github.com/uibcdf/molsyssketcher/issues/8)
+   and [suite #199](https://github.com/uibcdf/molsyssuite/issues/199). Published
+   registration and TypeScript engineering adoption are separately recorded below.
 2. Extend the real RDKit preparation route into a received host/transport and
    finish the needed finite operation/loss/corpus and measured-budget decisions.
 3. Extend owner-native interaction receiving with actual molecular
@@ -343,7 +345,7 @@ has been delivered in the existing suite proposal, superseding its earlier
 optional-module assessment.
 
 - [MolSysSuite #199](https://github.com/uibcdf/molsyssuite/issues/199) owns the
-  proposed component split/admission. Its earlier optional-module report is
+  shared TypeScript admission and generic-resource contract. Its earlier optional-module report is
   historical; the maintainer's local two-pillar product decision is accepted.
 - [Sabueso #154](https://github.com/uibcdf/sabueso/issues/154) owns the first
   consumer/0.16.0 target. Exact finite candidate acceptance remains explicit.
@@ -352,7 +354,7 @@ optional-module assessment.
 - Native interaction provider contracts and experimental limits remain owned
   by MolSysMT and the relevant domain components.
 
-The canonical suite registry/guide inspection at
+The historical canonical suite registry/guide inspection at
 [e4d97ba1](https://github.com/uibcdf/molsyssuite/tree/e4d97ba1ac5341aa2d1cd50b56096098e59bb940)
 did not register MolSysSketcher. Local product acceptance does not establish
 formal membership, publication or qualified cross-component support.
@@ -362,10 +364,12 @@ The first implementation is tracked in
 [central handoff](https://github.com/uibcdf/molsyssuite/issues/199#issuecomment-6890500934)
 records the missing TypeScript-first admission/profile at inspected central
 checkout `b9852d973e96613a68cab7278491ff647bfd0b7d`.
-Root instructions, the local reporting/check route and
-[source/tool locations](WORKSPACE.md) exist; registered guide synchronization and
-central profile receiving remain pending. No sibling code, shared environment,
-registry or release was changed. Project-local npm development tools are installed.
+Those inspected missing-registration/profile observations are historical. Published
+policy-v1.6.0 now registers the component, and all eight guides were delivered in
+eaebcefd4259ebf5b06c794da4478429cdc84a3d. The current #8 adoption receives the actual
+caller, mandatory instructions, badges and offline lifecycle. See the dated receiving
+below for executed controls and remaining original artifact/profile acceptance.
+No shared prefix, provider input, runtime implementation or release is changed.
 
 The maintainer authorizes direct commits/pushes to this component and issue
 publication in UIBCDF; third-party issue publication requires explicit permission
@@ -386,3 +390,35 @@ At the 2026-11-14 review no product feature or microstep was added, and no runti
 validation was performed. Its 69-step, 5-done/64-pending counts are historical.
 The current ledger above records the first executable foundation; the original
 receipts and archived assessment remain unchanged. No G-M/G-I/G-J gate is complete.
+
+
+## TypeScript engineering adoption — 2026-11-16
+
+[Component #8](https://github.com/uibcdf/molsyssketcher/issues/8) and the
+[partial local record](pending_proposals/typescript_adoption.md) receive the actual
+immutable `check-typescript-repository.yaml@policy-v1.6.0` caller, mandatory
+root/nested common-guide route, three badges and the common report lifecycle.
+The official frozen generator supplies the administrative Python index/validator
+and compiler-AST Node guard resolver unchanged; the existing documentation checker
+continues to protect links, anchors and the 69-task ledger. The historical
+assessment retains its complete original prose, with dated lifecycle mapping.
+
+The [local receipt](evidence/typescript_adoption_20261116.json) records six initial
+conformance findings becoming zero, eight current canonical relationships and
+14 positive/negative reporting controls. Exact task-only Node24.22.1/npm11.19.1
+run strict types, formatting, 60 source tests and six internal experiment tests,
+documentation and generated report checks successfully. The private packed
+37-file ESM/declaration consumer, relocated-prefix layout and supplied/stored-data
+examples pass. The containing commit is the candidate identity; actual hosted
+receiving is returned through issue #8 and central coordination.
+
+The bounded serial engineering checks observe over17GiB available RAM and over11GiB
+free scratch. These are observations, not reservations or enforceable aggregate
+protection. Scientific/provider/browser campaigns and shared-prefix changes are
+not selected locally. Normal automatic CI preserves its independent source,
+provider and browser outcomes; no historical execution is relabelled as current.
+
+P0.4 and issue #8 remain partial for the original component Conda archive/profile,
+installed visual consumers and resource/host/platform/public acceptance. The ledger
+remains69 microsteps:7done,29partial,33todo. Both primary views retain independent
+acceptance, and production chemical editing remains the final stage.

@@ -1,6 +1,6 @@
 # Living implementation plan
 
-Updated: 2026-11-15. Current milestone: first supplied ligand-centered/interface-centered SVG composition.
+Updated: 2026-11-16. Current milestone: first supplied ligand-centered/interface-centered SVG composition.
 
 This is the single microstep ledger for two equally important product pillars:
 Molecular View and Interaction View. Shared work is implemented once. Both
@@ -48,15 +48,15 @@ P6 is the final production capability.
 | P0.1 | done | Purpose, consumers and scientific boundaries recorded in PROJECT.md |
 | P0.2 | done | Architecture, document/provider contracts, editor path and tradeoffs recorded in the guide |
 | P0.3 | done | Staged plan, decisions, risks and continuation checkpoint recorded and documentation links checked |
-| P0.4 | partial | Local instructions/reporting route and central handoff exist; formal admission, TypeScript-first profile and registered guide synchronization remain in suite #199 |
+| P0.4 | partial | Published registration, eight canonical guides and TypeScript engineering adoption are received under component #8; original artifact/profile, installed visual/host and resource receiving remain explicit with suite #199 |
 | P0.5 | done | MIT selected by maintainer; Node/npm, TypeScript/Prettier pins, lockfile, ESM/declarations, executable local checks and clean packed-consumer route committed under component #1 |
 | P0.6 | partial | Supplied-input/provider matrices, 12 native molecular and 15 native interaction pages plus ingress/queue bounds exist; public complex/interface corpora, full operation matrices and accepted measured budgets remain pending |
 | P0.7 | done | Source-backed conceptual review and prepared-depiction/transaction requirements recorded in CONCEPTUAL_REVIEW.md |
 | P0.8 | done | Maintainer's equal-pillar direction, complete interaction contract, separate readiness and integrated work ledger recorded |
 
 Review the official starter/profile without inventing an unused Python package
-for a TypeScript-first component. Formal admission remains independent of this
-local product decision.
+for a TypeScript-first component. Published registration and engineering adoption
+remain independent of the local product decision and full delivery qualification.
 
 ## P1 — Shared documents and scientific boundaries (partial)
 

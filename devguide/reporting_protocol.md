@@ -2,17 +2,32 @@
 
 The common lifecycle is owned by
 [MolSysSuite](https://github.com/uibcdf/molsyssuite/blob/main/devguide/reporting_protocol.md).
-Formal TypeScript-first admission and the centrally received non-Python selector
-profile remain in [suite #199](https://github.com/uibcdf/molsyssuite/issues/199).
-This local route supports current implementation without claiming admission.
+Published policy-v1.6.0 registers this component and provides its immutable native
+TypeScript engineering gate. Component #8 receives actual adoption and the remaining
+original artifact/profile acceptance; suite #199 owns the shared contract.
 
-Use `uibcdf/molsyssketcher#<number>` for component implementation and provider
-repositories for provider behavior. Check existing owning issues before filing.
-Issue #1 owns the first toolchain/document increment. Plans and checkpoints can
-link that issue directly; no queued proposal document is required for a plan.
-If a queued bug/proposal is introduced, open its issue first and receive the
-common front matter, index and permanent archive lifecycle. Preserve the current
-historical archive and its dated evidence.
+Use `uibcdf/molsyssketcher#<number>` for component work and provider repositories
+for provider behavior. Every queued or archived report has a local owning issue.
+An incoming issue or a maintained plan need not acquire a queued report.
+Open the owning issue before adding a report from `templates/report.md`.
+Open bugs live in `pending_bugs/`, proposals in `pending_proposals/` and all
+resolved, withdrawn or superseded records in permanent `archive/`.
+Use the common front matter and statuses. A blocked report names `blocked_by`;
+a resolved report names a relevant durable `guard` or `normative` document and
+an ISO closing date. Move closed reports to the archive and synchronize the
+owning issue's outcome. Archive, never delete; append dated historical corrections.
+
+Regenerate and validate metadata/identity/status/guard/index consistency offline:
+
+```bash
+python devtools/devguide_index.py
+npm run check:reports
+```
+
+`check:reports` runs the policy-generated administrative Python validator/index
+checker; `check:docs` retains the existing Markdown link/anchor and task-ledger
+checks. `npm run check` executes both. Python 3.14 is administrative tooling,
+not a distributed Python package, scientific runtime or facade.
 
 The maintainer authorizes issue publication in UIBCDF repositories and direct
 commits/pushes to this component. Third-party issue publication requires prior
@@ -84,3 +99,15 @@ received by `python -m devtools.check_interaction_svg <path>/drawings.json`,
 reusing the established RDKit primitive oracle. CI runs both stored diagrams and
 fresh diagrams generated after the exact native provider build. See the
 [SVG profile](INTERACTION_SVG_PROFILE.md) for their independent finite scopes.
+
+## Local Node guard profile
+
+This TypeScript starter uses one regular module selector under `tests/`, ending
+in `.test.mjs`. `devtools/check-node-guard.mjs` parses the module with the pinned
+TypeScript compiler, resolves an imported `node:test` binding and at least one
+top-level named static test call. Comments, unrelated calls, dynamic wrappers,
+symlinks, traversal and shell/node suffixes do not establish addressability.
+Run `npm run build` and `node --test --test-isolation=none <module>` for actual
+execution; static addressability never proves relevance or scientific validity.
+Administrative Python/index tooling calls this resolver after npm ci, offline.
+It is not shipped or installed as a Python package or scientific runtime.

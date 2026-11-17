@@ -1,6 +1,6 @@
 # Working on this developer guide
 
-Read root AGENTS.md, the repository README, this directory's README, CHECKPOINT.md and
+Read [../AGENTS.md](../AGENTS.md), [reporting_protocol.md](reporting_protocol.md), the repository README, this directory's README, CHECKPOINT.md and
 IMPLEMENTATION_PLAN.md before changing the project plan. Consult the
 [canonical MolSysSuite guide](https://github.com/uibcdf/molsyssuite/blob/main/MOLSYSSUITE_GUIDE.md)
 for shared ownership, reporting and admission rules.
@@ -20,7 +20,10 @@ Route provider defects to their owners and cross-link consumer work. Existing
 internal reporting authorization retains its scope; publication outside UIBCDF
 requires explicit permission for the destination, action and concrete material.
 
-Root instructions and a local TypeScript reporting/check route now exist;
-read reporting_protocol.md. Registered guide synchronization and central
-profile receiving remain pending admission work. This directory file does not establish
-formal membership or replace that work.
+Follow [the common working-instruction rules](../MOLSYSSUITE_GUIDE.md#durable-working-instructions).
+Queued reports use `pending_bugs/` and `pending_proposals/`; permanent history
+uses `archive/`. Start from `templates/report.md`, regenerate indexes with
+`python devtools/devguide_index.py`, then run `npm run check:reports`. Preserve
+archived claims and append dated corrections. Published registration and eight
+canonical guide copies are separate from executed engineering, product, resource
+and original/public artifact receiving under component #8.

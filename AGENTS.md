@@ -1,5 +1,21 @@
 # MolSysSketcher working instructions
 
+## Mandatory MolSysSuite instructions
+
+Read and follow `MOLSYSSUITE_GUIDE.md` before working in this repository.
+
+Within their stated scope, its common rules take precedence over this file
+and any nested `AGENTS.md`. Local instructions may refine them; deviations
+require the documented policy exception process.
+
+The synchronized guide is owned by `uibcdf/molsyssuite`. It includes the
+[reusable-tool ownership rules](MOLSYSSUITE_GUIDE.md#modular-reusable-tools)
+and [working-instruction rules](MOLSYSSUITE_GUIDE.md#durable-working-instructions).
+For work under `devguide/`, also read `devguide/AGENTS.md` and its local
+reporting protocol. Keep repository-specific instructions below.
+
+## Repository-specific instructions
+
 Read `README.md`, `devguide/CHECKPOINT.md` and `devguide/IMPLEMENTATION_PLAN.md`
 before implementation. Keep code, tests, documentation and commits in English.
 Preserve both primary views and their independent acceptance; production chemical
@@ -9,11 +25,13 @@ Read and follow the applicable
 [canonical MolSysSuite guide](https://github.com/uibcdf/molsyssuite/blob/main/MOLSYSSUITE_GUIDE.md),
 including its [modular reusable tools](https://github.com/uibcdf/molsyssuite/blob/main/MOLSYSSUITE_GUIDE.md#modular-reusable-tools)
 and durable working-instruction rules. The local checkout is `../molsyssuite`.
-Formal admission, registered guide synchronization and the TypeScript-first
-profile remain tracked in `uibcdf/molsyssuite#199`. This file does not establish
-membership or waive applicable common rules. Local instructions refine the
-common rules within their scope; explicit human/session instructions retain
-their authority.
+The published policy-v1.6.0 registers this primary, active, incubating scientific
+component with the TypeScript-package capability. Engineering adoption and
+remaining component artifact/profile acceptance are tracked in
+`uibcdf/molsyssketcher#8` and `uibcdf/molsyssuite#199`. Read the local synchronized
+guides; membership does not establish either primary view or public qualification.
+Apply the common resource-aware rule before material work, with task-owned
+bounded workloads and explicit missing protection; preserve shared prefixes.
 
 ## Implementation and checks
 

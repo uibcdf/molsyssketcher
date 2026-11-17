@@ -9,3 +9,6 @@ tests/data/molsysmt-interactions.json
 tests/data/molsysmt-participants.json
 tests/data/interaction-diagrams.json
 .experiment/
+
+# Canonical source-owned guides must retain exact synchronized bytes.
+*GUIDE.md

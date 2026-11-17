@@ -1,5 +1,9 @@
 # MolSysSketcher
 
+[![MolSysSuite: Scientific Component](https://img.shields.io/badge/MolSysSuite-scientific%20component-0b7285?labelColor=24292f)](https://github.com/uibcdf/molsyssuite/blob/main/devguide/repository_badges.md#scientific-component)
+[![MolSysSuite policy](https://github.com/uibcdf/molsyssketcher/actions/workflows/molsyssuite-policy.yml/badge.svg?branch=main)](https://github.com/uibcdf/molsyssketcher/actions/workflows/molsyssuite-policy.yml)
+[![License](https://img.shields.io/github/license/uibcdf/molsyssketcher)](https://github.com/uibcdf/molsyssketcher/blob/main/LICENSE)
+
 An extensible scientific 2D component with two primary capabilities:
 molecular representation/exploration and molecular interaction diagrams.
 Chemical editing follows in a later stage.
@@ -24,9 +28,11 @@ production provider/host adapters and full view qualification remain pending.
 An explicit [RDKit source-development route](devguide/RDKIT_PROVIDER.md) now
 prepares a finite real-provider corpus for this foundation; it is separate from
 the shipped web runtime and the future production host adapter.
-There is no published package, selected release version or qualified platform. Formal
-MolSysSuite admission remains pending under
-[MolSysSuite #199](https://github.com/uibcdf/molsyssuite/issues/199).
+There is no published package, selected release version or qualified platform.
+Published policy-v1.6.0 registers MolSysSketcher as an incubating TypeScript-first
+scientific component. [Component #8](https://github.com/uibcdf/molsyssketcher/issues/8)
+tracks engineering adoption and the remaining original artifact/profile receiving;
+[MolSysSuite #199](https://github.com/uibcdf/molsyssuite/issues/199) owns the shared contract.
 
 Start with the [developer guide](devguide/README.md), the
 [current checkpoint](devguide/CHECKPOINT.md) and the

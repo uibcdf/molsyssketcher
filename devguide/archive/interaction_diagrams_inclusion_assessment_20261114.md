@@ -1,3 +1,17 @@
+---
+summary: Historical optional interaction-diagram assessment superseded by equal-pillar direction.
+issue: uibcdf/molsyssketcher#8
+status: superseded
+opened: 2026-11-14
+closed: 2026-11-14
+verification: inspected
+area: [architecture, interaction-view]
+guard:
+normative: devguide/INTERACTION_DIAGRAMS.md
+blocked_by: []
+supersedes: []
+---
+
 # Historical interaction-diagram inclusion assessment
 
 Superseded on 2026-11-14 by the maintainer decision to make interaction
@@ -256,3 +270,10 @@ Before adoption, select the first consumer journey, admitted native provider
 profile, multi-participant visual contract, layout comparison and release scope.
 Core viewer implementation, formal component admission and their existing
 acceptance remain separate. No public support or performance claim is made.
+
+## Lifecycle receiving note - 2026-11-16
+
+The metadata and local issue #8 mapping were added during administrative lifecycle
+receiving. The dates describe the original assessment and its supersession, not
+the creation of issue #8. The original assessment above remains unchanged; its
+central #199 references are historical provenance, not current membership state.

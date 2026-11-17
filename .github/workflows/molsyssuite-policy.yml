@@ -1,0 +1,7 @@
+name: TypeScript policy
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  policy:
+    uses: uibcdf/molsyssuite/.github/workflows/check-typescript-repository.yaml@policy-v1.6.0

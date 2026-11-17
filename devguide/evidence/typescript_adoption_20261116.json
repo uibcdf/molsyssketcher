@@ -1,0 +1,363 @@
+{
+  "owner": "uibcdf/molsyssketcher#8",
+  "observed_local_date": "2026-11-16",
+  "source_basis": "eaebcefd4259ebf5b06c794da4478429cdc84a3d",
+  "candidate_identity": "The containing commit is the candidate. Hosted exact-source evidence is returned to issue #8 and central receiving; it is not preclaimed here.",
+  "policy": {
+    "tag": "policy-v1.6.0",
+    "tag_object": "4d20cfc2e6d2aff783561410f23f69d660bca92e",
+    "source": "698fbdfd4b0a53b6b7cc49815e1102cd9c117749",
+    "generator": "actual frozen bootstrap_typescript.py, staged separately; no generated implementation replaced the component",
+    "caller": ".github/workflows/check-typescript-repository.yaml",
+    "copied_tool_sha256": {
+      "devtools/devguide_reports.py": "c3c416640b437f81435e7e64e6bbd294b99d6e15cb7ab6ead524ccf66b5affc6",
+      "devtools/devguide_index.py": "85c00d4dc3afbff09f8adf8f96fb80d20c30354a83f6bed337be8c2ba0834e5e",
+      "devtools/check-node-guard.mjs": "ece7d7e553ffd19cce0dd459f6310b8ce85cfe99168b9a27234f713ef28a0bd8"
+    }
+  },
+  "conformance": {
+    "before": [
+      {
+        "code": "IDENTITY_BADGE",
+        "message": "README.md lacks the canonical identity badge"
+      },
+      {
+        "code": "POLICY_BADGE",
+        "message": "README.md lacks the canonical policy badge"
+      },
+      {
+        "code": "LICENSE_BADGE",
+        "message": "README.md lacks the canonical license badge"
+      },
+      {
+        "code": "LATEST_POLICY",
+        "message": "adopt latest published policy policy-v1.6.0; observed <missing>"
+      },
+      {
+        "code": "TYPESCRIPT",
+        "message": "missing applicable native command: check:reports"
+      },
+      {
+        "code": "TYPESCRIPT",
+        "message": "actual immutable current TypeScript policy caller is required"
+      }
+    ],
+    "after": [],
+    "after_scope": "actual frozen full check_repository.py; exit0; official selected canonical synchronizer8/8 current"
+  },
+  "toolchain": {
+    "node": {
+      "version": "24.22.1",
+      "url": "https://nodejs.org/dist/v24.22.1/node-v24.22.1-linux-x64.tar.xz",
+      "sha256": "6c172a9ab6718f7b801fb5a7bd486af2ee5e32758086a04b84fcce2aa77095e6",
+      "verification": "matches official SHASUMS256.txt"
+    },
+    "npm": {
+      "version": "11.19.1",
+      "url": "https://registry.npmjs.org/npm/-/npm-11.19.1.tgz",
+      "integrity": "sha512-ztsxKxt/kkIaAs+2i0GU6I+DRmUdrNasxTZKJe9TCdSjKxlhah/4r/hl5ygMD6XAg1qZ9c2TNomR4qgOydp10g=="
+    },
+    "scope": "task-only toolchain; shared Node24.21/npm12.2 and all shared prefixes unchanged"
+  },
+  "native_results": [
+    {
+      "command": [
+        "node",
+        "--version"
+      ],
+      "exit_code": 0,
+      "seconds": 1.0,
+      "log": "local-0.log",
+      "log_sha256": "249baf635bb43877fcb9422efa1a4904b702d0ddf14d3949b7cd0950d5229c81",
+      "log_bytes": 9,
+      "stop": null,
+      "min_available_ram_bytes": 19114258432,
+      "min_scratch_free_bytes": 12294946816
+    },
+    {
+      "command": [
+        "npm",
+        "--version"
+      ],
+      "exit_code": 0,
+      "seconds": 1.0,
+      "log": "local-1.log",
+      "log_sha256": "acb90e420303a6e949fec90f74faf64cc372894b3964e310a261689b898f41b0",
+      "log_bytes": 8,
+      "stop": null,
+      "min_available_ram_bytes": 19115081728,
+      "min_scratch_free_bytes": 12294938624
+    },
+    {
+      "command": [
+        "node",
+        "node_modules/prettier/bin/prettier.cjs",
+        "--write",
+        "AGENTS.md",
+        ".github/workflows/molsyssuite-policy.yml"
+      ],
+      "exit_code": 0,
+      "seconds": 1.0,
+      "log": "local-2.log",
+      "log_sha256": "2eff027456060edddee34e2c462a1f8d62ea78a643826456fff93190f7ed6913",
+      "log_bytes": 61,
+      "stop": null,
+      "min_available_ram_bytes": 19112574976,
+      "min_scratch_free_bytes": 12294934528
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "check"
+      ],
+      "exit_code": 0,
+      "seconds": 13.01,
+      "log": "local-3.log",
+      "log_sha256": "56498501c97f584fc45ef4be9d73522d1f287cfa2d74a34a657d7801d049d69e",
+      "log_bytes": 8292,
+      "stop": null,
+      "min_available_ram_bytes": 18552909824,
+      "min_scratch_free_bytes": 12294627328
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "pack:check"
+      ],
+      "exit_code": 0,
+      "seconds": 6.0,
+      "log": "local-4.log",
+      "log_sha256": "c00b72fc299ce985661c25db28278a6d930dbf2d7354f1fb1b5fdaaf089907e7",
+      "log_bytes": 541,
+      "stop": null,
+      "min_available_ram_bytes": 18580037632,
+      "min_scratch_free_bytes": 12294164480
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "pack:conda:check"
+      ],
+      "exit_code": 0,
+      "seconds": 3.0,
+      "log": "local-5.log",
+      "log_sha256": "b43e7b2bd8a7848cb6d6bf7899318c764327d351c92c56a8a9fd8ef566a4b2dd",
+      "log_bytes": 365,
+      "stop": null,
+      "min_available_ram_bytes": 18569097216,
+      "min_scratch_free_bytes": 12294594560
+    },
+    {
+      "command": [
+        "npm",
+        "run",
+        "example"
+      ],
+      "exit_code": 0,
+      "seconds": 3.0,
+      "log": "local-6.log",
+      "log_sha256": "af3ffcf7d29117037a24c6560470d6e257049c0b928c430e34281ec145e7a27f",
+      "log_bytes": 8623,
+      "stop": null,
+      "min_available_ram_bytes": 18574082048,
+      "min_scratch_free_bytes": 12294590464
+    }
+  ],
+  "native_scope": {
+    "node_source_tests": 60,
+    "editor_experiment_tests": 6,
+    "failures": 0,
+    "documentation": "38 Markdown files,69 unique tasks;7done29partial33todo",
+    "private_tarball": "37 files, independent offline ESM/declaration consumer",
+    "conda_layout": "37 files; staging, digests, relocated prefix and installed ESM identity/import; no Conda archive built/installed",
+    "examples": "supplied documents plus stored native-interaction pages, not fresh provider calculations"
+  },
+  "reporting_controls": [
+    {
+      "control": "active local issue accepted",
+      "expected": "accept",
+      "errors": [],
+      "passed": true
+    },
+    {
+      "control": "foreign owning issue refused",
+      "expected": "reject",
+      "errors": [
+        "devguide/pending_proposals/probe.md: issue must be uibcdf/molsyssketcher#<positive integer>"
+      ],
+      "passed": true
+    },
+    {
+      "control": "blocked without dependency refused",
+      "expected": "reject",
+      "errors": [
+        "devguide/pending_proposals/probe.md: blocked requires at least one blocked_by issue"
+      ],
+      "passed": true
+    },
+    {
+      "control": "closed report in pending refused",
+      "expected": "reject",
+      "errors": [
+        "devguide/pending_proposals/probe.md: closed reports belong in devguide/archive",
+        "devguide/pending_proposals/probe.md: resolved requires guard or normative"
+      ],
+      "passed": true
+    },
+    {
+      "control": "resolved without durable guard/normative refused",
+      "expected": "reject",
+      "errors": [
+        "devguide/archive/probe.md: resolved requires guard or normative"
+      ],
+      "passed": true
+    },
+    {
+      "control": "AST static",
+      "expected": "accept",
+      "errors": [],
+      "passed": true
+    },
+    {
+      "control": "AST comment",
+      "expected": "reject",
+      "errors": [
+        "devguide/archive/probe.md: Node guard does not resolve to a static node:test module"
+      ],
+      "passed": true
+    },
+    {
+      "control": "AST unrelated",
+      "expected": "reject",
+      "errors": [
+        "devguide/archive/probe.md: Node guard does not resolve to a static node:test module"
+      ],
+      "passed": true
+    },
+    {
+      "control": "AST dynamic",
+      "expected": "reject",
+      "errors": [
+        "devguide/archive/probe.md: Node guard does not resolve to a static node:test module"
+      ],
+      "passed": true
+    },
+    {
+      "control": "shell suffix refused",
+      "expected": "reject",
+      "errors": [
+        "devguide/archive/probe.md: Node guard does not resolve to a static node:test module"
+      ],
+      "passed": true
+    },
+    {
+      "control": "traversal refused",
+      "expected": "reject",
+      "errors": [
+        "devguide/archive/probe.md: Node guard does not resolve to a static node:test module"
+      ],
+      "passed": true
+    },
+    {
+      "control": "symlink refused",
+      "expected": "reject",
+      "errors": [
+        "devguide/archive/probe.md: Node guard does not resolve to a static node:test module"
+      ],
+      "passed": true
+    },
+    {
+      "control": "stale index detected",
+      "passed": true
+    },
+    {
+      "control": "regenerated index current",
+      "passed": true
+    }
+  ],
+  "canonical_guides": {
+    "source_heads": {
+      "molsyssuite": "16f8107d71ff7fe33aa8effa2ace084ea48655af",
+      "smonitor": "d12aea807bdc8fba961150fe46b1537133539092",
+      "argdigest": "75979f5adacc2012b131bf923d8b1c3b58457b5a",
+      "depdigest": "15d0902ba38990cab80912ac1b8b4050062059bd",
+      "pyunitwizard": "3d7b293480448bba080d4ba2d33bfae86d06eb2c",
+      "ackredit": "c427fc344759292a4c6565d6ea83054efb07a0fa",
+      "gh-run-receptor": "49939d0ebce117c8473fefab129f9db8a12c2b36",
+      "pytest-receptor": "5a30123f2b366fd7fe606d77294e232d4f835e89"
+    },
+    "copies": {
+      "ACKREDIT_GUIDE.md": {
+        "sha256": "b7206aa1d8627a53f57f816cf99359f31de203b1d49fe9195785695ce8411464",
+        "git_blob": "7934416172af42887eb6cbd2dc307a5f91be233c"
+      },
+      "ARGDIGEST_GUIDE.md": {
+        "sha256": "1bb69c596cabd5d504416534ea952bea5fc7f23e74dea118cee47a4d196b965c",
+        "git_blob": "5bd64e12edf7647d27dad65ac5affe1c40c61ce6"
+      },
+      "DEPDIGEST_GUIDE.md": {
+        "sha256": "fa2d1af5dc9a7bc5e583fce0920ef988b08edff884e709b1629a977e4230624c",
+        "git_blob": "7838763b039cba4aeb5df2d83151038eb872179f"
+      },
+      "GH_RUN_RECEPTOR_GUIDE.md": {
+        "sha256": "38cd0b08b8739196df5db0aecd8fd4ec1e8cec2d59f194b10c55a7847330c740",
+        "git_blob": "72c3f33f9ebcb18194aaa582ed9af43eedd4749a"
+      },
+      "MOLSYSSUITE_GUIDE.md": {
+        "sha256": "02737e0099e17f94e610334f944fce595c2ab23f0c415c01418726e6d7ee3d82",
+        "git_blob": "69704d02047b9126505884e11e18756cd47d1525"
+      },
+      "PYTEST_RECEPTOR_GUIDE.md": {
+        "sha256": "0ef80eac29d785d7431cac942d44eeadc81bf85ce2d9cfe89021c8970e2242f2",
+        "git_blob": "819c8a516d643fdb2601e474e1e4f3b840f29484"
+      },
+      "PYUNITWIZARD_GUIDE.md": {
+        "sha256": "2bebdab26b9f5ac70bafd35bc48522e1a07535953e2a1b8939e0a3feb6d5b860",
+        "git_blob": "e87d9c42ab67ce87a697cc8e3d11e576c86ae764"
+      },
+      "SMONITOR_GUIDE.md": {
+        "sha256": "f7e94a70c4f4344f018925587a4dc5f481822ce312c791300927e62dd794576b",
+        "git_blob": "c64fcf2d5854515e0f6e6e9d0a405c5054ff17b4"
+      }
+    },
+    "mutation": "none; exact canonical bytes preserved; formatter excludes *GUIDE.md"
+  },
+  "historical_archive": "Complete original assessment prose retained byte-for-byte, lifecycle front matter and dated mapping note added; original dates do not imply issue8 existed then.",
+  "resource_receiving": {
+    "loaded_policy_sha256": "02737e0099e17f94e610334f944fce595c2ab23f0c415c01418726e6d7ee3d82",
+    "active_route": "No site scheduler/admission policy advertised to this task; bounded direct engineering probes under the accepted common resource rule. Shared-prefix pause retained.",
+    "budget": {
+      "material_jobs": 1,
+      "native_threads": 1,
+      "estimated_ram_mib": 2048,
+      "scratch_mib": 512,
+      "wall_seconds_per_job": 240
+    },
+    "observed_min_available_ram_bytes": 18552909824,
+    "observed_min_scratch_free_bytes": 12294164480,
+    "monitor": "one owned job at a time; native threads1;1s observed RAM/scratch/time checks; owned process-family stop only",
+    "actual_protection": "No reservation, enforced aggregate RAM/CPU containment, measured peak family RAM or simultaneous-admission guarantee. Node/toolchain task-only, shared tools/prefixes unchanged.",
+    "deferred": "No local provider/browser/scientific build, whole product/profile or hosted resource-protection qualification."
+  },
+  "preserved_failures": [
+    {
+      "stage": "initial native check",
+      "outcome": "Prettier rejected new AGENTS.md and caller formatting; corrected those two files only before the recorded passing controls."
+    },
+    {
+      "stage": "toolchain acquisition",
+      "outcome": "First completed retry found existing empty directory; next probe rejected201757420 expanded Node bytes above provisional160MiB extraction bound; measured size fits256MiB extraction guard and512MiB total task budget; final official hashes verify."
+    }
+  ],
+  "remaining": [
+    "original component Conda archive and installed generic-resource profile",
+    "installed visual consumer and actual browser/Qt/platform cells",
+    "independent full Molecular View and Interaction View acceptance",
+    "component resource profiles/actual required protection",
+    "release/version decision and separately authorized public package delivery"
+  ],
+  "closure": "partial; no broad product/artifact completion or local provider/browser rerun inferred; ordinary automatic CI has independent outcomes"
+}

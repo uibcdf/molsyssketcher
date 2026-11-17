@@ -7,3 +7,11 @@ guide, checkpoint and living plan for current scope.
   superseded by the maintainer decision to make interaction diagrams a primary
   product pillar. Scientific distinctions remain reflected in
   [the current contract](../INTERACTION_DIAGRAMS.md).
+
+<!-- generated: devguide_index -->
+
+### Superseded (1)
+
+- [`interaction_diagrams_inclusion_assessment_20261114.md`](interaction_diagrams_inclusion_assessment_20261114.md) — [#8](https://github.com/uibcdf/molsyssketcher/issues/8) — Historical optional interaction-diagram assessment superseded by equal-pillar direction. *(superseded, inspected)*
+
+<!-- /generated -->

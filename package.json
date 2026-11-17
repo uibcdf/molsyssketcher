@@ -38,11 +38,12 @@
     "corpus:prepare": "python -m devtools.rdkit_adapter.corpus",
     "corpus:check": "python -m devtools.rdkit_adapter.corpus --check",
     "check:docs": "node devtools/check-docs.mjs",
-    "check": "npm run check:version && npm run typecheck && npm run format:check && npm run test && npm run test:experiment && npm run check:docs",
+    "check": "npm run check:version && npm run typecheck && npm run format:check && npm run test && npm run test:experiment && npm run check:docs && npm run check:reports",
     "example": "npm run build && node examples/supplied-documents.mjs && node examples/native-interactions.mjs",
     "pack:check": "npm run build && node devtools/check-package.mjs",
     "pack:conda:check": "npm run build && node devtools/check-conda-layout.mjs",
-    "prepack": "npm run build"
+    "prepack": "npm run build",
+    "check:reports": "python devtools/devguide_index.py --check"
   },
   "devDependencies": {
     "playwright": "1.57.0",

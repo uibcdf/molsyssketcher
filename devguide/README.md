@@ -54,7 +54,11 @@ MolSysSuite owns suite-member admission, shared engineering rules and
 cross-member contracts. Read its
 [canonical component guide](https://github.com/uibcdf/molsyssuite/blob/main/MOLSYSSUITE_GUIDE.md)
 and [starter/admission route](https://github.com/uibcdf/molsyssuite/blob/main/devguide/new_component_starter_kit.md).
-The existence of this repository does not establish registration or compliance.
+Published policy-v1.6.0 registers this incubating component; actual source adoption
+and original artifact/profile acceptance are tracked in [component #8](https://github.com/uibcdf/molsyssketcher/issues/8).
+Read the local [reporting protocol](reporting_protocol.md), generated
+[bug](pending_bugs/README.md), [proposal](pending_proposals/README.md) and
+[archive](archive/README.md) indexes. Registration alone does not qualify either view.
 
 Keep this guide in English. Update the affected contract, task ledger, decisions
 and checkpoint with the implementation that changes them. Record a result's
